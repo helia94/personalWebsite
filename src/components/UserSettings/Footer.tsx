@@ -2,7 +2,6 @@ import { useApolloClient } from '@apollo/client'
 import * as React from 'react'
 
 import Button, { DeleteButton } from '~/components/Button'
-import { authik } from '~/lib/authik/client'
 
 import { DeleteUserDialog } from './DeleteUserDialog'
 
@@ -12,7 +11,6 @@ export function UserSettingsFooter() {
     <div className="flex justify-between space-x-4 py-12">
       <Button
         onClick={async () => {
-          await authik.logout()
           apolloClient.resetStore()
         }}
       >

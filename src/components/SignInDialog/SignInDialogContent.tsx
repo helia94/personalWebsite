@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import { TwitterButton } from '~/components/Button'
-import { authik } from '~/lib/authik/client'
+
 
 export function SignInDialogContent() {
   return (
@@ -81,7 +81,7 @@ export function SignInDialogContent() {
       <div className="flex items-stretch justify-items-stretch self-stretch">
         <TwitterButton
           onClick={() =>
-            authik.loginWithTwitter({ returnTo: window.location.pathname })
+            console.log('loginWithTwitter')
           }
           style={{ flex: '1' }}
           size="large"

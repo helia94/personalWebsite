@@ -4,11 +4,9 @@ import Query from '~/graphql/resolvers/queries'
 import { getCommentAuthor } from '~/graphql/resolvers/queries/comment'
 import { getQuestionAuthor } from '~/graphql/resolvers/queries/questions'
 import {
-  EmailSubscriptionType,
   QuestionStatus,
   UserRole,
 } from '~/graphql/types.generated'
-import { revue } from '~/lib/revue'
 
 import { dateScalar } from '../scalars'
 
@@ -95,38 +93,6 @@ export default {
     },
     pendingEmail: ({ id }, _, { viewer }: Context) => {
       return viewer && viewer.id === id ? viewer.pendingEmail : null
-    },
-    emailSubscriptions: async ({ id }, _, { viewer, prisma }: Context) => {
-      if (!viewer || !viewer.email || viewer.id !== id)
-        return [
-          {
-            type: EmailSubscriptionType.HackerNews,
-            subscribed: false,
-          },
-        ]
-
-      const [hn] = await Promise.all([
-        prisma.emailSubscription.findUnique({
-          where: {
-            emailAndType: {
-              email: viewer.email,
-              type: EmailSubscriptionType.HackerNews,
-            },
-          },
-        }),
-        // revue.getSubscriber({ email: viewer.email }),
-      ])
-
-      return [
-        // {
-        //   type: EmailSubscriptionType.Newsletter,
-        //   subscribed: !!newsletter,
-        // },
-        {
-          type: EmailSubscriptionType.HackerNews,
-          subscribed: !!hn,
-        },
-      ]
     },
   },
   Bookmark: {

@@ -5,7 +5,7 @@ import * as React from 'react'
 import { DeleteButton } from '~/components/Button'
 import { DialogComponent } from '~/components/Dialog'
 import { useDeleteUserMutation } from '~/graphql/types.generated'
-import { authik } from '~/lib/authik/client'
+
 
 import { LoadingSpinner } from '../LoadingSpinner'
 
@@ -25,7 +25,6 @@ export function DeleteUserDialog({ trigger }) {
           <DeleteButton
             onClick={async () => {
               await handleDelete()
-              await authik.clearSessionData()
               await apolloClient.resetStore()
             }}
           >

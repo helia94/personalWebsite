@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 
-import { revue } from '~/lib/revue'
+
 import { validEmail } from '~/lib/validators'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
@@ -10,7 +10,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     return res.status(200).json({ error: 'Invalid email' })
   }
 
-  const data = await revue.addSubscriber({ email, doubleOptIn: true })
 
-  return res.status(201).json({ data, error: '' })
+  return res.status(201).json({ error: '' })
 }

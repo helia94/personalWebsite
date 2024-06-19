@@ -8,7 +8,6 @@ import { useViewerQuery } from '~/graphql/types.generated'
 import { DialogComponent } from '../Dialog'
 import SegmentedControl from '../SegmentedController'
 import { WritingContext } from './PostsList'
-import { WritingSubscriptionForm } from './SubscriptionForm'
 
 export function WritingTitlebar({ scrollContainerRef }) {
   const { data } = useViewerQuery()
@@ -29,26 +28,10 @@ export function WritingTitlebar({ scrollContainerRef }) {
     return null
   }
 
-  function getSubscribeButton() {
-    if (data?.viewer?.isAdmin) return null
-    return (
-      <DialogComponent
-        title="Newsletter"
-        trigger={
-          <Button data-cy="open-subscribe-hn-dialog" size="small">
-            <Radio size={16} />
-            <span>Subscribe</span>
-          </Button>
-        }
-        modalContent={() => <WritingSubscriptionForm />}
-      />
-    )
-  }
 
   function trailingAccessory() {
     return (
       <div className="flex space-x-2">
-        {getSubscribeButton()}
         {getAddButton()}
       </div>
     )

@@ -17,9 +17,5 @@ export const UserSettingsFragment = gql`
   fragment UserSettings on User {
     email
     pendingEmail
-    emailSubscriptions {
-      type
-      subscribed
-    }
   }
 `

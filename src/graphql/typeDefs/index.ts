@@ -87,15 +87,6 @@ export default gql`
     ADMIN
   }
 
-  enum EmailSubscriptionType {
-    HACKER_NEWS
-    NEWSLETTER
-  }
-
-  type EmailSubscription {
-    type: EmailSubscriptionType
-    subscribed: Boolean
-  }
 
   type User {
     id: ID!
@@ -107,7 +98,6 @@ export default gql`
     isViewer: Boolean
     email: String
     pendingEmail: String
-    emailSubscriptions: [EmailSubscription]
     isAdmin: Boolean
   }
 
@@ -119,30 +109,6 @@ export default gql`
     author: User!
     viewerCanEdit: Boolean
     viewerCanDelete: Boolean
-  }
-
-  type HackerNewsComment {
-    id: ID
-    user: String
-    comments_count: String
-    comments: [HackerNewsComment]
-    time_ago: String
-    time: Int
-    level: Int
-    content: String
-  }
-
-  type HackerNewsPost {
-    id: ID
-    title: String
-    user: String
-    time: Int
-    time_ago: String
-    comments: [HackerNewsComment]
-    comments_count: String
-    url: String
-    domain: String
-    content: String
   }
 
   input BookmarkFilter {
@@ -220,8 +186,6 @@ export default gql`
       after: String
       filter: QuestionFilter
     ): QuestionsConnection!
-    hackerNewsPosts: [HackerNewsPost]!
-    hackerNewsPost(id: ID!): HackerNewsPost
     tags: [Tag]!
   }
 
@@ -230,11 +194,7 @@ export default gql`
     email: String
   }
 
-  input EmailSubscriptionInput {
-    type: EmailSubscriptionType!
-    subscribed: Boolean!
-    email: String
-  }
+
 
   input AddStackInput {
     name: String!
@@ -307,7 +267,6 @@ export default gql`
     deleteComment(id: ID!): Boolean
     editUser(data: EditUserInput): User
     deleteUser: Boolean
-    editEmailSubscription(data: EmailSubscriptionInput): User
     addPost(data: AddPostInput!): Post
     editPost(id: ID!, data: EditPostInput!): Post
     deletePost(id: ID!): Boolean

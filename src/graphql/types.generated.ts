@@ -135,48 +135,6 @@ export type EditUserInput = {
   username?: InputMaybe<Scalars['String']>
 }
 
-export type EmailSubscription = {
-  __typename?: 'EmailSubscription'
-  subscribed?: Maybe<Scalars['Boolean']>
-  type?: Maybe<EmailSubscriptionType>
-}
-
-export type EmailSubscriptionInput = {
-  email?: InputMaybe<Scalars['String']>
-  subscribed: Scalars['Boolean']
-  type: EmailSubscriptionType
-}
-
-export enum EmailSubscriptionType {
-  HackerNews = 'HACKER_NEWS',
-  Newsletter = 'NEWSLETTER',
-}
-
-export type HackerNewsComment = {
-  __typename?: 'HackerNewsComment'
-  comments?: Maybe<Array<Maybe<HackerNewsComment>>>
-  comments_count?: Maybe<Scalars['String']>
-  content?: Maybe<Scalars['String']>
-  id?: Maybe<Scalars['ID']>
-  level?: Maybe<Scalars['Int']>
-  time?: Maybe<Scalars['Int']>
-  time_ago?: Maybe<Scalars['String']>
-  user?: Maybe<Scalars['String']>
-}
-
-export type HackerNewsPost = {
-  __typename?: 'HackerNewsPost'
-  comments?: Maybe<Array<Maybe<HackerNewsComment>>>
-  comments_count?: Maybe<Scalars['String']>
-  content?: Maybe<Scalars['String']>
-  domain?: Maybe<Scalars['String']>
-  id?: Maybe<Scalars['ID']>
-  time?: Maybe<Scalars['Int']>
-  time_ago?: Maybe<Scalars['String']>
-  title?: Maybe<Scalars['String']>
-  url?: Maybe<Scalars['String']>
-  user?: Maybe<Scalars['String']>
-}
 
 export type Mutation = {
   __typename?: 'Mutation'
@@ -254,9 +212,6 @@ export type MutationEditCommentArgs = {
   text?: InputMaybe<Scalars['String']>
 }
 
-export type MutationEditEmailSubscriptionArgs = {
-  data?: InputMaybe<EmailSubscriptionInput>
-}
 
 export type MutationEditPostArgs = {
   data: EditPostInput
@@ -315,8 +270,6 @@ export type Query = {
   bookmarks: BookmarksConnection
   comment?: Maybe<Comment>
   comments: Array<Maybe<Comment>>
-  hackerNewsPost?: Maybe<HackerNewsPost>
-  hackerNewsPosts: Array<Maybe<HackerNewsPost>>
   post?: Maybe<Post>
   posts: Array<Maybe<Post>>
   question?: Maybe<Question>

@@ -51,37 +51,7 @@ module.exports = {
         source: '/projects',
         destination: '/',
         permanent: true,
-      },
-      {
-        source: '/youtube',
-        destination: 'https://www.youtube.com/channel/UC-esBYEUGQ6iK1wmw76f5MA',
-        permanent: true,
-        basePath: false,
-      },
-      {
-        source: '/twitter',
-        destination: 'https://twitter.com/brian_lovin',
-        permanent: true,
-        basePath: false,
-      },
-      {
-        source: '/github',
-        destination: 'https://github.com/brianlovin',
-        permanent: true,
-        basePath: false,
-      },
-      {
-        source: '/figma',
-        destination: 'https://figma.com/@brian',
-        permanent: true,
-        basePath: false,
-      },
-      {
-        source: '/mastadon',
-        destination: 'https://mastodon.cloud/@brian',
-        permanent: true,
-        basePath: false,
-      },
+      }
     ]
   },
 }

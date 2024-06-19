@@ -5,7 +5,6 @@ import { TitleBar } from '~/components/ListDetail/TitleBar'
 import { useGetViewerWithSettingsQuery } from '~/graphql/types.generated'
 
 import { EmailForm } from './Email'
-import { EmailPreferences } from './EmailPreferences'
 import { UserSettingsFooter } from './Footer'
 import { SignedOut } from './SignedOut'
 import { UsernameForm } from './Username'
@@ -45,13 +44,6 @@ export function UserSettings() {
             <EmailForm viewer={data.viewer} />
             <UsernameForm viewer={data.viewer} />
           </div>
-
-          {data.viewer.email && (
-            <div className="space-y-8 py-12">
-              <h3 className="text-primary text-lg font-bold">Emails</h3>
-              <EmailPreferences viewer={data.viewer} />
-            </div>
-          )}
 
           <UserSettingsFooter />
         </div>

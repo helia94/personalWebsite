@@ -1,8 +1,6 @@
 import React from 'react'
 import { useDropzone } from 'react-dropzone'
 
-import { CLOUDFLARE_IMAGE_DELIVERY_BASE_URL } from '~/lib/cloudflare'
-
 import { ActiveDropzone } from './ActiveDropzone'
 
 interface DropzoneProps {
@@ -47,7 +45,7 @@ export function Dropzone(props: DropzoneProps) {
       return console.error('Upload failed')
     }
 
-    const url = `${CLOUDFLARE_IMAGE_DELIVERY_BASE_URL}/${id}/public`
+    const url = ``
     return onUploadComplete(url)
   }, [])
 

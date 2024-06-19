@@ -1,12 +1,11 @@
 import { PrismaClient } from '@prisma/client'
 
-import { authik } from '~/lib/authik/server'
 import { prisma } from '~/lib/prisma'
 
 import { User, UserRole } from '../types.generated'
 
 export async function isAuthenticated(req, res) {
-  const { sessionToken } = await authik.verifySessionToken(req)
+  const { sessionToken } = { sessionToken: null }
   return sessionToken
 }
 

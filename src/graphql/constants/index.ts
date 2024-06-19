@@ -5,7 +5,6 @@ export const IS_DEV = process.env.NODE_ENV === 'development'
 export const IS_PREVIEW =
   process.env.VERCEL_ENV === 'preview' ||
   process.env.NEXT_PUBLIC_VERCEL_ENV === 'preview'
-export const GRAPHCDN_PURGE_ENDPOINT = process.env.GRAPHCDN_PURGE_ENDPOINT
 export const CLIENT_URL = IS_PROD ? baseUrl : 'http://localhost:3000'
 
 const PREVIEW_URL = process.env.VERCEL_URL || process.env.NEXT_PUBLIC_VERCEL_URL

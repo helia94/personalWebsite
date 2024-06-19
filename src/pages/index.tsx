@@ -1,3 +1,7 @@
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 import * as React from 'react'
 
 import { Intro } from '~/components/Home/Intro'

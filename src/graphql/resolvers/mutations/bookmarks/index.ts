@@ -7,8 +7,6 @@ import {
   MutationDeleteBookmarkArgs,
   MutationEditBookmarkArgs,
 } from '~/graphql/types.generated'
-import { graphcdn } from '~/lib/graphcdn'
-import { revue } from '~/lib/revue'
 import { validUrl } from '~/lib/validators'
 
 import getBookmarkMetaData from './getBookmarkMetaData'
@@ -53,7 +51,6 @@ export async function editBookmark(
       include: { tags: true },
     })
     .then((bookmark) => {
-      graphcdn.purgeList('bookmarks')
       return bookmark
     })
     .catch((err) => {
@@ -76,19 +73,6 @@ export async function addBookmark(
   const metadata = await getBookmarkMetaData(url)
   const { host, title, image, description, faviconUrl } = metadata
 
-  /*
-    Preemptively add bookmarks to Revue, assuming I want to share them
-    more broadly in the newsletter
-  */
-  if (IS_PROD) {
-    try {
-      const { id } = await revue.getCurrentIssue()
-      await revue.addItemToIssue({ id, url })
-    } catch (err) {
-      console.error({ err })
-    }
-  } else {
-  }
 
   return await prisma.bookmark
     .create({
@@ -109,7 +93,6 @@ export async function addBookmark(
       include: { tags: true },
     })
     .then((bookmark) => {
-      graphcdn.purgeList('bookmarks')
       return bookmark
     })
     .catch((err) => {
@@ -131,7 +114,6 @@ export async function deleteBookmark(
       where: { id },
     })
     .then(() => {
-      graphcdn.purgeList('bookmarks')
       return true
     })
     .catch((err) => {

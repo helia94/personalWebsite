@@ -3,7 +3,6 @@ import * as React from 'react'
 import { TwitterButton } from '~/components/Button'
 import { Detail } from '~/components/ListDetail/Detail'
 import { TitleBar } from '~/components/ListDetail/TitleBar'
-import { authik } from '~/lib/authik/client'
 
 export function SignedOut() {
   return (
@@ -12,7 +11,7 @@ export function SignedOut() {
       <div className="flex flex-1 flex-col items-center justify-center">
         <TwitterButton
           onClick={() =>
-            authik.loginWithTwitter({ returnTo: window.location.pathname })
+            console.log('loginWithTwitter')
           }
           size="large"
         >

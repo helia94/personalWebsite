@@ -5,8 +5,6 @@ import { baseEmail } from '~/config/seo'
 import { CLIENT_URL, IS_PROD } from '~/graphql/constants'
 import { Context } from '~/graphql/context'
 import { MutationEditUserArgs } from '~/graphql/types.generated'
-import { authik } from '~/lib/authik/server'
-import { client as postmark } from '~/lib/postmark'
 import { validEmail, validUsername } from '~/lib/validators'
 
 export async function deleteUser(_, __, ctx: Context) {
@@ -17,7 +15,6 @@ export async function deleteUser(_, __, ctx: Context) {
   }
 
   const user = await prisma.user.findUnique({ where: { id: viewer.id } })
-  await authik.deleteUser(user.authikId)
 
   return await prisma.user
     .delete({
@@ -77,21 +74,13 @@ export async function editUser(_, args: MutationEditUserArgs, ctx: Context) {
 
     const url = `${CLIENT_URL}/api/email/confirm?token=${token}`
 
-    if (IS_PROD) {
-      postmark.sendEmailWithTemplate({
-        From: baseEmail,
-        To: email,
-        TemplateId: 25539089,
-        TemplateModel: { url },
-      })
-    } else {
-      console.log('Sending confirmation email', {
-        From: baseEmail,
-        To: email,
-        TemplateId: 25539089,
-        TemplateModel: { url },
-      })
-    }
+
+    console.log('Sending confirmation email', {
+      From: baseEmail,
+      To: email,
+      TemplateId: 25539089,
+      TemplateModel: { url },
+    })
 
     return await prisma.user.update({
       where: { id: viewer.id },

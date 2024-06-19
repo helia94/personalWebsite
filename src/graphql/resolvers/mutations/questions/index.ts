@@ -7,8 +7,6 @@ import {
   MutationDeleteQuestionArgs,
   MutationEditQuestionArgs,
 } from '~/graphql/types.generated'
-import { graphcdn } from '~/lib/graphcdn'
-import { emailMe } from '~/lib/postmark'
 
 export async function editQuestion(
   _,
@@ -37,7 +35,6 @@ export async function editQuestion(
         },
       })
       .then((question) => {
-        graphcdn.purgeList('questions')
         return question
       })
       .catch((err) => {
@@ -74,7 +71,6 @@ export async function addQuestion(
       },
     })
     .then((question) => {
-      graphcdn.purgeList('questions')
       return question
     })
     .catch((err) => {
@@ -82,10 +78,6 @@ export async function addQuestion(
       throw new UserInputError('Unable to add question')
     })
 
-  emailMe({
-    subject: `AMA: ${title}`,
-    body: `${title}\n\n${baseUrl}/ama/${question.id}`,
-  })
 
   return question
 }
@@ -105,7 +97,6 @@ export async function deleteQuestion(
     return await prisma.question
       .delete({ where: { id } })
       .then(() => {
-        graphcdn.purgeList('questions')
         return true
       })
       .catch((err) => {

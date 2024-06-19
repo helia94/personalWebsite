@@ -8,8 +8,7 @@ import {
   MutationDeleteCommentArgs,
   MutationEditCommentArgs,
 } from '~/graphql/types.generated'
-import { graphcdn } from '~/lib/graphcdn'
-import { emailMe } from '~/lib/postmark'
+
 
 export async function editComment(
   _,
@@ -38,7 +37,6 @@ export async function editComment(
       data: { text },
     })
     .then((comment) => {
-      graphcdn.purgeList('comments')
       return comment
     })
     .catch((err) => {
@@ -99,12 +97,6 @@ export async function addComment(
     throw new UserInputError('Commenting on something that doesn’t exist')
   }
 
-  if (!viewer.isAdmin) {
-    emailMe({
-      subject: `New comment on ${table}`,
-      body: `${text}\n\n${route}`,
-    })
-  }
 
   const [comment] = await Promise.all([
     prisma.comment.create({
@@ -127,7 +119,6 @@ export async function addComment(
     throw new UserInputError('Unable to add comment')
   })
 
-  graphcdn.purgeList('comments')
 
   return comment
 }
@@ -156,7 +147,6 @@ export async function deleteComment(
       where: { id },
     })
     .then(() => {
-      graphcdn.purgeList('comments')
       return true
     })
     .catch((err) => {
