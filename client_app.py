@@ -2,7 +2,7 @@ from os import path
 
 from flask import Blueprint, send_from_directory
 
-client = Blueprint("client", __name__, static_folder=path.join("frontend", "build"))
+client = Blueprint("client", __name__, static_folder=path.join("build"))
 
 
 @client.route("/", defaults={"file_name": "", "id": ""})
