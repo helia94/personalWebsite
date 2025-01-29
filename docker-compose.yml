@@ -1,0 +1,23 @@
+# File: docker-compose.yml
+version: "3.9"
+services:
+  db:
+    image: postgres:14
+    container_name: personal_pg_db
+    environment:
+      POSTGRES_DB: personaldb
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: ./backend
+    container_name: personal_backend
+    environment:
+      DATABASE_URL: postgresql://user:pass@db:5432/personaldb
+      ADMIN_PASSWORD: secret123
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db

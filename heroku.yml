@@ -1,0 +1,8 @@
+# File: heroku.yml
+build:
+  docker:
+    web: backend/Dockerfile
+    frontend: frontend/Dockerfile
+run:
+  web: web
+  frontend: frontend

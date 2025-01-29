@@ -1,12 +1,4 @@
+# File: .gitignore
 node_modules
-# Keep environment variables out of version control
+build
 .env
-.env.build
-.env.local
-.next
-.DS_Store
-.vscode
-yarn-error.log
-.vercel
-cors.json
-src/data/local/*

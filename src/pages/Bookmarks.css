@@ -1,0 +1,36 @@
+/* File: src/pages/Bookmarks.css */
+
+
+  
+  .bookmark-side-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0;
+  }
+  
+  .bookmark-logo {
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+  }
+  
+  
+  /* Modern visit page button */
+  .visit-btn {
+    background-color:  #312244;
+    color: #CAD2C5;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+  .visit-btn:hover {
+    background: linear-gradient(135deg, #4D194D, #312244);
+  }
+
+  
+
+  
