@@ -10,7 +10,7 @@
 body, html {
   width: 100%;
   height: 100%;
-  font-family: "Merriweather", sans-serif;
+  font-family: "Merriweather", serif;
   color: #2F3E46;   
 }
 
@@ -28,7 +28,7 @@ a:hover, .submenu-item:hover {
   display: flex;
   height: 100vh;
   overflow: hidden;
-  background-color: #f9f9f9; /* Moved from .main-content-container for consistency */
+  background-color: #fff; /* Moved from .main-content-container for consistency */
 }
 
 /* Left Sidebar (Main Navigation) */
@@ -49,7 +49,7 @@ a:hover, .submenu-item:hover {
   cursor: pointer;
   transition: background 0.2s, transform 0.2s;
   font-weight: bold;
-  font-family: "Britti Sans",sans-serif;
+  font-family: "Britti Sans", sans-serif;
 }
 .sidebar-item:hover {
   background-color: #CAD2C5;
@@ -75,7 +75,7 @@ a:hover, .submenu-item:hover {
   flex: 1;
   overflow-y: auto;
   padding: 2rem;
-  background-color: #f9f9f9;
+  background-color: #fff;
 }
 
 /* Two-Column Layout for Pages with Sub-Sidebar */
@@ -90,7 +90,8 @@ a:hover, .submenu-item:hover {
   min-width: 250px;
   border-right: 2px solid #354F52;
   padding: 1rem;
-  overflow-y: auto;font-family: "Britti Sans",sans-serif;
+  overflow-y: auto;
+  font-family: "Britti Sans", sans-serif;
 }
 
 .sub-sidebar h3 {
@@ -98,7 +99,7 @@ a:hover, .submenu-item:hover {
   font-size: 1.2rem;
   color: #2F3E46;
   font-weight: bold;
-  font-family: "Britti Sans",sans-serif;
+  font-family: "Britti Sans", sans-serif;
 }
 
 .submenu-title {
@@ -107,7 +108,7 @@ a:hover, .submenu-item:hover {
   font-size: 1.1rem;
   color: #2F3E46;
   font-weight: bold;
-  font-family: "Britti Sans",sans-serif;
+  font-family: "Britti Sans", sans-serif;
 }
 .submenu-title:hover {
   text-decoration: underline;
@@ -192,8 +193,14 @@ img {
 h1, h2, h3, h4 {
   margin-bottom: 0.6rem;
   font-weight: bold;
-  font-family: "Britti Sans",sans-serif;
+  font-family: "Britti Sans", sans-serif;
 }
+
+h2 {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
 p {
   margin-bottom: 1rem;
 }
@@ -201,4 +208,24 @@ p {
 /* Example Home Page Styling */
 .writing-home {
   padding: 1rem;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide Scrollbars */
+.left-sidebar,
+.main-content-container,
+.sub-sidebar,
+.content-area {
+  scrollbar-width: none; /* Firefox */
+}
+
+.left-sidebar::-webkit-scrollbar,
+.main-content-container::-webkit-scrollbar,
+.sub-sidebar::-webkit-scrollbar,
+.content-area::-webkit-scrollbar {
+  display: none; /* WebKit */
 }
