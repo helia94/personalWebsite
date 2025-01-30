@@ -10,8 +10,8 @@
 body, html {
   width: 100%;
   height: 100%;
-  font-family: "Georgia", serif;
-  color: #2F3E46;              /* Dark text */
+  font-family: "Merriweather", sans-serif;
+  color: #2F3E46;   
 }
 
 /* Links */
@@ -48,6 +48,8 @@ a:hover, .submenu-item:hover {
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.2s, transform 0.2s;
+  font-weight: bold;
+  font-family: "Britti Sans",sans-serif;
 }
 .sidebar-item:hover {
   background-color: #CAD2C5;
@@ -88,13 +90,15 @@ a:hover, .submenu-item:hover {
   min-width: 250px;
   border-right: 2px solid #354F52;
   padding: 1rem;
-  overflow-y: auto;
+  overflow-y: auto;font-family: "Britti Sans",sans-serif;
 }
 
 .sub-sidebar h3 {
   margin-bottom: 1rem;
   font-size: 1.2rem;
   color: #2F3E46;
+  font-weight: bold;
+  font-family: "Britti Sans",sans-serif;
 }
 
 .submenu-title {
@@ -102,6 +106,8 @@ a:hover, .submenu-item:hover {
   margin: 0.6rem 0;
   font-size: 1.1rem;
   color: #2F3E46;
+  font-weight: bold;
+  font-family: "Britti Sans",sans-serif;
 }
 .submenu-title:hover {
   text-decoration: underline;
@@ -137,6 +143,7 @@ button {
   cursor: pointer;
   font-size: 0.9rem;
   transition: background 0.3s, transform 0.2s;
+  font-weight: bold;
 }
 
 .cta-button,
@@ -184,6 +191,8 @@ img {
 /* General Styling for Headings and Paragraphs */
 h1, h2, h3, h4 {
   margin-bottom: 0.6rem;
+  font-weight: bold;
+  font-family: "Britti Sans",sans-serif;
 }
 p {
   margin-bottom: 1rem;

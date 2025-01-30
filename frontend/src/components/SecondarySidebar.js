@@ -2,18 +2,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-/**
- * categories = [
- *   {
- *     title: "Section Title",
- *     items: [
- *       { label: "SubItem 1", route: "/page/subitem1" },
- *       { label: "SubItem 2", route: "/page/subitem2" }
- *     ]
- *   },
- *   ...
- * ]
- */
 
 export default function SecondarySidebar({ heading, categories }) {
   const [expanded, setExpanded] = useState([]);
