@@ -9,7 +9,7 @@ CORS(app)
 # Configure SQLAlchemy
 db_url = os.environ.get("DATABASE_URL", "sqlite:///test.db")
 if db_url and db_url.startswith("postgres://"):
-    uri = db_url.replace("postgres://", "postgresql://", 1)
+    db_url = db_url.replace("postgres://", "postgresql://", 1)
 app.config["SQLALCHEMY_DATABASE_URI"] = db_url
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db.init_app(app)  # Initialize the db with the app
