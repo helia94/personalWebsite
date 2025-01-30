@@ -1,4 +1,4 @@
-from database import db  # Import from the new database module
+from backend.database import db  # Import from the new database module
 
 class Questions(db.Model):
     __tablename__ = 'personal_question'

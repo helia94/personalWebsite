@@ -1,7 +1,7 @@
 import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from database import db  # Import from the new database module
+from backend.database import db  # Import from the new database module
 
 app = Flask(__name__)
 CORS(app)
@@ -17,7 +17,7 @@ db.init_app(app)  # Initialize the db with the app
 ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD", "secret123")
 
 # Import models after db is defined
-from models import Questions, Messages
+from backend.models import Questions, Messages
 
 @app.before_first_request
 def create_tables():
