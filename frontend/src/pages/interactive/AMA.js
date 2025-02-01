@@ -8,13 +8,9 @@ export default function AMA() {
   const [questionName, setQuestionName] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
-  // Admin modal and password states
   const [showAdminModal, setShowAdminModal] = useState(false);
   const [adminPassword, setAdminPassword] = useState("");
-  const [isAdmin, setIsAdmin] = useState(false); // track whether user is logged in as admin
-
-  // For submitting an answer
+  const [isAdmin, setIsAdmin] = useState(false);
   const [answerText, setAnswerText] = useState("");
   const [activeQuestionId, setActiveQuestionId] = useState(null);
 
@@ -58,24 +54,15 @@ export default function AMA() {
     }
   };
 
-  // Admin login
   const handleAdminLogin = () => {
-    // You can do a quick test request or check password locally
-    // but typically you'd do something secure (session-based, etc.)
-    // For simplicity, let's just set isAdmin to true if there's any password:
     if (!adminPassword) {
       alert("Please enter admin password!");
       return;
     }
-
-    // If you want to verify using backend,
-    // you could do an API call with the password and set isAdmin if 200:
-    // But for this example, we'll set isAdmin to true immediately:
     setIsAdmin(true);
     setShowAdminModal(false);
   };
 
-  // Submit an answer as admin
   const submitAnswer = async (qId) => {
     if (!answerText.trim()) {
       setError("Answer cannot be empty.");
@@ -83,7 +70,6 @@ export default function AMA() {
     }
     try {
       setLoading(true);
-      // calls your Flask endpoint
       await axios.post("/api/questions/answer", {
         id: qId,
         answer: answerText,
@@ -136,12 +122,10 @@ export default function AMA() {
                   <span className="question-name">{q.name || "Anonymous"} asks:</span>
                   <span className="question-text">{q.question}</span>
                 </div>
-
                 {q.answer ? (
                   <div className="answer-section">
                     <span className="answer-label">Answer:</span>
                     <span className="answer-text">{q.answer}</span>
-                    {/* Re-answer if admin */}
                     {isAdmin && (
                       <button
                         className="admin-button"
@@ -170,8 +154,6 @@ export default function AMA() {
                     )}
                   </div>
                 )}
-
-                {/* Show answer form if this question is selected for answering */}
                 {isAdmin && activeQuestionId === q.id && (
                   <div className="answer-form">
                     <textarea
@@ -195,10 +177,6 @@ export default function AMA() {
         </div>
       </div>
 
-      {/* 
-        Invisible / small link at bottom:
-        Clicking this triggers the admin modal 
-      */}
       <div
         className="impressum-footer"
         onClick={() => setShowAdminModal(true)}
@@ -206,7 +184,6 @@ export default function AMA() {
         Admin Login
       </div>
 
-      {/* Admin Modal */}
       {showAdminModal && (
         <div className="modal-backdrop">
           <div className="modal-content">
