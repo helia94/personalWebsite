@@ -5,7 +5,7 @@ import SecondarySidebar from "../components/SecondarySidebar";
 import "./Bookmarks.css";
 
 // Define the categories and their respective bookmark items
-const bookmarkCategories = [
+export const bookmarkCategories = [
   {
     title: "Book",
     items: [
@@ -15,7 +15,12 @@ const bookmarkCategories = [
         logoUrl:
           "https://res.cloudinary.com/demo/image/upload/w_40,h_40/v1/cool_site_logo.png",
       },
-      // Add more book-related bookmarks here
+      {
+        label: "Warm Site",
+        route: "/bookmarks/warm-site",
+        logoUrl:
+          "https://res.cloudinary.com/demo/image/upload/w_40,h_40/v1/cool_site_logo.png",
+      },
     ],
   },
   {

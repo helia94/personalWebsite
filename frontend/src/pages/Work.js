@@ -3,7 +3,7 @@ import React from "react";
 import { Routes, Route, useParams } from "react-router-dom";
 import SecondarySidebarBasic from "../components/SecondarySidebarBasic";
 
-const workItems = [
+export const workItems = [
   { label: "Experience", route: "/work/experience"},
   { label: "Freelance", route: "/work/freelance" },
   { label: "Values", route: "/work/values"},

@@ -3,7 +3,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import SecondarySidebar from "../components/SecondarySidebar";
 
-const writingData = [
+export const writingData = [
   {
     title: "Tango",
     items: [

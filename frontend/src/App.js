@@ -1,4 +1,3 @@
-// File: src/App.js
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
@@ -12,6 +11,11 @@ import Work from "./pages/Work";
 import Interactive from "./pages/Interactive";
 import SocialMedia from "./pages/SocialMedia";
 
+// Import data
+import { writingData } from "./pages/Writing";
+import { workItems } from "./pages/Work";
+import { bookmarkCategories } from "./pages/Bookmarks";
+
 export default function App() {
   const [activeMenu, setActiveMenu] = useState("Home");
 
@@ -19,7 +23,11 @@ export default function App() {
     <Router>
       <div className="app-container">
         <Sidebar activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
-        <MainContent>
+        <MainContent
+          writingData={writingData}
+          workItems={workItems}
+          bookmarkCategories={bookmarkCategories}
+        >
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/writing/*" element={<Writing />} />
