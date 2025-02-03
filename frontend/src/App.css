@@ -229,3 +229,25 @@ html {
 .content-area::-webkit-scrollbar {
   display: none; /* WebKit */
 }
+
+
+.mobile-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  padding: .5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-header button {
+  margin: 0 0.5rem;
+  padding: 0.1rem .2rem;
+  background-color: #fff;
+  color: #312244;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

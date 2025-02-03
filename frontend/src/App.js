@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import MainContent from "./components/MainContent";
@@ -11,18 +11,46 @@ import Work from "./pages/Work";
 import Interactive from "./pages/Interactive";
 import SocialMedia from "./pages/SocialMedia";
 
-// Import data
 import { writingData } from "./pages/Writing";
 import { workItems } from "./pages/Work";
 import { bookmarkCategories } from "./pages/Bookmarks";
 
-export default function App() {
-  const [activeMenu, setActiveMenu] = useState("Home");
+import { MobileViewProvider, MobileViewContext } from "./context/MobileViewContext";
 
+function AppContent() {
+  const [activeMenu, setActiveMenu] = useState("Home");
+  const [isMobile, setIsMobile] = useState(false);
+  const { contentIsVisibleMobile, setCoc1IsVisibleMobile } = useContext(MobileViewContext);
+  const { toc1IsVisibleMobile, setToc1IsVisibleMobile } = useContext(MobileViewContext);
+  const { mobileView, setMobileView } = useContext(MobileViewContext);
+
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", checkMobile);
+    checkMobile();
+    setMobileView("main")
+    console.log("isMobile " + isMobile)
+    console.log("!isMobile " + !isMobile)
+    console.log("mobileView " + mobileView)
+    console.log("toc1IsVisibleMobile " + toc1IsVisibleMobile)
+
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
   return (
     <Router>
       <div className="app-container">
-        <Sidebar activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
+        {isMobile && (
+          <div className="mobile-header">
+            {( mobileView === "toc2") && <button onClick={setMobileView("toc1")}>ToC1</button>}
+            {( mobileView === "main") && <button onClick={setMobileView("toc2")}>ToC2</button>}
+          </div>
+        )}
+      {((!isMobile) || toc1IsVisibleMobile) && <div className= "left-sidebar">
+          <Sidebar activeMenu={activeMenu} setActiveMenu={setActiveMenu}/>
+        </div>}
+        {((!isMobile) || contentIsVisibleMobile) && 
         <MainContent
           writingData={writingData}
           workItems={workItems}
@@ -37,8 +65,16 @@ export default function App() {
             <Route path="/interactive/*" element={<Interactive />} />
             <Route path="/social-media" element={<SocialMedia />} />
           </Routes>
-        </MainContent>
+        </MainContent>}
       </div>
     </Router>
+  );
+}
+
+export default function App() {
+  return (
+    <MobileViewProvider>
+      <AppContent />
+    </MobileViewProvider>
   );
 }
