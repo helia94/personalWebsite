@@ -4,8 +4,11 @@ import { Routes, Route } from "react-router-dom";
 import { useContext, useState, useEffect } from "react";
 import { MobileViewContext } from "../context/MobileViewContext";
 import SecondarySidebar from "../components/SecondarySidebar";
+import "./writing.css"
 
-
+const linkToMedium3rdGeneration = "https://medium.com/fourth-wave/how-to-transition-to-a-third-generation-of-online-dating-platforms-05315ddeb388?format=html"
+const linkToMediumVocation = "https://medium.com/@helia.jm/can-i-find-satisfying-work-93385a3bcd41?format=html"
+const linkToMediumUniversity = "https://medium.com/@helia.jm/the-long-shadow-of-the-university-ec66129852ed?format=html"
 
 export const writingData = [
   {
@@ -19,7 +22,7 @@ export const writingData = [
   {
     title: "Dating",
     items: [
-      { label: "Article Dating 1", route: "/writing/dating/article-dating-1" },
+      { label: "Third Generation of Online Dating", route: "/writing/dating/online-dating" },
       { label: "Article Dating 2", route: "/writing/dating/article-dating-2" },
       { label: "Article Dating 3", route: "/writing/dating/article-dating-3" },
     ],
@@ -43,8 +46,8 @@ export const writingData = [
   {
     title: "Work",
     items: [
-      { label: "Article Work 1", route: "/writing/work/article-work-1" },
-      { label: "Article Work 2", route: "/writing/work/article-work-2" },
+      { label: "Shadow of University", route: "/writing/work/university" },
+      { label: "Vocation", route: "/writing/work/vocation" },
       { label: "Article Work 3", route: "/writing/work/article-work-3" },
     ],
   }
@@ -62,13 +65,13 @@ function WritingHome() {
 
 
 
-function ArticlePageDate() {
+function MediumArticle(link) {
   const [articleHTML, setArticleHTML] = useState("");
 
   useEffect(() => {
     const proxyUrl = "https://thingproxy.freeboard.io/fetch/";
     const targetUrl =
-      "https://medium.com/fourth-wave/how-to-transition-to-a-third-generation-of-online-dating-platforms-05315ddeb388?format=html";
+    link;
     fetch(proxyUrl + targetUrl)
       .then((res) => res.text())
       .then((htmlString) => {
@@ -81,6 +84,12 @@ function ArticlePageDate() {
         // In case there are additional wrappers, you can also try removing a known header container:
         const headerContainer = doc.querySelector("header");
         if (headerContainer) headerContainer.remove();
+
+        doc.querySelectorAll("button").forEach(button => button.remove());
+        doc.querySelectorAll("svg").forEach(button => button.remove());
+        doc.querySelectorAll(".wq.ab.lk.jr").forEach(element => element.remove());
+
+      
 
         setArticleHTML(doc.body.innerHTML);
       })
@@ -123,7 +132,7 @@ export default function Writing({isMobile}) {
           <Route path="/tango/article-tango-3" element={<ArticlePage />} />
 
           {/* Dating Articles */}
-          <Route path="/dating/article-dating-1" element={<ArticlePageDate />} />
+          <Route path="/dating/online-dating" element={MediumArticle(linkToMedium3rdGeneration)} />
           <Route path="/dating/article-dating-2" element={<ArticlePage />} />
           <Route path="/dating/article-dating-3" element={<ArticlePage />} />
 
@@ -138,8 +147,8 @@ export default function Writing({isMobile}) {
           <Route path="/personal/article-personal-3" element={<ArticlePage />} />
 
           {/* Work Articles */}
-          <Route path="/work/article-work-1" element={<ArticlePage />} />
-          <Route path="/work/article-work-2" element={<ArticlePage />} />
+          <Route path="/work/university" element={MediumArticle(linkToMediumUniversity)} />
+          <Route path="/work/vocation" element={MediumArticle(linkToMediumVocation)} />
           <Route path="/work/article-work-3" element={<ArticlePage />} />
         </Routes>
       </div>

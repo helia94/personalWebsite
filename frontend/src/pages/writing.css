@@ -1,0 +1,18 @@
+h1 {
+    font-size: 4rem!important; 
+    margin-bottom: 3rem!important;
+  }
+
+  h2 {
+    font-size: 2rem!important; 
+    margin-bottom: 0.5rem!important;
+    font-weight: lighter!important;
+  }
+
+  img {
+    margin-bottom: 2.5rem!important;
+    position: relative;
+    display: block; 
+    margin: 2.5rem auto; 
+    position: relative; 
+  }
