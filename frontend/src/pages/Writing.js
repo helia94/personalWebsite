@@ -1,7 +1,7 @@
 // File: src/pages/Writing.js
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { MobileViewContext } from "../context/MobileViewContext";
 import SecondarySidebar from "../components/SecondarySidebar";
 
@@ -60,6 +60,25 @@ function WritingHome() {
   );
 }
 
+
+function ArticlePageDate() {
+  const [articleHTML, setArticleHTML] = useState("");
+
+  useEffect(() => {
+    // Switch to an alternative proxy that works
+    const proxyUrl = "https://thingproxy.freeboard.io/fetch/";
+    const targetUrl = "https://medium.com/fourth-wave/how-to-transition-to-a-third-generation-of-online-dating-platforms-05315ddeb388?format=html";
+    fetch(proxyUrl + targetUrl)
+      .then((res) => res.text())
+      .then((html) => setArticleHTML(html))
+      .catch((err) => console.error("Fetch error:", err));
+  }, []);
+
+  return (
+    <div className="article-content" dangerouslySetInnerHTML={{ __html: articleHTML }} />
+  );
+}
+
 function ArticlePage() {
   return (
     <div>
@@ -82,7 +101,30 @@ export default function Writing({isMobile}) {
       <div className="content-area">
         <Routes>
           <Route path="/" element={<WritingHome />} />
-          <Route path=":category/:article" element={<ArticlePage />} />
+          {/* Tango Articles */}
+          <Route path="/tango/article-tango-1" element={<ArticlePage />} />
+          <Route path="/tango/article-tango-2" element={<ArticlePage />} />
+          <Route path="/tango/article-tango-3" element={<ArticlePage />} />
+
+          {/* Dating Articles */}
+          <Route path="/dating/article-dating-1" element={<ArticlePageDate />} />
+          <Route path="/dating/article-dating-2" element={<ArticlePage />} />
+          <Route path="/dating/article-dating-3" element={<ArticlePage />} />
+
+          {/* SmallTalk Articles */}
+          <Route path="/smalltalk/article-smalltalk-1" element={<ArticlePage />} />
+          <Route path="/smalltalk/article-smalltalk-2" element={<ArticlePage />} />
+          <Route path="/smalltalk/article-smalltalk-3" element={<ArticlePage />} />
+
+          {/* Personal Articles */}
+          <Route path="/personal/article-personal-1" element={<ArticlePage />} />
+          <Route path="/personal/article-personal-2" element={<ArticlePage />} />
+          <Route path="/personal/article-personal-3" element={<ArticlePage />} />
+
+          {/* Work Articles */}
+          <Route path="/work/article-work-1" element={<ArticlePage />} />
+          <Route path="/work/article-work-2" element={<ArticlePage />} />
+          <Route path="/work/article-work-3" element={<ArticlePage />} />
         </Routes>
       </div>
       }
