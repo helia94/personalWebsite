@@ -1,7 +1,10 @@
 // File: src/pages/Writing.js
 import React from "react";
+import { useState, useEffect, useContext } from "react";
 import { Routes, Route } from "react-router-dom";
 import SecondarySidebar from "../components/SecondarySidebar";
+
+import { MobileViewProvider, MobileViewContext } from "../context/MobileViewContext";
 
 export const writingData = [
   {
@@ -48,6 +51,7 @@ export const writingData = [
 ];
 
 function WritingHome() {
+  const { mobileView, setMobileView, contentIsVisibleMobile, toc1IsVisibleMobile, toc2IsVisibleMobile } = useContext(MobileViewContext);
   return (
     <div>
       <h2>Writing Overview</h2>
@@ -65,16 +69,25 @@ function ArticlePage() {
   );
 }
 
-export default function Writing() {
+export default function Writing({isMobile}) {
+    const { mobileView, setMobileView, contentIsVisibleMobile, toc2IsVisibleMobile } = useContext(MobileViewContext);
+    console.log("Writing: contentIsVisibleMobile: " + contentIsVisibleMobile)
+    console.log("Writing: toc2IsVisibleMobile: " + toc2IsVisibleMobile)
+
   return (
     <div className="content-with-sub">
-      <SecondarySidebar heading="Writing" categories={writingData} />
+      {(!isMobile || toc2IsVisibleMobile) && 
+      <SecondarySidebar heading="Writing" categories={writingData} isMobile={isMobile}/>
+      }
+      
+      {(!isMobile || contentIsVisibleMobile) && 
       <div className="content-area">
         <Routes>
           <Route path="/" element={<WritingHome />} />
           <Route path=":category/:article" element={<ArticlePage />} />
         </Routes>
       </div>
+      }
     </div>
   );
 }

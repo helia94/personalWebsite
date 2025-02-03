@@ -1,6 +1,7 @@
 // File: src/components/Sidebar.js
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect, useContext } from "react";
 import {
   FaHome,
   FaPenFancy,
@@ -10,6 +11,8 @@ import {
   FaExchangeAlt,
   FaUserFriends,
 } from "react-icons/fa";
+import { MobileViewProvider, MobileViewContext } from "../context/MobileViewContext";
+
 
 // Main Menu Items With Icons
 const menuItems = [
@@ -23,6 +26,8 @@ const menuItems = [
 ];
 
 export default function Sidebar({ activeMenu, setActiveMenu }) {
+  const { mobileView, setMobileView, contentIsVisibleMobile, toc1IsVisibleMobile } = useContext(MobileViewContext);
+  
   const navigate = useNavigate();
 
   const handleClick = (item) => {
@@ -36,7 +41,9 @@ export default function Sidebar({ activeMenu, setActiveMenu }) {
         <div
           key={item.name}
           className={`sidebar-item ${activeMenu === item.name ? "active" : ""}`}
-          onClick={() => handleClick(item)}
+          onClick={() => {handleClick(item);
+                          setMobileView("toc2")
+          }}
         >
           <span className="sidebar-icon">{item.icon}</span>
           <span className="sidebar-text">{item.name}</span>
