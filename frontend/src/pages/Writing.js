@@ -65,17 +65,32 @@ function ArticlePageDate() {
   const [articleHTML, setArticleHTML] = useState("");
 
   useEffect(() => {
-    // Switch to an alternative proxy that works
     const proxyUrl = "https://thingproxy.freeboard.io/fetch/";
-    const targetUrl = "https://medium.com/fourth-wave/how-to-transition-to-a-third-generation-of-online-dating-platforms-05315ddeb388?format=html";
+    const targetUrl =
+      "https://medium.com/fourth-wave/how-to-transition-to-a-third-generation-of-online-dating-platforms-05315ddeb388?format=html";
     fetch(proxyUrl + targetUrl)
       .then((res) => res.text())
-      .then((html) => setArticleHTML(html))
+      .then((htmlString) => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(htmlString, "text/html");
+
+        // Remove the Medium header using its unique data-testid attribute.
+        const headerLogo = doc.querySelector('[data-testid="headerMediumLogo"]');
+        if (headerLogo) {
+          // Remove the closest parent element (which wraps the entire header).
+          const headerContainer = headerLogo.closest("div");
+          if (headerContainer) headerContainer.remove();
+        }
+        setArticleHTML(doc.body.innerHTML);
+      })
       .catch((err) => console.error("Fetch error:", err));
   }, []);
 
   return (
-    <div className="article-content" dangerouslySetInnerHTML={{ __html: articleHTML }} />
+    <div
+      className="article-content"
+      dangerouslySetInnerHTML={{ __html: articleHTML }}
+    />
   );
 }
 
