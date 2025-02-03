@@ -71,8 +71,6 @@ function ArticlePage() {
 
 export default function Writing({isMobile}) {
     const {contentIsVisibleMobile, toc2IsVisibleMobile } = useContext(MobileViewContext);
-    console.log("Writing: contentIsVisibleMobile: " + contentIsVisibleMobile)
-    console.log("Writing: toc2IsVisibleMobile: " + toc2IsVisibleMobile)
 
   return (
     <div className="content-with-sub">

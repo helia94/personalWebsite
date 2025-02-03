@@ -30,10 +30,6 @@ function AppContent() {
     window.addEventListener("resize", checkMobile);
     checkMobile();
     setMobileView("main")
-    console.log("isMobile " + isMobile)
-    console.log("!isMobile " + !isMobile)
-    console.log("mobileView " + mobileView)
-    console.log("toc1IsVisibleMobile " + toc1IsVisibleMobile)
 
 
     return () => window.removeEventListener("resize", checkMobile);
