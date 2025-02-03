@@ -1,6 +1,8 @@
 // File: src/pages/Interactive.js
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import { useContext } from "react";
+import { MobileViewContext } from "../context/MobileViewContext";
 import SecondarySidebarBasic from "../components/SecondarySidebarBasic";
 import BookCalendar from "./interactive/BookCalendar";
 import AMA from "./interactive/AMA";
@@ -21,10 +23,13 @@ function InteractiveHome() {
   );
 }
 
-export default function Interactive() {
+export default function Interactive({isMobile}) {
+  const {contentIsVisibleMobile, toc2IsVisibleMobile } = useContext(MobileViewContext);
   return (
     <div className="content-with-sub">
-      <SecondarySidebarBasic heading="Interactive" items={interactiveItems} />
+      {(!isMobile || toc2IsVisibleMobile) && 
+      <SecondarySidebarBasic heading="Interactive" items={interactiveItems} />}
+      {(!isMobile || contentIsVisibleMobile) && 
       <div className="content-area">
         <Routes>
           <Route path="/" element={<InteractiveHome />} />
@@ -32,7 +37,7 @@ export default function Interactive() {
           <Route path="ama" element={<AMA />} />
           <Route path="share" element={<ShareMessage />} />
         </Routes>
-      </div>
+      </div>}
     </div>
   );
 }

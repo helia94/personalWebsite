@@ -1,7 +1,7 @@
 // File: src/components/Sidebar.js
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect, useContext } from "react";
+import {useContext } from "react";
 import {
   FaHome,
   FaPenFancy,
@@ -11,7 +11,7 @@ import {
   FaExchangeAlt,
   FaUserFriends,
 } from "react-icons/fa";
-import { MobileViewProvider, MobileViewContext } from "../context/MobileViewContext";
+import { MobileViewContext } from "../context/MobileViewContext";
 
 
 // Main Menu Items With Icons
@@ -26,7 +26,7 @@ const menuItems = [
 ];
 
 export default function Sidebar({ activeMenu, setActiveMenu }) {
-  const { mobileView, setMobileView, contentIsVisibleMobile, toc1IsVisibleMobile } = useContext(MobileViewContext);
+  const {setMobileView} = useContext(MobileViewContext);
   
   const navigate = useNavigate();
 

@@ -1,12 +1,12 @@
 // File: src/components/SecondarySidebar.js
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import { MobileViewProvider, MobileViewContext } from "../context/MobileViewContext";
+import { MobileViewContext } from "../context/MobileViewContext";
 
 
 export default function SecondarySidebar({ heading, categories, isMobile }) {
   const [expanded, setExpanded] = useState([]);
-  const { mobileView, setMobileView, contentIsVisibleMobile, toc2IsVisibleMobile } = useContext(MobileViewContext);
+  const { setMobileView } = useContext(MobileViewContext);
 
   const toggleExpand = (title) => {
     if (expanded.includes(title)) {

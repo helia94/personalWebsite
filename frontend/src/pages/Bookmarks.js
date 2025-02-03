@@ -1,6 +1,8 @@
 // File: src/pages/Bookmarks.js
 import React from "react";
-import { Routes, Route, useParams, Link } from "react-router-dom";
+import { Routes, Route, useParams } from "react-router-dom";
+import { useContext } from "react";
+import { MobileViewContext } from "../context/MobileViewContext";
 import SecondarySidebar from "../components/SecondarySidebar";
 import "./Bookmarks.css";
 
@@ -101,16 +103,19 @@ function BookmarkDetail() {
   );
 }
 
-export default function Bookmarks() {
+export default function Bookmarks({isMobile}) {
+    const {contentIsVisibleMobile, toc2IsVisibleMobile } = useContext(MobileViewContext);
   return (
     <div className="content-with-sub">
-      <SecondarySidebar heading="Bookmarks" categories={bookmarkCategories} />
+      {(!isMobile || toc2IsVisibleMobile) && 
+      <SecondarySidebar heading="Bookmarks" categories={bookmarkCategories} />}
+      {(!isMobile || contentIsVisibleMobile) && 
       <div className="content-area">
         <Routes>
           <Route path="/" element={<BookmarksHome />} />
           <Route path=":bookmarkId" element={<BookmarkDetail />} />
         </Routes>
-      </div>
+      </div>}
     </div>
   );
 }

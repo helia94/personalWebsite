@@ -1,6 +1,8 @@
 // File: src/pages/SocialMedia.js
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { useContext } from "react";
+import { Routes, Route } from "react-router-dom";
+import { MobileViewContext } from "../context/MobileViewContext";
 import SecondarySidebarBasic from "../components/SecondarySidebarBasic";
 
 const socialItems = [
@@ -52,16 +54,19 @@ function ExternalLink({ platform }) {
   );
 }
 
-export default function SocialMedia() {
+export default function SocialMedia({isMobile}) {
+    const {contentIsVisibleMobile, toc2IsVisibleMobile } = useContext(MobileViewContext);
   return (
     <div className="content-with-sub">
-      <SecondarySidebarBasic heading="Social Media" items={socialItems} />
+      {(!isMobile || toc2IsVisibleMobile) && 
+      <SecondarySidebarBasic heading="Social Media" items={socialItems} />}
+      {(!isMobile || contentIsVisibleMobile) && 
       <div className="content-area">
         <Routes>
           <Route path="/" element={<SocialHome />} />
           <Route path=":platform" element={<ExternalLink />} />
         </Routes>
-      </div>
+      </div>}
     </div>
   );
 }

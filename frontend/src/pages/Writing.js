@@ -1,10 +1,11 @@
 // File: src/pages/Writing.js
 import React from "react";
-import { useState, useEffect, useContext } from "react";
 import { Routes, Route } from "react-router-dom";
+import { useContext } from "react";
+import { MobileViewContext } from "../context/MobileViewContext";
 import SecondarySidebar from "../components/SecondarySidebar";
 
-import { MobileViewProvider, MobileViewContext } from "../context/MobileViewContext";
+
 
 export const writingData = [
   {
@@ -51,7 +52,6 @@ export const writingData = [
 ];
 
 function WritingHome() {
-  const { mobileView, setMobileView, contentIsVisibleMobile, toc1IsVisibleMobile, toc2IsVisibleMobile } = useContext(MobileViewContext);
   return (
     <div>
       <h2>Writing Overview</h2>
@@ -70,7 +70,7 @@ function ArticlePage() {
 }
 
 export default function Writing({isMobile}) {
-    const { mobileView, setMobileView, contentIsVisibleMobile, toc2IsVisibleMobile } = useContext(MobileViewContext);
+    const {contentIsVisibleMobile, toc2IsVisibleMobile } = useContext(MobileViewContext);
     console.log("Writing: contentIsVisibleMobile: " + contentIsVisibleMobile)
     console.log("Writing: toc2IsVisibleMobile: " + toc2IsVisibleMobile)
 

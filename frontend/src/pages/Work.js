@@ -1,6 +1,8 @@
 // File: src/pages/Work.js
 import React from "react";
+import { useContext } from "react";
 import { Routes, Route, useParams } from "react-router-dom";
+import { MobileViewContext } from "../context/MobileViewContext";
 import SecondarySidebarBasic from "../components/SecondarySidebarBasic";
 
 export const workItems = [
@@ -30,16 +32,19 @@ function WorkDetail() {
   );
 }
 
-export default function Work() {
+export default function Work({isMobile}) {
+    const {contentIsVisibleMobile, toc2IsVisibleMobile } = useContext(MobileViewContext);
   return (
     <div className="content-with-sub">
-      <SecondarySidebarBasic heading="Work" items={workItems} />
+      {(!isMobile || toc2IsVisibleMobile) && 
+      <SecondarySidebarBasic heading="Work" items={workItems} />}
+      {(!isMobile || contentIsVisibleMobile) && 
       <div className="content-area">
         <Routes>
           <Route path="/" element={<WorkHome />} />
           <Route path=":sectionId" element={<WorkDetail />} />
         </Routes>
-      </div>
+      </div>}
     </div>
   );
 }

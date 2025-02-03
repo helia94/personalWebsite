@@ -1,6 +1,8 @@
 // File: src/pages/Projects.js
 import React from "react";
+import { useContext } from "react";
 import { Routes, Route, useParams } from "react-router-dom";
+import { MobileViewContext } from "../context/MobileViewContext";
 import SecondarySidebarBasic from "../components/SecondarySidebarBasic";
 
 const projectItems = [
@@ -27,16 +29,19 @@ function ProjectDetail() {
   );
 }
 
-export default function Projects() {
+export default function Projects({isMobile}) {
+    const {contentIsVisibleMobile, toc2IsVisibleMobile } = useContext(MobileViewContext);
   return (
     <div className="content-with-sub">
-      <SecondarySidebarBasic heading="Projects" items={projectItems} />
+      {(!isMobile || toc2IsVisibleMobile) && 
+      <SecondarySidebarBasic heading="Projects" items={projectItems} />}
+      {(!isMobile || contentIsVisibleMobile) && 
       <div className="content-area">
         <Routes>
           <Route path="/" element={<ProjectsHome />} />
           <Route path=":projId" element={<ProjectDetail />} />
         </Routes>
-      </div>
+      </div>}
     </div>
   );
 }

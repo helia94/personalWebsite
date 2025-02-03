@@ -1,6 +1,8 @@
 // App.js
 import React, { useState, useEffect, useContext } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { FaBarsStaggered, FaBars  } from "react-icons/fa6";
+
 import Sidebar from "./components/Sidebar";
 import MainContent from "./components/MainContent";
 
@@ -42,8 +44,8 @@ function AppContent() {
       <div className="app-container">
         {isMobile && (
           <div className="mobile-header">
-            {mobileView === "toc2" && <button onClick={() => setMobileView("toc1")}>ToC1</button>}
-            {mobileView === "main" && <button onClick={() => setMobileView("toc2")}>ToC2</button>}
+            {mobileView === "toc2" && <button onClick={() => setMobileView("toc1")}><FaBars /></button>}
+            {mobileView === "main" && <button onClick={() => setMobileView("toc2")}><FaBarsStaggered /></button>}
           </div>
         )}
         {(!isMobile || toc1IsVisibleMobile) && (
@@ -61,11 +63,11 @@ function AppContent() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/writing/*" element={<Writing isMobile={isMobile}/>} />
-              <Route path="/bookmarks/*" element={<Bookmarks />} />
-              <Route path="/projects/*" element={<Projects />} />
-              <Route path="/work/*" element={<Work />} />
-              <Route path="/interactive/*" element={<Interactive />} />
-              <Route path="/social-media" element={<SocialMedia />} />
+              <Route path="/bookmarks/*" element={<Bookmarks isMobile={isMobile} />} />
+              <Route path="/projects/*" element={<Projects isMobile={isMobile} />} />
+              <Route path="/work/*" element={<Work isMobile={isMobile} />} />
+              <Route path="/interactive/*" element={<Interactive isMobile={isMobile} />} />
+              <Route path="/social-media" element={<SocialMedia isMobile={isMobile} />} />
             </Routes>
           </MainContent>
         )}
