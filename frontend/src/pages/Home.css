@@ -2,7 +2,7 @@
 
 .home-container {
     width: 100%;
-    color: #2F3E46;
+    color: #242424;
     font-family: ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
   }
   
@@ -33,7 +33,7 @@
     margin-bottom: 1.2rem;
     font-size: 1.6rem;
     font-weight: normal;
-    color: #52796F;
+    color: #242424;
   }
   
   .hero-text p {

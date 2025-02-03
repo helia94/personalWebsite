@@ -76,7 +76,7 @@
 .questions-section h3 {
   margin-bottom: 1rem;
   font-size: 1.6rem;
-  color: #2F3E46;
+  color: #242424;
 }
 
 .questions-list {
@@ -127,12 +127,12 @@
 
 .answer-label {
   font-weight: bold;
-  color: #2F3E46;
+  color: #242424;
   margin-right: 5px;
 }
 
 .answer-text {
-  color: #2F3E46;
+  color: #242424;
 }
 
 /* Answer form styling */
