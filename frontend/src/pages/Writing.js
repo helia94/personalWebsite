@@ -61,6 +61,7 @@ function WritingHome() {
 }
 
 
+
 function ArticlePageDate() {
   const [articleHTML, setArticleHTML] = useState("");
 
@@ -74,13 +75,13 @@ function ArticlePageDate() {
         const parser = new DOMParser();
         const doc = parser.parseFromString(htmlString, "text/html");
 
-        // Remove the Medium header using its unique data-testid attribute.
-        const headerLogo = doc.querySelector('[data-testid="headerMediumLogo"]');
-        if (headerLogo) {
-          // Remove the closest parent element (which wraps the entire header).
-          const headerContainer = headerLogo.closest("div");
-          if (headerContainer) headerContainer.remove();
-        }
+        // Remove all elements whose data-testid attribute starts with "header"
+        doc.querySelectorAll('[data-testid^="header"]').forEach((el) => el.remove());
+        
+        // In case there are additional wrappers, you can also try removing a known header container:
+        const headerContainer = doc.querySelector("header");
+        if (headerContainer) headerContainer.remove();
+
         setArticleHTML(doc.body.innerHTML);
       })
       .catch((err) => console.error("Fetch error:", err));
