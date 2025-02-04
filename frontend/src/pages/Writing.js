@@ -69,18 +69,22 @@ function MediumArticle(link) {
   const [articleHTML, setArticleHTML] = useState("");
 
   useEffect(() => {
-    const proxyUrl = "https://api.allorigins.win/get?url=" + encodeURIComponent(link);
+    const proxyUrl = "http://localhost:3001/proxy?url=" + encodeURIComponent(link);
     fetch(proxyUrl)
-      .then(res => res.json())
-      .then(data => {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(data.contents, "text/html");
-        doc.querySelectorAll('[data-testid^="header"]').forEach(el => el.remove());
-        doc.querySelectorAll("button").forEach(btn => btn.remove());
-        doc.querySelectorAll("svg").forEach(svg => svg.remove());
-        setArticleHTML(doc.body.innerHTML);
-      })
-      .catch(err => console.error("Fetch error:", err));
+    .then(res => res.text()) // ✅ Read response as text (HTML)
+    .then(html => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, "text/html");
+      
+      // Clean up unnecessary elements
+      doc.querySelectorAll('[data-testid^="header"]').forEach(el => el.remove());
+      doc.querySelectorAll("button").forEach(btn => btn.remove());
+      doc.querySelectorAll("svg").forEach(svg => svg.remove());
+      
+      setArticleHTML(doc.body.innerHTML);
+    })
+    .catch(err => console.error("Fetch error:", err));
+  
   }, []);
 
   return <div dangerouslySetInnerHTML={{ __html: articleHTML }} />;

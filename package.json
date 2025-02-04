@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "scripts": {
     "postinstall": "cd frontend && npm ci && npm run build",
+    "start": "concurrently --kill-others \"npm run start-backend\" \"npm run start-frontend\"",
+    "start-backend": "node frontend/server.js", 
+    "start-frontend": "serve -s frontend/build",  
     "analyze": "webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json"
-    
   }
 }
