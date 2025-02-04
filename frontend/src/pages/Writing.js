@@ -69,8 +69,13 @@ function MediumArticle(link) {
   const [articleHTML, setArticleHTML] = useState("");
 
   useEffect(() => {
-    const proxyUrl = "http://localhost:3001/proxy?url=" + encodeURIComponent(link);
-    fetch(proxyUrl)
+    const baseUrl = window.location.hostname === "localhost"
+    ? "http://localhost:3001"
+    : "https://jous.app";
+
+  const proxyUrl = `${baseUrl}/proxy?url=${encodeURIComponent(link)}`;
+
+  fetch(proxyUrl)
     .then(res => res.text()) // ✅ Read response as text (HTML)
     .then(html => {
       const parser = new DOMParser();
