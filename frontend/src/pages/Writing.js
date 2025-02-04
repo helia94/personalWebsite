@@ -69,37 +69,24 @@ function MediumArticle(link) {
   const [articleHTML, setArticleHTML] = useState("");
 
   useEffect(() => {
-    // Using an alternative proxy that injects CORS headers
-    const proxyUrl = "https://api.allorigins.hexocode.repl.co/get?disableCache=true&url=";
-    const targetUrl = encodeURIComponent(link);
-    fetch(proxyUrl + targetUrl)
-      .then((res) => {
-        if (!res.ok) throw new Error("Network response was not ok.");
-        return res.json();
-      })
-      .then((data) => {
-        const htmlString = data.contents;
+    const proxyUrl = "https://api.allorigins.win/get?url=" + encodeURIComponent(link);
+    fetch(proxyUrl)
+      .then(res => res.json())
+      .then(data => {
         const parser = new DOMParser();
-        const doc = parser.parseFromString(htmlString, "text/html");
-
-        // Clean up the article HTML
+        const doc = parser.parseFromString(data.contents, "text/html");
         doc.querySelectorAll('[data-testid^="header"]').forEach(el => el.remove());
-        const headerContainer = doc.querySelector("header");
-        if (headerContainer) headerContainer.remove();
-        doc.querySelectorAll("button, svg, .wq.ab.lk.jr").forEach(el => el.remove());
-
+        doc.querySelectorAll("button").forEach(btn => btn.remove());
+        doc.querySelectorAll("svg").forEach(svg => svg.remove());
         setArticleHTML(doc.body.innerHTML);
       })
-      .catch((err) => console.error("Fetch error:", err));
-  }, [link]);
+      .catch(err => console.error("Fetch error:", err));
+  }, []);
 
-  return (
-    <div
-      className="article-content"
-      dangerouslySetInnerHTML={{ __html: articleHTML }}
-    />
-  );
+  return <div dangerouslySetInnerHTML={{ __html: articleHTML }} />;
 }
+
+
 
 
 function ArticlePage() {
