@@ -3,7 +3,7 @@ const cors = require("cors");
 
 const app = express();
 
-const allowedOrigins = ["http://localhost:3000", "https://jous.app"];
+const allowedOrigins = ["http://localhost:3000", "http://heliajamshidi.me"];
 app.use(cors({ origin: allowedOrigins }));
 
 app.get("/proxy", async (req, res) => {
