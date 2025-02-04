@@ -69,32 +69,29 @@ function MediumArticle(link) {
   const [articleHTML, setArticleHTML] = useState("");
 
   useEffect(() => {
-    const proxyUrl = "https://thingproxy.freeboard.io/fetch/";
-    const targetUrl =
-    link;
+    // Using an alternative proxy that injects CORS headers
+    const proxyUrl = "https://api.allorigins.hexocode.repl.co/get?disableCache=true&url=";
+    const targetUrl = encodeURIComponent(link);
     fetch(proxyUrl + targetUrl)
-      .then((res) => res.text())
-      .then((htmlString) => {
+      .then((res) => {
+        if (!res.ok) throw new Error("Network response was not ok.");
+        return res.json();
+      })
+      .then((data) => {
+        const htmlString = data.contents;
         const parser = new DOMParser();
         const doc = parser.parseFromString(htmlString, "text/html");
 
-        // Remove all elements whose data-testid attribute starts with "header"
-        doc.querySelectorAll('[data-testid^="header"]').forEach((el) => el.remove());
-        
-        // In case there are additional wrappers, you can also try removing a known header container:
+        // Clean up the article HTML
+        doc.querySelectorAll('[data-testid^="header"]').forEach(el => el.remove());
         const headerContainer = doc.querySelector("header");
         if (headerContainer) headerContainer.remove();
-
-        doc.querySelectorAll("button").forEach(button => button.remove());
-        doc.querySelectorAll("svg").forEach(button => button.remove());
-        doc.querySelectorAll(".wq.ab.lk.jr").forEach(element => element.remove());
-
-      
+        doc.querySelectorAll("button, svg, .wq.ab.lk.jr").forEach(el => el.remove());
 
         setArticleHTML(doc.body.innerHTML);
       })
       .catch((err) => console.error("Fetch error:", err));
-  }, []);
+  }, [link]);
 
   return (
     <div
@@ -103,6 +100,7 @@ function MediumArticle(link) {
     />
   );
 }
+
 
 function ArticlePage() {
   return (
