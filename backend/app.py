@@ -1,7 +1,10 @@
 import os
+import asyncio
+import aiohttp
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from backend.database import db  # Import from the new database module
+import requests
 
 app = Flask(__name__)
 CORS(app)
@@ -63,6 +66,22 @@ def add_message():
     db.session.add(new_msg)
     db.session.commit()
     return jsonify({"message": "Message saved"}), 201
+
+
+async def fetch_async(url):
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as resp:
+            return await resp.text()
+
+@app.route("/proxy")
+def proxy():
+    target_url = request.args.get("url")
+    try:
+        loop = asyncio.get_event_loop()
+        text = loop.run_until_complete(fetch_async(target_url))
+        return text
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 # ... rest of your routes ...
 

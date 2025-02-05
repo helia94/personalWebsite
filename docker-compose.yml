@@ -12,12 +12,15 @@ services:
       - "5432:5432"
 
   backend:
-    build: ./backend
+    build: ./
     container_name: personal_backend
     environment:
       DATABASE_URL: postgresql://user:pass@db:5432/personaldb
       ADMIN_PASSWORD: secret123
+      PORT: 5000
     ports:
       - "5000:5000"
+    volumes:
+      - .:/app
     depends_on:
       - db

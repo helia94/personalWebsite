@@ -9,18 +9,16 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /app
 
 # Install dependencies
-COPY requirements.txt .
+COPY backend/requirements.txt ./
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy project
-COPY . .
+# Copy only the backend folder
+COPY backend /app/backend
 
 # Install Gunicorn
 RUN pip install gunicorn
 
-# Expose the port Heroku assigns
-EXPOSE $PORT
 
 # Command to run the app with Gunicorn
-CMD ["gunicorn", "--bind", "0.0.0.0:$PORT", "app:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "backend.app:app"]

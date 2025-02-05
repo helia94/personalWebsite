@@ -69,8 +69,8 @@ function MediumArticle(link) {
   const [articleHTML, setArticleHTML] = useState("");
 
   useEffect(() => {
-    const baseUrl = window.location.hostname === "localhost"
-    ? "http://localhost:3001"
+    const baseUrl = true
+    ? "http://localhost:5000"
     : "https://jous.app";
 
   const proxyUrl = `${baseUrl}/proxy?url=${encodeURIComponent(link)}`;
