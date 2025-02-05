@@ -139,7 +139,7 @@ function MediumArticle(link) {
 function ArticlePage() {
   return (
     <div>
-      <h2>Sample Writing Article</h2>
+      <h1>Sample Writing Article</h1>
       <p>This is some placeholder text for the writing article content.</p>
     </div>
   );

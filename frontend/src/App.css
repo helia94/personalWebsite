@@ -192,18 +192,31 @@ img {
 
 /* General Styling for Headings and Paragraphs */
 h1, h2, h3, h4 {
-  margin-bottom: 0.6rem;
   font-weight: bold;
   /*font-family: "Britti Sans", sans-serif;*/
 }
 
-h2 {
-  font-size: 4rem;
+h1 {
   margin-bottom: 3rem;
 }
 
-p {
+h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+
+h3 {
+  margin-bottom: 0.5rem;
+}
+
+
+.list-section {
   margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.2rem;
 }
 
 /* Example Home Page Styling */
