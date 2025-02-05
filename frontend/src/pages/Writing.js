@@ -1,6 +1,7 @@
 // File: src/pages/Writing.js
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import axios from 'axios'
 import { useContext, useState, useEffect } from "react";
 import { MobileViewContext } from "../context/MobileViewContext";
 import SecondarySidebar from "../components/SecondarySidebar";
@@ -62,6 +63,43 @@ function WritingHome() {
     </div>
   );
 }
+
+
+const MediumArticle2 = ({ rssFeed, targetSlug }) => {
+  const [article, setArticle] = useState(null)
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(
+          rssFeed
+        )}`
+      )
+      .then((res) => {
+        // Find the article whose link includes the target slug, or fallback to the first item
+        const found = res.data.items.find((item) =>
+          item.link.includes(targetSlug)
+        )
+        setArticle(found || res.data.items[0])
+      })
+      .catch((err) => console.error('Fetch error:', err))
+  }, [rssFeed, targetSlug])
+
+  if (!article) return <div>Loading...</div>
+
+  return (
+    <div>
+      <h1>{article.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: article.content }} />
+      <a href={article.link} target="_blank" rel="noopener noreferrer">
+        Read on Medium
+      </a>
+    </div>
+  )
+}
+
+
+
 
 
 
@@ -126,7 +164,10 @@ export default function Writing({isMobile}) {
           <Route path="/tango/article-tango-3" element={<ArticlePage />} />
 
           {/* Dating Articles */}
-          <Route path="/dating/online-dating" element={MediumArticle(linkToMedium3rdGeneration)} />
+          <Route path="/dating/online-dating" element={<MediumArticle2
+  rssFeed="https://medium.com/feed/@helia.jm"
+  targetSlug="how-to-transition-to-a-third-generation-of-online-dating-platforms"
+/>} />
           <Route path="/dating/article-dating-2" element={<ArticlePage />} />
           <Route path="/dating/article-dating-3" element={<ArticlePage />} />
 
@@ -141,8 +182,14 @@ export default function Writing({isMobile}) {
           <Route path="/personal/article-personal-3" element={<ArticlePage />} />
 
           {/* Work Articles */}
-          <Route path="/work/university" element={MediumArticle(linkToMediumUniversity)} />
-          <Route path="/work/vocation" element={MediumArticle(linkToMediumVocation)} />
+          <Route path="/work/university" element={<MediumArticle2
+  rssFeed="https://medium.com/feed/@helia.jm"
+  targetSlug="the-long-shadow-of-the-university"
+/>} />
+          <Route path="/work/vocation" element={<MediumArticle2
+                                                  rssFeed="https://medium.com/feed/@helia.jm"
+                                                  targetSlug="can-i-find-satisfying-work"
+                                                />} />
           <Route path="/work/article-work-3" element={<ArticlePage />} />
         </Routes>
       </div>
