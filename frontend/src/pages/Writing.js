@@ -69,7 +69,7 @@ function MediumArticle(link) {
   const [articleHTML, setArticleHTML] = useState("");
 
   useEffect(() => {
-    const baseUrl = true
+    const baseUrl = window.location.hostname === "localhost"
     ? "http://localhost:5000"
     : "https://jous.app";
 
