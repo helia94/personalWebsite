@@ -39,13 +39,13 @@ function Freelance() {
       <h1>Freelance</h1>
       <section className="freelance-intro" style={{ marginBottom: "3rem" }}>
         <p>
-          I decided to focus on building my own products, but until they become profitable, I support myself by offering specialized services. Until December 2024, I was a senior software engineer at PTV, a cloud software company with highly competitive optimization solutions for the logistics and delivery business, serving leading supermarkets and delivery services in Germany and the Benelux region.
+          I decided to focus on <em>building my own products</em>, but until they become profitable, I support myself by offering specialized services. Until December 2024, I was a senior software engineer at <em>PTV</em>, a cloud software company with highly competitive optimization solutions for the logistics and delivery business, serving leading supermarkets and delivery services in Germany and the Benelux region.
         </p>
       </section>
       <section className="speaking-section">
-        <h2>You can trust me with:</h2>
+        <h2>You can <em>trust</em> me with:</h2>
         <div className="list-section">
-          <h3>Operation Research</h3>
+          <h3>Operations Research</h3>
           <ul>
             <li>Solving your discrete (integer) optimization problems with linear programming and modern metaheuristics.</li>
             <li>Consulting to speed up your current discrete optimization solver.</li>
@@ -56,7 +56,7 @@ function Freelance() {
           <h3>ML / AI</h3>
           <ul>
             <li>Setting up your ML pipelines, from data gathering to evaluation, monitoring, and impact (Azure ML).</li>
-            <li>Fine-tuning open-source foundation models for your needs and deploying them on your local cloud.</li>
+            <li>Fine-tuning open-source <em>foundation models</em> for your needs and deploying them on your local cloud.</li>
           </ul>
         </div>
         <div className="list-section">
@@ -74,9 +74,17 @@ function Freelance() {
           </ul>
         </div>
       </section>
+      <section className="call-to-action" 
+      style={{ marginTop: "4rem", textAlign: "center", padding: "3rem", backgroundColor: "#f8f9fa", borderRadius: "8px" }}>
+        <p style={{ fontSize: "1.2rem", maxWidth: "600px", margin: "0 auto" }}>
+          If you need expert help in optimization, ML let's talk! 
+          I’m also happy to be recommended to anyone who could benefit from my expertise.
+        </p>
+      </section>
     </div>
   );
 }
+
 
 
 export default function Work({isMobile}) {
