@@ -1,6 +1,6 @@
 // TechStackShowcase.js
 import React from 'react';
-import './TechStack.css';
+import './TechStackShowcase.css';
 
 const logoImages = {
   languages: [
