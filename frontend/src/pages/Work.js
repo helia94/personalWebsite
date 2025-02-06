@@ -77,7 +77,7 @@ function Freelance() {
       <section className="call-to-action" 
       style={{ marginTop: "4rem", textAlign: "center", padding: "3rem", borderRadius: "8px" }}>
         <p style={{ fontSize: "1.2rem", maxWidth: "600px", margin: "0 auto" }}>
-          If you need expert help in optimization, ML let's talk! 
+          If you need expert help in optimization or ML, let's talk! 
           I’m also happy to be recommended to anyone who could benefit from my expertise.
         </p>
       </section>
