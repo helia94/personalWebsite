@@ -7,53 +7,48 @@ import { MobileViewContext } from "../context/MobileViewContext";
 import SecondarySidebar from "../components/SecondarySidebar";
 import "./writing.css"
 
-const linkToMedium3rdGeneration = "https://medium.com/fourth-wave/how-to-transition-to-a-third-generation-of-online-dating-platforms-05315ddeb388?format=html"
-const linkToMediumVocation = "https://medium.com/@helia.jm/can-i-find-satisfying-work-93385a3bcd41?format=html"
-const linkToMediumUniversity = "https://medium.com/@helia.jm/the-long-shadow-of-the-university-ec66129852ed?format=html"
-
 export const writingData = [
   {
     title: "Tango",
     items: [
-      { label: "Article Tango 1", route: "/writing/tango/article-tango-1" },
-      { label: "Article Tango 2", route: "/writing/tango/article-tango-2" },
-      { label: "Article Tango 3", route: "/writing/tango/article-tango-3" },
+      { label: "For Non-dancers", route: "/writing/tango/non-dancers" },
+      { label: "Teaching for Young Beginners", route: "/writing/tango/teaching" },
+      { label: "Tango Music", route: "/writing/tango/music" },
+      { label: "Learning Tango Faster", route: "/writing/tango/leaning" },
+      { label: "A Woman in Tango", route: "/writing/tango/woman-in-tango" },
+      { label: "Giving and Getting", route: "/writing/tango/giving-getting" },
+      { label: "Talking about Tango", route: "/writing/tango/questions" }
     ],
   },
   {
     title: "Dating",
     items: [
       { label: "Third Generation of Online Dating", route: "/writing/dating/online-dating" },
-      { label: "Article Dating 2", route: "/writing/dating/article-dating-2" },
-      { label: "Article Dating 3", route: "/writing/dating/article-dating-3" },
+      { label: "First Date Ideas", route: "/writing/dating/first-date" }
     ],
   },
   {
     title: "SmallTalk",
     items: [
-      { label: "Article SmallTalk 1", route: "/writing/smalltalk/article-smalltalk-1" },
-      { label: "Article SmallTalk 2", route: "/writing/smalltalk/article-smalltalk-2" },
-      { label: "Article SmallTalk 3", route: "/writing/smalltalk/article-smalltalk-3" },
+      { label: "Connection", route: "/writing/smalltalk/connection" },
+      { label: "Hard Not to SmallTalk", route: "/writing/smalltalk/smalltalk-sticks" }
     ],
   },
   {
     title: "Personal",
     items: [
-      { label: "Article Personal 1", route: "/writing/personal/article-personal-1" },
-      { label: "Article Personal 2", route: "/writing/personal/article-personal-2" },
-      { label: "Article Personal 3", route: "/writing/personal/article-personal-3" },
+      { label: "Article Personal 1", route: "/writing/personal/article-personal-1" }
     ],
   },
   {
     title: "Work",
     items: [
       { label: "Shadow of University", route: "/writing/work/university" },
-      { label: "Vocation", route: "/writing/work/vocation" },
-      { label: "Article Work 3", route: "/writing/work/article-work-3" },
+      { label: "Vocation", route: "/writing/work/vocation" }
     ],
   }
-  // etc...
 ];
+
 
 function WritingHome() {
   return (
@@ -65,7 +60,7 @@ function WritingHome() {
 }
 
 
-const MediumArticle2 = ({ rssFeed, targetSlug }) => {
+const MediumArticle = ({ rssFeed, targetSlug }) => {
   const [article, setArticle] = useState(null)
 
   useEffect(() => {
@@ -100,46 +95,10 @@ const MediumArticle2 = ({ rssFeed, targetSlug }) => {
 
 
 
-
-
-
-function MediumArticle(link) {
-  const [articleHTML, setArticleHTML] = useState("");
-
-  useEffect(() => {
-    const baseUrl = window.location.hostname === "localhost"
-    ? "http://localhost:5000"
-    : "https://jous.app";
-
-  const proxyUrl = `${baseUrl}/proxy?url=${encodeURIComponent(link)}`;
-
-  fetch(proxyUrl)
-    .then(res => res.text()) // ✅ Read response as text (HTML)
-    .then(html => {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, "text/html");
-      
-      // Clean up unnecessary elements
-      doc.querySelectorAll('[data-testid^="header"]').forEach(el => el.remove());
-      doc.querySelectorAll("button").forEach(btn => btn.remove());
-      doc.querySelectorAll("svg").forEach(svg => svg.remove());
-      
-      setArticleHTML(doc.body.innerHTML);
-    })
-    .catch(err => console.error("Fetch error:", err));
-  
-  }, []);
-
-  return <div dangerouslySetInnerHTML={{ __html: articleHTML }} />;
-}
-
-
-
-
-function ArticlePage() {
+function ArticlePage({ title }) {
   return (
     <div>
-      <h1>Sample Writing Article</h1>
+      <h1>{title}</h1>
       <p>This is some placeholder text for the writing article content.</p>
     </div>
   );
@@ -159,38 +118,37 @@ export default function Writing({isMobile}) {
         <Routes>
           <Route path="/" element={<WritingHome />} />
           {/* Tango Articles */}
-          <Route path="/tango/article-tango-1" element={<ArticlePage />} />
-          <Route path="/tango/article-tango-2" element={<ArticlePage />} />
-          <Route path="/tango/article-tango-3" element={<ArticlePage />} />
+          <Route path="/tango/non-dancers" element={<ArticlePage title= "For Non-dancers"/>} />
+          <Route path="/tango/teaching" element={<ArticlePage title= "Teaching for Young Beginners"/>} />
+          <Route path="/tango/music" element={<ArticlePage title= "Tango Music" />} />
+          <Route path="/tango/leaning" element={<ArticlePage title= "Learning Tango Faster" />} />
+          <Route path="/tango/woman-in-tango" element={<ArticlePage title= "A Woman in Tango" />} />
+          <Route path="/tango/giving-getting" element={<ArticlePage title= "Giving and Getting" />} />
+          <Route path="/tango/questions" element={<ArticlePage title= "Talking about Tango" />} />
 
           {/* Dating Articles */}
-          <Route path="/dating/online-dating" element={<MediumArticle2
+          <Route path="/dating/online-dating" element={<MediumArticle
   rssFeed="https://medium.com/feed/@helia.jm"
   targetSlug="how-to-transition-to-a-third-generation-of-online-dating-platforms"
 />} />
-          <Route path="/dating/article-dating-2" element={<ArticlePage />} />
-          <Route path="/dating/article-dating-3" element={<ArticlePage />} />
+          <Route path="/dating/first-date" element={<ArticlePage title= "First Date Ideas"/>} />
 
           {/* SmallTalk Articles */}
-          <Route path="/smalltalk/article-smalltalk-1" element={<ArticlePage />} />
-          <Route path="/smalltalk/article-smalltalk-2" element={<ArticlePage />} />
-          <Route path="/smalltalk/article-smalltalk-3" element={<ArticlePage />} />
+          <Route path="/smalltalk/connection" element={<ArticlePage title= "Conection"/>} />
+          <Route path="/smalltalk/smalltalk-sticks" element={<ArticlePage title= "It Is Hard Not to SmallTalk"/>} />
 
           {/* Personal Articles */}
-          <Route path="/personal/article-personal-1" element={<ArticlePage />} />
-          <Route path="/personal/article-personal-2" element={<ArticlePage />} />
-          <Route path="/personal/article-personal-3" element={<ArticlePage />} />
+          <Route path="/personal/article-personal-1" element={<ArticlePage title= "Personal Article 1"/>} />
 
           {/* Work Articles */}
-          <Route path="/work/university" element={<MediumArticle2
+          <Route path="/work/university" element={<MediumArticle
   rssFeed="https://medium.com/feed/@helia.jm"
   targetSlug="the-long-shadow-of-the-university"
 />} />
-          <Route path="/work/vocation" element={<MediumArticle2
+          <Route path="/work/vocation" element={<MediumArticle
                                                   rssFeed="https://medium.com/feed/@helia.jm"
                                                   targetSlug="can-i-find-satisfying-work"
                                                 />} />
-          <Route path="/work/article-work-3" element={<ArticlePage />} />
         </Routes>
       </div>
       }
