@@ -98,7 +98,7 @@ export default function Work({isMobile}) {
         <Routes>
           <Route path="/" element={<WorkHome />} />
           <Route path="/freelance" element={<Freelance/>} />
-          <Route path="/experience" element={<WorkDetail sectionId = "Expereince" />} />
+          <Route path="/experience" element={<WorkDetail sectionId = "Experience" />} />
           <Route path="/values" element={<WorkDetail sectionId = "Values" />} />
           <Route path="/work/collaborate" element={<WorkDetail sectionId = "Collaborate" />} />
         </Routes>
