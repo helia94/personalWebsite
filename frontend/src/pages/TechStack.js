@@ -29,96 +29,138 @@ const logoImages = {
     'https://res.cloudinary.com/dl9xg597r/image/upload/f_webp/q_auto:low/v1738880151/amazon-web-services_f0jfji.png'
   ],
   other: [
-    'https://res.cloudinary.com/dl9xg597r/image/upload/f_webp/q_auto:low/v1738880152/png-transparent-mongodb-original-wordmark-logo-icon-thumbnail_zh0mpy.png',
+    'https://res.cloudinary.com/dl9xg597r/image/upload/v1738882638/mongo_ljrzin.webp',
     'https://res.cloudinary.com/dl9xg597r/image/upload/f_webp/q_auto:low/v1738880153/postgresql-icon-1987x2048-v2fkmdaw_pdeg2m.png',
     'https://res.cloudinary.com/dl9xg597r/image/upload/f_webp/q_auto:low/v1738880155/aws-s3-icon-423x512-k9kb24sg_c41teg.png',
     'https://res.cloudinary.com/dl9xg597r/image/upload/f_webp/q_auto:low/v1738880156/0_xhLcTOIL9R45OLXF_wwsaxl.png',
     'https://res.cloudinary.com/dl9xg597r/image/upload/f_webp/q_auto:low/v1738880157/elasticsearch_zlydtw.svg',
-    'https://res.cloudinary.com/dl9xg597r/image/upload/f_webp/q_auto:low/v1738880157/png-clipart-logo-kibana-elasticsearch-kiba-text-presentation_x2v5u3.png',
+    'https://res.cloudinary.com/dl9xg597r/image/upload/v1738882638/elastic-kibana_dbxwqe.svg',
     'https://res.cloudinary.com/dl9xg597r/image/upload/f_webp/q_auto:low/v1738880158/sentry_cg89aj.svg'
   ]
 };
 
-// Map each logo to its corresponding technology name (in the same order)
 const techNames = {
   languages: ['Java', 'Kotlin', 'C++', 'C#', 'Python'],
-  practices: ['Test Driven', 'Domain Driven'],
+  practices: ['Test Driven Development', 'Domain Driven Development'],
   webApis: ['Quarkus', 'Flask', 'Spring Boot', 'Swagger', '.NET'],
   aiMlOps: ['Hugging Face', 'PyTorch', 'Azure-ML'],
   cloudInfra: ['Azure', 'AWS'],
   other: ['MongoDB', 'Postgres', 'S3', 'Grafana', 'Elastic', 'Kibana', 'Sentry']
 };
 
-const TechStack = () => {
+const categoryDisplayNames = {
+  languages: 'Programming Languages',
+  practices: 'Development Practices',
+  webApis: 'Web APIs',
+  aiMlOps: 'AI & MLOps',
+  cloudInfra: 'Cloud Infrastructure',
+  other: 'Other Tools'
+};
+
+const TechStackSections = () => {
   return (
     <>
-      {/* Inline styles for a self-contained component */}
+      {/* Inline styles for sectioned panels, left-aligned category labels, and custom hover text */}
       <style>{`
         .tech-stack-container {
           max-width: 1200px;
           margin: 0 auto;
           padding: 20px;
-          text-align: center;
-          font-family: Arial, sans-serif;
         }
-        .tech-stack-container h1 {
+        .tech-stack-header {
+          text-align: center;
+          margin-bottom: 40px;
+        }
+        .tech-stack-header h1 {
           font-size: 2.5rem;
           margin-bottom: 10px;
+          color: #333;
         }
-        .tech-stack-container p {
+        .tech-stack-header p {
           font-size: 1.2rem;
-          margin-bottom: 40px;
           color: #555;
         }
-        .tech-category {
+        .tech-category-section {
+          display: flex;
+          align-items: flex-start;
           margin-bottom: 40px;
+          background-color: #f9f9f9;
+          padding: 20px;
+          border-radius: 8px;
         }
-        .tech-category h2 {
-          font-size: 1.8rem;
-          margin-bottom: 20px;
-          text-transform: uppercase;
-          letter-spacing: 1px;
+        .tech-category-label {
+          flex: 0 0 200px;
+          text-align: left;
+          font-size: 1.4rem;
+          font-weight: bold;
+          color: #333;
+          margin-right: 20px;
+          display: flex;
+          align-items: center;
         }
         .tech-logo-grid {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
           gap: 20px;
+          flex-grow: 1;
         }
         .tech-logo {
-          width: 80px;
-          height: 80px;
+          position: relative;
+          width: 130px;
+          height: 130px;
+          background: #fff;
+          border: 1px solid #ddd;
+          border-radius: 10px;
           display: flex;
           align-items: center;
           justify-content: center;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          cursor: pointer;
+        }
+        .tech-logo:hover {
+          transform: scale(1.1);
+          box-shadow: 0 8px 15px rgba(0,0,0,0.1);
         }
         .tech-logo img {
-          max-width: 100%;
-          max-height: 100%;
-          transition: transform 0.3s ease;
+          max-width: 80%;
+          max-height: 80%;
         }
-        .tech-logo img:hover {
-          transform: scale(1.1);
+        .hover-text {
+          position: absolute;
+          bottom: -25px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: rgba(0, 0, 0, 0.7);
+          color: #fff;
+          padding: 2px 8px;
+          border-radius: 4px;
+          font-size: 0.8rem;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          pointer-events: none;
+          white-space: nowrap;
+        }
+        .tech-logo:hover .hover-text {
+          opacity: 1;
         }
       `}</style>
 
       <div className="tech-stack-container">
-        <h1>My Tech Stack</h1>
-        <p>
-          Crafting robust, scalable solutions with a modern blend of languages, frameworks, and best practices.
-        </p>
+        <div className="tech-stack-header">
+          <h2>My Tech Stack</h2>
+          <p>A snapshot of the technologies I use to build modern solutions.</p>
+        </div>
 
         {Object.keys(logoImages).map((category) => (
-          <div key={category} className="tech-category">
-            <h2>{category.charAt(0).toUpperCase() + category.slice(1)}</h2>
+          <div key={category} className="tech-category-section">
+            <div className="tech-category-label">
+              {categoryDisplayNames[category]}
+            </div>
             <div className="tech-logo-grid">
-              {logoImages[category].map((imgSrc, index) => (
+              {logoImages[category].map((src, index) => (
                 <div key={index} className="tech-logo">
-                  <img
-                    src={imgSrc}
-                    alt={techNames[category][index]}
-                    title={techNames[category][index]}
-                  />
+                  <img src={src} alt={techNames[category][index]} />
+                  <div className="hover-text">{techNames[category][index]}</div>
                 </div>
               ))}
             </div>
@@ -129,4 +171,4 @@ const TechStack = () => {
   );
 };
 
-export default TechStack;
+export default TechStackSections;

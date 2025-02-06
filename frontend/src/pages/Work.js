@@ -12,7 +12,6 @@ import "./Home.css";
 export const workItems = [
   { label: "Freelance", route: "/work/freelance" },
   { label: "Experience", route: "/work/experience"},
-  { label: "Values", route: "/work/values"},
   { label: "Collaborate", route: "/work/collaborate"},
 ];
 
@@ -113,7 +112,6 @@ export default function Work({isMobile}) {
           <Route path="/" element={<WorkHome />} />
           <Route path="/freelance" element={<Freelance/>} />
           <Route path="/experience" element={<TechStack/>} />
-          <Route path="/values" element={<WorkDetail sectionId = "Values" />} />
           <Route path="/collaborate" element={<WorkDetail sectionId = "Collaborate" />} />
         </Routes>
       </div>}
