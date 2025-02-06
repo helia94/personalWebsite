@@ -1,6 +1,4 @@
-// TechStackShowcase.js
 import React from 'react';
-import './TechStackShowcase.css';
 
 const logoImages = {
   languages: [
@@ -41,44 +39,94 @@ const logoImages = {
   ]
 };
 
+// Map each logo to its corresponding technology name (in the same order)
 const techNames = {
   languages: ['Java', 'Kotlin', 'C++', 'C#', 'Python'],
   practices: ['Test Driven', 'Domain Driven'],
-  webApis: ['Quarkus', 'Flask', 'Spring Boot', 'Swagger', '.Net'],
+  webApis: ['Quarkus', 'Flask', 'Spring Boot', 'Swagger', '.NET'],
   aiMlOps: ['Hugging Face', 'PyTorch', 'Azure-ML'],
   cloudInfra: ['Azure', 'AWS'],
   other: ['MongoDB', 'Postgres', 'S3', 'Grafana', 'Elastic', 'Kibana', 'Sentry']
 };
 
-const TechStackShowcase = () => {
+const TechStack = () => {
   return (
-    <div className="tech-stack-showcase">
-      <h1>My Tech Stack</h1>
-      <p>
-        Explore the technologies I work with. The logos move dynamically to highlight my continuous innovation.
-      </p>
-      {Object.keys(logoImages).map((category) => (
-        <div key={category} className="tech-row">
-          <h2>{category}</h2>
-          <div className="marquee">
-            <div className="marquee-content">
-              {logoImages[category].map((logo, idx) => (
-                <div key={idx} className="tech-logo">
-                  <img src={logo} alt={techNames[category][idx]} title={techNames[category][idx]} />
-                </div>
-              ))}
-              {/* Duplicate for seamless looping */}
-              {logoImages[category].map((logo, idx) => (
-                <div key={`dup-${idx}`} className="tech-logo">
-                  <img src={logo} alt={techNames[category][idx]} title={techNames[category][idx]} />
+    <>
+      {/* Inline styles for a self-contained component */}
+      <style>{`
+        .tech-stack-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px;
+          text-align: center;
+          font-family: Arial, sans-serif;
+        }
+        .tech-stack-container h1 {
+          font-size: 2.5rem;
+          margin-bottom: 10px;
+        }
+        .tech-stack-container p {
+          font-size: 1.2rem;
+          margin-bottom: 40px;
+          color: #555;
+        }
+        .tech-category {
+          margin-bottom: 40px;
+        }
+        .tech-category h2 {
+          font-size: 1.8rem;
+          margin-bottom: 20px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+        .tech-logo-grid {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 20px;
+        }
+        .tech-logo {
+          width: 80px;
+          height: 80px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .tech-logo img {
+          max-width: 100%;
+          max-height: 100%;
+          transition: transform 0.3s ease;
+        }
+        .tech-logo img:hover {
+          transform: scale(1.1);
+        }
+      `}</style>
+
+      <div className="tech-stack-container">
+        <h1>My Tech Stack</h1>
+        <p>
+          Crafting robust, scalable solutions with a modern blend of languages, frameworks, and best practices.
+        </p>
+
+        {Object.keys(logoImages).map((category) => (
+          <div key={category} className="tech-category">
+            <h2>{category.charAt(0).toUpperCase() + category.slice(1)}</h2>
+            <div className="tech-logo-grid">
+              {logoImages[category].map((imgSrc, index) => (
+                <div key={index} className="tech-logo">
+                  <img
+                    src={imgSrc}
+                    alt={techNames[category][index]}
+                    title={techNames[category][index]}
+                  />
                 </div>
               ))}
             </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </>
   );
 };
 
-export default TechStackShowcase;
+export default TechStack;

@@ -1,63 +1,73 @@
 /* TechStackShowcase.css */
 .tech-stack-showcase {
-  padding: 20px;
+  padding: 40px 20px;
   text-align: center;
-  background: #f9f9f9;
-  font-family: sans-serif;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  font-family: 'Roboto', sans-serif;
+  color: #333;
 }
 
 .tech-stack-showcase h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .tech-stack-showcase p {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-  color: #555;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
 }
 
 .tech-row {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  overflow: hidden;
+  position: relative;
 }
 
 .tech-row h2 {
   font-size: 1.8rem;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   text-transform: capitalize;
+  position: relative;
+  z-index: 2;
 }
 
 .marquee {
   overflow: hidden;
   position: relative;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px 0;
 }
 
 .marquee-content {
   display: flex;
-  width: max-content;
-  animation: scroll-right 20s linear infinite;
+  animation: marquee 20s linear infinite;
 }
 
 .tech-logo {
-  margin: 0 20px;
+  margin: 0 30px;
   flex-shrink: 0;
-  position: relative;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .tech-logo img {
-  height: 50px;
-  transition: transform 0.3s;
+  height: 60px;
+  width: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
 }
 
-.tech-logo:hover img {
+.tech-logo:hover {
   transform: scale(1.1);
 }
 
-@keyframes scroll-right {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+.tech-logo:hover img {
+  filter: grayscale(0%);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
