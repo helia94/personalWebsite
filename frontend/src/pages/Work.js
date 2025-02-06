@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { MobileViewContext } from "../context/MobileViewContext";
 import SecondarySidebarBasic from "../components/SecondarySidebarBasic";
+import TechStack from "./TechStack"
 import "./Home.css";
 
 
@@ -111,9 +112,9 @@ export default function Work({isMobile}) {
         <Routes>
           <Route path="/" element={<WorkHome />} />
           <Route path="/freelance" element={<Freelance/>} />
-          <Route path="/experience" element={<WorkDetail sectionId = "Experience" />} />
+          <Route path="/experience" element={<TechStack/>} />
           <Route path="/values" element={<WorkDetail sectionId = "Values" />} />
-          <Route path="/work/collaborate" element={<WorkDetail sectionId = "Collaborate" />} />
+          <Route path="/collaborate" element={<WorkDetail sectionId = "Collaborate" />} />
         </Routes>
       </div>}
     </div>
