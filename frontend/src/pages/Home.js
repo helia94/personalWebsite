@@ -3,8 +3,6 @@ import React from "react";
 import "./Home.css";
 
 export default function Home() {
-
-
   return (
     <div className="home-container">
       {/* Hero Section */}
@@ -13,30 +11,29 @@ export default function Home() {
           <h1>Helia Jamshidi</h1>
           <h2>Freelance Software Engineer • Creator • Tango Dancer</h2>
           <p>
-            Starting entrepreneurial journey, and supporting myself with freelancing at the moment.
+            Starting my entrepreneurial journey, currently supporting myself through freelancing.
           </p>
         </div>
       </div>
 
       {/* About Section */}
       <div className="about-section">
-        <h2>Building community</h2>
+        <h2>Building Community</h2>
 
         <p>
-          Hi. This is Helia. Welcome to my digital space. This is not a portfolio website please vitit the work tab for that. 
-          This is my attempt to occupy a digital space as a human, not just a professional. 
-          I’m training myself to publish awful first drafts, and since I started this website in February of 2025, it’s still awful—but I’m committed to exposing this first draft.
+          Hi, this is Helia. Welcome to my digital space. This is not a portfolio website; please visit the work tab for that. 
+          This space is my attempt to exist digitally as a human, not just as a professional. 
+          I’m training myself to publish rough first drafts. Since I started this website in February 2025, it’s still rough—but I’m committed to improving it.
         </p>
         <p>
           I know most of you don’t have a lot of time. That’s okay. My target reader is the rare person—maybe one in a hundred—who wants to make time for me in their life. 
           The purpose of this homepage is to explain who I am and what I desire most from you, and how I can include you in my life.
         </p>
         <p>
-          I’m an Iranian born and raised woman. I moved to Holland when I was 23, and two days later I moved to Karlsruhe, Germany, where I’ve now lived for more than four years. 
-          After all this time, I have a happy personal life, but my connection to the city and the people around me remains minimal, and I want that to change. 
-          This website is here to give you a taste of me so you can decide if you want to be part of my future—if you want to be a friend, if you want to get to know me, 
-          if you want me to get to know you, or if we can do something together and stay connected.
-        </p>
+          I’m an Iranian-born woman who moved to the Netherlands at 23, and three years later to Karlsruhe, Germany, where I’ve lived for over four years. 
+          While I have a fulfilling personal life, my connection to the city and its people is minimal, and I want that to change.
+          This website offers a glimpse of who I am, helping you decide if you want to get to know me, if you want me to know you, or if we can do something together and stay connected.
+          </p>
         <p>
           I once spent a week in Lisbon and two weeks in Berlin, and I met so many people so fast. It made me sad to realize how much more spark 
           I had in those short trips than I’ve had in four years in Karlsruhe. It feels like something I can change, and I’m determined to try.
@@ -79,34 +76,31 @@ export default function Home() {
 
       {/* Books Section */}
       <div className="books-section">
-        <h2>Favorite Books &amp; Podcats</h2>
+        <h2>Favorite Books & Podcasts</h2>
         <div className="book-grid">
           <div className="book-card">
             <img
               src="https://res.cloudinary.com/dl9xg597r/image/upload/f_webp/q_auto:low/v1738793047/EconTalk_viuikc.png"
-              alt="Mating in Captivity"
+              alt="EconTalk"
             />
             <h4>EconTalk</h4>
-            <p>Been a listener for ten years. Has strongly shaped my world view.</p>
-            {/*<button className="visit-page-button">Visit Page</button>*/}
+            <p>Been a listener for ten years. It has strongly shaped my worldview.</p>
           </div>
           <div className="book-card">
             <img
               src="https://res.cloudinary.com/dl9xg597r/image/upload/f_webp/q_auto:low/v1738793047/ab6765630000ba8addba47c1c103baae10e6b258_dw8jqq.jpg"
-              alt="The State of Affairs"
+              alt="Conversations with Tyler"
             />
             <h4>Conversations with Tyler</h4>
-            <p>Tyler has an unmatched depth and breadth about cultur.</p>
-            {/*<button className="visit-page-button">Visit Page</button>*/}
+            <p>Tyler offers an unmatched depth and breadth of cultural knowledge.</p>
           </div>
           <div className="book-card">
             <img
               src="https://res.cloudinary.com/dl9xg597r/image/upload/f_webp/q_auto:low/v1738793047/unnamed_ynerzm.jpg"
-              alt="The State of Affairs"
+              alt="Come As You Are"
             />
             <h4>Come As You Are</h4>
-            <p>The one book I would wish everyone would read. The book feels like a warm hug.</p>
-            {/*<button className="visit-page-button">Visit Page</button>*/}
+            <p>This book, which feels like a warm hug, is one I wish everyone would read.</p>
           </div>
           <div className="book-card">
             <img
@@ -114,8 +108,7 @@ export default function Home() {
               alt="How Emotions Are Made"
             />
             <h4>How Emotions Are Made</h4>
-            <p>I had the feeling Lisa Feldman went to great lengths to prove herself wrong—a rare trait among scientists in complex fields.</p>
-            {/*<button className="visit-page-button">Visit Page</button>*/}
+            <p>Lisa Feldman Barrett goes to great lengths to challenge her own theories—a rare trait among scientists in complex fields.</p>
           </div>
         </div>
       </div>
@@ -124,14 +117,14 @@ export default function Home() {
       <div className="sample-images-section">
         <h2>Projects</h2>
         <div className="image-gallery">
-        <a href="https://jous.app" target="_blank" rel="noopener noreferrer">
+          <a href="https://jous.app" target="_blank" rel="noopener noreferrer">
             <img
               key={0}
-              src={"https://res.cloudinary.com/dl9xg597r/image/upload/f_webp/q_auto:low/v1738794201/Screenshot_2025-01-29_210213_amqqyk.png"}
-              alt={`Sample 1`}
+              src="https://res.cloudinary.com/dl9xg597r/image/upload/f_webp/q_auto:low/v1738794201/Screenshot_2025-01-29_210213_amqqyk.png"
+              alt="Sample 1"
               className="gallery-image"
             />
-            </a>
+          </a>
         </div>
       </div>
 
