@@ -1,10 +1,12 @@
 // File: src/pages/Work.js
 import React from "react";
 import { useContext } from "react";
-import { Routes, Route, useParams } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import { MobileViewContext } from "../context/MobileViewContext";
 import SecondarySidebarBasic from "../components/SecondarySidebarBasic";
 import "./Home.css";
+
+
 
 export const workItems = [
   { label: "Freelance", route: "/work/freelance" },
@@ -33,7 +35,15 @@ function WorkDetail({ sectionId }) {
 
 
 
+
 function Freelance() {
+
+  const navigate = useNavigate();
+
+  const handleBookTime = () => {
+    navigate('/interactive/book');
+  };
+
   return (
     <div>
       <h1>Freelance</h1>
@@ -76,10 +86,13 @@ function Freelance() {
       </section>
       <section className="call-to-action" 
       style={{ marginTop: "4rem", textAlign: "center", padding: "3rem", borderRadius: "8px" }}>
-        <p style={{ fontSize: "1.2rem", maxWidth: "600px", margin: "0 auto" }}>
+        <p style={{ fontSize: "1.2rem", maxWidth: "600px", margin: "0 auto" , marginBottom: "2rem"}}>
           If you need expert help in optimization or ML, let's talk! 
-          I’m also happy to be recommended to anyone who could benefit from my expertise.
+          I’m also happy to be recommended to anyone who could benefit from my skills.
         </p>
+        <button type="submit" className="submit-button" onClick={handleBookTime}>
+            Book an Introductory Session
+          </button>
       </section>
     </div>
   );
