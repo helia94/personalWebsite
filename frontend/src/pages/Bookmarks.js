@@ -12,16 +12,28 @@ export const bookmarkCategories = [
     title: "Book",
     items: [
       {
-        label: "Cool Site",
-        route: "/bookmarks/cool-site",
-        logoUrl:
-          "https://res.cloudinary.com/demo/image/upload/w_40,h_40/v1/cool_site_logo.png",
+        label: "Come As You Are",
+        route: "/bookmarks/come-as-you-are"
       },
       {
-        label: "Warm Site",
-        route: "/bookmarks/warm-site",
-        logoUrl:
-          "https://res.cloudinary.com/demo/image/upload/w_40,h_40/v1/cool_site_logo.png",
+        label: "How Emotions Are Made",
+        route: "/bookmarks/how-emotions-are-made"
+      },
+      {
+        label: "Why We Sleep",
+        route: "/bookmarks/why-we-sleep"
+      },
+      {
+        label: "Being You",
+        route: "/bookmarks/being-you"
+      },
+      {
+        label: "The Song Of Significance",
+        route: "/bookmarks/the-song-of-significance"
+      },
+      {
+        label: "Tribes",
+        route: "/bookmarks/tribes"
       },
     ],
   },
@@ -29,24 +41,38 @@ export const bookmarkCategories = [
     title: "Podcast",
     items: [
       {
-        label: "Talk Podcast",
-        route: "/bookmarks/talk-podcast",
-        logoUrl:
-          "https://res.cloudinary.com/demo/image/upload/w_40,h_40/v1/talk_podcast_logo.png",
+        label: "EconTalk",
+        route: "/bookmarks/econtalk"
       },
-      // Add more podcast-related bookmarks here
+      {
+        label: "Conversations with Tyler",
+        route: "/bookmarks/conversations-with-tyler"
+      },
+      {
+        label: "Akimbo",
+        route: "/bookmarks/akimbo"
+      },
+      {
+        label: "Where do we begin",
+        route: "/bookmarks/where-do-we-begin"
+      },
     ],
   },
   {
     title: "Web",
     items: [
       {
-        label: "Fun Blog",
-        route: "/bookmarks/fun-blog",
-        logoUrl:
-          "https://res.cloudinary.com/demo/image/upload/w_40,h_40/v1/fun_blog_logo.png",
+        label: "Epicllama",
+        route: "/bookmarks/epicllama"
       },
-      // Add more web-related bookmarks here
+      {
+        label: "Perfect Socks",
+        route: "/bookmarks/perfect-socks"
+      },
+      {
+        label: "Perfect Chair",
+        route: "/bookmarks/perfect-chair"
+      },
     ],
   },
   // Add more categories if needed
@@ -63,24 +89,155 @@ function BookmarksHome() {
 
 function BookmarkDetail() {
   const { bookmarkId } = useParams();
+
+  // Create an entry for every bookmark in bookmarkCategories.
+  // The keys here (e.g. "come-as-you-are") match the last segment of the route.
   const bookmarksInfo = {
-    "cool-site": {
-      name: "Cool Site",
-      url: "https://example.com",
-      description: "A cool site for awesome content.",
+    "come-as-you-are": {
+      name: "Come As You Are",
+      url: "https://www.amazon.com/Come-You-Are-Surprising-Science/dp/1472157238",
+      description: () => (
+        <div>
+          <p>
+            A groundbreaking book that explores the science of sexuality and how understanding your body can transform your life.
+          </p>
+        </div>
+      )
     },
-    "fun-blog": {
-      name: "Fun Blog",
-      url: "https://blog.example.com",
-      description: "A blog filled with fun and engaging posts.",
+    "how-emotions-are-made": {
+      name: "How Emotions Are Made",
+      url: "https://www.amazon.com/How-Emotions-Are-Made-Secret/dp/0547677984",
+      description: () => (
+        <div>
+          <p>
+            An insightful exploration into the construction of emotions that challenges conventional wisdom and reshapes how we feel.
+          </p>
+        </div>
+      )
     },
-    "talk-podcast": {
-      name: "Talk Podcast",
-      url: "https://podcasts.example.com",
-      description: "A podcast where interesting topics are discussed.",
+    "why-we-sleep": {
+      name: "Why We Sleep",
+      url: "https://www.amazon.com/Why-We-Sleep-Matthew-Walker/dp/1501144316",
+      description: () => (
+        <div>
+          <p>
+            A fascinating look at the vital importance of sleep and its impact on every aspect of our health and well-being.
+          </p>
+        </div>
+      )
     },
-    // Add more bookmark details here
+    "being-you": {
+      name: "Being You",
+      url: "https://www.amazon.com/Being-You-Consciousness-Explained-Experience/dp/024136720X",
+      description: () => (
+        <div>
+          <p>
+            An exploration into the nature of consciousness and what it truly means to be yourself in a complex world.
+          </p>
+        </div>
+      )
+    },
+    "the-song-of-significance": {
+      name: "The Song Of Significance",
+      url: "https://www.amazon.com/dp/placeholder", // Replace with the correct URL when available
+      description: () => (
+        <div>
+          <p>
+            A deep dive into the hidden meanings behind music and art, exploring how significance is woven into our culture.
+          </p>
+        </div>
+      )
+    },
+    "tribes": {
+      name: "Tribes",
+      url: "https://www.sethgodin.com/books/tribes",
+      description: () => (
+        <div>
+          <p>
+            A compelling look at leadership and the power of communities, urging readers to find and lead their own tribes.
+          </p>
+        </div>
+      )
+    },
+    "econtalk": {
+      name: "EconTalk",
+      url: "https://www.econtalk.org",
+      description: () => (
+        <div>
+          <p>
+            A long-running podcast that delves into economics, philosophy, and human behavior through engaging conversations.
+          </p>
+        </div>
+      )
+    },
+    "conversations-with-tyler": {
+      name: "Conversations with Tyler",
+      url: "https://conversationswithtyler.com",
+      description: () => (
+        <div>
+          <p>
+            A thought-provoking podcast featuring interviews with some of the most influential thinkers in economics and culture.
+          </p>
+        </div>
+      )
+    },
+    "akimbo": {
+      name: "Akimbo",
+      url: "https://akimbo.link",
+      description: () => (
+        <div>
+          <p>
+            A podcast that challenges conventional wisdom and offers fresh insights into business, culture, and innovation.
+          </p>
+        </div>
+      )
+    },
+    "where-do-we-begin": {
+      name: "Where do we begin",
+      url: "https://wheredowebegin.org",
+      description: () => (
+        <div>
+          <p>
+            An intimate podcast exploring the beginnings of meaningful conversations and relationships, inviting reflection on life’s pivotal moments.
+          </p>
+        </div>
+      )
+    },
+    "epicllama": {
+      name: "Epicllama",
+      url: "https://www.epicllama.com",
+      description: () => (
+        <div>
+          <p>
+            A quirky website that offers creative insights and a fresh perspective on modern culture.
+          </p>
+        </div>
+      )
+    },
+    "perfect-socks": {
+      name: "Perfect Socks",
+      url: "https://www.perfectsocks.com",
+      description: () => (
+        <div>
+          <p>
+            Here are a pair of perfect home socks. (I dare you to find better).
+          </p>
+        </div>
+      )
+    },
+    "perfect-chair": {
+      name: "Perfect Chair",
+      url: "https://www.perfectchair.com",
+      description: () => (
+        <div>
+          <p>
+            This chair is perfection. (I dare you to find better). And no I do not have it, I just sat on it.
+          </p>
+        </div>
+      )
+    }
   };
+
   const info = bookmarksInfo[bookmarkId] || {};
 
   return (
@@ -94,28 +251,33 @@ function BookmarkDetail() {
           Visit Page
         </button>
       )}
-      <p>
-        {info.description
-          ? info.description
-          : `This is a short description for ${info.name || "the bookmark"}.`}
-      </p>
+      {info.description ? (
+        // Render the description component
+        <info.description />
+      ) : (
+        <p>
+          {`This is a short description for ${info.name || "the bookmark"}.`}
+        </p>
+      )}
     </div>
   );
 }
 
-export default function Bookmarks({isMobile}) {
-    const {contentIsVisibleMobile, toc2IsVisibleMobile } = useContext(MobileViewContext);
+export default function Bookmarks({ isMobile }) {
+  const { contentIsVisibleMobile, toc2IsVisibleMobile } = useContext(MobileViewContext);
   return (
     <div className="content-with-sub">
-      {(!isMobile || toc2IsVisibleMobile) && 
-      <SecondarySidebar heading="Bookmarks" categories={bookmarkCategories} />}
-      {(!isMobile || contentIsVisibleMobile) && 
-      <div className="content-area">
-        <Routes>
-          <Route path="/" element={<BookmarksHome />} />
-          <Route path=":bookmarkId" element={<BookmarkDetail />} />
-        </Routes>
-      </div>}
+      {(!isMobile || toc2IsVisibleMobile) && (
+        <SecondarySidebar heading="Bookmarks" categories={bookmarkCategories} />
+      )}
+      {(!isMobile || contentIsVisibleMobile) && (
+        <div className="content-area">
+          <Routes>
+            <Route path="/" element={<BookmarksHome />} />
+            <Route path=":bookmarkId" element={<BookmarkDetail />} />
+          </Routes>
+        </div>
+      )}
     </div>
   );
 }
