@@ -14,6 +14,8 @@
     align-items: center;
     justify-content: flex-start;
     padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 1rem;
   }
   
   .hero-text {
@@ -61,6 +63,8 @@
   .about-section {
     padding: 2rem 5%;
     background: #f9f9f9;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
   
   .about-section h2 {
