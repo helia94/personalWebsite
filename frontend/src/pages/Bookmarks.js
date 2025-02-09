@@ -81,8 +81,40 @@ export const bookmarkCategories = [
 function BookmarksHome() {
   return (
     <div>
-      <h2>Bookmarks</h2>
-      <p>Choose a bookmark from the sidebar to explore.</p>
+      <h1>Books Overview</h1>
+      <p>
+        I think people's perspectives on life and things that interest them are so diverse that hardly any material or book can be recommended without knowing their context. But I have come to make some exceptions only because I wish someone had given me these earlier in my life. We are very different, yet we share at least some biology and we also share the systems that we live in.
+      </p>
+      <section className="speaking-section">
+        <div>
+          <h3>How the brain works:</h3>
+          <div className="list-section">
+            <ul>
+              <li><i>Big Magic</i> is a tale of how fear and creativity work.</li>
+              <li><i>Come As You Are</i> is your brain’s account of sexuality.</li>
+              <li><i>Being You</i> is all about understanding perception, either perception of objects or perception of self.</li>
+              <li><i>How Emotions Are Made</i> shows exactly what’s in the title.</li>
+              <li><i>Why We Sleep</i> does the same.</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <h3>How the systems we live in work:</h3>
+          <div className="list-section">
+            <ul>
+              <li><i>This Is Strategy</i>, <i>Tribe</i>, and <i>The Song Of Significance</i> all by <b>Seth Godin</b> have excellent formulations of the different kinds of systems we have all around us, starting from a family to the globe.</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <h3>How the body works:</h3>
+          <div className="list-section">
+            <ul>
+              <li><i>Outlive</i> by <b>Pere Attia</b>, is a new way of looking at the body and long-term planning for our old age.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
