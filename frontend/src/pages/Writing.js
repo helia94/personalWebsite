@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import axios from 'axios'
 import { useContext, useState, useEffect } from "react";
 import { MobileViewContext } from "../context/MobileViewContext";
+import SecondarySidebar from "../components/SecondarySidebar";
 
 export const writingData = [
   {
