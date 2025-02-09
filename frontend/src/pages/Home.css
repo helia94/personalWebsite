@@ -26,23 +26,7 @@
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
   
-  .hero-text h1 {
-    margin-bottom: 0.5rem;
-    font-size: 2.8rem;
-  }
-  
-  .hero-text h2 {
-    margin-bottom: 1.2rem;
-    font-size: 1.6rem;
-    font-weight: normal;
-    color: #242424;
-  }
-  
-  .hero-text p {
-    margin-bottom: 2rem;
-    line-height: 1.6;
-    font-size: 1.1rem;
-  }
+
   
   /* Example CTA button */
   .cta-button {
@@ -67,15 +51,7 @@
     margin-right: 0.5rem;
   }
   
-  .about-section h2 {
-    margin-bottom: 1rem;
-    font-size: 2rem;
-  }
-  
-  .about-section p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-  }
+
   
   /* Books Section */
   .books-section {
