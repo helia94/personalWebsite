@@ -170,21 +170,3 @@
     border-color: #4D194D;
   }
   
-  /* Speaking Section */
-  .speaking-section {
-    padding: 2rem 5%;
-    background: #f2f2f2;
-  }
-  
-  .speaking-section h2 {
-    margin-bottom: 1rem;
-    font-size: 2rem;
-  }
-  
-  .speaking-section ul {
-    margin-top: 1rem;
-    list-style: disc inside;
-    font-size: 1.1rem;
-    color: #555;
-  }
-  

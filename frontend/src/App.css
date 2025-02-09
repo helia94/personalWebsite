@@ -279,3 +279,64 @@ html {
   font-size: 1rem;
   transition: background 0.3s, transform 0.2s;
 }
+
+
+.speaking-section {
+  padding: 2rem 5%;
+}
+
+.speaking-section-colored {
+  padding: 2rem 5%;
+  background: #f2f2f2;
+}
+
+.speaking-section h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.speaking-section ul {
+  margin-top: 1rem;
+  list-style: disc inside;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Quote Styling */
+.quote {
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #b5838d; /* A soft, complementary color to your theme */
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  background-color: #f9f9f9; /* A very light background to make the quote stand out */
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.quote::before {
+  content: open-quote;
+  font-size: 3rem;
+  color: #b5838d;
+  line-height: 0.1em;
+  margin-right: 0.15em;
+  vertical-align: -0.4em;
+}
+
+.quote::after {
+  content: close-quote;
+  font-size: 3rem;
+  color: #b5838d;
+  line-height: 0.1em;
+  margin-left: 0.15em;
+  vertical-align: -0.6em;
+}
+
+.quote-author {
+  display: block;
+  margin-top: 0.5rem;
+  text-align: right;
+  font-style: normal;
+  font-weight: bold;
+  color: #242424;
+}

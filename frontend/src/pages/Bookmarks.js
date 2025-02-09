@@ -127,13 +127,53 @@ function BookmarkDetail() {
   const bookmarksInfo = {
     "come-as-you-are": {
       name: "Come As You Are",
-      url: "https://www.amazon.com/Come-You-Are-Surprising-Science/dp/1472157238",
+      url: "https://www.simonandschuster.com/books/Come-As-You-Are-Revised-and-Updated/Emily-Nagoski/9781982165314",
       description: () => (
         <div>
+        <p>
+          If I could suggest only one book, it would surely be <i>Come As You Are</i> by <b>Emily Nagoski</b>. To show you why, let me ask you a few questions:
+        </p>
+      <section className="speaking-section">
+      <div className="list-section">
+        <ul style={{listStyle :"none"}}>
+          <li>
+            Did you form expectations about how you should feel or desire around sexuality before you had a chance to discover what you truly feel and desire?
+          </li>
+          <li>
+            Are you afraid of hurting your partner’s feelings while also fearing not meeting their expectations?
+          </li>
+          <li>
+            Do you wonder if "good" and "normal" sexual experiences have been defined by what works for most men?
+          </li>
+          <li>
+            Do you struggle to like or trust your body to behave the way you want it to?
+          </li>
+          <li>
+            Do you think there’s something wrong with your desires?
+          </li>
+        </ul>
+        </div>
+        </section>
+        <p>
+          If you feel that your sexuality is a stranger to yourself; if you feel you should have sex more or less than you want; if you’ve changed and want to reclaim something from your past; if you can’t fully let go during intimacy, or if you think you’ve lost the desire for sex entirely—this book is worth reading.
+        </p>
+        <p>
+          <b>Emily Nagoski</b> doesn’t tell you what to do. There are no techniques or tricks. Instead, the book feels like an invitation to enter a safe space for a few minutes where you can drop all expectations around sex and simply experience how you feel without them. It’s like the author is holding your hand, helping you feel normal, comfortable, and okay in your body. Even if you already feel comfortable in your skin, this book can bring empathy for others who struggle under the weight of cultural expectations around sex.
+        </p>
+        <blockquote class="quote">
+          When people ask me, "Am I normal?" They're asking, "Do I belong?" The answer is yes. You belong in your body. You belong in the world. You've belonged since the day you were born, this is your home. You don't have to earn it by conforming to some externally imposed sexual standard.
+        </blockquote>
+  
+        <div>
+          <h3>Who should not read the book:</h3>
           <p>
-            A groundbreaking book that explores the science of sexuality and how understanding your body can transform your life.
+            If you’re looking for a straightforward, science-heavy, fact-driven guide to sexuality, you will be disappointed. <i>Come As You Are</i> is more like talking to a therapist or a good friend—it’s conversational, and filled with metaphors and repetition. The overly chatty tone can come off as condescending, or even infantilizing, especially to those who prefer a more serious tone. For me, the repetition was a feature, not a bug. I didn’t go into this book looking for facts and information; I wanted understanding and a change of mindset, which I believe is only possible through repetition. I plan to read it more times. But I can see how it might feel redundant or unnecessary to others.
+          </p>
+          <p>
+            Additionally, some readers notice the book’s heteronormative scope. It primarily centers on cisgender women’s experiences.
           </p>
         </div>
+      </div>
       )
     },
     "how-emotions-are-made": {
@@ -274,7 +314,7 @@ function BookmarkDetail() {
 
   return (
     <div>
-      <h2>{info.name || "Unknown Bookmark"}</h2>
+      <h1>{info.name || "Unknown Bookmark"}</h1>
       {info.url && (
         <button
           className="visit-btn"

@@ -5,7 +5,6 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import { MobileViewContext } from "../context/MobileViewContext";
 import SecondarySidebarBasic from "../components/SecondarySidebarBasic";
 import TechStack from "./TechStack"
-import "./Home.css";
 
 
 
@@ -198,7 +197,7 @@ function Freelance() {
           I decided to focus on <em>building my own products</em>, but until they become profitable, I support myself by offering specialized services. Until December 2024, I was a senior software engineer at <em>PTV</em>, a cloud software company with highly competitive optimization solutions for the logistics and delivery business, serving leading supermarkets and delivery services in Germany and the Benelux region.
         </p>
       </section>
-      <section className="speaking-section">
+      <section className="speaking-section-colored">
         <h2>You can <em>trust</em> me with:</h2>
         <div className="list-section">
           <h3>Operations Research</h3>

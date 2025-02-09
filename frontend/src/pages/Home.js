@@ -129,7 +129,7 @@ export default function Home() {
       </div>
 
       {/* Speaking Section 
-      <div className="speaking-section">
+      <div className="speaking-section-colored">
         <h2>Keynotes &amp; Events</h2>
         <ul>
           <li>Global Leadership Summit</li>
