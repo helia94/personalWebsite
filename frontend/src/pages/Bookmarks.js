@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { MobileViewContext } from "../context/MobileViewContext";
 import SecondarySidebar from "../components/SecondarySidebar";
 import "./Bookmarks.css";
+import Collage from "../components/Collage"
 
 // Define the categories and their respective bookmark items
 export const bookmarkCategories = [
@@ -119,6 +120,21 @@ function BookmarksHome() {
   );
 }
 
+const LisaYouTubeEmbed = () => {
+  return (
+    <div className="video-container">
+    <iframe
+      src="https://www.youtube.com/embed/0gks6ceq4eQ"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      title="Emotions Explained"
+    ></iframe>
+    <p>Watch Lisa Feldman Barrett explain how emotions are made.</p>
+  </div>
+  );
+};
+
 function BookmarkDetail() {
   const { bookmarkId } = useParams();
 
@@ -178,13 +194,32 @@ function BookmarkDetail() {
     },
     "how-emotions-are-made": {
       name: "How Emotions Are Made",
-      url: "https://www.amazon.com/How-Emotions-Are-Made-Secret/dp/0547677984",
+      url: "https://lisafeldmanbarrett.com/books/how-emotions-are-made/",
       description: () => (
         <div>
           <p>
-            An insightful exploration into the construction of emotions that challenges conventional wisdom and reshapes how we feel.
+          <i>How Emotions Are Made</i> suggests that your brain might mix up the bodily feelings of <b>having the flu</b> with those of <b>falling in love</b>.
+           The premise is that your brain is a prediction machine. It doesn’t passively receive sensory data;
+            it uses past experience to predict and interpret them.
+            She introduces the concept of the <b>'body budget,'</b> where your brain acts like an accountant, constantly adjusting and allocating energy, nutrition, and oxygen to keep you going.
+            Even the presence of your boss in the hallway can alter your budget, draining or boosting energy.
+            You might interpret bodily signals as being sick or falling in love, depending on context.
           </p>
+          <img
+              src="https://res.cloudinary.com/dl9xg597r/image/upload/v1739118864/Screenshot_2025-02-09_162336_js4lmm.png"
+              alt="Cat Photos"
+              style={{width:"30rem", maxWidth:"90%"}}
+            />
+          <p>
+            There’s a lot about how we classify and label emotions. 
+            You see something, your body reacts, and then you guess or construct which 'emotion' you’re feeling based on your assumptions and past experiences. 
+            She then provides ideas for building a healthier body budget—getting good sleep, better nutrition, exercise, physical touch, and gratitude. 
+            It redefines how I see emotions and the line between <b>'body' and 'mind’</b>.
+          </p>
+          <LisaYouTubeEmbed/>
+          <Collage/>
         </div>
+        
       )
     },
     "why-we-sleep": {

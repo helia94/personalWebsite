@@ -343,6 +343,25 @@ html {
   color: #242424;
 }
 
+.video-wrapper {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.video-container {
+  text-align: center; /* Centers the content */
+  max-width: 90%; /* Limits max width, adjust based on preference */
+  margin: auto; /* Centers the container */
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.video-container iframe {
+  width: 100%; /* Responsive width */
+  height: 250px; /* Default height for mobile */
+}
+
+
 
 @media (max-width: 768px) {
 
@@ -384,4 +403,7 @@ html {
     padding: 0.5rem;
   }
 
+  .video-container iframe {
+    height: 500px;
+  }
 }
