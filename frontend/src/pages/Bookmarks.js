@@ -224,12 +224,45 @@ function BookmarkDetail() {
     },
     "why-we-sleep": {
       name: "Why We Sleep",
-      url: "https://www.amazon.com/Why-We-Sleep-Matthew-Walker/dp/1501144316",
+      url: "https://www.goodreads.com/book/show/34466963-why-we-sleep",
       description: () => (
         <div>
+        <img
+            src="https://res.cloudinary.com/dl9xg597r/image/upload/v1739119872/Screenshot_2025-02-09_174438_gllcmf.png"
+            alt="Cat Photos"
+            style={{width:"40rem", maxWidth:"90%"}}
+          />
           <p>
-            A fascinating look at the vital importance of sleep and its impact on every aspect of our health and well-being.
+          Why We Sleep by Matthew Walker changed my view of sleep. 
+          I used to think of sleep as simply "turning off," like a laptop, but it’s far more complex. Sleep is not passive; 
+          it’s an active process where parts of your brain are even more active than when you’re awake.
           </p>
+          <p>
+          The book covers the best research on sleep, its effects on emotional and physical health, and why we dream. 
+          It also provides ways for improving sleep. 
+          While I felt Walker could be more rigorous in some conclusions, 
+          the book is an effective way to shift your mindset about sleep and take it seriously—not as wasted time, but as a critical part of life.
+          </p>
+          <p>I for example had no idea that we and many other animal have four sleep cycles of sleep with dearm and without. 
+            Here is how it looks if like me, you did not know about it either.</p>
+        <img
+            src="https://res.cloudinary.com/dl9xg597r/image/upload/v1739120164/Screenshot_2025-02-09_175458_vx4tki.png"
+            alt="sleep cycles"
+            style={{width:"40rem", maxWidth:"90%"}}
+          />
+          <div style={{margin: "3rem"}}>
+          <p>
+            You can get a taste of the book from his podcast.
+          </p>
+          <iframe 
+            src="https://open.spotify.com/embed-podcast/show/1aIVAabjRjnmiouX0zCzF3" 
+            width="100%" 
+            height="352" 
+            frameborder="0" 
+            allow="encrypted-media" 
+            allowtransparency="true">
+          </iframe>
+          </div>
         </div>
       )
     },
