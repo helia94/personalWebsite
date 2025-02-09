@@ -20,10 +20,22 @@
   
   .hero-text {
     background: rgba(255, 255, 255, 0.85);
-    padding: 1.5rem 2.5rem;
+    padding: 1.1rem 2rem;
     border-radius: 8px;
     max-width: 500px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .hero-text h1 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-text h2 {
+    margin-bottom: 1.2rem;
+  }
+  
+  .hero-text p {
+    margin-bottom: 2rem;
   }
   
 
