@@ -189,7 +189,8 @@ button {
 
 /* Ensure Images are Responsive */
 img {
-  max-width: 100%;
+  max-width: 90%;
+  width:"40rem";
   height: auto;
   margin-bottom: 2.5rem!important;
   position: relative;
