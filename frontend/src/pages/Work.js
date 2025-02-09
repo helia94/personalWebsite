@@ -201,7 +201,7 @@ export default function Work({isMobile}) {
           <Route path="/" element={<WorkHome />} />
           <Route path="/freelance" element={<Freelance/>} />
           <Route path="/experience" element={
-            <div>
+            <div style={{padding:"0px" , margin:"0px"}}> 
               <PortfolioShowcase/>
               <TechStack/>
             </div>

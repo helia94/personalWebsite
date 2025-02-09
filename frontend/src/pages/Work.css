@@ -2,13 +2,15 @@
     padding: 60px 20px;
     background: #f0f4f8;
     color: #333;
-  }
-  .portfolio-showcase h1 {
+}
+
+.portfolio-showcase h1 {
     text-align: center;
     font-size: 2.8rem;
     margin-bottom: 40px;
-  }
-  .portfolio-section {
+}
+
+.portfolio-section {
     display: flex;
     align-items: center;
     margin-bottom: 60px;
@@ -16,40 +18,91 @@
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  .portfolio-section:nth-child(even) {
+}
+
+.portfolio-section:nth-child(even) {
     flex-direction: row-reverse;
-  }
-  .portfolio-content {
+}
+
+.portfolio-content {
     flex: 1;
     padding: 20px;
-  }
-  .portfolio-content h2 {
+    text-align: left;
+}
+
+.portfolio-content h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-  }
-  .portfolio-content p {
+}
+
+.portfolio-content p {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 20px;
-  }
-  .portfolio-content a {
+}
+
+.portfolio-content a {
     text-decoration: none;
     color: #0077cc;
     font-weight: bold;
     border-bottom: 2px solid transparent;
     transition: border-bottom 0.3s ease;
-  }
-  .portfolio-content a:hover {
+}
+
+.portfolio-content a:hover {
     border-bottom: 2px solid #0077cc;
-  }
-  .portfolio-visual {
+}
+
+.portfolio-visual {
     flex: 1;
     padding: 20px;
     text-align: center;
-  }
-  .portfolio-visual img {
+}
+
+.portfolio-visual img {
     max-width: 100%;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
+}
+
+/* Mobile Overrides */
+@media (max-width: 768px) {
+    .portfolio-showcase {
+        padding: 30px 5px;
+    }
+
+    .portfolio-showcase h1 {
+        font-size: 2rem;
+    }
+
+    .portfolio-section {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .portfolio-section:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .portfolio-content {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .portfolio-content h2 {
+        font-size: 1rem;
+    }
+
+    .portfolio-content p {
+        font-size: 0.9rem;
+        line-height: 1.2;
+    }
+
+    .portfolio-visual {
+        padding: 5px;
+    }
+
+    .portfolio-showcase h1 {
+        font-size: 2rem !important;
+    }
+}
