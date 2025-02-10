@@ -5,6 +5,8 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from backend.database import db  # Import from the new database module
 import requests
+from backend.emotion_resolver import EmotionResolver
+from backend.gpt import GPT
 
 app = Flask(__name__)
 CORS(app)
@@ -16,6 +18,7 @@ if db_url and db_url.startswith("postgres://"):
 app.config["SQLALCHEMY_DATABASE_URI"] = db_url
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db.init_app(app)  # Initialize the db with the app
+emotion_resolver = EmotionResolver(GPT())
 
 ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD", "secret123")
 
@@ -67,6 +70,15 @@ def add_message():
     db.session.commit()
     return jsonify({"message": "Message saved"}), 201
 
+@app.route("/api/emotion", methods=["POST"])
+def emotion():
+    data = request.json
+    emotion = data.get("emotion")
+    try:
+        json_response = emotion_resolver.resolve(emotion)
+        return jsonify(json_response)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 async def fetch_async(url):
     async with aiohttp.ClientSession() as session:
