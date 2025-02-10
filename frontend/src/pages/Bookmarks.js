@@ -25,15 +25,15 @@ export const bookmarkCategories = [
         route: "/bookmarks/why-we-sleep"
       },
       {
-        label: "Being You",
+        label: "(p) Being You",
         route: "/bookmarks/being-you"
       },
       {
-        label: "The Song Of Significance",
+        label: "(p) The Song Of Significance",
         route: "/bookmarks/the-song-of-significance"
       },
       {
-        label: "Tribes",
+        label: "(p) Tribes",
         route: "/bookmarks/tribes"
       },
     ],
@@ -42,19 +42,19 @@ export const bookmarkCategories = [
     title: "Podcast",
     items: [
       {
-        label: "EconTalk",
+        label: "(p) EconTalk",
         route: "/bookmarks/econtalk"
       },
       {
-        label: "Conversations with Tyler",
+        label: "(p) Conversations with Tyler",
         route: "/bookmarks/conversations-with-tyler"
       },
       {
-        label: "Akimbo",
+        label: "(p) Akimbo",
         route: "/bookmarks/akimbo"
       },
       {
-        label: "Where do we begin",
+        label: "(p) Where do we begin",
         route: "/bookmarks/where-do-we-begin"
       },
     ],
@@ -63,15 +63,20 @@ export const bookmarkCategories = [
     title: "Web",
     items: [
       {
-        label: "Epicllama",
+        label: "(p) Epicllama",
         route: "/bookmarks/epicllama"
-      },
+      }
+    ],
+  },,
+  {
+    title: "Goodies",
+    items: [
       {
-        label: "Perfect Socks",
+        label: "(p) Perfect Socks",
         route: "/bookmarks/perfect-socks"
       },
       {
-        label: "Perfect Chair",
+        label: "(p) Perfect Chair",
         route: "/bookmarks/perfect-chair"
       },
     ],

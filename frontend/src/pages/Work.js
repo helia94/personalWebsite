@@ -12,7 +12,7 @@ import "./Work.css"
 export const workItems = [
   { label: "Freelance", route: "/work/freelance" },
   { label: "Experience", route: "/work/experience"},
-  { label: "Collaborate", route: "/work/collaborate"},
+  { label: "(p) Collaborate", route: "/work/collaborate"},
 ];
 
 function WorkHome() {

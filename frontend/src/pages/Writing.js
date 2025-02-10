@@ -11,32 +11,26 @@ export const writingData = [
     title: "Tango",
     items: [
       { label: "For Non-dancers", route: "/writing/tango/non-dancers" },
-      { label: "Teaching for Young Beginners", route: "/writing/tango/teaching" },
-      { label: "Tango Music", route: "/writing/tango/music" },
-      { label: "Learning Tango Faster", route: "/writing/tango/leaning" },
-      { label: "A Woman in Tango", route: "/writing/tango/woman-in-tango" },
-      { label: "Giving and Getting", route: "/writing/tango/giving-getting" },
-      { label: "Talking about Tango", route: "/writing/tango/questions" }
+      { label: "(p) Teaching for Young Beginners", route: "/writing/tango/teaching" },
+      { label: "(p) Tango Music", route: "/writing/tango/music" },
+      { label: "(p) Learning Tango Faster", route: "/writing/tango/leaning" },
+      { label: "(p) A Woman in Tango", route: "/writing/tango/woman-in-tango" },
+      { label: "(p) Giving and Getting", route: "/writing/tango/giving-getting" },
+      { label: "(p) Talking about Tango", route: "/writing/tango/questions" }
     ],
   },
   {
     title: "Dating",
     items: [
       { label: "Third Generation of Online Dating", route: "/writing/dating/online-dating" },
-      { label: "First Date Ideas", route: "/writing/dating/first-date" }
+      { label: "(p) First Date Ideas", route: "/writing/dating/first-date" }
     ],
   },
   {
     title: "SmallTalk",
     items: [
-      { label: "Connection", route: "/writing/smalltalk/connection" },
-      { label: "Hard Not to SmallTalk", route: "/writing/smalltalk/smalltalk-sticks" }
-    ],
-  },
-  {
-    title: "Personal",
-    items: [
-      { label: "Article Personal 1", route: "/writing/personal/article-personal-1" }
+      { label: "(p) Connection", route: "/writing/smalltalk/connection" },
+      { label: "(p) Hard Not to SmallTalk", route: "/writing/smalltalk/smalltalk-sticks" }
     ],
   },
   {
