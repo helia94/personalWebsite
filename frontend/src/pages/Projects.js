@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { Routes, Route, useParams } from "react-router-dom";
 import { MobileViewContext } from "../context/MobileViewContext";
 import SecondarySidebarBasic from "../components/SecondarySidebarBasic";
+import "./Projects.css"
 
 const projectItems = [
   { label: "Jous", route: "/projects/jous" },
@@ -41,99 +42,77 @@ function Jous() {
   );
 }
 
-
 function EmotionResolver() {
-    const [emotion, setEmotion] = useState('');
-    const [result, setResult] = useState(null);
-    const [loading, setLoading] = useState(false);
-  
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-      setLoading(true);
-      setResult(null);
-  
-      try {
-        const response = await fetch('/api/emotion', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ emotion })
-        });
-        if (response.ok) {
-          const data = await response.json();
-          setResult(data);
-        } else {
-          console.error('Server error');
-        }
-      } catch (error) {
-        console.error('Request failed:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-  
-    const quickEmotions = ['Calm', 'Angry', 'Bitter'];
-  
-    return (
-      <div className="ama-container">
-        <h1>Emotion Explorer</h1>
-  
-        {/* Quick Emotions */}
-        <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1rem' }}>
-          {quickEmotions.map((e) => (
-            <button 
-              key={e}
-              type="button" 
-              className="admin-button"
-              onClick={() => setEmotion(e)}
-            >
-              {e}
-            </button>
-          ))}
-        </div>
-  
-        {/* Form */}
-        <form className="question-form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Type your emotion"
-            value={emotion}
-            onChange={(e) => setEmotion(e.target.value)}
-            className="form-input"
-          />
-          <button 
-            type="submit" 
-            className="submit-button" 
-            disabled={loading || !emotion.trim()}
-          >
-            {loading ? "Loading this might take some time" : "Send"}
+  const [emotion, setEmotion] = useState('');
+  const [result, setResult] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const quickEmotions = ['Calm', 'Angry', 'Bitter'];
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setResult(null);
+    try {
+      const response = await fetch('/api/emotion', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ emotion })
+      });
+      if (!response.ok) throw new Error('Server error');
+      const data = await response.json();
+      setResult(data);
+    } catch (error) {
+      console.error('Request failed:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div className="container">
+      <h1>Emotion Explorer</h1>
+
+      <div className="quick-emotions">
+        {quickEmotions.map((item) => (
+          <button key={item} type="button" className="quick-btn" onClick={() => setEmotion(item)}>
+            {item}
           </button>
-        </form>
-  
-        {/* Result */}
-        {result && (
-          <div>
-            <p style={{ fontStyle: 'italic', marginBottom: '1rem' }}>{result.intro}</p>
-            <div 
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-                gap: '20px'
-              }}
-            >
-              {result.emotions.map((item, idx) => (
-                <div key={idx} className="question-card" style={{ backgroundColor: '#fff' }}>
-                  <h3 style={{ marginTop: 0 }}>{item.name}</h3>
-                  <h4 style={{ marginTop: 0 }}>{item.language}</h4>
-                  <p>{item.meaning}</p>
-                  <p style={{fontSize: "0.9rem"}}> <b>Cultural context: </b>{item["cultural context"]}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
+        ))}
       </div>
-    );
-  }
+
+      <form className="emotion-form" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Type your emotion"
+          value={emotion}
+          onChange={(e) => setEmotion(e.target.value)}
+          className="emotion-input"
+        />
+        <button type="submit" className="submit-btn" disabled={loading || !emotion.trim()}>
+          {loading ? 'Loading...' : 'Send'}
+        </button>
+      </form>
+
+      {result && (
+        <div className="result">
+          <p className="result-intro">{result.intro}</p>
+          <div className="emotion-grid">
+            {result.emotions.map((item, idx) => (
+              <div key={idx} className="emotion-card">
+                <h3>{item.name}</h3>
+                <h4>{item.language}</h4>
+                <p>{item.meaning}</p>
+                <p className="cultural-context">
+                  <strong>Cultural context:</strong> {item['cultural context']}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function Projects({isMobile}) {
     const {contentIsVisibleMobile, toc2IsVisibleMobile } = useContext(MobileViewContext);
