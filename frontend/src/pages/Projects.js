@@ -8,7 +8,7 @@ import "./Projects.css"
 
 const projectItems = [
   { label: "Jous", route: "/projects/jous" },
-  { label: "Emotion Explorer", route: "/projects/emotion-xxplorer" },
+  { label: "Emotion Explorer", route: "/projects/emotion-explorer" },
 ];
 
 function ProjectsHome() {
@@ -125,7 +125,7 @@ export default function Projects({isMobile}) {
         <Routes>
           <Route path="/" element={<ProjectsHome />} />
           <Route path="/jous" element={<Jous />} />
-          <Route path="/emotion-resolver" element={<EmotionResolver />} />
+          <Route path="/emotion-explorer" element={<EmotionResolver />} />
         </Routes>
       </div>}
     </div>
