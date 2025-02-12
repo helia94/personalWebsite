@@ -1,7 +1,7 @@
 // File: src/pages/Work.js
 import React from "react";
 import { useContext } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate, Link } from "react-router-dom";
 import { MobileViewContext } from "../context/MobileViewContext";
 import SecondarySidebarBasic from "../components/SecondarySidebarBasic";
 import TechStack from "./TechStack"
@@ -12,7 +12,7 @@ import "./Work.css"
 export const workItems = [
   { label: "Freelance", route: "/work/freelance" },
   { label: "Experience", route: "/work/experience"},
-  { label: "(p) Collaborate", route: "/work/collaborate"},
+  { label: "Collaborate", route: "/work/collaborate"},
 ];
 
 function WorkHome() {
@@ -24,14 +24,319 @@ function WorkHome() {
   );
 }
 
-function WorkDetail({ sectionId }) {
+function Collaborate() {
   return (
-    <div>
-      <h1>{sectionId}</h1>
-      <p>Details about {sectionId} go here.</p>
+    <div >
+      {/* Main Title */}
+      <h1 style={{textAlign: "left"}}>
+        Collaborate:
+      </h1>
+
+      {/* Intro Section */}
+      <section >
+        <p >
+          This is a space where I share my values and interests. If we have
+          something in common, let’s chat! I enjoy all kinds of exchanges—
+          whether it’s about past experiences or brainstorming
+          future ideas.
+        </p>
+      </section>
+
+      {/* Values & Interests Section */}
+      <section className="speaking-section-colored higher-margin">
+        <h2>
+          Here’s what I value (and avoid) when it comes to collaboration:
+        </h2>
+        <div className="list-section">
+        <ul style={{ listStyleType: "none", paddingLeft: "0" }}>
+          <li >
+            <strong>Radical Directness + Respect + Kindness:</strong> These three
+            need to go hand in hand. I’ve appreciated when others are direct
+            with me, but I’m still working on being more direct myself.
+          </li>
+
+          <li >
+            <strong>Yes-People:</strong> I admire those who say “yes” unless
+            there’s a good reason to say “no.” I love trying new things, facing
+            fears head-on, and staying optimistic about change.
+          </li>
+
+          <li >
+            <strong>Generalists Over Specialists:</strong> My career heroes are
+            generalists—people with broad knowledge who’ve worked across
+            different fields. I’m drawn to projects that are nuanced, uncertain,
+            or even seemingly impossible. Clear-cut projects where only
+            execution matters? Not so much.
+          </li>
+
+          <li >
+            <strong>Curiosity-Driven:</strong> Curiosity comes naturally to me.
+            I’m drawn to the unknown and the complex. If a project feels too
+            predictable, it doesn’t excite me as much.
+          </li>
+
+          <li >
+            <strong>Problem-Making Over Problem-Solving:</strong> I used to be
+            all about solving problems—fixing traffic, teaching kids about
+            systems, optimizing everything. But then I discovered Tango. It
+            didn’t solve any of my problems; in fact, it added more. Yet, I
+            wouldn’t trade it for anything. Now, I enjoy introducing people to
+            problems they didn’t know they had—in a way that makes them grateful
+            for the discovery.
+          </li>
+
+          <li >
+            <strong>LLMs (Loyal to GPT):</strong> I use it for everything—
+            technical tasks, outsourcing, even book recommendations. It’s
+            changed how I learn, giving me more freedom to explore topics deeply
+            or broadly. Surprisingly, though, I’ve never found a product built
+            on LLMs that I liked as much as the raw text interface.
+          </li>
+
+          <li >
+            <strong>No False Proxies:</strong> I can’t stand metrics or
+            standards that pretend to measure something important but actually
+            measure something trivial. When we focus on proxies, we lose sight
+            of our real goals.
+          </li>
+
+          <li >
+            <strong>Balanced Information Flow:</strong> I thrive in environments
+            with low-to-medium information flow—where experience actually
+            deepens understanding. On one end of the spectrum, you have fields
+            like opera singing or brain surgery, where extreme low-info flow
+            reigns. In these areas, experience is everything, and the frameworks
+            don’t change much over time. On the other end, you have fields like
+            AI or software engineering, where high-info flow dominates. In these
+            areas, frameworks evolve so quickly that someone with 30 years of
+            experience is only marginally better than a newcomer. My sweet spot
+            is somewhere in the middle—where experience matters, but there’s
+            still room for growth and adaptation without being overwhelmed by
+            constant change.
+          </li>
+        </ul>
+        </div>
+      </section>
+
+      <br></br>
+      <section className="speaking-section-colored higher-margin">
+        <h2 >
+          Skills and Values I Aspire To:
+        </h2>
+
+        <ul style={{ listStyleType: "none", paddingLeft: "0" }}>
+          <li >
+            <strong>Experimental Thinking:</strong> I tend to overthink problems
+            in isolation, coming up with logical solutions that “should” work. I
+            admire people who just go out and test things, gather data, and see
+            what actually works.
+          </li>
+
+          <li >
+            <strong>Deeper Empathy:</strong> I know people don’t
+            love what I love (and vice versa), but I still fail to act on that.
+          </li>
+
+          <li >
+            <strong>Collaborating with New People:</strong> As a software
+            engineer, I thrive with a fixed team that knows each other well. I
+            want to get better at working with new people or customers, even in
+            one-time projects.
+          </li>
+
+          <li >
+            <strong>Overcoming Social Media Fear:</strong> I want to stop
+            judging social media and get over my fear of using it.
+          </li>
+        </ul>
+      </section>
+
+      {/* How We Can Collaborate */}
+        <h2 >
+          How We Can Collaborate:
+        </h2>
+        <p >
+          The first step is simple: let’s talk. If we click, we can exchange
+          ideas. If those ideas grow into something bigger, great! But I’m also
+          happy with small, one-time conversations with people from diverse
+          backgrounds. Here are some starting points we can explore, but I’m
+          open to your ideas too:
+        </p>
+
+        
+      <section className="speaking-section higher-margin">
+
+        <ul >
+          <li >
+            <strong>Local Collaborations in Karlsruhe:</strong> I want to
+            experiment with new event formats that foster deeper connections
+            without pressure. Think reading quietly together, conversation
+            groups using prompts from apps like <a href="https://jous.app" target="_blank" rel="noopener noreferrer" style={{ color: '#0077cc' }}>Jous App</a>, or even exploring physical contact. I’ll
+            organize these through Meetup.com, and you can be as involved as
+            you’d like.
+          </li>
+
+          <li >
+            <strong>Strategy Group:</strong> I’m looking for a small group
+            (4-5 people) to meet weekly-ish. We’d hold each other accountable,
+            discuss progress, challenge each other, and refine our strategies.
+            My current focus is freelancing and developing three product ideas,
+            but your goals can be anything—work-related or not. If we click,
+            let’s make it happen. For more context, check out this <a href="https://open.spotify.com/episode/1lW81z1q7Mepvs2oFd6erH?si=d8Vkj3MISc2_VjHB9q0J5g"
+             target="_blank" rel="noopener noreferrer" style={{ color: '#0077cc' }}>Seth Godin episode on Spotify</a>.
+          </li>
+        </ul>
+      </section>
+
+      {/* Dating App Idea */}
+      <section className="speaking-section higher-margin">
+        <h2>
+          I am thinking about making a radically different dating app.
+        </h2>
+        <p >
+          Read fully about it under <Link to="/writing/dating/online-dating" style={{ color: '#0077cc' }}>my Writings</Link>.
+          But for now, I am only taking small steps to see if there is any real
+          audience for my ideas of how dating apps should be.
+        </p>
+
+        <h3>
+          The Premise:
+        </h3>
+        <p >
+          From a user’s perspective, dating today feels like an investment—a
+          form of work that might pay off if you find a partner, but often
+          leaves you frustrated if you don’t. It’s like a slot machine: you keep
+          putting coins in until you hit the jackpot or walk away disappointed.
+          I want to change this dynamic. My hope is to create a dating
+          experience that is enjoyable on its own, where finding a partner is
+          the cherry on top. Even if you don’t find "the one," you shouldn’t feel like you’ve wasted your time.
+        </p>
+
+        <p >
+          This app would move away from overwhelming users with countless
+          options and instead focus on the enjoyment of dating. It
+          would support users with many diverse ideas of what to try on the
+          first date by content curated by us, ideas from other users in
+          the platform, and third-party offers on the app. Additionally, it
+          would explicitly address dating culture—quantifying aspects of it
+          where possible and fostering transparent discussions. Dating would be
+          treated as both an evolving skill and an evolving culture, helping
+          users to get better at both.
+        </p>
+        <section className="speaking-section-colored higher-margin">
+        <h3 >
+          The First Steps:
+        </h3>
+        <p >
+          To test this idea, I’m starting small by building a community on
+          Reddit and Instagram focused on curating better first-date ideas. This
+          collaborative approach will help gauge whether there’s an audience for
+          this concept. If it gains traction, the next step would be to develop
+          a dating app that acts as a companion for better dates—not just for
+          finding dates. Over time, the app could expand into a comprehensive
+          platform offering everything from mental health support to date
+          planning tools. The ultimate goal is to create a one-stop solution for
+          all things dating-related, whether it’s meeting new people, improving
+          dating skills, or simply enjoying the process.
+        </p>
+
+        <p >
+          Does this scratch your itch? Let’s connect and explore ways to
+          collaborate.
+        </p>
+        </section>
+      </section>
+
+      {/* Another Idea */}
+        <section className="speaking-section">
+        <h2 >
+          Another idea I am working on is a social platform...
+        </h2>
+        <p >
+          ...that seamlessly integrates the speed of Twitter with the locational
+          specificity of Google Maps. Every post on this network is tied to a
+          distinct physical point and can include an optional time range, it’s
+          about turning every piece of content into a location-based narrative
+          of urban life. The platform would allow users to share everything from
+          festival experiences and market finds to critical updates on city
+          infrastructure and emergency alerts.
+        </p>
+
+        <h3>
+          Who would post on it?
+        </h3>
+        <ul style={{color: "#242424"}}>
+          <li >
+            People attending festivals, concerts, or public events can share
+            real-time impressions.
+          </li>
+          <li >
+            Shoppers at Saturday markets or local pop-up sales could post about
+            unique finds.
+          </li>
+          <li >
+            Locals might use it to highlight spontaneous backyard sales, new
+            store openings, or street performances.
+          </li>
+          <li >
+            Citizens might use it to call attention to everyday urban
+            concerns—from broken streetlights to noisy construction—ensuring
+            their voices are amplified.
+          </li>
+          <li >
+            Activists and protest organizers would coordinate their efforts by
+            posting details of demonstrations or urgent civic actions.
+          </li>
+          <li >
+            Anyone can share updates during emergencies, disasters, or crime
+            incidents, making the platform a hub for real-time response.
+          </li>
+        </ul>
+
+        <h3 style={{marginTop:"2rem"}}>
+          Who would browse it, and what for?
+        </h3>
+        <p >
+          Users explore this platform through an interactive, zoomable map.
+          Different colors and icons indicate various types of activity—from
+          cultural events and foodie hotspots to political rallies and
+          neighborhood gatherings. Tourists can explore the city to find areas
+          with “good vibes” or discover where locals hangout. Locals can use the app to stay informed about what’s
+          happening in their vicinity, ensuring they never miss a spontaneous
+          event or a critical update. This dual functionality serves both those
+          looking for entertainment and those needing timely, practical
+          information about their surroundings.
+        </p>
+
+        <h3 >
+          What kind of information can it gather?
+        </h3>
+        <p>
+          The system would capture real-time social updates alongside historical
+          data, providing an in-depth look at urban trends. Long-term data
+          aggregation could aid real estate evaluations, help businesses decide
+          on new locations, or assist city administrations in understanding
+          recurring infrastructure issues. By combining immediate social
+          interactions with trend analysis, the platform offers a tool
+          for both daily life and strategic urban planning.
+        </p>
+        </section>
+        <section className="speaking-section-colored higher-margin">
+        <h3>First step:</h3>
+        <p >
+          I would start by developing a data aggregation service that pulls
+          location tagged posts from platforms like Twitter, Instagram, Google Maps’ Places via
+          APIs to showcase how the app migh look like. I
+          would focus on posts from the last week and the upcoming week. Additional
+          features would include using AI for content categorization, sentiment
+          analysis, and personalized user filter.
+        </p>
+      </section>
     </div>
   );
 }
+
+
 
 
 const PortfolioShowcase = () => {
@@ -206,7 +511,7 @@ export default function Work({isMobile}) {
               <TechStack/>
             </div>
           }></Route>
-          <Route path="/collaborate" element={<WorkDetail sectionId = "Collaborate" />} />
+          <Route path="/collaborate" element={<Collaborate />} />
         </Routes>
       </div>}
     </div>

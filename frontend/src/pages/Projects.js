@@ -71,6 +71,7 @@ function EmotionResolver() {
   return (
     <div className="container">
       <h1>Emotion Explorer</h1>
+      <h4 style={{textAlign: "center", marginTop:"0px", marginBottom:"3rem"}}>Find out similar but more specific emotions from other cultures</h4>
 
       <div className="quick-emotions">
         {quickEmotions.map((item) => (
