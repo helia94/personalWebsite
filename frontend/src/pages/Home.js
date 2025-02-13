@@ -1,6 +1,7 @@
 // File: src/pages/Home.js
 import React from "react";
 import "./Home.css";
+import { Helmet } from "react-helmet";
 
 export default function Home() {
   return (

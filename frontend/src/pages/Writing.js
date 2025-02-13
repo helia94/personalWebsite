@@ -1,6 +1,7 @@
 // File: src/pages/Writing.js
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import axios from 'axios'
 import { useContext, useState, useEffect } from "react";
 import { MobileViewContext } from "../context/MobileViewContext";
