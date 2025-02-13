@@ -89,6 +89,46 @@ const MediumArticle = ({ rssFeed, targetSlug }) => {
 function TangoIntroduction() {
   return (
     <div>
+      <Helmet>
+        <title>Tango for Non-Dancers | Helia Jamshidi</title>
+        <meta
+          name="description"
+          content="Discover the essence of social tango—an improvised dance embracing physical closeness, courage, and cultural rituals."
+        />
+        <meta
+          name="keywords"
+          content="Tango, social dance, embrace, improvisation, tango culture"
+        />
+        <meta name="author" content="Helia Jamshidi" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Tango for Non-Dancers | Helia Jamshidi" />
+        <meta
+          property="og:description"
+          content="Tango isn't about roses and fishnets—it’s a social dance blending physical mastery, improvisation, and culture. Learn how it can enrich your life."
+        />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dl9xg597r/image/upload/v1739135937/tango-hug_nq2ql5.png"
+        />
+        <meta property="og:url" content="https://heliajamshidi.me/writing/tango" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Tango for Non-Dancers | Helia Jamshidi" />
+        <meta
+          name="twitter:description"
+          content="Learn why tango is addictive, full of rituals, and fosters deeper connections through its improvisational embrace."
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/dl9xg597r/image/upload/v1739135937/tango-hug_nq2ql5.png"
+        />
+
+        <link rel="canonical" href="https://heliajamshidi.me/writing/tango" />
+      </Helmet>
+
       <h1>
         Tango For Non-dancers
       </h1>
@@ -130,7 +170,7 @@ function TangoIntroduction() {
         Finally, tango is wonderfully arbitrary. We pour in so much effort for a fleeting dance that isn’t broadcasted or recorded, that no one else sees, which we might not even remember. It exists only at that moment and then vanishes.
       </p>
       <div className="image-gallery" style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <a
+        <a
           href="https://muraterdemsel.com/MuratsArt/MuratsArt.html"
           target="_blank"
           rel="noopener noreferrer"

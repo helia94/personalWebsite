@@ -11,8 +11,8 @@ import "./Work.css"
 
 export const workItems = [
   { label: "Freelance", route: "/work/freelance" },
-  { label: "Experience", route: "/work/experience"},
-  { label: "Collaborate", route: "/work/collaborate"},
+  { label: "Experience", route: "/work/experience" },
+  { label: "Collaborate", route: "/work/collaborate" },
 ];
 
 function WorkHome() {
@@ -27,8 +27,47 @@ function WorkHome() {
 function Collaborate() {
   return (
     <div >
+      <Helmet>
+        <title>Collaborate | Helia Jamshidi</title>
+        <meta
+          name="description"
+          content="Explore Helia's collaboration values, skills, and ideas—local events, unique dating concepts, and a location-based social platform."
+        />
+        <meta
+          name="keywords"
+          content="Helia Jamshidi, collaboration, local events, dating app, social platform, community building"
+        />
+        <meta name="author" content="Helia Jamshidi" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Collaborate | Helia Jamshidi" />
+        <meta
+          property="og:description"
+          content="Discover Helia's approach to collaboration, her innovative dating app idea, and a location-based social platform vision."
+        />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dl9xg597r/image/upload/f_webp/q_auto:low/v1738793047/EconTalk_viuikc.png"
+        />
+        <meta property="og:url" content="https://heliajamshidi.me/work/collaborate" />
+        <meta property="og:type" content="website" />
+
+        <link rel="canonical" href="https://heliajamshidi.me/work/collaborate" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Collaborate | Helia Jamshidi" />
+        <meta
+          name="twitter:description"
+          content="A space for radical directness, curiosity, and new ideas—from event formats to future dating and social platforms."
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/dl9xg597r/image/upload/f_webp/q_auto:low/v1738793047/EconTalk_viuikc.png"
+        />
+      </Helmet>
       {/* Main Title */}
-      <h1 style={{textAlign: "left"}}>
+      <h1 style={{ textAlign: "left" }}>
         Collaborate:
       </h1>
 
@@ -48,73 +87,73 @@ function Collaborate() {
           Here’s what I value (and avoid) when it comes to collaboration:
         </h2>
         <div className="list-section">
-        <ul style={{ listStyleType: "none", paddingLeft: "0" }}>
-          <li >
-            <strong>Radical Directness + Respect + Kindness:</strong> These three
-            need to go hand in hand. I’ve appreciated when others are direct
-            with me, but I’m still working on being more direct myself.
-          </li>
+          <ul style={{ listStyleType: "none", paddingLeft: "0" }}>
+            <li >
+              <strong>Radical Directness + Respect + Kindness:</strong> These three
+              need to go hand in hand. I’ve appreciated when others are direct
+              with me, but I’m still working on being more direct myself.
+            </li>
 
-          <li >
-            <strong>Yes-People:</strong> I admire those who say “yes” unless
-            there’s a good reason to say “no.” I love trying new things, facing
-            fears head-on, and staying optimistic about change.
-          </li>
+            <li >
+              <strong>Yes-People:</strong> I admire those who say “yes” unless
+              there’s a good reason to say “no.” I love trying new things, facing
+              fears head-on, and staying optimistic about change.
+            </li>
 
-          <li >
-            <strong>Generalists Over Specialists:</strong> My career heroes are
-            generalists—people with broad knowledge who’ve worked across
-            different fields. I’m drawn to projects that are nuanced, uncertain,
-            or even seemingly impossible. Clear-cut projects where only
-            execution matters? Not so much.
-          </li>
+            <li >
+              <strong>Generalists Over Specialists:</strong> My career heroes are
+              generalists—people with broad knowledge who’ve worked across
+              different fields. I’m drawn to projects that are nuanced, uncertain,
+              or even seemingly impossible. Clear-cut projects where only
+              execution matters? Not so much.
+            </li>
 
-          <li >
-            <strong>Curiosity-Driven:</strong> Curiosity comes naturally to me.
-            I’m drawn to the unknown and the complex. If a project feels too
-            predictable, it doesn’t excite me as much.
-          </li>
+            <li >
+              <strong>Curiosity-Driven:</strong> Curiosity comes naturally to me.
+              I’m drawn to the unknown and the complex. If a project feels too
+              predictable, it doesn’t excite me as much.
+            </li>
 
-          <li >
-            <strong>Problem-Making Over Problem-Solving:</strong> I used to be
-            all about solving problems—fixing traffic, teaching kids about
-            systems, optimizing everything. But then I discovered Tango. It
-            didn’t solve any of my problems; in fact, it added more. Yet, I
-            wouldn’t trade it for anything. Now, I enjoy introducing people to
-            problems they didn’t know they had—in a way that makes them grateful
-            for the discovery.
-          </li>
+            <li >
+              <strong>Problem-Making Over Problem-Solving:</strong> I used to be
+              all about solving problems—fixing traffic, teaching kids about
+              systems, optimizing everything. But then I discovered Tango. It
+              didn’t solve any of my problems; in fact, it added more. Yet, I
+              wouldn’t trade it for anything. Now, I enjoy introducing people to
+              problems they didn’t know they had—in a way that makes them grateful
+              for the discovery.
+            </li>
 
-          <li >
-            <strong>LLMs (Loyal to GPT):</strong> I use it for everything—
-            technical tasks, outsourcing, even book recommendations. It’s
-            changed how I learn, giving me more freedom to explore topics deeply
-            or broadly. Surprisingly, though, I’ve never found a product built
-            on LLMs that I liked as much as the raw text interface.
-          </li>
+            <li >
+              <strong>LLMs (Loyal to GPT):</strong> I use it for everything—
+              technical tasks, outsourcing, even book recommendations. It’s
+              changed how I learn, giving me more freedom to explore topics deeply
+              or broadly. Surprisingly, though, I’ve never found a product built
+              on LLMs that I liked as much as the raw text interface.
+            </li>
 
-          <li >
-            <strong>No False Proxies:</strong> I can’t stand metrics or
-            standards that pretend to measure something important but actually
-            measure something trivial. When we focus on proxies, we lose sight
-            of our real goals.
-          </li>
+            <li >
+              <strong>No False Proxies:</strong> I can’t stand metrics or
+              standards that pretend to measure something important but actually
+              measure something trivial. When we focus on proxies, we lose sight
+              of our real goals.
+            </li>
 
-          <li >
-            <strong>Balanced Information Flow:</strong> I thrive in environments
-            with low-to-medium information flow—where experience actually
-            deepens understanding. On one end of the spectrum, you have fields
-            like opera singing or brain surgery, where extreme low-info flow
-            reigns. In these areas, experience is everything, and the frameworks
-            don’t change much over time. On the other end, you have fields like
-            AI or software engineering, where high-info flow dominates. In these
-            areas, frameworks evolve so quickly that someone with 30 years of
-            experience is only marginally better than a newcomer. My sweet spot
-            is somewhere in the middle—where experience matters, but there’s
-            still room for growth and adaptation without being overwhelmed by
-            constant change.
-          </li>
-        </ul>
+            <li >
+              <strong>Balanced Information Flow:</strong> I thrive in environments
+              with low-to-medium information flow—where experience actually
+              deepens understanding. On one end of the spectrum, you have fields
+              like opera singing or brain surgery, where extreme low-info flow
+              reigns. In these areas, experience is everything, and the frameworks
+              don’t change much over time. On the other end, you have fields like
+              AI or software engineering, where high-info flow dominates. In these
+              areas, frameworks evolve so quickly that someone with 30 years of
+              experience is only marginally better than a newcomer. My sweet spot
+              is somewhere in the middle—where experience matters, but there’s
+              still room for growth and adaptation without being overwhelmed by
+              constant change.
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -152,18 +191,18 @@ function Collaborate() {
       </section>
 
       {/* How We Can Collaborate */}
-        <h2 >
-          How We Can Collaborate:
-        </h2>
-        <p >
-          The first step is simple: let’s talk. If we click, we can exchange
-          ideas. If those ideas grow into something bigger, great! But I’m also
-          happy with small, one-time conversations with people from diverse
-          backgrounds. Here are some starting points we can explore, but I’m
-          open to your ideas too:
-        </p>
+      <h2 >
+        How We Can Collaborate:
+      </h2>
+      <p >
+        The first step is simple: let’s talk. If we click, we can exchange
+        ideas. If those ideas grow into something bigger, great! But I’m also
+        happy with small, one-time conversations with people from diverse
+        backgrounds. Here are some starting points we can explore, but I’m
+        open to your ideas too:
+      </p>
 
-        
+
       <section className="speaking-section higher-margin">
 
         <ul >
@@ -183,7 +222,7 @@ function Collaborate() {
             My current focus is freelancing and developing three product ideas,
             but your goals can be anything—work-related or not. If we click,
             let’s make it happen. For more context, check out this <a href="https://open.spotify.com/episode/1lW81z1q7Mepvs2oFd6erH?si=d8Vkj3MISc2_VjHB9q0J5g"
-             target="_blank" rel="noopener noreferrer" style={{ color: '#0077cc' }}>Seth Godin episode on Spotify</a>.
+              target="_blank" rel="noopener noreferrer" style={{ color: '#0077cc' }}>Seth Godin episode on Spotify</a>.
           </li>
         </ul>
       </section>
@@ -224,31 +263,31 @@ function Collaborate() {
           users to get better at both.
         </p>
         <section className="speaking-section-colored higher-margin">
-        <h3 >
-          The First Steps:
-        </h3>
-        <p >
-          To test this idea, I’m starting small by building a community on
-          Reddit and Instagram focused on curating better first-date ideas. This
-          collaborative approach will help gauge whether there’s an audience for
-          this concept. If it gains traction, the next step would be to develop
-          a dating app that acts as a companion for better dates—not just for
-          finding dates. Over time, the app could expand into a comprehensive
-          platform offering everything from mental health support to date
-          planning tools. The ultimate goal is to create a one-stop solution for
-          all things dating-related, whether it’s meeting new people, improving
-          dating skills, or simply enjoying the process.
-        </p>
+          <h3 >
+            The First Steps:
+          </h3>
+          <p >
+            To test this idea, I’m starting small by building a community on
+            Reddit and Instagram focused on curating better first-date ideas. This
+            collaborative approach will help gauge whether there’s an audience for
+            this concept. If it gains traction, the next step would be to develop
+            a dating app that acts as a companion for better dates—not just for
+            finding dates. Over time, the app could expand into a comprehensive
+            platform offering everything from mental health support to date
+            planning tools. The ultimate goal is to create a one-stop solution for
+            all things dating-related, whether it’s meeting new people, improving
+            dating skills, or simply enjoying the process.
+          </p>
 
-        <p >
-          Does this scratch your itch? Let’s connect and explore ways to
-          collaborate.
-        </p>
+          <p >
+            Does this scratch your itch? Let’s connect and explore ways to
+            collaborate.
+          </p>
         </section>
       </section>
 
       {/* Another Idea */}
-        <section className="speaking-section">
+      <section className="speaking-section">
         <h2 >
           Another idea I am working on is a social platform...
         </h2>
@@ -265,7 +304,7 @@ function Collaborate() {
         <h3>
           Who would post on it?
         </h3>
-        <ul style={{color: "#242424"}}>
+        <ul style={{ color: "#242424" }}>
           <li >
             People attending festivals, concerts, or public events can share
             real-time impressions.
@@ -293,7 +332,7 @@ function Collaborate() {
           </li>
         </ul>
 
-        <h3 style={{marginTop:"2rem"}}>
+        <h3 style={{ marginTop: "2rem" }}>
           Who would browse it, and what for?
         </h3>
         <p >
@@ -320,8 +359,8 @@ function Collaborate() {
           interactions with trend analysis, the platform offers a tool
           for both daily life and strategic urban planning.
         </p>
-        </section>
-        <section className="speaking-section-colored higher-margin">
+      </section>
+      <section className="speaking-section-colored higher-margin">
         <h3>First step:</h3>
         <p >
           I would start by developing a data aggregation service that pulls
@@ -340,19 +379,60 @@ function Collaborate() {
 
 
 const PortfolioShowcase = () => {
+
   return (
     <div>
+      <Helmet>
+        <title>Portfolio Highlights | Helia Jamshidi</title>
+        <meta
+          name="description"
+          content="Explore Helia's portfolio highlights at PTV: Geocoding API, Model2Go, Route Optimization, and Optiflow."
+        />
+        <meta
+          name="keywords"
+          content="Helia Jamshidi, PTV, Geocoding, Model2Go, Route Optimization, Optiflow, logistics solutions"
+        />
+        <meta name="author" content="Helia Jamshidi" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Portfolio Highlights | Helia Jamshidi" />
+        <meta
+          property="og:description"
+          content="Helia's work on geocoding, route optimization, and SaaS solutions leveraging Java, Python, AWS, and more."
+        />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dl9xg597r/image/upload/v1739045146/geocoding_rbcpgs.png"
+        />
+        <meta property="og:url" content="https://heliajamshidi.me/work/portfolio" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Portfolio Highlights | Helia Jamshidi" />
+        <meta
+          name="twitter:description"
+          content="Showcasing Helia's top projects: Geocoding API, Model2Go, Route Optimization, and Optiflow."
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/dl9xg597r/image/upload/v1739045146/geocoding_rbcpgs.png"
+        />
+
+        <link rel="canonical" href="https://heliajamshidi.me/work/portfolio" />
+      </Helmet>
+
       <section className="portfolio-showcase">
         <h1>Portfolio Highlights</h1>
         <div className="portfolio-section" id="geocoding">
           <div className="portfolio-content">
             <h2>Geocoding Developer API</h2>
             <p>
-          At PTV Logistics, I worked on the <strong>Geocoding Developer API</strong>, a powerful tool that transforms free-form text into precise geographic coordinates. This API is the backbone of location-based services, enabling businesses to optimize logistics, improve delivery accuracy, and enhance customer experiences.
-        </p>
-        <p>
-          I optimized the geocoding logic using <strong>Quarkus</strong> and <strong>Java</strong>, ensuring high performance and scalability. Additionally, I integrated <strong>Azure ML pipelines</strong> to train and evaluate large language models (LLMs), significantly improving the API's accuracy and efficiency.
-        </p>
+              At PTV Logistics, I worked on the <strong>Geocoding Developer API</strong>, a powerful tool that transforms free-form text into precise geographic coordinates. This API is the backbone of location-based services, enabling businesses to optimize logistics, improve delivery accuracy, and enhance customer experiences.
+            </p>
+            <p>
+              I optimized the geocoding logic using <strong>Quarkus</strong> and <strong>Java</strong>, ensuring high performance and scalability. Additionally, I integrated <strong>Azure ML pipelines</strong> to train and evaluate large language models (LLMs), significantly improving the API's accuracy and efficiency.
+            </p>
             <a href="https://developer.myptv.com/en/documentation/geocoding-places-api" target="_blank" rel="noopener noreferrer">
               Discover more
             </a>
@@ -368,11 +448,11 @@ const PortfolioShowcase = () => {
           <div className="portfolio-content">
             <h2>PTV Model2Go</h2>
             <p>
-          <strong>PTV Model2Go</strong> is a cutting-edge solution for automated transport model generation. I played a key role in developing and maintaining Python modules that power this product, enabling seamless integration with APIs and serverless jobs.
-        </p>
-        <p>
-          I also established a robust testing framework, increasing test coverage from <strong>0% to 80%</strong>, ensuring a high-quality codebase. This product is a game-changer for logistics companies, allowing them to create accurate transport models in minutes.
-        </p>
+              <strong>PTV Model2Go</strong> is a cutting-edge solution for automated transport model generation. I played a key role in developing and maintaining Python modules that power this product, enabling seamless integration with APIs and serverless jobs.
+            </p>
+            <p>
+              I also established a robust testing framework, increasing test coverage from <strong>0% to 80%</strong>, ensuring a high-quality codebase. This product is a game-changer for logistics companies, allowing them to create accurate transport models in minutes.
+            </p>
             <a href="https://www.ptvgroup.com/en/products/ptv-model2go" target="_blank" rel="noopener noreferrer">
               Explore Model2Go
             </a>
@@ -388,11 +468,11 @@ const PortfolioShowcase = () => {
           <div className="portfolio-content">
             <h2>Route Optimisation API & Route-Optimiser</h2>
             <p>
-          The <strong>Route Optimization API</strong> is a strategic product for PTV, solving complex vehicle routing problems (VRP). I contributed to the development of a meta-heuristic solver, restructuring the existing <strong>C++</strong> codebase to integrate state-of-the-art academic algorithms.
-        </p>
-        <p>
-          This API helps logistics companies reduce costs, minimize delivery times, and improve resource utilization. My work ensured that the solver could handle real-world constraints, such as time windows and vehicle capacities, with exceptional efficiency.
-        </p>
+              The <strong>Route Optimization API</strong> is a strategic product for PTV, solving complex vehicle routing problems (VRP). I contributed to the development of a meta-heuristic solver, restructuring the existing <strong>C++</strong> codebase to integrate state-of-the-art academic algorithms.
+            </p>
+            <p>
+              This API helps logistics companies reduce costs, minimize delivery times, and improve resource utilization. My work ensured that the solver could handle real-world constraints, such as time windows and vehicle capacities, with exceptional efficiency.
+            </p>
             <a href="https://developer.myptv.com/en/documentation/route-optimization-api/quick-start-route-optimisation-api" target="_blank" rel="noopener noreferrer">
               See the solution in action
             </a>
@@ -408,11 +488,11 @@ const PortfolioShowcase = () => {
           <div className="portfolio-content">
             <h2>PTV Optiflow</h2>
             <p>
-          <strong>PTV Optiflow</strong> is a SaaS product designed to optimize large-scale logistics operations. I worked on a new microservice for this product, leveraging <strong>AWS</strong> and <strong>Spring Boot</strong> to build a scalable and reliable solution.
-        </p>
-        <p>
-          My contributions included implementing <strong>Domain-Driven Design (DDD)</strong> principles and collaborating with a team using <strong>Mob Programming</strong>. This ensured that the microservice met the highest standards of quality and performance.
-        </p>
+              <strong>PTV Optiflow</strong> is a SaaS product designed to optimize large-scale logistics operations. I worked on a new microservice for this product, leveraging <strong>AWS</strong> and <strong>Spring Boot</strong> to build a scalable and reliable solution.
+            </p>
+            <p>
+              My contributions included implementing <strong>Domain-Driven Design (DDD)</strong> principles and collaborating with a team using <strong>Mob Programming</strong>. This ensured that the microservice met the highest standards of quality and performance.
+            </p>
             <a href="https://developer.myptv.com/en/documentation/route-optimization-optiflow-api/quick-start-route-optimization-optiflow" target="_blank" rel="noopener noreferrer">
               Learn about Optiflow
             </a>
@@ -440,6 +520,46 @@ function Freelance() {
 
   return (
     <div>
+      <Helmet>
+        <title>Freelance Services | Helia Jamshidi</title>
+        <meta
+          name="description"
+          content="Offering freelance services in operations research, ML/AI, data science, and microservice development until my own products become profitable."
+        />
+        <meta
+          name="keywords"
+          content="Helia Jamshidi, freelance, operations research, ML, AI, data science, microservices, SaaS, API"
+        />
+        <meta name="author" content="Helia Jamshidi" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Freelance Services | Helia Jamshidi" />
+        <meta
+          property="og:description"
+          content="Helia helps solve discrete optimization problems, build ML pipelines, and develop microservices. Book an introductory session today."
+        />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dl9xg597r/image/upload/f_webp/q_auto:low/v1738793047/EconTalk_viuikc.png"
+        />
+        <meta property="og:url" content="https://heliajamshidi.me/work/freelance" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Freelance Services | Helia Jamshidi" />
+        <meta
+          name="twitter:description"
+          content="Specialized freelance services: operations research, ML/AI, data science, and microservice development."
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/dl9xg597r/image/upload/f_webp/q_auto:low/v1738793047/EconTalk_viuikc.png"
+        />
+
+        <link rel="canonical" href="https://heliajamshidi.me/work/freelance" />
+      </Helmet>
+
       <h1>Freelance</h1>
       <section className="freelance-intro" style={{ marginBottom: "3rem" }}>
         <p>
@@ -478,15 +598,15 @@ function Freelance() {
           </ul>
         </div>
       </section>
-      <section className="call-to-action" 
-      style={{ marginTop: "4rem", textAlign: "center", padding: "3rem", borderRadius: "8px" }}>
-        <p style={{ fontSize: "1.2rem", maxWidth: "600px", margin: "0 auto" , marginBottom: "2rem"}}>
-          If you need expert help in optimization or ML, let's talk! 
+      <section className="call-to-action"
+        style={{ marginTop: "4rem", textAlign: "center", padding: "3rem", borderRadius: "8px" }}>
+        <p style={{ fontSize: "1.2rem", maxWidth: "600px", margin: "0 auto", marginBottom: "2rem" }}>
+          If you need expert help in optimization or ML, let's talk!
           I’m also happy to be recommended to anyone who could benefit from my skills.
         </p>
         <button type="submit" className="submit-button" onClick={handleBookTime}>
-            Book an Introductory Session
-          </button>
+          Book an Introductory Session
+        </button>
       </section>
     </div>
   );
@@ -494,26 +614,26 @@ function Freelance() {
 
 
 
-export default function Work({isMobile}) {
-    const {contentIsVisibleMobile, toc2IsVisibleMobile } = useContext(MobileViewContext);
+export default function Work({ isMobile }) {
+  const { contentIsVisibleMobile, toc2IsVisibleMobile } = useContext(MobileViewContext);
   return (
     <div className="content-with-sub">
-      {(!isMobile || toc2IsVisibleMobile) && 
-      <SecondarySidebarBasic heading="Work" items={workItems} />}
-      {(!isMobile || contentIsVisibleMobile) && 
-      <div className="content-area">
-        <Routes>
-          <Route path="/" element={<WorkHome />} />
-          <Route path="/freelance" element={<Freelance/>} />
-          <Route path="/experience" element={
-            <div style={{padding:"0px" , margin:"0px"}}> 
-              <PortfolioShowcase/>
-              <TechStack/>
-            </div>
-          }></Route>
-          <Route path="/collaborate" element={<Collaborate />} />
-        </Routes>
-      </div>}
+      {(!isMobile || toc2IsVisibleMobile) &&
+        <SecondarySidebarBasic heading="Work" items={workItems} />}
+      {(!isMobile || contentIsVisibleMobile) &&
+        <div className="content-area">
+          <Routes>
+            <Route path="/" element={<WorkHome />} />
+            <Route path="/freelance" element={<Freelance />} />
+            <Route path="/experience" element={
+              <div style={{ padding: "0px", margin: "0px" }}>
+                <PortfolioShowcase />
+                <TechStack />
+              </div>
+            }></Route>
+            <Route path="/collaborate" element={<Collaborate />} />
+          </Routes>
+        </div>}
     </div>
   );
 }
