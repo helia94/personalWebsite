@@ -2,6 +2,9 @@
 import React, { useState, useEffect, useContext } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { FaBarsStaggered, FaBars  } from "react-icons/fa6";
+import ReactGA from "react-ga4";
+
+
 
 import Sidebar from "./components/Sidebar";
 import MainContent from "./components/MainContent";
@@ -30,6 +33,9 @@ function AppContent() {
     window.addEventListener("resize", checkMobile);
     checkMobile();
     setMobileView("main")
+
+    ReactGA.initialize("G-PVECYSQ08Y");
+    ReactGA.send("pageview");
 
 
     return () => window.removeEventListener("resize", checkMobile);
