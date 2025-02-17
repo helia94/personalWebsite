@@ -44,7 +44,7 @@ export const writingData = [
   {
     title: "Personal",
     items: [
-      { label: "None Sense", route: "/writing/personal/none-sense" }
+      { label: "Nonsense", route: "/writing/personal/nonsense" }
     ],
   },
 
@@ -384,7 +384,7 @@ export default function Writing({ isMobile }) {
             <Route path="/smalltalk/smalltalk-sticks" element={<ArticlePage title="It Is Hard Not to SmallTalk" />} />
 
             {/* Personal Articles */}
-            <Route path="/personal/none-sense" element={<Poems/>} />
+            <Route path="/personal/nonsense" element={<Poems/>} />
 
             {/* Work Articles */}
             <Route path="/work/university" element={<MediumArticle
