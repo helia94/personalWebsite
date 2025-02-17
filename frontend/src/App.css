@@ -380,6 +380,21 @@ html {
 }
 
 
+.poem {
+  text-align: center;
+  margin: 15rem 0; /* Big margin among poems */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1rem;
+}
+
+.poem p {
+  margin: 0.4rem 0; /* Small line margin within each poem */
+}
+
+.poem h4 {
+  text-align: center;
+}
+
 
 @media (max-width: 768px) {
 

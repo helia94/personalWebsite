@@ -40,7 +40,14 @@ export const writingData = [
       { label: "Shadow of University", route: "/writing/work/university" },
       { label: "Vocation", route: "/writing/work/vocation" }
     ],
-  }
+  },
+  {
+    title: "Personal",
+    items: [
+      { label: "None Sense", route: "/writing/personal/none-sense" }
+    ],
+  },
+
 ];
 
 
@@ -199,6 +206,150 @@ function ArticlePage({ title }) {
   );
 }
 
+function Poems() {
+  return (
+    <div>
+      <div className="poem">
+        <h4>1</h4>
+        <p>Was your skin out of air?</p>
+        <p>I feel you told me it was</p>
+        <p>Would someone believe me when I tell them?</p>
+        <p>Would I feel something if I touched them?</p>
+        <p>That was not for me to know</p>
+      </div>
+
+      <div className="poem">
+        <h4>2</h4>
+        <p>How is anyone ever sure what they want?</p>
+        <p>I asked you once</p>
+        <p>You pushed all the doubts away</p>
+        <p>Who else could tell me what I don't want to hear?</p>
+        <p>When hope had crippled in, I asked you again</p>
+        <p>How can I trust that you know yourself?</p>
+      </div>
+
+      <div className="poem">
+        <h4>3</h4>
+        <p>Does poetry have to be true, or just beautiful?</p>
+        <p>How can I know the truth about you?</p>
+        <p>I felt every colour, day after night</p>
+        <p>How can I tell which day deserves to be told?</p>
+        <p>Can I ever have two things at once, or will they tear me apart every time?</p>
+        <p>No one cared less about impressing me</p>
+        <p>But could you not just a little bit?</p>
+        <p>How odd to find you so untaint</p>
+        <p>How comforting to know nothing could be fake but myself</p>
+        <p>Would I give that up to know that you cared what I think of you?</p>
+        <p>Or could I just not face the shame for how far I have walked down paths that I did not choose?</p>
+      </div>
+
+      <div className="poem">
+        <h4>4</h4>
+        <p>The anticipation of possibility in complete unknown</p>
+        <p>The sea of people I will not know</p>
+        <p>The lonely cold walk to the warms that might await me</p>
+        <p>When we are two, there is always something to share, a detail to remember together</p>
+        <p>When we are two, they are the outside and we are the inside</p>
+        <p>But I arrive here on a single point</p>
+        <p>I take no space, even in theory</p>
+        <p>Is there something to be missed about the inside?</p>
+      </div>
+
+      <div className="poem">
+        <h4>5</h4>
+        <p>It was not an easy way to this point</p>
+        <p>Nor was it a short one</p>
+        <p>To know I can stay here on the half floor</p>
+        <p>To be not-interested</p>
+        <p>To know what I wanted</p>
+        <p>To let the others talk, laugh, and drink whisky</p>
+        <p>But that I was here</p>
+        <p>Only in company of my feet demanding attention</p>
+        <p>To once not envy the desires I see</p>
+        <p>How long I had wished for this</p>
+        <p>How many nights that went with me not knowing</p>
+        <p>But have I learned something, or is it what I will lose again?</p>
+      </div>
+
+      <div className="poem">
+        <h4>6</h4>
+        <p>Do I choose to have the choice?</p>
+        <p>Do I put my heart and reflection, at mercy of people I don't know</p>
+        <p>And do this next month and the one after that</p>
+        <p>To once discover the same need in the eyes of another</p>
+        <p>Will I go round and round again?</p>
+        <p>Am I in it for the way, with no end to expect?</p>
+        <p>Or do I choose to shield myself from the circle?</p>
+        <p>With your heart, your gaze, and your arm on my shoulder, or your chest against mine?</p>
+        <p>With a promise that you withhold nothing for the next ten minutes?</p>
+      </div>
+
+      <div className="poem">
+        <h4>7</h4>
+        <p>Have you ever thought about it?</p>
+        <p>Did a second pass you by, even a forgettable one?</p>
+        <p>Will you ever find out how I felt?</p>
+        <p>I have told others</p>
+        <p>Will you be mad?</p>
+      </div>
+
+      <div className="poem">
+        <h4>8</h4>
+        <p>I prepare myself to be distant</p>
+        <p>Here when I can, when I have someone I know.</p>
+        <p>What would you be expecting when I come back?</p>
+        <p>Do I make it easy just for me?</p>
+        <p>You never show how you hurt</p>
+        <p>But it was already more than I could take.</p>
+        <p>Can that ever be an excuse?</p>
+        <p>Did you wish to be set free of me?</p>
+        <p>Tell me you miss me, but don't hurt too much</p>
+        <p>Make it easy for me, but not easy enough</p>
+        <p>Leave me remembering your skin, but not always</p>
+        <p>Let me rest my body next to yours, but just in my dreams</p>
+      </div>
+
+      <div className="poem">
+        <h4>9</h4>
+        <p>You wake up to see you're swimming in water</p>
+        <p>It is warm and it gets warmer</p>
+        <p>You swim, but there is no out</p>
+        <p>Your feet reach the floor</p>
+        <p>You know you can walk out</p>
+        <p>But your feet are powerless in pushing the floor</p>
+        <p>Where did the water come?</p>
+        <p>You dreamed the water and now it stays</p>
+        <p>Can I dream anything, no matter how enorm, how powerful?</p>
+        <p>Does power come out of nothing?</p>
+        <p>Can I be excused? ..No.</p>
+        <p>...</p>
+        <p>The water seems silly </p>
+        <p>Maybe I can distract it with a joke</p>
+        <p>Just enough to walk out</p>
+        <p>I know it is a dream and nobody can see me in the water</p>
+        <p>I could walk out with no one noticing</p>
+        <p>But whenever I have hope, I get heavier</p>
+        <p>I imagine myself dead. It is a dream after all</p>
+        <p>I can be anyone</p>
+        <p>If I am dead or someone else, ..</p>
+        <p>Then maybe their feet can push the floor</p>
+        <p>I get more afraid</p>
+        <p>I stop to swimm and just think about walking</p>
+        <p>I try to remember in detail how I have ever walked before</p>
+        <p>Hours pass and I now have built a theory ..... </p>
+      </div>
+
+      <div className="poem">
+        <h4>10</h4>
+        <p>I give you my arms, and you give me your legs, he said</p>
+        <p>But more than anything, it was his tears he gave me</p>
+        <p>They were mine more than his</p>
+        <p>It was only me they listened to</p>
+      </div>
+    </div>
+  );
+}
+
 export default function Writing({ isMobile }) {
   const { contentIsVisibleMobile, toc2IsVisibleMobile } = useContext(MobileViewContext);
 
@@ -233,7 +384,7 @@ export default function Writing({ isMobile }) {
             <Route path="/smalltalk/smalltalk-sticks" element={<ArticlePage title="It Is Hard Not to SmallTalk" />} />
 
             {/* Personal Articles */}
-            <Route path="/personal/article-personal-1" element={<ArticlePage title="Personal Article 1" />} />
+            <Route path="/personal/none-sense" element={<Poems/>} />
 
             {/* Work Articles */}
             <Route path="/work/university" element={<MediumArticle
