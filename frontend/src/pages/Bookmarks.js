@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { MobileViewContext } from "../context/MobileViewContext";
 import SecondarySidebar from "../components/SecondarySidebar";
 import "./Bookmarks.css";
+import EconTalk from "./EconTalk"
 import Collage from "../components/Collage"
 
 // Define the categories and their respective bookmark items
@@ -42,7 +43,7 @@ export const bookmarkCategories = [
     title: "Podcast",
     items: [
       {
-        label: "(p) EconTalk",
+        label: "EconTalk",
         route: "/bookmarks/econtalk"
       },
       {
@@ -308,11 +309,7 @@ function BookmarkDetail() {
       name: "EconTalk",
       url: "https://www.econtalk.org",
       description: () => (
-        <div>
-          <p>
-            A long-running podcast that delves into economics, philosophy, and human behavior through engaging conversations.
-          </p>
-        </div>
+        <EconTalk/>
       )
     },
     "conversations-with-tyler": {

@@ -1,0 +1,42 @@
+.econtalk-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+strong {
+    font-weight: 500;
+  }
+  
+  .margin-left {
+    margin: 1rem 3rem 1rem 2rem;
+  }
+  
+  .margin-right {
+    margin: 1rem 2rem 1rem 0;
+  }
+  
+  .highlight-section-podcast {
+    background-color: #f9f9f9;
+    border-left: 4px solid #ccc;
+    padding: 1rem;
+    margin: 1rem 2rem;
+  }
+  
+  .image-style {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0.5rem 0;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .margin-left,
+    .margin-right {
+      margin: 0.5rem 0 !important;
+    }
+    .highlight-section-podcast {
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+    }
+  }
+  
