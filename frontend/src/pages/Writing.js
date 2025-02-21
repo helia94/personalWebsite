@@ -101,11 +101,11 @@ function TangoIntroduction() {
         <title>Tango for Non-Dancers | Helia Jamshidi</title>
         <meta
           name="description"
-          content="Discover the essence of social tango—an improvised dance embracing physical closeness, courage, and cultural rituals."
+          content="Discover the essence of social Tango—an improvised dance embracing physical closeness, courage, and cultural rituals."
         />
         <meta
           name="keywords"
-          content="Tango, social dance, embrace, improvisation, tango culture"
+          content="Tango, social dance, embrace, improvisation, Tango culture"
         />
         <meta name="author" content="Helia Jamshidi" />
 
@@ -127,7 +127,7 @@ function TangoIntroduction() {
         <meta name="twitter:title" content="Tango for Non-Dancers | Helia Jamshidi" />
         <meta
           name="twitter:description"
-          content="Learn why tango is addictive, full of rituals, and fosters deeper connections through its improvisational embrace."
+          content="Learn why Tango is addictive, full of rituals, and fosters deeper connections through its improvisational embrace."
         />
         <meta
           name="twitter:image"
@@ -141,10 +141,16 @@ function TangoIntroduction() {
         Tango For Non-dancers
       </h1>
       <p>
-        It’s a universal thing for people outside Argentina not to understand what tango can feel like until they’ve actually danced socially for several years. In the beginning, it might seem like something else entirely compared to what it becomes later. If you’ve only seen tango in movies or videos, with a rose in the mouth or fishnets, set that aside. Let’s start from scratch.
+        It’s a universal thing for people outside Argentina not to understand what Tango can feel like until they’ve actually danced socially for several years. In the beginning, it might seem like something else entirely compared to what it becomes later. If you’ve only seen Tango in movies or videos, with a rose in the mouth or fishnets, set that aside. Let’s start from scratch.
       </p>
+      <div className="image-gallery" style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+
+      <p> In the playlist below, you will find humorous and cynical, but mostly accurate takes on Tango. There are also videos where social dancers share why they enjoy Tango. You'll see several clips of people dancing Tango socially, and finally, to complete the mix, a recorded video of a Tango Show (last 10/10 video). Keep in mind, he has been living Tango all his life, and this is not what most Tango dancing looks like.          </p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=bYLG3di8iOf6Wjoc&amp;list=PLisEU8FzrGwnSVuma3SLQLL91jqFKlFvm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
       <p>
-        On a structural level, I like explaining tango by comparing it to a combination of elements in tennis and in playing music. Like tennis, you need physical mastery, quick reactions, and constant improvisation based on your partner. The details get finer over time, and you can’t plan moves a week in advance—you have to respond in the moment. Unlike tennis, though, there is no single goal—no 'winning' or points. You do not work against your opponent but with your partner. “Dancing better” means something different to every person, it can be dancing to every beat in the music, or dancing minimally, it could mean pleasing your partner or it could mean expressing your emotions, as with the music the final goal is up to you.
+        On a structural level, I like explaining Tango by comparing it to a combination of elements in tennis and in playing music. Like tennis, you need physical mastery, quick reactions, and constant improvisation based on your partner. The details get finer over time, and you can’t plan moves a week in advance—you have to respond in the moment. Unlike tennis, though, there is no single goal—no 'winning' or points. You do not work against your opponent but with your partner. “Dancing better” means something different to every person, it can be dancing to every beat in the music, or dancing minimally, it could mean pleasing your partner or it could mean expressing your emotions, as with the music the final goal is up to you.
       </p>
       <p>
         It’s deeply historical, cultural, and social, connected to other forms of art like music and poetry. But unlike playing an instrument, social Tango is highly improvised. You don’t get a music sheet; you listen to your partner and the music, creating something new in the moment.
@@ -169,13 +175,13 @@ function TangoIntroduction() {
         <strong>Courage:</strong> You’ll need courage, especially in the beginning, to approach strangers, ask for a dance, ask that they give you 12 minutes of undivided attention, and watch you make many mistakes and slightly put their toes at risk. But that courage spreads to other parts of life.
       </p>
       <p>
-        <strong>Rituals:</strong> The tango community also has codes and rituals built over more than a century: how the DJ arranges music, how to enter or leave the dance floor, ways to invite or decline a dance, when to switch partners, and so on. Some are archaic and follow an expired gendered lens, but many feel elegant and comforting—they keep things running smoothly and prevent chaos and damage to one’s ego.
+        <strong>Rituals:</strong> The Tango community also has codes and rituals built over more than a century: how the DJ arranges music, how to enter or leave the dance floor, ways to invite or decline a dance, when to switch partners, and so on. Some are archaic and follow an expired gendered lens, but many feel elegant and comforting—they keep things running smoothly and prevent chaos and damage to one’s ego.
       </p>
       <p>
-        <strong>Travel:</strong> Travel blends nicely with tango. Before dancing, I was just a tourist everywhere I went. Now, I can find a milonga in most cities and blend into the local community in a single night. You talk, you dance, you see how people live, and it’s often a deeper experience than typical tourism.
+        <strong>Travel:</strong> Travel blends nicely with Tango. Before dancing, I was just a tourist everywhere I went. Now, I can find a milonga in most cities and blend into the local community in a single night. You talk, you dance, you see how people live, and it’s often a deeper experience than typical tourism.
       </p>
       <p>
-        Finally, tango is wonderfully arbitrary. We pour in so much effort for a fleeting dance that isn’t broadcasted or recorded, that no one else sees, which we might not even remember. It exists only at that moment and then vanishes.
+        Finally, Tango is wonderfully arbitrary. We pour in so much effort for a fleeting dance that isn’t broadcasted or recorded, that no one else sees, which we might not even remember. It exists only at that moment and then vanishes.
       </p>
       <div className="image-gallery" style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <a
@@ -189,10 +195,10 @@ function TangoIntroduction() {
             style={{ width: "40rem", maxWidth: "90%", display: "block" }}
           />
           <p style={{ fontStyle: 'italic' }}>
-            Depiction of a tango song by Murat Erdemsel
+            Depiction of a Tango song by Murat Erdemsel
           </p>
-        </a>
-      </div>
+        </a> 
+        </div>
     </div>
   );
 }
@@ -384,7 +390,7 @@ export default function Writing({ isMobile }) {
             <Route path="/smalltalk/smalltalk-sticks" element={<ArticlePage title="It Is Hard Not to SmallTalk" />} />
 
             {/* Personal Articles */}
-            <Route path="/personal/nonsense" element={<Poems/>} />
+            <Route path="/personal/nonsense" element={<Poems />} />
 
             {/* Work Articles */}
             <Route path="/work/university" element={<MediumArticle
