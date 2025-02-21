@@ -52,17 +52,17 @@ const DatingApp = () => {
         })}
       </script>
     </Helmet>
-      <h1>Like we need another one!</h1>
+      <h1>Like we need another Dating App!</h1>
 
       {/* Table of Contents */}
       <nav className="toc">
       <ul className="toc-list">
-      <li><Link to="#vision">What is the Vision?</Link></li>
-        <li><Link to="#why-potential">Why This Vision Has Potential</Link></li>
-        <li><Link to="#risks-challenges">Risks and Challenges</Link></li>
-        <li><Link to="#feature-details">Feature-Set Details</Link></li>
-        <li><Link to="#next-steps">Where I’m At and Next Steps</Link></li>
-        <li><Link to="#how-to-help">How You Can Help</Link></li>
+      <li><a href="#vision">What is the Vision?</a></li>
+    <li><a href="#why-potential">Why This Vision Has Potential</a></li>
+    <li><a href="#risks-challenges">Risks and Challenges</a></li>
+    <li><a href="#feature-details">Feature-Set Details</a></li>
+    <li><a href="#next-steps">Where I’m At and Next Steps</a></li>
+    <li><a href="#how-to-help">How You Can Help</a></li>
       </ul>
     </nav>
 
