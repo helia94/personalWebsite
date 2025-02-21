@@ -6,6 +6,7 @@ import { Routes, Route, useNavigate, Link } from "react-router-dom";
 import { MobileViewContext } from "../context/MobileViewContext";
 import SecondarySidebarBasic from "../components/SecondarySidebarBasic";
 import TechStack from "./TechStack"
+import DatingApp from "./DatingApp"
 import "./Work.css"
 
 
@@ -14,6 +15,7 @@ export const workItems = [
   { label: "Freelance", route: "/work/freelance" },
   { label: "Experience", route: "/work/experience" },
   { label: "Collaborate", route: "/work/collaborate" },
+  { label: "A New Dating App", route: "/work/datingapp" },
 ];
 
 function WorkHome() {
@@ -633,6 +635,7 @@ export default function Work({ isMobile }) {
               </div>
             }></Route>
             <Route path="/collaborate" element={<Collaborate />} />
+            <Route path="/datingapp" element={<DatingApp />} />
           </Routes>
         </div>}
     </div>
