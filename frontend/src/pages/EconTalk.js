@@ -90,12 +90,12 @@ export default function EconTalk() {
 
             <p className="margin-left">
                 When Syrian refugees poured into Jordan, two camps emerged:{" "}
-                <strong><em>"Zaatari—a chaotic pop-up city—and Azraq—meticulously planned."</em></strong>{" "}
+                <strong><em>"Zaatari, a chaotic pop-up city, and Azraq, meticulously planned."</em></strong>{" "}
                 Here are some moments from their story:
             </p>
 
             <p className="margin-left">
-                <strong><em>"Zaatari grew at lightning speed, at one point reaching 200,000 people—like a city conjured from thin air."</em></strong>{" "}
+                <strong><em>"Zaatari grew at lightning speed, at one point reaching 200,000 people, like a city conjured from thin air."</em></strong>{" "}
                 Refugees set up shops selling wedding dresses, running barbershops, and even opening a
                 full-scale pool hall. Powdered milk became the gold standard: buy in bulk with e-credits,
                 and sell outside for Jordanian dinars. Soon, currency circulated, letting entrepreneurs
@@ -154,7 +154,7 @@ export default function EconTalk() {
             <p className="margin-left">
                 How do you make a rational decision about something that will <strong>completely change who you are</strong>?
                 Rational choice suggests you should gather information and pick what fits your current preferences.
-                L.A. Paul finds that approach not complete when it comes to <em>transformative experiences</em>—decisions
+                L.A. Paul finds that approach not complete when it comes to <em>transformative experiences</em>, decisions
                 like becoming a vampire, having a child, or converting to a religion.
             </p>
 
@@ -162,7 +162,7 @@ export default function EconTalk() {
                 <p className="margin-right">
                     How could you possibly predict how you’d feel about immortality or nocturnal cravings if
                     becoming a vampire rewires your entire sense of self? Your current self can’t fully grasp
-                    what your future self will value. Even other vampires can’t fully help—their advice is
+                    what your future self will value. Even other vampires can’t fully help, their advice is
                     colored by their own irreversible transformation.
                 </p>
             </section>
@@ -171,8 +171,8 @@ export default function EconTalk() {
             <p className="margin-right">
                 Epstein challenges the philosophy of early, narrow specialization by arguing that the world
                 we operate in isn’t uniformly predictable. In what he calls{" "}
-                <strong><em>"kind environments"</em></strong>—settings where cause and effect are clear and feedback
-                is immediate—repeating the same task builds expertise, such as in Golf or Chess.
+                <strong><em>"kind environments"</em></strong>, settings where cause and effect are clear and feedback
+                is immediate, repeating the same task builds expertise, such as in Golf or Chess.
             </p>
 
             <section className="highlight-section-podcast">
@@ -190,7 +190,7 @@ export default function EconTalk() {
                 This episode shares a lot of the same concerns as the Vampire problem, which is how to{" "}
                 <strong>become someone you are not.</strong> Agnes talks about the distinction between
                 ambition and aspiration and makes the case for the latter. Aspiration in her work isn’t a
-                static goal but a process—a continuous, evolving practice for self-transformation. This
+                static goal but a process, a continuous, evolving practice for self-transformation. This
                 demands that you acknowledge the uncomfortable gap between who you are and who you might
                 become. I enjoy listening to Agnes whenever she is on the show, I like how she frames things
                 and looks at seemingly trivial reactions we have in our lives (e.g. aspiration or anger)
@@ -234,8 +234,8 @@ export default function EconTalk() {
             <p className="margin-left">
                 It explores a tension between personal freedom with the unwritten rules that hold society
                 together. "Obedience to the unenforceable" captures the voluntary acts of integrity that
-                keep societies functioning without constant oversight. These unspoken norms—like honesty,
-                respect, or fairness—are fragile and yet vital since as they erode, societies often turn to
+                keep societies functioning without constant oversight. These unspoken norms, like honesty,
+                respect, or fairness, are fragile and yet vital since as they erode, societies often turn to
                 laws to fill the gap. Over-reliance on dry enforceable rules lowers flexibility and trust,
                 increases transaction costs to do anything, and weakens our ability to self-govern.
             </p>
@@ -270,7 +270,7 @@ export default function EconTalk() {
 
             <h2 className="margin-right">Matt Ridley on How Innovation Works</h2>
             <p className="margin-left">
-                Innovation isn’t what we think it is. It’s not a lone genius having a eureka moment—it’s a
+                Innovation isn’t what we think it is. It’s not a lone genius having a eureka moment, it’s a
                 slow, grinding process of trial and error, persistence, and collaboration. Matt Ridley
                 argues that history has been rewritten to celebrate singular inventors like Edison and the
                 Wright brothers when, in reality, they were just the ones who perfected ideas that many
@@ -294,7 +294,7 @@ export default function EconTalk() {
 
             <section className="highlight-section-podcast">
                 <p className="margin-left">
-                    David talks about the psychology of belief, persuasion, and why we cling to ideas—even
+                    David talks about the psychology of belief, persuasion, and why we cling to ideas, even
                     when the evidence is stacked against us. He explains how our brains aren’t wired for
                     truth-seeking but for justification, how social influence trumps logic, and why simply
                     giving people "the facts" almost never works.
@@ -305,7 +305,7 @@ export default function EconTalk() {
             <p className="margin-left">
                 Recorded in 2017 this conversation sounds still ahead of the current time (2025). We often
                 struggle to imagine how technology will truly change our lives, focusing only on the obvious
-                upgrades—like a faster car or a quieter engine. But the change lies in the unexpected ripple
+                upgrades, like a faster car or a quieter engine. But the change lies in the unexpected ripple
                 effects.
             </p>
 
@@ -326,7 +326,7 @@ export default function EconTalk() {
             <h2 className="margin-right">Nassim Nicholas Taleb on Skin in the Game</h2>
             <p className="margin-right">
                 <strong>Skin in the game</strong> is what keeps people honest. If you make a decision, you
-                should feel the consequences—good or bad. In the past, a reckless general died with his
+                should feel the consequences, good or bad. In the past, a reckless general died with his
                 army, and a bad merchant went broke. This natural balance ensured that power and
                 responsibility stayed connected. When people had direct exposure to their own risks, they
                 made smarter choices, or they didn’t last. It was survival of the most accountable.
@@ -373,7 +373,7 @@ export default function EconTalk() {
                 As an immigrant kid who never really stopped feeling guilty about leaving and giving up,
                 this one hits close to home. Chris, a former Wall Street trader, spent years making
                 decisions based on numbers, but then he began exploring forgotten neighborhoods. He met drug
-                addicts, prostitutes, and the homeless—who were often reduced to statistics but had{" "}
+                addicts, prostitutes, and the homeless, who were often reduced to statistics but had{" "}
                 <strong>dignity and community that the numbers failed to talk about.</strong>
             </p>
 
@@ -396,15 +396,15 @@ export default function EconTalk() {
                 <p className="margin-left">
                     Science has challenged both but neither confirmed nor disproven either. People can sense
                     the presence of both. These are among the oldest beliefs sustained throughout human
-                    history. Societies have felt that without these beliefs—no ultimate justice (God) or no
-                    responsibility (free will)—chaos could ensue, as people act without regard for
+                    history. Societies have felt that without these beliefs, no ultimate justice (God) or no
+                    responsibility (free will), chaos could ensue, as people act without regard for
                     consequences.
                 </p>
             </section>
 
             <p className="margin-right">
             <strong>What if free will is just a story your brain tells you after the fact? What if every
-                decision—what you had for breakfast, and who you married—was already set in motion long
+                decision, what you had for breakfast, and who you married, was already set in motion long
                 before you even thought about it? </strong>Robert (Neuroscientist) has come to believe that’s exactly
                 how it works. No free will, no true choices, just biology and circumstance playing out.
             </p>
@@ -413,7 +413,7 @@ export default function EconTalk() {
                 He starts dropping evidence. Put someone in a room with a disgusting smell, and they’ll
                 answer political questions more conservatively. Judges rule more harshly when they’re
                 hungry. Brain scans show your neurons fire to make a decision before you even realize you’ve
-                made it. Even your personality—whether you're impulsive, disciplined, kind, or vengeful—was
+                made it. Even your personality, whether you're impulsive, disciplined, kind, or vengeful, was
                 shaped by everything from fetal hormone levels to whether your great-great-grandparents
                 were farmers or herders. They then ask why we feel regret. Why do we praise and blame? And
                 if we accept this view, what happens to justice? To meaning? To the very idea that we should
@@ -422,7 +422,7 @@ export default function EconTalk() {
 
             <h2 className="margin-right">John Gray on the Seven Kinds of Atheism</h2>
             <p className="margin-left">
-                John Gray begins with the ancient world—a time when the idea of indefinite human improvement
+                John Gray begins with the ancient world, a time when the idea of indefinite human improvement
                 would have been incomprehensible. <strong>In the polytheistic traditions of Asia, Greece, and Rome,
                 history had no direction, no grand arc bending toward justice, no final destination where
                 humanity would reach its full potential. </strong>The gods themselves were in eternal conflict, each
@@ -431,10 +431,10 @@ export default function EconTalk() {
             </p>
 
             <p className="margin-left">
-                This polytheistic worldview led to a kind of tolerance—at least in principle. Beauty and
+                This polytheistic worldview led to a kind of tolerance, at least in principle. Beauty and
                 pleasure were as much a part of the good life as discipline and morality. The Greeks and
                 Romans did not imagine that history had a single meaning. There were Greek histories, Roman
-                histories, and Jewish histories—each a self-contained narrative with its values, none
+                histories, and Jewish histories, each a self-contained narrative with its values, none
                 needing to be merged into a singular vision of the human story.
             </p>
 
@@ -457,7 +457,7 @@ export default function EconTalk() {
 
             <p className="margin-left">
                 Today’s secular humanists believe that history is not just a series of events but a story of
-                progress. They assume that human beings are improving—not just technologically, but morally.
+                progress. They assume that human beings are improving, not just technologically, but morally.
                 But improvement implies a goal, an ultimate destination toward which humanity is moving.
                 This is not a belief grounded in science but in faith, inherited from the very monotheistic
                 traditions that secularists claim to have left behind.
@@ -474,7 +474,7 @@ export default function EconTalk() {
             <section className="highlight-section-podcast">
                 <p className="margin-left">
                     If values can be derived scientifically, then there is no longer any need for
-                    tolerance—those who resist the truth are simply wrong.
+                    tolerance, those who resist the truth are simply wrong.
                 </p>
             </section>
         </div>

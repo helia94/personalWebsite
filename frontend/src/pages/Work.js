@@ -34,7 +34,7 @@ function Collaborate() {
         <title>Collaborate | Helia Jamshidi</title>
         <meta
           name="description"
-          content="Explore Helia's collaboration values, skills, and ideas—local events, unique dating concepts, and a location-based social platform."
+          content="Explore Helia's collaboration values, skills, and ideas, local events, unique dating concepts, and a location-based social platform."
         />
         <meta
           name="keywords"
@@ -62,7 +62,7 @@ function Collaborate() {
         <meta name="twitter:title" content="Collaborate | Helia Jamshidi" />
         <meta
           name="twitter:description"
-          content="A space for radical directness, curiosity, and new ideas—from event formats to future dating and social platforms."
+          content="A space for radical directness, curiosity, and new ideas, from event formats to future dating and social platforms."
         />
         <meta
           name="twitter:image"
@@ -78,7 +78,7 @@ function Collaborate() {
       <section >
         <p >
           This is a space where I share my values and interests. If we have
-          something in common, let’s chat! I enjoy all kinds of exchanges—
+          something in common, let’s chat! I enjoy all kinds of exchanges, 
           whether it’s about past experiences or brainstorming
           future ideas.
         </p>
@@ -105,7 +105,7 @@ function Collaborate() {
 
             <li >
               <strong>Generalists Over Specialists:</strong> My career heroes are
-              generalists—people with broad knowledge who’ve worked across
+              generalists, people with broad knowledge who’ve worked across
               different fields. I’m drawn to projects that are nuanced, uncertain,
               or even seemingly impossible. Clear-cut projects where only
               execution matters? Not so much.
@@ -119,16 +119,16 @@ function Collaborate() {
 
             <li >
               <strong>Problem-Making Over Problem-Solving:</strong> I used to be
-              all about solving problems—fixing traffic, teaching kids about
+              all about solving problems, fixing traffic, teaching kids about
               systems, optimizing everything. But then I discovered Tango. It
               didn’t solve any of my problems; in fact, it added more. Yet, I
               wouldn’t trade it for anything. Now, I enjoy introducing people to
-              problems they didn’t know they had—in a way that makes them grateful
+              problems they didn’t know they had, in a way that makes them grateful
               for the discovery.
             </li>
 
             <li >
-              <strong>LLMs (Loyal to GPT):</strong> I use it for everything—
+              <strong>LLMs (Loyal to GPT):</strong> I use it for everything, 
               technical tasks, outsourcing, even book recommendations. It’s
               changed how I learn, giving me more freedom to explore topics deeply
               or broadly. Surprisingly, though, I’ve never found a product built
@@ -144,7 +144,7 @@ function Collaborate() {
 
             <li >
               <strong>Balanced Information Flow:</strong> I thrive in environments
-              with low-to-medium information flow—where experience actually
+              with low-to-medium information flow, where experience actually
               deepens understanding. On one end of the spectrum, you have fields
               like opera singing or brain surgery, where extreme low-info flow
               reigns. In these areas, experience is everything, and the frameworks
@@ -152,7 +152,7 @@ function Collaborate() {
               AI or software engineering, where high-info flow dominates. In these
               areas, frameworks evolve so quickly that someone with 30 years of
               experience is only marginally better than a newcomer. My sweet spot
-              is somewhere in the middle—where experience matters, but there’s
+              is somewhere in the middle, where experience matters, but there’s
               still room for growth and adaptation without being overwhelmed by
               constant change.
             </li>
@@ -223,7 +223,7 @@ function Collaborate() {
             (4-5 people) to meet weekly-ish. We’d hold each other accountable,
             discuss progress, challenge each other, and refine our strategies.
             My current focus is freelancing and developing three product ideas,
-            but your goals can be anything—work-related or not. If we click,
+            but your goals can be anything, work-related or not. If we click,
             let’s make it happen. For more context, check out this <a href="https://open.spotify.com/episode/1lW81z1q7Mepvs2oFd6erH?si=d8Vkj3MISc2_VjHB9q0J5g"
               target="_blank" rel="noopener noreferrer" style={{ color: '#0077cc' }}>Seth Godin episode on Spotify</a>.
           </li>
@@ -245,7 +245,7 @@ function Collaborate() {
           The Premise:
         </h3>
         <p >
-          From a user’s perspective, dating today feels like an investment—a
+          From a user’s perspective, dating today feels like an investment, a
           form of work that might pay off if you find a partner, but often
           leaves you frustrated if you don’t. It’s like a slot machine: you keep
           putting coins in until you hit the jackpot or walk away disappointed.
@@ -260,7 +260,7 @@ function Collaborate() {
           would support users with many diverse ideas of what to try on the
           first date by content curated by us, ideas from other users in
           the platform, and third-party offers on the app. Additionally, it
-          would explicitly address dating culture—quantifying aspects of it
+          would explicitly address dating culture, quantifying aspects of it
           where possible and fostering transparent discussions. Dating would be
           treated as both an evolving skill and an evolving culture, helping
           users to get better at both.
@@ -274,7 +274,7 @@ function Collaborate() {
             Reddit and Instagram focused on curating better first-date ideas. This
             collaborative approach will help gauge whether there’s an audience for
             this concept. If it gains traction, the next step would be to develop
-            a dating app that acts as a companion for better dates—not just for
+            a dating app that acts as a companion for better dates, not just for
             finding dates. Over time, the app could expand into a comprehensive
             platform offering everything from mental health support to date
             planning tools. The ultimate goal is to create a one-stop solution for
@@ -322,7 +322,7 @@ function Collaborate() {
           </li>
           <li >
             Citizens might use it to call attention to everyday urban
-            concerns—from broken streetlights to noisy construction—ensuring
+            concerns, from broken streetlights to noisy construction, ensuring
             their voices are amplified.
           </li>
           <li >
@@ -340,7 +340,7 @@ function Collaborate() {
         </h3>
         <p >
           Users explore this platform through an interactive, zoomable map.
-          Different colors and icons indicate various types of activity—from
+          Different colors and icons indicate various types of activity, from
           cultural events and foodie hotspots to political rallies and
           neighborhood gatherings. Tourists can explore the city to find areas
           with “good vibes” or discover where locals hangout. Locals can use the app to stay informed about what’s

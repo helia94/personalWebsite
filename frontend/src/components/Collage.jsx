@@ -36,7 +36,7 @@ const emotions = [
   {
     title: "Afsondering (Dutch)",
     description:
-      "Means seclusion or isolation, often self-imposed. It reflects being alone—either peaceful and contemplative or lonely and desolate."
+      "Means seclusion or isolation, often self-imposed. It reflects being alone, either peaceful and contemplative or lonely and desolate."
   },
   {
     title: "Ennui (French)",
@@ -61,7 +61,7 @@ const emotions = [
   {
     title: "Topophilia (English)",
     description:
-      "The love of place—a strong affection and attachment to a specific environment, emphasizing the bond people feel with their cherished spaces."
+      "The love of place, a strong affection and attachment to a specific environment, emphasizing the bond people feel with their cherished spaces."
   },
   {
     title: "Nakama (Japanese)",
@@ -101,7 +101,7 @@ const emotions = [
   {
     title: "L'appel du vide (French)",
     description:
-      "Known as 'the call of the void,' it's the sudden, inexplicable urge to jump from high places—a fleeting, irrational impulse."
+      "Known as 'the call of the void,' it's the sudden, inexplicable urge to jump from high places, a fleeting, irrational impulse."
   },
   {
     title: "Gombrowiczowska (Polish)",
@@ -111,12 +111,12 @@ const emotions = [
   {
     title: "Poshlost (Russian)",
     description:
-      "Refers to a kind of vulgarity or banality linked to moral and spiritual shallowness—a sentimental kitsch or hypocrisy in art and social interactions."
+      "Refers to a kind of vulgarity or banality linked to moral and spiritual shallowness, a sentimental kitsch or hypocrisy in art and social interactions."
   },
   {
     title: "Litost (Czech)",
     description:
-      "A state of torment created by the sudden sight of one’s own misery—a mix of grief, longing, and remorse triggered by personal inadequacy."
+      "A state of torment created by the sudden sight of one’s own misery, a mix of grief, longing, and remorse triggered by personal inadequacy."
   },
   {
     title: "Han (Korean)",

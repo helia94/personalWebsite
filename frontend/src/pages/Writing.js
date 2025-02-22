@@ -101,7 +101,7 @@ function TangoIntroduction() {
         <title>Tango for Non-Dancers | Helia Jamshidi</title>
         <meta
           name="description"
-          content="Discover the essence of social Tango—an improvised dance embracing physical closeness, courage, and cultural rituals."
+          content="Discover the essence of social Tango, an improvised dance embracing physical closeness, courage, and cultural rituals."
         />
         <meta
           name="keywords"
@@ -113,7 +113,7 @@ function TangoIntroduction() {
         <meta property="og:title" content="Tango for Non-Dancers | Helia Jamshidi" />
         <meta
           property="og:description"
-          content="Tango isn't about roses and fishnets—it’s a social dance blending physical mastery, improvisation, and culture. Learn how it can enrich your life."
+          content="Tango isn't about roses and fishnets, it’s a social dance blending physical mastery, improvisation, and culture. Learn how it can enrich your life."
         />
         <meta
           property="og:image"
@@ -150,7 +150,7 @@ function TangoIntroduction() {
       </div>
 
       <p>
-        On a structural level, I like explaining Tango by comparing it to a combination of elements in tennis and in playing music. Like tennis, you need physical mastery, quick reactions, and constant improvisation based on your partner. The details get finer over time, and you can’t plan moves a week in advance—you have to respond in the moment. Unlike tennis, though, there is no single goal—no 'winning' or points. You do not work against your opponent but with your partner. “Dancing better” means something different to every person, it can be dancing to every beat in the music, or dancing minimally, it could mean pleasing your partner or it could mean expressing your emotions, as with the music the final goal is up to you.
+        On a structural level, I like explaining Tango by comparing it to a combination of elements in tennis and in playing music. Like tennis, you need physical mastery, quick reactions, and constant improvisation based on your partner. The details get finer over time, and you can’t plan moves a week in advance, you have to respond in the moment. Unlike tennis, though, there is no single goal, no 'winning' or points. You do not work against your opponent but with your partner. “Dancing better” means something different to every person, it can be dancing to every beat in the music, or dancing minimally, it could mean pleasing your partner or it could mean expressing your emotions, as with the music the final goal is up to you.
       </p>
       <p>
         It’s deeply historical, cultural, and social, connected to other forms of art like music and poetry. But unlike playing an instrument, social Tango is highly improvised. You don’t get a music sheet; you listen to your partner and the music, creating something new in the moment.
@@ -159,7 +159,7 @@ function TangoIntroduction() {
         So here are six things I enjoy most in Tango.
       </p>
       <p>
-        <strong>Details:</strong> I enjoy Tango because of its endlessness. Even after 10 or 20 years, you’ll feel like you’re just beginning. The music, the connection, the physicality—it’s an addiction to wanting more. The same songs have been played for nearly a century, yet people still find nuances.
+        <strong>Details:</strong> I enjoy Tango because of its endlessness. Even after 10 or 20 years, you’ll feel like you’re just beginning. The music, the connection, the physicality, it’s an addiction to wanting more. The same songs have been played for nearly a century, yet people still find nuances.
       </p>
       <p>
         <strong>Embrace:</strong> Over time, you become comfortable with close physical contact and reading subtle signals in another person’s body. Every dancing night, you hug new or familiar people in a tight embrace. It changes your perspective on physical closeness, and you develop your attention in the moment, a kind of body-based meditation.
@@ -175,7 +175,7 @@ function TangoIntroduction() {
         <strong>Courage:</strong> You’ll need courage, especially in the beginning, to approach strangers, ask for a dance, ask that they give you 12 minutes of undivided attention, and watch you make many mistakes and slightly put their toes at risk. But that courage spreads to other parts of life.
       </p>
       <p>
-        <strong>Rituals:</strong> The Tango community also has codes and rituals built over more than a century: how the DJ arranges music, how to enter or leave the dance floor, ways to invite or decline a dance, when to switch partners, and so on. Some are archaic and follow an expired gendered lens, but many feel elegant and comforting—they keep things running smoothly and prevent chaos and damage to one’s ego.
+        <strong>Rituals:</strong> The Tango community also has codes and rituals built over more than a century: how the DJ arranges music, how to enter or leave the dance floor, ways to invite or decline a dance, when to switch partners, and so on. Some are archaic and follow an expired gendered lens, but many feel elegant and comforting, they keep things running smoothly and prevent chaos and damage to one’s ego.
       </p>
       <p>
         <strong>Travel:</strong> Travel blends nicely with Tango. Before dancing, I was just a tourist everywhere I went. Now, I can find a milonga in most cities and blend into the local community in a single night. You talk, you dance, you see how people live, and it’s often a deeper experience than typical tourism.

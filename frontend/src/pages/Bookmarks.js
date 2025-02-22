@@ -177,7 +177,7 @@ function BookmarkDetail() {
         </div>
         </section>
         <p>
-          If you feel that your sexuality is a stranger to yourself; if you feel you should have sex more or less than you want; if you’ve changed and want to reclaim something from your past; if you can’t fully let go during intimacy, or if you think you’ve lost the desire for sex entirely—this book is worth reading.
+          If you feel that your sexuality is a stranger to yourself; if you feel you should have sex more or less than you want; if you’ve changed and want to reclaim something from your past; if you can’t fully let go during intimacy, or if you think you’ve lost the desire for sex entirely, this book is worth reading.
         </p>
         <p>
           <b>Emily Nagoski</b> doesn’t tell you what to do. There are no techniques or tricks. Instead, the book feels like an invitation to enter a safe space for a few minutes where you can drop all expectations around sex and simply experience how you feel without them. It’s like the author is holding your hand, helping you feel normal, comfortable, and okay in your body. Even if you already feel comfortable in your skin, this book can bring empathy for others who struggle under the weight of cultural expectations around sex.
@@ -189,7 +189,7 @@ function BookmarkDetail() {
         <div>
           <h3>Who should not read the book:</h3>
           <p>
-            If you’re looking for a straightforward, science-heavy, fact-driven guide to sexuality, you will be disappointed. <i>Come As You Are</i> is more like talking to a therapist or a good friend—it’s conversational, and filled with metaphors and repetition. The overly chatty tone can come off as condescending, or even infantilizing, especially to those who prefer a more serious tone. For me, the repetition was a feature, not a bug. I didn’t go into this book looking for facts and information; I wanted understanding and a change of mindset, which I believe is only possible through repetition. I plan to read it more times. But I can see how it might feel redundant or unnecessary to others.
+            If you’re looking for a straightforward, science-heavy, fact-driven guide to sexuality, you will be disappointed. <i>Come As You Are</i> is more like talking to a therapist or a good friend, it’s conversational, and filled with metaphors and repetition. The overly chatty tone can come off as condescending, or even infantilizing, especially to those who prefer a more serious tone. For me, the repetition was a feature, not a bug. I didn’t go into this book looking for facts and information; I wanted understanding and a change of mindset, which I believe is only possible through repetition. I plan to read it more times. But I can see how it might feel redundant or unnecessary to others.
           </p>
           <p>
             Additionally, some readers notice the book’s heteronormative scope. It primarily centers on cisgender women’s experiences.
@@ -219,7 +219,7 @@ function BookmarkDetail() {
           <p>
             There’s a lot about how we classify and label emotions. 
             You see something, your body reacts, and then you guess or construct which 'emotion' you’re feeling based on your assumptions and past experiences. 
-            She then provides ideas for building a healthier body budget—getting good sleep, better nutrition, exercise, physical touch, and gratitude. 
+            She then provides ideas for building a healthier body budget, getting good sleep, better nutrition, exercise, physical touch, and gratitude. 
             It redefines how I see emotions and the line between <b>'body' and 'mind’</b>.
           </p>
           <LisaYouTubeEmbed/>
@@ -247,7 +247,7 @@ function BookmarkDetail() {
           The book covers the best research on sleep, its effects on emotional and physical health, and why we dream. 
           It also provides ways for improving sleep. 
           While I felt Walker could be more rigorous in some conclusions, 
-          the book is an effective way to shift your mindset about sleep and take it seriously—not as wasted time, but as a critical part of life.
+          the book is an effective way to shift your mindset about sleep and take it seriously, not as wasted time, but as a critical part of life.
           </p>
           <p>I for example had no idea that we and many other animal have four sleep cycles of sleep with dearm and without. 
             Here is how it looks if like me, you did not know about it either.</p>

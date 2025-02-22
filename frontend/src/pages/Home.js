@@ -50,10 +50,10 @@ export default function Home() {
         <p>
           Hi, this is Helia. Welcome to my digital space. This is not a portfolio website; please visit the work tab for that.
           This space is my attempt to exist digitally as a human, not just as a professional.
-          I’m training myself to publish rough first drafts. Since I started this website in February 2025, it’s still rough—but I’m committed to improving it.
+          I’m training myself to publish rough first drafts. Since I started this website in February 2025, it’s still rough, but I’m committed to improving it.
         </p>
         <p>
-          I know most of you don’t have a lot of time. That’s okay. My target reader is the rare person—maybe one in a hundred—who wants to make time for me in their life.
+          I know most of you don’t have a lot of time. That’s okay. My target reader is the rare person, maybe one in a hundred, who wants to make time for me in their life.
           The purpose of this homepage is to explain who I am and what I desire most from you, and how I can include you in my life.
         </p>
         <p>
@@ -74,13 +74,13 @@ export default function Home() {
         <h3>On Conversations</h3>
         <p>
           A crucial thing to know about me as a friend is that I crave deeper connections. Small talk drains me.
-          I want to talk about real stuff—feelings, aspirations, the juicy things in life. I want us to discover new things about each other
+          I want to talk about real stuff, feelings, aspirations, the juicy things in life. I want us to discover new things about each other
           and ourselves in real time. That kind of conversation energizes me.
         </p>
         <p>
           Ironically, though I love conversation, I don’t always feel connected through words alone.
           I’ve never felt the most connection with the people who “get” me the most intellectually.
-          My closest bonds often form through physical presence—through affectionate contact. Touch makes me feel accepted, normal, and seen.
+          My closest bonds often form through physical presence, through affectionate contact. Touch makes me feel accepted, normal, and seen.
           I know that’s not how everyone feels, but it’s my physiology. Relationships without any physical dimension have been very meaningful to me,
           but they often leave me with a hole where that closeness should be.
         </p>
@@ -88,7 +88,7 @@ export default function Home() {
         <h3>On Curiosity</h3>
         <p>
           I’m often perceived as curious and optimistic. I don’t usually go super deep into a single topic, but I love diving into the basics of almost anything.
-          I’ve done countless random presentations—about the history of potatoes in Europe, about pirate ship economies and rules,
+          I’ve done countless random presentations, about the history of potatoes in Europe, about pirate ship economies and rules,
           about animal reproduction theories and bizarre anatomy (like certain ducks’ 42 cm corkscrew-shaped penises).
           I’m fascinated by these weird facts and how they reflect on evolution and the human mind, even if I don’t become an expert in them.
         </p>
@@ -135,7 +135,7 @@ export default function Home() {
               alt="How Emotions Are Made"
             />
             <h4>How Emotions Are Made</h4>
-            <p>Lisa Feldman Barrett goes to great lengths to challenge her own theories—a rare trait among scientists in complex fields.</p>
+            <p>Lisa Feldman Barrett goes to great lengths to challenge her own theories, a rare trait among scientists in complex fields.</p>
           </div>
         </div>
       </div>
