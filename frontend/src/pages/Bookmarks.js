@@ -2,6 +2,7 @@
 import React from "react";
 import { Routes, Route, useParams } from "react-router-dom";
 import { useContext } from "react";
+import { InstagramEmbed } from 'react-social-media-embed';
 import { MobileViewContext } from "../context/MobileViewContext";
 import SecondarySidebar from "../components/SecondarySidebar";
 import "./Bookmarks.css";
@@ -64,7 +65,7 @@ export const bookmarkCategories = [
     title: "Web",
     items: [
       {
-        label: "(p) Epicllama",
+        label: "Epicllama",
         route: "/bookmarks/epicllama"
       }
     ],
@@ -351,8 +352,11 @@ function BookmarkDetail() {
       description: () => (
         <div>
           <p>
-            A quirky website that offers creative insights and a fresh perspective on modern culture.
-          </p>
+            They organize F*ck the Small Talk which is an out-of-the-box social experience where strangers come together and are not allowed to ask, "what do you do?", "what brought you to here?, "Got any plans for the weekend?". I joined in Lisbon and was really inspired by the host and the format. Here is the founder telling the story of why he started it.</p>
+            <div style={{ display: "flex", maxWidth: "80%", alignItems: "center", justifyContent: "center" , margin: "4rem"}}>
+
+            <InstagramEmbed url="https://www.instagram.com/p/DF2kKdlsylx/" width={400} />
+            </div>
         </div>
       )
     },
