@@ -68,16 +68,16 @@ export const bookmarkCategories = [
         route: "/bookmarks/epicllama"
       }
     ],
-  },,
+  }, ,
   {
     title: "Goodies",
     items: [
       {
-        label: "(p) Perfect Socks",
+        label: "Perfect Socks",
         route: "/bookmarks/perfect-socks"
       },
       {
-        label: "(p) Perfect Chair",
+        label: "Perfect Chair",
         route: "/bookmarks/perfect-chair"
       },
     ],
@@ -129,15 +129,15 @@ function BookmarksHome() {
 const LisaYouTubeEmbed = () => {
   return (
     <div className="video-container">
-    <iframe
-      src="https://www.youtube.com/embed/0gks6ceq4eQ"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-      title="Emotions Explained"
-    ></iframe>
-    <p>Watch Lisa Feldman Barrett explain how emotions are made.</p>
-  </div>
+      <iframe
+        src="https://www.youtube.com/embed/0gks6ceq4eQ"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        title="Emotions Explained"
+      ></iframe>
+      <p>Watch Lisa Feldman Barrett explain how emotions are made.</p>
+    </div>
   );
 };
 
@@ -152,50 +152,50 @@ function BookmarkDetail() {
       url: "https://www.simonandschuster.com/books/Come-As-You-Are-Revised-and-Updated/Emily-Nagoski/9781982165314",
       description: () => (
         <div>
-        <p>
-          If I could suggest only one book, it would surely be <i>Come As You Are</i> by <b>Emily Nagoski</b>. To show you why, let me ask you a few questions:
-        </p>
-      <section className="speaking-section">
-      <div className="list-section">
-        <ul style={{listStyle :"none"}}>
-          <li>
-            Did you form expectations about how you should feel or desire around sexuality before you had a chance to discover what you truly feel and desire?
-          </li>
-          <li>
-            Are you afraid of hurting your partner’s feelings while also fearing not meeting their expectations?
-          </li>
-          <li>
-            Do you wonder if "good" and "normal" sexual experiences have been defined by what works for most men?
-          </li>
-          <li>
-            Do you struggle to like or trust your body to behave the way you want it to?
-          </li>
-          <li>
-            Do you think there’s something wrong with your desires?
-          </li>
-        </ul>
-        </div>
-        </section>
-        <p>
-          If you feel that your sexuality is a stranger to yourself; if you feel you should have sex more or less than you want; if you’ve changed and want to reclaim something from your past; if you can’t fully let go during intimacy, or if you think you’ve lost the desire for sex entirely, this book is worth reading.
-        </p>
-        <p>
-          <b>Emily Nagoski</b> doesn’t tell you what to do. There are no techniques or tricks. Instead, the book feels like an invitation to enter a safe space for a few minutes where you can drop all expectations around sex and simply experience how you feel without them. It’s like the author is holding your hand, helping you feel normal, comfortable, and okay in your body. Even if you already feel comfortable in your skin, this book can bring empathy for others who struggle under the weight of cultural expectations around sex.
-        </p>
-        <blockquote class="quote">
-          When people ask me, "Am I normal?" They're asking, "Do I belong?" The answer is yes. You belong in your body. You belong in the world. You've belonged since the day you were born, this is your home. You don't have to earn it by conforming to some externally imposed sexual standard.
-        </blockquote>
-  
-        <div>
-          <h3>Who should not read the book:</h3>
           <p>
-            If you’re looking for a straightforward, science-heavy, fact-driven guide to sexuality, you will be disappointed. <i>Come As You Are</i> is more like talking to a therapist or a good friend, it’s conversational, and filled with metaphors and repetition. The overly chatty tone can come off as condescending, or even infantilizing, especially to those who prefer a more serious tone. For me, the repetition was a feature, not a bug. I didn’t go into this book looking for facts and information; I wanted understanding and a change of mindset, which I believe is only possible through repetition. I plan to read it more times. But I can see how it might feel redundant or unnecessary to others.
+            If I could suggest only one book, it would surely be <i>Come As You Are</i> by <b>Emily Nagoski</b>. To show you why, let me ask you a few questions:
+          </p>
+          <section className="speaking-section">
+            <div className="list-section">
+              <ul style={{ listStyle: "none" }}>
+                <li>
+                  Did you form expectations about how you should feel or desire around sexuality before you had a chance to discover what you truly feel and desire?
+                </li>
+                <li>
+                  Are you afraid of hurting your partner’s feelings while also fearing not meeting their expectations?
+                </li>
+                <li>
+                  Do you wonder if "good" and "normal" sexual experiences have been defined by what works for most men?
+                </li>
+                <li>
+                  Do you struggle to like or trust your body to behave the way you want it to?
+                </li>
+                <li>
+                  Do you think there’s something wrong with your desires?
+                </li>
+              </ul>
+            </div>
+          </section>
+          <p>
+            If you feel that your sexuality is a stranger to yourself; if you feel you should have sex more or less than you want; if you’ve changed and want to reclaim something from your past; if you can’t fully let go during intimacy, or if you think you’ve lost the desire for sex entirely, this book is worth reading.
           </p>
           <p>
-            Additionally, some readers notice the book’s heteronormative scope. It primarily centers on cisgender women’s experiences.
+            <b>Emily Nagoski</b> doesn’t tell you what to do. There are no techniques or tricks. Instead, the book feels like an invitation to enter a safe space for a few minutes where you can drop all expectations around sex and simply experience how you feel without them. It’s like the author is holding your hand, helping you feel normal, comfortable, and okay in your body. Even if you already feel comfortable in your skin, this book can bring empathy for others who struggle under the weight of cultural expectations around sex.
           </p>
+          <blockquote class="quote">
+            When people ask me, "Am I normal?" They're asking, "Do I belong?" The answer is yes. You belong in your body. You belong in the world. You've belonged since the day you were born, this is your home. You don't have to earn it by conforming to some externally imposed sexual standard.
+          </blockquote>
+
+          <div>
+            <h3>Who should not read the book:</h3>
+            <p>
+              If you’re looking for a straightforward, science-heavy, fact-driven guide to sexuality, you will be disappointed. <i>Come As You Are</i> is more like talking to a therapist or a good friend, it’s conversational, and filled with metaphors and repetition. The overly chatty tone can come off as condescending, or even infantilizing, especially to those who prefer a more serious tone. For me, the repetition was a feature, not a bug. I didn’t go into this book looking for facts and information; I wanted understanding and a change of mindset, which I believe is only possible through repetition. I plan to read it more times. But I can see how it might feel redundant or unnecessary to others.
+            </p>
+            <p>
+              Additionally, some readers notice the book’s heteronormative scope. It primarily centers on cisgender women’s experiences.
+            </p>
+          </div>
         </div>
-      </div>
       )
     },
     "how-emotions-are-made": {
@@ -204,28 +204,28 @@ function BookmarkDetail() {
       description: () => (
         <div>
           <p>
-          <i>How Emotions Are Made</i> suggests that your brain might mix up the bodily feelings of <b>having the flu</b> with those of <b>falling in love</b>.
-           The premise is that your brain is a prediction machine. It doesn’t passively receive sensory data;
+            <i>How Emotions Are Made</i> suggests that your brain might mix up the bodily feelings of <b>having the flu</b> with those of <b>falling in love</b>.
+            The premise is that your brain is a prediction machine. It doesn’t passively receive sensory data;
             it uses past experience to predict and interpret them.
             She introduces the concept of the <b>'body budget,'</b> where your brain acts like an accountant, constantly adjusting and allocating energy, nutrition, and oxygen to keep you going.
             Even the presence of your boss in the hallway can alter your budget, draining or boosting energy.
             You might interpret bodily signals as being sick or falling in love, depending on context.
           </p>
           <img
-              src="https://res.cloudinary.com/dl9xg597r/image/upload/v1739118864/Screenshot_2025-02-09_162336_js4lmm.png"
-              alt="Cat Photos"
-              style={{width:"30rem", maxWidth:"90%"}}
-            />
+            src="https://res.cloudinary.com/dl9xg597r/image/upload/v1739118864/Screenshot_2025-02-09_162336_js4lmm.png"
+            alt="Cat Photos"
+            style={{ width: "30rem", maxWidth: "90%" }}
+          />
           <p>
-            There’s a lot about how we classify and label emotions. 
-            You see something, your body reacts, and then you guess or construct which 'emotion' you’re feeling based on your assumptions and past experiences. 
-            She then provides ideas for building a healthier body budget, getting good sleep, better nutrition, exercise, physical touch, and gratitude. 
+            There’s a lot about how we classify and label emotions.
+            You see something, your body reacts, and then you guess or construct which 'emotion' you’re feeling based on your assumptions and past experiences.
+            She then provides ideas for building a healthier body budget, getting good sleep, better nutrition, exercise, physical touch, and gratitude.
             It redefines how I see emotions and the line between <b>'body' and 'mind’</b>.
           </p>
-          <LisaYouTubeEmbed/>
-          <Collage/>
+          <LisaYouTubeEmbed />
+          <Collage />
         </div>
-        
+
       )
     },
     "why-we-sleep": {
@@ -233,41 +233,41 @@ function BookmarkDetail() {
       url: "https://www.goodreads.com/book/show/34466963-why-we-sleep",
       description: () => (
         <div>
-        <img
+          <img
             src="https://res.cloudinary.com/dl9xg597r/image/upload/v1739119872/Screenshot_2025-02-09_174438_gllcmf.png"
             alt="Cat Photos"
-            style={{width:"40rem", maxWidth:"90%"}}
+            style={{ width: "40rem", maxWidth: "90%" }}
           />
           <p>
-          Why We Sleep by Matthew Walker changed my view of sleep. 
-          I used to think of sleep as simply "turning off," like a laptop, but it’s far more complex. Sleep is not passive; 
-          it’s an active process where parts of your brain are even more active than when you’re awake.
+            Why We Sleep by Matthew Walker changed my view of sleep.
+            I used to think of sleep as simply "turning off," like a laptop, but it’s far more complex. Sleep is not passive;
+            it’s an active process where parts of your brain are even more active than when you’re awake.
           </p>
           <p>
-          The book covers the best research on sleep, its effects on emotional and physical health, and why we dream. 
-          It also provides ways for improving sleep. 
-          While I felt Walker could be more rigorous in some conclusions, 
-          the book is an effective way to shift your mindset about sleep and take it seriously, not as wasted time, but as a critical part of life.
+            The book covers the best research on sleep, its effects on emotional and physical health, and why we dream.
+            It also provides ways for improving sleep.
+            While I felt Walker could be more rigorous in some conclusions,
+            the book is an effective way to shift your mindset about sleep and take it seriously, not as wasted time, but as a critical part of life.
           </p>
-          <p>I for example had no idea that we and many other animal have four sleep cycles of sleep with dearm and without. 
+          <p>I for example had no idea that we and many other animal have four sleep cycles of sleep with dearm and without.
             Here is how it looks if like me, you did not know about it either.</p>
-        <img
+          <img
             src="https://res.cloudinary.com/dl9xg597r/image/upload/v1739120164/Screenshot_2025-02-09_175458_vx4tki.png"
             alt="sleep cycles"
-            style={{width:"40rem", maxWidth:"90%"}}
+            style={{ width: "40rem", maxWidth: "90%" }}
           />
-          <div style={{margin: "3rem"}}>
-          <p>
-            You can get a taste of the book from his podcast.
-          </p>
-          <iframe 
-            src="https://open.spotify.com/embed-podcast/show/1aIVAabjRjnmiouX0zCzF3" 
-            width="100%" 
-            height="352" 
-            frameborder="0" 
-            allow="encrypted-media" 
-            allowtransparency="true">
-          </iframe>
+          <div style={{ margin: "3rem" }}>
+            <p>
+              You can get a taste of the book from his podcast.
+            </p>
+            <iframe
+              src="https://open.spotify.com/embed-podcast/show/1aIVAabjRjnmiouX0zCzF3"
+              width="100%"
+              height="352"
+              frameborder="0"
+              allow="encrypted-media"
+              allowtransparency="true">
+            </iframe>
           </div>
         </div>
       )
@@ -309,7 +309,7 @@ function BookmarkDetail() {
       name: "EconTalk",
       url: "https://www.econtalk.org",
       description: () => (
-        <EconTalk/>
+        <EconTalk />
       )
     },
     "conversations-with-tyler": {
@@ -358,23 +358,41 @@ function BookmarkDetail() {
     },
     "perfect-socks": {
       name: "Perfect Socks",
-      url: "https://www.perfectsocks.com",
+      url: "https://www.amazon.de/dp/B07JVSMYN5?ref=ppx_yo2ov_dt_b_fed_asin_title",
       description: () => (
         <div>
           <p>
             Here are a pair of perfect home socks. (I dare you to find better).
           </p>
+
+          <div style={{ display: "flex", maxWidth: "80%" }}>
+            <img
+              src="https://res.cloudinary.com/dl9xg597r/image/upload/v1740263398/91cAQkOOBKL._AC_SX569__mza2sd.jpg"
+              alt="Winter Warm Thick Cute House Socks with Full Plush and Wool"
+              className="image-style"
+              style={{ width: "45%", objectFit: "cover" }}
+            />
+          </div>
         </div>
       )
     },
     "perfect-chair": {
       name: "Perfect Chair",
-      url: "https://www.perfectchair.com",
+      url: "https://www.freifrau.com/de/produkte/leya-lounge-chair?variant=1320",
       description: () => (
         <div>
           <p>
             This chair is perfection. (I dare you to find better). And no I do not have it, I just sat on it.
           </p>
+
+          <div style={{ display: "flex", gap: "3%", maxWidth: "80%" }}>
+            <img
+              src="https://res.cloudinary.com/dl9xg597r/image/upload/v1740263398/photo_2025-02-22_23-27-55_kzlcxf.jpg"
+              alt="Leya Lounge Chair aus der Familie Leya von Freifrau"
+              className="image-style"
+              style={{ width: "45%", objectFit: "cover" }}
+            />
+          </div>
         </div>
       )
     }
