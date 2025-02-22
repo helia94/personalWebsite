@@ -269,10 +269,10 @@ const DatingApp = () => {
       <section id="next-steps" className="speaking-section-colored">
         <h2>Where I’m At and Next Steps</h2>
         <ul>
+          <li><strong>Need Partners in Crime:</strong>My top priority right now is finding partners to talk with who can challenge this vision. If you’re optimistic but love to critique, and you feel the same itch I do, reach out. Skillwise, I need someone who understands beauty, the app has to be a work of art, and I want someone with a vision because that’s not something I can learn. Other skills that would complement mine are UX, understanding the customer journey, and knowing how to sell.</li>
           <li><strong>Defining the Product and Customer Segment:</strong> Narrow down the target demographic and how to reach them.</li>
           <li><strong>Choosing a Starting Point:</strong> Decide on the first feature and initial market to target.</li>
           <li><strong>Crafting the Story:</strong> Develop a compelling narrative for users to share with others. Figure out how to encourage organic sharing (e.g., through social media, word of mouth).</li>
-          <li><strong>Finding Partners:</strong> Look for co-founders or partners in crime who share interest for dating.</li>
           <li><strong>Bootstrapping the App:</strong> Explore no-investment or low-cost models to launch the app.</li>
           <li><strong>Validating the Vision:</strong> Talk to potential users to test assumptions and refine the concept. Experiment with small-scale pilots to gather feedback and iterate.</li>
         </ul>
