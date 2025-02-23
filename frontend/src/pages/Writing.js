@@ -12,9 +12,9 @@ export const writingData = [
     title: "Tango",
     items: [
       { label: "For Non-dancers", route: "/writing/tango/non-dancers" },
-      { label: "(p) Teaching for Young Beginners", route: "/writing/tango/teaching" },
+      { label: "Mentoring for Young Beginners", route: "/writing/tango/mentoring" },
+      { label: "Exercises Ideas", route: "/writing/tango/exercises" },
       { label: "(p) Tango Music", route: "/writing/tango/music" },
-      { label: "(p) Learning Tango Faster", route: "/writing/tango/leaning" },
       { label: "(p) A Woman in Tango", route: "/writing/tango/woman-in-tango" },
       { label: "(p) Giving and Getting", route: "/writing/tango/giving-getting" },
       { label: "(p) Talking about Tango", route: "/writing/tango/questions" }
@@ -145,8 +145,8 @@ function TangoIntroduction() {
       </p>
       <div className="image-gallery" style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
-      <p> In the playlist below, you will find humorous and cynical, but mostly accurate takes on Tango. There are also videos where social dancers share why they enjoy Tango. You'll see several clips of people dancing Tango socially, and finally, to complete the mix, a recorded video of a Tango Show (last 10/10 video). Keep in mind, he has been living Tango all his life, and this is not what most Tango dancing looks like.          </p>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=bYLG3di8iOf6Wjoc&amp;list=PLisEU8FzrGwnSVuma3SLQLL91jqFKlFvm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p> In the playlist below, you will find humorous and cynical, but mostly accurate takes on Tango. There are also videos where social dancers share why they enjoy Tango. You'll see several clips of people dancing Tango socially, and finally, to complete the mix, a recorded video of a Tango Show (last 10/10 video). Keep in mind, he has been living Tango all his life, and this is not what most Tango dancing looks like.          </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=bYLG3di8iOf6Wjoc&amp;list=PLisEU8FzrGwnSVuma3SLQLL91jqFKlFvm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
 
       <p>
@@ -197,11 +197,183 @@ function TangoIntroduction() {
           <p style={{ fontStyle: 'italic' }}>
             Depiction of a Tango song by Murat Erdemsel
           </p>
-        </a> 
-        </div>
+        </a>
+      </div>
     </div>
   );
 }
+
+const MentoringSection = () => {
+  return (
+    <div>
+      <Helmet>
+        {/* General SEO Tags */}
+        <title>Learn Argentine Tango in Karlsruhe | Mentoring for Beginners</title>
+        <meta
+          name="description"
+          content="Join personalized mentoring sessions for Argentine Tango in Karlsruhe. Learn balance, musicality, and milonga techniques. Perfect for beginners and young dancers."
+        />
+        <meta
+          name="keywords"
+          content="Argentine Tango Karlsruhe, learn milonga, tango mentoring, tango beginners, tango dance Karlsruhe, tango musicality, tango balance, tango community Karlsruhe"
+        />
+
+        {/* German SEO Tags */}
+        <meta
+          name="description"
+          lang="de"
+          content="Lernen Sie Argentinischen Tango in Karlsruhe mit persönlichem Mentoring für Anfänger. Verbessern Sie Balance, Musikalität und Milonga-Techniken. Perfekt für junge Tänzer und Einsteiger."
+        />
+        <meta
+          name="keywords"
+          lang="de"
+          content="Argentinischer Tango Karlsruhe, Milonga lernen, Tango Mentoring, Tango Anfänger, Tango tanzen Karlsruhe, Tango Musikalität, Tango Balance, Tango Gemeinschaft Karlsruhe"
+        />
+
+        {/* Open Graph Tags (for social media sharing) */}
+        <meta property="og:title" content="Learn Argentine Tango in Karlsruhe | Mentoring for Beginners" />
+        <meta
+          property="og:description"
+          content="Join personalized mentoring sessions for Argentine Tango in Karlsruhe. Learn balance, musicality, and milonga techniques. Perfect for beginners and young dancers."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://heliajamshidi.me/writing/tango/mentoring" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Learn Argentine Tango in Karlsruhe | Mentoring for Beginners" />
+        <meta
+          name="twitter:description"
+          content="Join personalized mentoring sessions for Argentine Tango in Karlsruhe. Learn balance, musicality, and milonga techniques. Perfect for beginners and young dancers."
+        />
+
+        {/* Canonical Link */}
+        <link rel="canonical" href="https://heliajamshidi.me/writing/tango/mentoring" />
+      </Helmet>
+      <section className="speaking-section">
+        <h1>Mentoring for Young Beginners</h1>
+        <p>
+          I like to mentor young beginners to Tango with <strong>one-on-one or small-group sessions</strong> for people from one up to three years of dancing. Whether you’re leading or following, this is for people who already like Tango and want to improve and enjoy it. If you’re not sure if Tango is for you, visit the <strong>Group Beginner Classes in AKK</strong> instead. If you’re in love with Tango and want a push, <strong>write me</strong>.
+        </p>
+
+        <section className="speaking-section-colored">
+          <h2>Why Mentoring Matters</h2>
+          <p>
+            Tango dancing itself is cheap, pay <strong>10 euros</strong>, and dance for six hours. But learning can be expensive, especially early on, and you don’t always need the most famous teacher from Buenos Aires. Plus, we need <strong>new, young dancers</strong> to learn faster so they don’t get frustrated and quit.
+          </p>
+        </section>
+
+        <section className="list-section">
+          <h3>Six Areas to Train Independently</h3>
+          <p>
+            There’s a feeling in tango that you only improve by dancing with people who are better than you. That used to bother me because it means your progress depends on who you manage to dance with, rather than on your own practice. I focus on <strong>six areas</strong> that you can train by yourself, without relying on a more advanced partner:
+          </p>
+          <ul>
+            <li><strong>Balance:</strong> Exercising stable standing, walking, and turning, identifying good vs. bad balance habits.</li>
+            <li><strong>Articulation and Control:</strong> Learning to move softly, controlling your leg speed, turning smoothly, all without a partner.</li>
+            <li><strong>Musicality:</strong> In the first few years, all tango music can sound alike. I like to help you find at least one orchestra or one song you fall in love with, and then discover layers: rhythm, melody, texture.</li>
+            <li><strong>Leader Strategies:</strong> If you lead, how not to get bored with your own ideas? Exercises and patterns to keep your dance fresh.</li>
+            <li><strong>Full-Body Engagement:</strong> Using your toes, your arms, your torso, and your head, so dancing isn’t just about feet or arms alone.</li>
+            <li><strong>Mental Aspects:</strong> Rejections, fear, confidence, gratitude, desire, calm, and attitude. These are rarely addressed in standard classes but can block or free you.</li>
+          </ul>
+        </section>
+
+        <section className="call-to-action">
+          <h3>Join the Community</h3>
+          <p>
+            To have a place to practice, you have to be a member of <strong>Tanzsportclub Astoria Karlsruhe</strong>. Membership is <strong>60 euros per 3 months</strong>, or you can suggest your own location.
+          </p>
+          <p>
+            This is part of my wish to expand my community in Karlsruhe, and I am sure you have something I can learn from you. <strong>We will find out.</strong>
+          </p>
+          <a href="mailto:helia.jm@gmail.com" className="submit-button">
+            Write Me
+          </a>
+        </section>
+      </section>
+    </div>
+  );
+};
+
+const NonsenseExercises = () => {
+  return (
+    <section className="speaking-section">
+      <h1>Nonsense Exercises I Like to Try in Tango</h1>
+      <h4>If you like them too, let’s find a time to practice</h4>
+
+      <section className="list-section">
+        <ul>
+          <li>
+            <strong>The leader connects with the space, the follower connects the couple with the music and time.</strong>
+            <p>
+              The leader focuses on navigating, reading the space, and reacting to the room. The follower tunes into the music, shaping movement based on rhythm and timing. The leader stops dictating steps and instead responds to the environment, while the follower takes charge of musicality.
+            </p>
+          </li>
+          <li>
+            <strong>Dance actively the whole time so you feel like you’re dancing, but no one sees you dancing.</strong>
+            <p>
+              Engage your whole body, feel the music, and move with subtlety. Keep the dance internal, minimal from the outside, yet fully alive inside.
+            </p>
+          </li>
+          <li>
+            <strong>Dance at two different tempos at the same time, one very slow, one faster.</strong>
+            <p>
+              One person moves slowly, the other speeds up. Both stay connected, adjusting to each other's rhythm while maintaining their distinct timing.
+            </p>
+          </li>
+          <li>
+            <strong>A single impulse from the leader results in multiple steps from the follower.</strong>
+            <p>
+              The leader gives one movement, but the follower extends it into multiple steps or a flowing sequence.
+            </p>
+          </li>
+          <li>
+            <strong>Play between control and lack of control.</strong>
+            <p>
+              Switch between leading precisely and letting go. Shift between structured movement and spontaneous reactions.
+            </p>
+          </li>
+          <li>
+            <strong>Suddenly dance against each other, interrupting the flow of the other’s movement.</strong>
+            <p>
+              Break patterns, disrupt your partner’s steps, create tension, and play with unexpected shifts.
+            </p>
+          </li>
+          <li>
+            <strong>Dance only to one element in the music and stay still when it’s absent.</strong>
+            <p>
+              Move only when your chosen element, beat, melody, counter-melody, etc., is present. When it’s gone, pause.
+            </p>
+          </li>
+          <li>
+            <strong>Lead the follower’s steps and execute the follower’s steps as a leader.</strong>
+            <p>
+              Leaders follow, followers lead, without switching roles. Each executes the other’s movement within their existing role.
+            </p>
+          </li>
+          <li>
+            <strong>Play with projections and positions. Dance more statically, moving from position to position with less transition in between.</strong>
+            <p>
+              Hold defined shapes, move between them with minimal extra movement. Focus on clear positions over fluid transitions.
+            </p>
+          </li>
+          <li>
+            <strong>Switch between a very light touch and a very intense touch.</strong>
+            <p>
+              Vary your connection, sometimes barely there, sometimes grounded and firm.
+            </p>
+          </li>
+          <li>
+            <strong>One person becomes the center, the other moves around them, then switch.</strong>
+            <p>
+              One stays as the axis while the other orbits, then reverse roles.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </section>
+  );
+};
 
 function ArticlePage({ title }) {
   return (
@@ -371,9 +543,9 @@ export default function Writing({ isMobile }) {
             <Route path="/" element={<WritingHome />} />
             {/* Tango Articles */}
             <Route path="/tango/non-dancers" element={<TangoIntroduction />} />
-            <Route path="/tango/teaching" element={<ArticlePage title="Teaching for Young Beginners" />} />
+            <Route path="/tango/mentoring" element={<MentoringSection />} />
+            <Route path="/tango/exercises" element={<NonsenseExercises/>} />
             <Route path="/tango/music" element={<ArticlePage title="Tango Music" />} />
-            <Route path="/tango/leaning" element={<ArticlePage title="Learning Tango Faster" />} />
             <Route path="/tango/woman-in-tango" element={<ArticlePage title="A Woman in Tango" />} />
             <Route path="/tango/giving-getting" element={<ArticlePage title="Giving and Getting" />} />
             <Route path="/tango/questions" element={<ArticlePage title="Talking about Tango" />} />
