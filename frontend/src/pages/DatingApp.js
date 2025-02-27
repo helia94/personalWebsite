@@ -4,39 +4,39 @@ import { Helmet } from "react-helmet";
 import './TOC.css'
 
 const DatingApp = () => {
-    const navigate = useNavigate();
-  
-    const handleBookTime = () => {
-      navigate('/interactive/book');
-    };
+  const navigate = useNavigate();
+
+  const handleBookTime = () => {
+    navigate('/interactive/book');
+  };
 
   return (
-      <div>  <Helmet>
+    <div>  <Helmet>
       {/* Basic SEO */}
       <title>Innovative Dating App Startup - Disrupting the Dating Industry</title>
       <meta name="description" content="A groundbreaking dating app startup redefining matchmaking with an offline-first, experience-focused approach. Join the future of dating innovation." />
       <meta name="keywords" content="dating app startup, dating innovation, matchmaking platform, relationship tech, dating disruption, social networking startup, love tech, startup growth, tech entrepreneurship, dating business model" />
       <meta name="author" content="Helia Jamshidi" />
-  
+
       {/* Open Graph for Social Media */}
       <meta property="og:title" content="Innovative Dating App Startup - Disrupting the Dating Industry" />
       <meta property="og:description" content="Revolutionizing dating with a fresh, experience-driven approach. Explore a new vision for modern relationships." />
       <meta property="og:image" content="https://heliajamshidi.me/images/datingapp-social.jpg" />
       <meta property="og:url" content="https://heliajamshidi.me/work/datingapp" />
       <meta property="og:type" content="website" />
-  
+
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Innovative Dating App Startup - Disrupting the Dating Industry" />
       <meta name="twitter:description" content="From swiping fatigue to real-world connections. A startup changing the dating landscape." />
       <meta name="twitter:image" content="https://heliajamshidi.me/images/datingapp-twitter.jpg" />
-  
+
       {/* Canonical URL */}
       <link rel="canonical" href="https://heliajamshidi.me/work/datingapp" />
-  
+
       {/* Favicon */}
       <link rel="icon" href="https://heliajamshidi.me/favicon.ico" />
-  
+
       {/* Schema Markup for Rich Snippets */}
       <script type="application/ld+json">
         {JSON.stringify({
@@ -56,16 +56,48 @@ const DatingApp = () => {
 
       {/* Table of Contents */}
       <nav className="toc">
-      <ul className="toc-list">
-      <li><a href="#vision">What is the Vision?</a></li>
-    <li><a href="#why-potential">Why This Vision Has Potential</a></li>
-    <li><a href="#risks-challenges">Risks and Challenges</a></li>
-    <li><a href="#feature-details">Feature-Set Details</a></li>
-    <li><a href="#next-steps">Where I’m At and Next Steps</a></li>
-    <li><a href="#how-to-help">How You Can Help</a></li>
-      </ul>
-    </nav>
+        <ul className="toc-list">
+          <li><a href="#problem">What is the Problem?</a></li>
+          <li><a href="#vision">What is the Vision?</a></li>
+          <li><a href="#why-potential">Why This Vision Has Potential</a></li>
+          <li><a href="#risks-challenges">Risks and Challenges</a></li>
+          <li><a href="#feature-details">Feature-Set Details</a></li>
+          <li><a href="#next-steps">Where I’m At and Next Steps</a></li>
+          <li><a href="#how-to-help">How You Can Help</a></li>
+        </ul>
+      </nav>
+      <section id="problem" className="speaking-section-colored higher-margin narrow-container " style={{ margin: "4rem" }}>
+        <h3>The Actual Problem</h3>
+        <ul>
+        <li>
+        <p>Many people find it hard to find and build relationships that matter to them. Many people I have met have given up trying.</p>
+        </li>  
+        </ul>
 
+        <section className="list-section">
+          <h3>The Problem with Current Online Solutions</h3>
+          <ul>
+            <li>
+              <strong>First Dates Can Be Draining:</strong> People feel the pressure to perform, and some get anxious. The dating script can get too repetitive, often feeling like a job interview. Many daters fear boredom or rejection before even going on the date. Ever-growing high expectations inevitably cause dissatisfaction, and the person we see on the first date is usually not their normal state. There has been little innovation in improving the quality of first dates.
+            </li>
+            <li>
+              <strong>High Online Investment Before Meeting:</strong> Most apps require significant time online before meeting in real life. While this could be fine if the time spent was enjoyable and valuable, swiping and chatting are often draining instead.
+            </li>
+            <li>
+              <strong>Imbalance in Attention:</strong> Daters typically contact the most objectively desirable individuals at massively higher rates than others. In real-world scenarios, attendees at a party would not all mob one attractive individual, but this effectively happens online because daters cannot see how much attention a person is already receiving.
+            </li>
+            <li>
+              <strong>Matching Intentions:</strong> Although it sounds easy to handle with LLM capabilities, top apps lack a clear and flexible way of stating and matching compatible intentions.
+            </li>
+            <li>
+              <strong>Comparison Mindset Leads to Inaction:</strong> Constantly comparing options online keeps users stuck in an assessment mindset, always wondering if there’s someone better. This makes it harder to take action and actually pursue someone, leaving users paralyzed instead of connecting.
+            </li>
+            <li>
+              <strong>Profiles Lack Depth:</strong> Profiles typically show photos, bios, Instagram, and Spotify links but reveal little about whether users will enjoy talking to or dating the person. We are bad at predicting what we will find attractive in real life. This problem is relatively less important but the hardest to solve among the six.
+            </li>
+          </ul>
+        </section>
+      </section>
       {/* Vision Section */}
       <section id="vision" className="speaking-section">
         <h2>What is the Vision?</h2>
@@ -135,7 +167,7 @@ const DatingApp = () => {
             This aligns with the app’s vision, giving it credibility.</li>
           <li><strong>Innovation & Partnership Opportunities:</strong> Partnering with vendors and event organizers creates unique date ideas. Built-in marketing vehicles through partnerships.</li>
           <li><strong>Focus on Quality Over Quantity:</strong> Prioritize enjoyable dates over sheer numbers of matches or dates.
-          Use feedback loops to continuously improve the quality of the dating experience.</li>
+            Use feedback loops to continuously improve the quality of the dating experience.</li>
           <li><strong>User-Centric Design:</strong> Replace addictive features with engaging ways to share more about themselves (e.g., quizzes, games).
             Use AI to allow users to express preferences in freeform text or voice, making the process more natural and less rigid.
             Progressive profile building rather than front-loaded information collection.</li>
@@ -145,27 +177,27 @@ const DatingApp = () => {
 
       {/* Risks and Challenges Section */}
       <section className="speaking-section higher-margin">
-      <section id="risks-challenges" className="list-section">
-        <h2>Risks and Challenges</h2>
-        <ul>
-          <li><strong>User Adoption Challenges:</strong> Many users may not want to invest more time or energy into dating.
-            The app’s focus on thoughtful dating might feel overwhelming to those used to swiping and quick matches.
-            Potential resistance to a guided dating approach.</li>
-          <li><strong>Risk of Being Too Prescriptive:</strong> The app might come across as telling users how to date, which could feel infantilizing.
-            Users may resist being told not to ghost or to approach dating in a specific way.</li>
-          <li><strong>Technical & Design Challenges:</strong> Balancing multiple features (e.g., activities, mental health support, AI preferences) could make the app too complex or clunky.
-            Creating a pleasant and realistic digital self-representation remains an unsolved challenge.</li>
-          <li><strong>Revenue Model Uncertainty:</strong> Relying on third-party vendors for revenue might not generate enough income to sustain and grow the app.</li>
-          <li><strong>Human Behavior Challenges:</strong> Issues like ghosting and messaging imbalances might persist.</li>
-          <li><strong>Competition with Meetup and Others:</strong> Overlap with activity-based apps could create competition.</li>
-          <li><strong>Network Effect Challenges:</strong> Launching in a new city with no users could make it hard to attract the critical mass needed for the app to succeed.</li>
-          <li><strong>Content Creation:</strong> High-quality content (e.g., dating advice, how-to guides) is essential but challenging to produce without a dedicated content team.</li>
-          <li><strong>Activity-Based Dating Might Feel Awkward:</strong> Users might find planned activities too structured or awkward for a first date.
-            There may not be enough diverse or appealing activity ideas to keep users engaged.</li>
-          <li><strong>Risk of Losing User Interest:</strong> Without addictive features like "see who likes you," users might lose interest or stop engaging with the app.</li>
-        </ul>
-      </section>
+        <section id="risks-challenges" className="list-section">
+          <h2>Risks and Challenges</h2>
+          <ul>
+            <li><strong>User Adoption Challenges:</strong> Many users may not want to invest more time or energy into dating.
+              The app’s focus on thoughtful dating might feel overwhelming to those used to swiping and quick matches.
+              Potential resistance to a guided dating approach.</li>
+            <li><strong>Risk of Being Too Prescriptive:</strong> The app might come across as telling users how to date, which could feel infantilizing.
+              Users may resist being told not to ghost or to approach dating in a specific way.</li>
+            <li><strong>Technical & Design Challenges:</strong> Balancing multiple features (e.g., activities, mental health support, AI preferences) could make the app too complex or clunky.
+              Creating a pleasant and realistic digital self-representation remains an unsolved challenge.</li>
+            <li><strong>Revenue Model Uncertainty:</strong> Relying on third-party vendors for revenue might not generate enough income to sustain and grow the app.</li>
+            <li><strong>Human Behavior Challenges:</strong> Issues like ghosting and messaging imbalances might persist.</li>
+            <li><strong>Competition with Meetup and Others:</strong> Overlap with activity-based apps could create competition.</li>
+            <li><strong>Network Effect Challenges:</strong> Launching in a new city with no users could make it hard to attract the critical mass needed for the app to succeed.</li>
+            <li><strong>Content Creation:</strong> High-quality content (e.g., dating advice, how-to guides) is essential but challenging to produce without a dedicated content team.</li>
+            <li><strong>Activity-Based Dating Might Feel Awkward:</strong> Users might find planned activities too structured or awkward for a first date.
+              There may not be enough diverse or appealing activity ideas to keep users engaged.</li>
+            <li><strong>Risk of Losing User Interest:</strong> Without addictive features like "see who likes you," users might lose interest or stop engaging with the app.</li>
+          </ul>
         </section>
+      </section>
       {/* Feature-Set Details Section */}
       <section id="feature-details" className="speaking-section-colored higher-margin">
         <h2>If you want to go get deeper into the feature-set details, read here:</h2>
@@ -280,20 +312,20 @@ const DatingApp = () => {
 
       {/* How You Can Help Section */}
       <section className="speaking-section">
-      <section id="how-to-help" className="call-to-action">
-        <h2>How You Can Help</h2>
-        <ul>
-          <li><strong>Refine the Product and Customer Segment:</strong> Help narrow down the target audience and core features.</li>
-          <li><strong>Craft the Story:</strong> Assist in developing a compelling narrative.</li>
-          <li><strong>Bootstrapping Strategies:</strong> Suggest creative, low-cost ways to launch and grow the app.</li>
-          <li><strong>Challenge Assumptions:</strong> Critique the vision to identify blind spots.</li>
-          <li><strong>Brainstorm Solutions:</strong> Help address risks like user engagement and competition.</li>
-        </ul>
-        <p>This vision is ambitious, but with the right focus and execution, it has the potential to redefine how people approach dating.</p>
-        <button className="submit-button" onClick={handleBookTime}>Let’s Talk</button>
+        <section id="how-to-help" className="call-to-action">
+          <h2>How You Can Help</h2>
+          <ul>
+            <li><strong>Refine the Product and Customer Segment:</strong> Help narrow down the target audience and core features.</li>
+            <li><strong>Craft the Story:</strong> Assist in developing a compelling narrative.</li>
+            <li><strong>Bootstrapping Strategies:</strong> Suggest creative, low-cost ways to launch and grow the app.</li>
+            <li><strong>Challenge Assumptions:</strong> Critique the vision to identify blind spots.</li>
+            <li><strong>Brainstorm Solutions:</strong> Help address risks like user engagement and competition.</li>
+          </ul>
+          <p>This vision is ambitious, but with the right focus and execution, it has the potential to redefine how people approach dating.</p>
+          <button className="submit-button" onClick={handleBookTime}>Let’s Talk</button>
+        </section>
       </section>
-      </section>
-      </div>
+    </div>
   );
 };
 

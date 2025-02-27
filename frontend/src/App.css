@@ -322,6 +322,10 @@ html {
   color: #555;
 }
 
+.narrow-container {
+  max-width: 800px;
+}
+
 /* Quote Styling */
 .quote {
   font-style: italic;
@@ -447,5 +451,10 @@ html {
   .speaking-section-colored {
     padding:1rem;
   }
+
+  
+.narrow-container {
+  max-width: 90%;
+}
   
 }
