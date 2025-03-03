@@ -69,31 +69,40 @@ const DatingApp = () => {
       <section id="problem" className="speaking-section-colored higher-margin narrow-container " style={{ margin: "4rem" }}>
         <h3>The Actual Problem</h3>
         <ul>
-        <li>
-        <p>Many people find it hard to find and build relationships that matter to them. Many people I have met have given up trying.</p>
-        </li>  
+          <li>
+            <p>Many people find it hard to find and build relationships that matter to them. Many people I have met have given up trying.</p>
+          </li>
         </ul>
 
         <section className="list-section">
           <h3>The Problem with Current Online Solutions</h3>
+          <h4>The percentages are my subjective opinion of which problems are most to blame</h4>
           <ul>
             <li>
-              <strong>First Dates Can Be Draining:</strong> People feel the pressure to perform, and some get anxious. The dating script can get too repetitive, often feeling like a job interview. Many daters fear boredom or rejection before even going on the date. Ever-growing high expectations inevitably cause dissatisfaction, and the person we see on the first date is usually not their normal state. There has been little innovation in improving the quality of first dates.
+              <p>
+                <strong>(60%) First Dates Can Be Draining: </strong>
+                 Two people meet each other for coffee (face to face), or walking (side to side). They have to talk for one to three hours, having no initial context between them, or another environmental context to interact with. This sets a high pressure on both people to perform and come across as interesting, non-stop. If they do not get lucky and quickly find something they can talk about, they both go home not wanting to repeat this ever again.
+              </p>
+              <p>
+                The just-talk dating script can get too repetitive, often feeling like a job interview. The harder the first date, the less anyone wants to do it. The longer you wait to go on a date, your expectations arise on “this time it must work out”. Having high expectations is the enemy of desire and attraction. And there you have an escalating feedback loop. Combine that with the new “intentional dating” wave and you have a recipe for even less pleasure and more dissatisfaction on dates. “Do not waste my time” is the new dating motto of the year.               </p>
             </li>
             <li>
-              <strong>High Online Investment Before Meeting:</strong> Most apps require significant time online before meeting in real life. While this could be fine if the time spent was enjoyable and valuable, swiping and chatting are often draining instead.
+              <strong>(20%) Imbalance in Attention and Comparison Mindset:</strong> Daters typically contact the most objectively desirable individuals at massively higher rates than others, look at the graph below. In the real world, attendees at a party would not all mob one attractive individual, but this effectively happens online because daters cannot see how much attention a person is already receiving.
+            </li>
+          <img
+            src="https://res.cloudinary.com/dl9xg597r/image/upload/v1740998397/1_C94oqo_0Xi9q7j97__dUXQ_qykvth.webp"
+            alt="OkCupid: Number of Weekly Messages by Attractiveness Quantile
+"
+            style={{ width: "30rem", maxWidth: "70%" }}
+          />
+            <li>
+              <strong>(10%) High Online Investment Before Meeting:</strong> Most apps require significant time online before meeting in real life. While this could be fine if the time spent was enjoyable and valuable, swiping and chatting are often draining instead. This is somewhat solved by a few smaller dating apps.
             </li>
             <li>
-              <strong>Imbalance in Attention:</strong> Daters typically contact the most objectively desirable individuals at massively higher rates than others. In real-world scenarios, attendees at a party would not all mob one attractive individual, but this effectively happens online because daters cannot see how much attention a person is already receiving.
+              <strong>(5%) Matching Intentions:</strong> Although it sounds easy to handle with LLM capabilities, top apps lack a clear and flexible way of stating and matching compatible intentions.
             </li>
             <li>
-              <strong>Matching Intentions:</strong> Although it sounds easy to handle with LLM capabilities, top apps lack a clear and flexible way of stating and matching compatible intentions.
-            </li>
-            <li>
-              <strong>Comparison Mindset Leads to Inaction:</strong> Constantly comparing options online keeps users stuck in an assessment mindset, always wondering if there’s someone better. This makes it harder to take action and actually pursue someone, leaving users paralyzed instead of connecting.
-            </li>
-            <li>
-              <strong>Profiles Lack Depth:</strong> Profiles typically show photos, bios, Instagram, and Spotify links but reveal little about whether users will enjoy talking to or dating the person. We are bad at predicting what we will find attractive in real life. This problem is relatively less important but the hardest to solve among the six.
+              <strong>(5%) Profiles cannot predict real-life connections:</strong> We are bad at predicting what we will find attractive in real life. This problem is relatively less important but the hardest to solve among the six. Many people do not look at more than the first picture, not because it is superficial, but because it simply does not change their decision. Creating expressive digital expressions that improve the guess “Will I enjoy meeting this person” is intrinsically challenging.
             </li>
           </ul>
         </section>
@@ -104,53 +113,32 @@ const DatingApp = () => {
 
         <section className="list-section">
           <h3>From Problem-Solving to Nurturing and Mood-Setting</h3>
-          <ul>
-            <li>Shift the focus from solving the <strong>"problem" of finding a partner</strong> to fostering natural connections through serendipity.</li>
-            <li>Create <strong>enjoyable experiences</strong> rather than rushing to an end goal.</li>
-          </ul>
+          <p>From a user’s perspective, dating today feels like an investment, a form of work that might pay off if you find a partner, but often leaves you frustrated if you don’t. <strong> It’s like a slot machine: you keep putting coins in until you hit the jackpot or walk away disappointed. </strong>I hope to create a dating experience that is enjoyable on its own, where finding a partner is the cherry on top. </p>
+          <p>I have listened to more than thirty stories from dating app founders, they often come from a business background, they are problem solvers and they see dating as one as well. <strong>“What is the most efficient way to know if we match?”</strong> they ask. A 5-minute phone call, a personality test, .. . </p>
+          <p>But listen to world-class dating coaches Matthew Hussey, Logan Ury, Helen Fisher, or my favorite by far Esther Perel, and they will all tell you <strong>the more you are focused on monotone interactions based on set rules and maximizing your chances, the less likely you are to let attraction grow. </strong></p>
+          <p>Instead dating should be a place of pleasure on its own even if the person you met did not turn out to be the one. Make dates worth your time by <strong>giving room to joy and curiosity, instead of pressure and expectation.</strong></p>
         </section>
 
         <section className="list-section">
-          <h3>From Matchmaking to Full Support</h3>
-          <ul>
-            <li>Offer tools to help users <strong>plan dates, stay relaxed, and enjoy the experience</strong>.</li>
-            <li>Build a library of date activities and partner with vendors to offer <strong>unique experiences</strong>.</li>
-            <li>Provide <strong>mental health support</strong> to help users navigate dating challenges.</li>
-          </ul>
-        </section>
-
-        <section className="list-section">
-          <h3>Offline-First Philosophy</h3>
-          <ul>
-            <li>Reduce addictive online features like <strong>swiping, likes, and endless messaging</strong>.</li>
-            <li>Encourage users to move offline faster with tools like <strong>video calls, "open to call" badges, and simplified first-date planning</strong>.</li>
-            <li>Focus on <strong>date quality over match quantity</strong>, making the transition from matching to meeting in person seamless and less intimidating.</li>
-          </ul>
+          <h3>Offline Philosophy</h3>
+          <p>Although new founders have high hopes for AI match-making in 2025, there is no data submitted yet to prove they work. <strong>The brain (given an in-person meeting) is the best algorithm science has found, until today.</strong> So the only way is to be more comfortable meeting more people in person. Reduce addictive online features like swiping, likes, and endless messaging. Encourage users to move offline faster with tools like <strong>video calls</strong>, <strong>"open to call" badges</strong>, and <strong>simplified first-date planning</strong>. Focus on date quality over match quantity, making the transition from matching to meeting in person seamless and less intimidating.</p>
         </section>
 
         <section className="list-section">
           <h3>From "Best Match" to "Best Date"</h3>
-          <ul>
-            <li>Instead of obsessing over finding the <strong>perfect partner</strong>, focus on creating the <strong>best possible date experience</strong>.</li>
-            <li>Shift the culture from <strong>transactional dating</strong> to enjoying the process of meeting new people.</li>
-          </ul>
+          <p>Instead of obsessing over finding the perfect partner online, focus on creating a pleasurable date experience. Build an easy-to-use <strong>library of date activities</strong> that work well and create a <strong>marketplace for vendors</strong> that offer moderated, and context-rich experiences. Then extend the support to navigate what happens after the date itself; go over <strong>red and green flags</strong> with people who are in doubt. Provide <strong>mental health support</strong> to help users navigate dating challenges.</p>
+          <p>A central key to better dates is “Mass Innovation”, curated events or content alone cannot keep up with the innovation needed in dating space. Instead, the platform should support and <strong>unleash innovation</strong> of different communities, <strong>do for dating what Hugging Face did for AI</strong>, and let people think outside the box and share formats that work better. </p>
         </section>
 
         <section className="list-section">
           <h3>Cultural Transformation Through Transparency</h3>
-          <ul>
-            <li>Make dating culture transparent by showing <strong>live data</strong> on issues like ghosting or messaging gaps.</li>
-            <li>Empower users to <strong>understand and influence dating culture</strong>.</li>
-            <li>Move away from <strong>"winning strategies"</strong> to authentic, diverse interactions.</li>
-          </ul>
+          <p>Users often mix the quality of the dating app with the quality of the users and their culture. They just switch to a different app if they are not happy with the culture. <strong>We see the combination of the app and the people on it as a service we are consuming and paying for</strong>, not just the app. </p>
+          <p>Present the culture as fluid rather than fixed. And to show users that they are not only observers of this culture but also have a role in shaping it. Providing ways for users to give feedback specific to the culture rather than the app itself can foster a feeling of <strong>validation and agency</strong>. Imagine seeing a live daily graph of the percentage of <strong>women who started chatting</strong> in Berlin today, or the same but with a self-reported number of people being <strong>ghosted</strong>.</p>
         </section>
 
         <section className="list-section">
-          <h3>Encourage Diversity and Lower Expectations</h3>
-          <ul>
-            <li>Allow users to present themselves in <strong>diverse ways</strong> and explore different dating approaches.</li>
-            <li>Lower the pressure by making dating less about <strong>"finding the one"</strong> and more about enjoying the experience.</li>
-          </ul>
+          <h3>Ease of Use</h3>
+          <p>The interaction of the user with other users should be <strong>human first</strong>, not hiding behind AI. The interaction of the user with the app should be <strong>AI-first</strong>. Use AI as the main medium with which users interact with the app, they have one button that can express preferences and share feedback on what bothers them, tell why this profile is not their type, or say how they are feeling today, all via voice or freeform text. They do not have to navigate menus to adapt the app to their need making the process more natural and less rigid. <strong>Preferences and filters can be soft and fluid</strong>, not black and white for example: I am mostly into X, but I might be open to Y.</p>
         </section>
       </section>
 
@@ -158,20 +146,11 @@ const DatingApp = () => {
       <section id="why-potential" className="speaking-section-colored higher-margin">
         <h2>Why This Vision Has Potential</h2>
         <ul>
-          <li><strong>Female-Centric Approach:</strong> Features designed to appeal more to women.
-            Potential to achieve better gender balance than existing apps.
-            Natural male user acquisition through improved gender ratio.
-            A more balanced gender ratio could lead to a healthier dating culture, where women feel less pressured to be overly selective.</li>
-          <li><strong>Fresh Approach in a Saturated Market:</strong> A nurturing, holistic approach stands out in a market dominated by swiping apps.</li>
-          <li><strong>Backed by Psychology and Experts:</strong> Influential dating coaches like Esther Perel and Helen Fisher advocate for a more relaxed, enjoyable approach to dating.
-            This aligns with the app’s vision, giving it credibility.</li>
-          <li><strong>Innovation & Partnership Opportunities:</strong> Partnering with vendors and event organizers creates unique date ideas. Built-in marketing vehicles through partnerships.</li>
-          <li><strong>Focus on Quality Over Quantity:</strong> Prioritize enjoyable dates over sheer numbers of matches or dates.
-            Use feedback loops to continuously improve the quality of the dating experience.</li>
-          <li><strong>User-Centric Design:</strong> Replace addictive features with engaging ways to share more about themselves (e.g., quizzes, games).
-            Use AI to allow users to express preferences in freeform text or voice, making the process more natural and less rigid.
-            Progressive profile building rather than front-loaded information collection.</li>
+          <li><strong>Female-Centric Approach:</strong> The last app I made was widely better received by females. I believe this vision too, is one to appeal more to women. Thus it has the potential to achieve better gender balance than existing apps. Male user acquisition would follow naturally through an improved gender ratio. A more balanced gender ratio could lead to a healthier dating culture, where women feel less pressured to be overly selective.</li>
+          <li><strong>Backed by Psychology and Experts:</strong> Influential dating coaches like Esther Perel and Helen Fisher advocate for a more relaxed, enjoyable approach to dating. This aligns with the app’s vision.</li>
+          <li><strong>Innovation & Partnership Opportunities:</strong> Partnering with vendors and event organizers creates diverse date ideas and at the same time functions as a built-in marketing vehicle.</li>
           <li><strong>Media-Friendly and Marketable:</strong> Dating is a hot topic, making it easier to gain media exposure.</li>
+          <li><strong>Meaningful Feedback to Learn and Iterate:</strong> Feedback should focus on how the date went, understand if the user feels validated or rejected after using the app, check in to see how they feel about the state of dating, and improve on real metrics that affect people's wellbeing not time on the app, and number of matches.</li>
         </ul>
       </section>
 
