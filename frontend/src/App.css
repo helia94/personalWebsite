@@ -94,8 +94,7 @@ a:hover, .submenu-item:hover {
 }
 
 .sub-sidebar {
-  width: 250px;
-  min-width: 250px;
+  min-width: 200px;
   border-right: 2px solid #242424;
   padding: 1rem;
   overflow-y: auto;
