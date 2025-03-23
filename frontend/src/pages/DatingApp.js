@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { InstagramEmbed } from 'react-social-media-embed';
 import './TOC.css'
 
 const DatingApp = () => {
@@ -304,6 +305,16 @@ const DatingApp = () => {
           <button className="submit-button" onClick={handleBookTime}>Let’s Talk</button>
         </section>
       </section>
+
+
+
+      <div style={{ margin: "2rem auto", padding: "1rem", maxWidth: "600px", border: "1px solid #ccc", borderRadius: "10px" , overflowY: 'scroll'}}>
+        <h2 style={{ textAlign: "center", marginBottom: "1rem" }}>Follow Our Journey on Instagram</h2>
+        <InstagramEmbed
+          url="https://www.instagram.com/dating_evolution/"
+          width="100%"
+        />
+      </div>
     </div>
   );
 };
