@@ -311,7 +311,7 @@ const DatingApp = () => {
       <div style={{ margin: "2rem auto", padding: "1rem", maxWidth: "600px", border: "1px solid #ccc", borderRadius: "10px" , overflowY: 'scroll'}}>
         <h2 style={{ textAlign: "center", marginBottom: "1rem" }}>Follow Our Journey on Instagram</h2>
         <InstagramEmbed
-          url="https://www.instagram.com/dating_evolution/"
+          url="https://www.instagram.com/dating_evolution_berlin/"
           width="100%"
         />
       </div>
