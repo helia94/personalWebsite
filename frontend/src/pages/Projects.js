@@ -1,6 +1,7 @@
 // File: src/pages/Projects.js
 import React, { useState } from "react";
 import { useContext } from "react";
+import { Helmet } from "react-helmet";
 import { Routes, Route, useParams } from "react-router-dom";
 import { MobileViewContext } from "../context/MobileViewContext";
 import SecondarySidebarBasic from "../components/SecondarySidebarBasic";
@@ -14,6 +15,25 @@ const projectItems = [
 function ProjectsHome() {
   return (
     <div>
+      <Helmet>
+        <title>Projects | Helia Jamshidi</title>
+        <meta
+          name="description"
+          content="Overview of personal and experimental projects by Helia Jamshidi."
+        />
+        <meta
+          name="keywords"
+          content="Helia Jamshidi projects, Jous, Emotion Explorer"
+        />
+        <meta property="og:title" content="Projects | Helia Jamshidi" />
+        <meta
+          property="og:description"
+          content="Discover apps and tools Helia is building or experimenting with."
+        />
+        <meta property="og:url" content="https://heliajamshidi.me/projects" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://heliajamshidi.me/projects" />
+      </Helmet>
       <h2>Projects Overview</h2>
       <p>Choose a project to findout more about it.</p>
     </div>
@@ -23,6 +43,21 @@ function ProjectsHome() {
 function Jous() {
   return (
     <div>
+      <Helmet>
+        <title>Jous Conversation Cards | Helia Jamshidi</title>
+        <meta
+          name="description"
+          content="Community app with conversation questions to spark meaningful dialogue."
+        />
+        <meta property="og:title" content="Jous Conversation Cards | Helia Jamshidi" />
+        <meta
+          property="og:description"
+          content="Discover Jous, an app for avoiding small talk and connecting over thoughtful questions."
+        />
+        <meta property="og:url" content="https://heliajamshidi.me/projects/jous" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://heliajamshidi.me/projects/jous" />
+      </Helmet>
       <h1>Jous Conversation Cards</h1>
       <p>This App is for people trying to avoid small talk. It is a cozy community for questions that spark conversations. But it is not Reddit! To answer questions in Jous, you should search inward, inside yourself. For families, friends, dates, and strangers. Anyone can share questions on Jous, the question set changes daily.</p>
       <div className="sample-images-section">
@@ -70,6 +105,21 @@ function EmotionResolver() {
 
   return (
     <div className="container">
+      <Helmet>
+        <title>Emotion Explorer | Helia Jamshidi</title>
+        <meta
+          name="description"
+          content="Tool to discover nuanced emotions and their cultural context."
+        />
+        <meta property="og:title" content="Emotion Explorer | Helia Jamshidi" />
+        <meta
+          property="og:description"
+          content="Find more specific words for how you feel using this simple app."
+        />
+        <meta property="og:url" content="https://heliajamshidi.me/projects/emotion-explorer" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://heliajamshidi.me/projects/emotion-explorer" />
+      </Helmet>
       <h1>Emotion Explorer</h1>
       <h4 style={{textAlign: "center", marginTop:"0px", marginBottom:"3rem"}}>Find out similar but more specific emotions from other cultures</h4>
 

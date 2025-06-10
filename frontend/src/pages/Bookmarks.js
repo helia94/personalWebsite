@@ -1,6 +1,7 @@
 // File: src/pages/Bookmarks.js
 import React from "react";
 import { Routes, Route, useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import { useContext } from "react";
 import { InstagramEmbed } from 'react-social-media-embed';
 import { MobileViewContext } from "../context/MobileViewContext";
@@ -89,6 +90,28 @@ export const bookmarkCategories = [
 function BookmarksHome() {
   return (
     <div>
+      <Helmet>
+        <title>Bookmarks | Helia Jamshidi</title>
+        <meta
+          name="description"
+          content="Curated list of books, podcasts and other recommendations from Helia Jamshidi."
+        />
+        <meta
+          name="keywords"
+          content="bookmarks, book recommendations, podcasts, web links, Helia Jamshidi"
+        />
+        <meta property="og:title" content="Bookmarks | Helia Jamshidi" />
+        <meta
+          property="og:description"
+          content="A collection of useful references including books and podcasts."
+        />
+        <meta
+          property="og:url"
+          content="https://heliajamshidi.me/bookmarks"
+        />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://heliajamshidi.me/bookmarks" />
+      </Helmet>
       <h1>Books Overview</h1>
       <p>
         I think people's perspectives on life and things that interest them are so diverse that hardly any material or book can be recommended without knowing their context. But I have come to make some exceptions only because I wish someone had given me these earlier in my life. We are very different, yet we share at least some biology and we also share the systems that we live in.
@@ -406,6 +429,19 @@ function BookmarkDetail() {
 
   return (
     <div>
+      <Helmet>
+        <title>{`${info.name || "Bookmark"} | Bookmarks | Helia Jamshidi`}</title>
+        <meta
+          name="description"
+          content={`Details and links for ${info.name || "this bookmark"} curated by Helia Jamshidi.`}
+        />
+        <meta property="og:title" content={`${info.name || "Bookmark"} | Bookmarks | Helia Jamshidi`} />
+        <meta
+          property="og:description"
+          content={`Find out more about ${info.name || "this bookmark"} on Helia's personal site.`}
+        />
+        <meta property="og:type" content="article" />
+      </Helmet>
       <h1>{info.name || "Unknown Bookmark"}</h1>
       {info.url && (
         <button

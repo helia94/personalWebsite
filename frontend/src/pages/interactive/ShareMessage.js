@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 
 export default function ShareMessage() {
   const [message, setMessage] = useState("");
@@ -24,6 +25,21 @@ export default function ShareMessage() {
 
   return (
     <div className="ama-container">
+      <Helmet>
+        <title>Share Anything With Me | Helia Jamshidi</title>
+        <meta
+          name="description"
+          content="Send a personal message or feedback directly to Helia Jamshidi."
+        />
+        <meta property="og:title" content="Share Anything With Me | Helia Jamshidi" />
+        <meta
+          property="og:description"
+          content="Submit your thoughts or ideas privately through this form."
+        />
+        <meta property="og:url" content="https://heliajamshidi.me/interactive/share" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://heliajamshidi.me/interactive/share" />
+      </Helmet>
       <h2>Share Anything With Me</h2>
       <input
         placeholder="Name (optional)"

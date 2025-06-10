@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 import "./AMA.css";
 
 export default function AMA() {
@@ -88,6 +89,21 @@ export default function AMA() {
 
   return (
     <>
+      <Helmet>
+        <title>Ask Me Anything | Helia Jamshidi</title>
+        <meta
+          name="description"
+          content="Submit anonymous questions for Helia Jamshidi to answer."
+        />
+        <meta property="og:title" content="Ask Me Anything | Helia Jamshidi" />
+        <meta
+          property="og:description"
+          content="Send in your questions and read the answers here."
+        />
+        <meta property="og:url" content="https://heliajamshidi.me/interactive/ama" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://heliajamshidi.me/interactive/ama" />
+      </Helmet>
       <div className="ama-container">
         <h2>Ask Me Anything</h2>
         <form className="question-form" onSubmit={submitQuestion}>
