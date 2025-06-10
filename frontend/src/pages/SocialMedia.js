@@ -1,6 +1,7 @@
 // File: src/pages/SocialMedia.js
 import React from "react";
 import { Routes, Route, useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const socialItems = [
   {
@@ -44,6 +45,21 @@ const socialItems = [
 export default function SocialMedia() {
   return (
     <div className="content-with-sub">
+      <Helmet>
+        <title>Social Media Links | Helia Jamshidi</title>
+        <meta
+          name="description"
+          content="Find Helia on Twitter, LinkedIn, GitHub, Instagram and TikTok."
+        />
+        <meta property="og:title" content="Social Media Links | Helia Jamshidi" />
+        <meta
+          property="og:description"
+          content="Quick links to Helia's profiles across major platforms."
+        />
+        <meta property="og:url" content="https://heliajamshidi.me/social-media" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://heliajamshidi.me/social-media" />
+      </Helmet>
       <div className="sub-sidebar" style={{ textAlign: "left" }}>
         <h3 style={{ margin: "0 0 4px", fontSize: "0.9rem" }}>Social Media</h3>
         <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
