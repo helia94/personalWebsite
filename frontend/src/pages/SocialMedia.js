@@ -44,37 +44,35 @@ const socialItems = [
 export default function SocialMedia() {
   return (
     <div className="content-with-sub">
-      <div className="sub-sidebar">
-        <h3>Social Media</h3>
-        <ul className="simple-submenu" style={{ margin: 0, padding: 0, listStyle: "none" }}>
+      <div className="sub-sidebar" style={{ textAlign: "left" }}>
+        <h3 style={{ margin: "0 0 4px", fontSize: "0.9rem" }}>Social Media</h3>
+        <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
           {socialItems.map((it) => (
-            <li
-              key={it.label}
-              style={{
-                 margin: 0, padding: "0px 0  !important", lineHeight: "0rem  !important" }}
-            >
+            <li key={it.label} style={{ margin: 0, padding: 0 }}>
               <a
-                className="submenu-item"
-                style={{
-                  all: "unset",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "6px",
-                  fontSize: "0.85rem",
-                  lineHeight: "0.5rem  !important",
-                  color: "#242424",
-                  textDecoration: "none",
-                  padding: "0px 0px  !important",
-                }}
                 href={it.profileUrl}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  textAlign: "left" ,
+                  justifyContent: "flex-start",
+                  fontSize: "0.9rem",
+                  lineHeight: "1",
+                  padding: "0px 0",
+                  textDecoration: "none",
+                  color: "#242424",
+                  height: "40px",
+                  gap: "0px",
+                }}
               >
+                <span style={{ display: "inline-block", transform: "translateY(-1px)" }}>
+                  {it.label}
+                </span>
                 <img
                   src={it.logoUrl}
-                  alt={`${it.label} logo`}
-                  className="submenu-logo"
-                  style={{ marginRight: "6px", width: "16px", height: "16px" }}
+                  alt=""
+                  style={{ width: "14px", height: "14px", flexShrink: 0 }}
                 />
-                <span>{it.label}</span>
               </a>
             </li>
           ))}
