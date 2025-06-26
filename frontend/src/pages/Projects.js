@@ -10,6 +10,8 @@ import "./Projects.css"
 const projectItems = [
   { label: "Jous", route: "/projects/jous" },
   { label: "Emotion Explorer", route: "/projects/emotion-explorer" },
+  { label: "Second Date", route: "/projects/second-date" },
+  { label: "Tango Diario", route: "/projects/tango-diario" },
 ];
 
 function ProjectsHome() {
@@ -23,7 +25,7 @@ function ProjectsHome() {
         />
         <meta
           name="keywords"
-          content="Helia Jamshidi projects, Jous, Emotion Explorer"
+          content="Helia Jamshidi projects, Jous, Emotion Explorer, Second Date, Tango Diario"
         />
         <meta property="og:title" content="Projects | Helia Jamshidi" />
         <meta
@@ -62,15 +64,92 @@ function Jous() {
       <p>This App is for people trying to avoid small talk. It is a cozy community for questions that spark conversations. But it is not Reddit! To answer questions in Jous, you should search inward, inside yourself. For families, friends, dates, and strangers. Anyone can share questions on Jous, the question set changes daily.</p>
       <div className="sample-images-section">
         <div className="image-gallery" >
-          <a href="https://jous.app" target="_blank" rel="noopener noreferrer">
-            <img
-              key={0}
-              src="https://res.cloudinary.com/dl9xg597r/image/upload/f_webp/q_auto:low/v1738794201/Screenshot_2025-01-29_210213_amqqyk.png"
-              alt="Sample 1"
-              className="gallery-image"
-              style={{width: "50rem", maxWidth: "90%"}}
-            />
-          </a>
+          <div className="project-item">
+            <iframe
+              src="https://jous.app"
+              title="Jous preview"
+              className="app-iframe"
+            ></iframe>
+            <a href="https://jous.app" target="_blank" rel="noopener noreferrer">
+              <button className="visit-page-button">Open Jous</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function SecondDate() {
+  return (
+    <div>
+      <Helmet>
+        <title>Second Date | Helia Jamshidi</title>
+        <meta
+          name="description"
+          content="Swipe through fun date ideas contributed by the community."
+        />
+        <meta property="og:title" content="Second Date | Helia Jamshidi" />
+        <meta
+          property="og:description"
+          content="Explore Helia's experiment to make dating less like work."
+        />
+        <meta property="og:url" content="https://heliajamshidi.me/projects/second-date" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://heliajamshidi.me/projects/second-date" />
+      </Helmet>
+      <h1>Second Date</h1>
+      <p>Swipe-based collection of first-date ideas aimed at making dates playful and engaging.</p>
+      <div className="sample-images-section">
+        <div className="image-gallery" >
+          <div className="project-item">
+            <iframe
+              src="https://seconddate.date/swipe"
+              title="Second Date preview"
+              className="app-iframe"
+            ></iframe>
+            <a href="https://seconddate.date/swipe" target="_blank" rel="noopener noreferrer">
+              <button className="visit-page-button">Open Second Date</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function TangoDiario() {
+  return (
+    <div>
+      <Helmet>
+        <title>Tango Diario | Helia Jamshidi</title>
+        <meta
+          name="description"
+          content="A daily five-minute practice tool for tango musicality."
+        />
+        <meta property="og:title" content="Tango Diario | Helia Jamshidi" />
+        <meta
+          property="og:description"
+          content="Practice tango musicality step by step with weekly topics."
+        />
+        <meta property="og:url" content="https://heliajamshidi.me/projects/tango-diario" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://heliajamshidi.me/projects/tango-diario" />
+      </Helmet>
+      <h1>Tango Diario</h1>
+      <p>Practice tango musicality with short daily exercises and weekly themes.</p>
+      <div className="sample-images-section">
+        <div className="image-gallery" >
+          <div className="project-item">
+            <iframe
+              src="https://tango-diario.com/"
+              title="Tango Diario preview"
+              className="app-iframe"
+            ></iframe>
+            <a href="https://tango-diario.com/" target="_blank" rel="noopener noreferrer">
+              <button className="visit-page-button">Open Tango Diario</button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -177,6 +256,8 @@ export default function Projects({isMobile}) {
           <Route path="/" element={<ProjectsHome />} />
           <Route path="/jous" element={<Jous />} />
           <Route path="/emotion-explorer" element={<EmotionResolver />} />
+          <Route path="/second-date" element={<SecondDate />} />
+          <Route path="/tango-diario" element={<TangoDiario />} />
         </Routes>
       </div>}
     </div>

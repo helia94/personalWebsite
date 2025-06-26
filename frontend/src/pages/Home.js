@@ -144,14 +144,36 @@ export default function Home() {
       <div className="sample-images-section">
         <h2>Projects</h2>
         <div className="image-gallery">
-          <a href="https://jous.app" target="_blank" rel="noopener noreferrer">
-            <img
-              key={0}
-              src="https://res.cloudinary.com/dl9xg597r/image/upload/f_webp/q_auto:low/v1738794201/Screenshot_2025-01-29_210213_amqqyk.png"
-              alt="Sample 1"
-              className="gallery-image"
-            />
-          </a>
+          <div className="project-item">
+            <iframe
+              src="https://jous.app"
+              title="Jous preview"
+              className="app-iframe"
+            ></iframe>
+            <a href="https://jous.app" target="_blank" rel="noopener noreferrer">
+              <button className="visit-page-button">Open Jous</button>
+            </a>
+          </div>
+          <div className="project-item">
+            <iframe
+              src="https://seconddate.date/swipe"
+              title="Second Date preview"
+              className="app-iframe"
+            ></iframe>
+            <a href="https://seconddate.date/swipe" target="_blank" rel="noopener noreferrer">
+              <button className="visit-page-button">Open Second Date</button>
+            </a>
+          </div>
+          <div className="project-item">
+            <iframe
+              src="https://tango-diario.com/"
+              title="Tango Diario preview"
+              className="app-iframe"
+            ></iframe>
+            <a href="https://tango-diario.com/" target="_blank" rel="noopener noreferrer">
+              <button className="visit-page-button">Open Tango Diario</button>
+            </a>
+          </div>
         </div>
       </div>
 
