@@ -148,7 +148,23 @@ export default function Home() {
             <img
               key={0}
               src="https://res.cloudinary.com/dl9xg597r/image/upload/f_webp/q_auto:low/v1738794201/Screenshot_2025-01-29_210213_amqqyk.png"
-              alt="Sample 1"
+              alt="Jous screenshot"
+              className="gallery-image"
+            />
+          </a>
+          <a href="https://seconddate.date/swipe" target="_blank" rel="noopener noreferrer">
+            <img
+              key={1}
+              src="https://res.cloudinary.com/dl9xg597r/image/upload/v1748245861/sticker_2_boring_coffee_date_shvkfc.png"
+              alt="Second Date screenshot"
+              className="gallery-image"
+            />
+          </a>
+          <a href="https://tango-diario.com/" target="_blank" rel="noopener noreferrer">
+            <img
+              key={2}
+              src="https://tango-diario.com/lovable-uploads/3e4f67a7-9a5c-4d34-b8aa-fa7bad6095c4.png"
+              alt="Tango Diario screenshot"
               className="gallery-image"
             />
           </a>
