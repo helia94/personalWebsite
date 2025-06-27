@@ -64,15 +64,17 @@ function Jous() {
       <p>This App is for people trying to avoid small talk. It is a cozy community for questions that spark conversations. But it is not Reddit! To answer questions in Jous, you should search inward, inside yourself. For families, friends, dates, and strangers. Anyone can share questions on Jous, the question set changes daily.</p>
       <div className="sample-images-section">
         <div className="image-gallery" >
-          <a href="https://jous.app" target="_blank" rel="noopener noreferrer">
-            <img
-              key={0}
-              src="https://res.cloudinary.com/dl9xg597r/image/upload/f_webp/q_auto:low/v1738794201/Screenshot_2025-01-29_210213_amqqyk.png"
-              alt="Sample 1"
-              className="gallery-image"
-              style={{width: "50rem", maxWidth: "90%"}}
-            />
-          </a>
+          <iframe
+            src="https://jous.app"
+            title="Jous app"
+            className="app-embed"
+          ></iframe>
+          <button
+            className="visit-btn"
+            onClick={() => window.open('https://jous.app', '_blank')}
+          >
+            Visit App
+          </button>
         </div>
       </div>
     </div>
@@ -101,14 +103,17 @@ function SecondDate() {
       <p>Swipe-based collection of first-date ideas aimed at making dates playful and engaging.</p>
       <div className="sample-images-section">
         <div className="image-gallery" >
-          <a href="https://seconddate.date/swipe" target="_blank" rel="noopener noreferrer">
-            <img
-              src="https://res.cloudinary.com/dl9xg597r/image/upload/v1748245861/sticker_2_boring_coffee_date_shvkfc.png"
-              alt="Second Date screenshot"
-              className="gallery-image"
-              style={{width: "50rem", maxWidth: "90%"}}
-            />
-          </a>
+          <iframe
+            src="https://seconddate.date/swipe"
+            title="Second Date app"
+            className="app-embed"
+          ></iframe>
+          <button
+            className="visit-btn"
+            onClick={() => window.open('https://seconddate.date/swipe', '_blank')}
+          >
+            Visit App
+          </button>
         </div>
       </div>
     </div>
@@ -137,14 +142,17 @@ function TangoDiario() {
       <p>Practice tango musicality with short daily exercises and weekly themes.</p>
       <div className="sample-images-section">
         <div className="image-gallery" >
-          <a href="https://tango-diario.com/" target="_blank" rel="noopener noreferrer">
-            <img
-              src="https://tango-diario.com/lovable-uploads/3e4f67a7-9a5c-4d34-b8aa-fa7bad6095c4.png"
-              alt="Tango Diario screenshot"
-              className="gallery-image"
-              style={{width: "50rem", maxWidth: "90%"}}
-            />
-          </a>
+          <iframe
+            src="https://tango-diario.com/"
+            title="Tango Diario app"
+            className="app-embed"
+          ></iframe>
+          <button
+            className="visit-btn"
+            onClick={() => window.open('https://tango-diario.com/', '_blank')}
+          >
+            Visit App
+          </button>
         </div>
       </div>
     </div>
