@@ -28,6 +28,10 @@ export const bookmarkCategories = [
         route: "/bookmarks/why-we-sleep"
       },
       {
+        label: "Crucial Conversations",
+        route: "/bookmarks/crucial-conversations"
+      },
+      {
         label: "(p) Being You",
         route: "/bookmarks/being-you"
       },
@@ -293,6 +297,86 @@ function BookmarkDetail() {
               allowtransparency="true">
             </iframe>
           </div>
+        </div>
+      )
+    },
+    "crucial-conversations": {
+      name: "Crucial Conversations",
+      url: "https://www.amazon.de/Crucial-Conversations-Tools-Talking-Stakes/dp/0071771328",
+      description: () => (
+        <div>
+          <section className="speaking-section">
+            <h2>What are Crucial Conversations?</h2>
+            <p>Crucial conversations show up with these three badges:</p>
+            <div className="list-section">
+              <ul>
+                <li>Someone disagrees with you</li>
+                <li>Stakes are high</li>
+                <li>Emotions are sitting in the corner, sharpening knives</li>
+              </ul>
+            </div>
+            <p>When conversations matter most, we tend to handle them the worst. Failing at a crucial conversation can affect every part of life: your health, your work, your relationships. </p>
+          </section>
+          <section className="speaking-section">
+            <h2>Why it surprised me?</h2>
+            <p>Yes, the book is a how-to book, but the biggest moment for me was in the intro, not the actual body. Specifically, two messages delivered rather confidently by the writers.</p>
+            <blockquote className="quote">
+              First one: “Most people think you have to choose between being completely honest and keeping a relationship.”And then they absolutely refuse to accept this. Not even a hint of “well, maybe sometimes…”—just a total, bulletproof “NOPE.” The book’s been around for 20 years, and somehow no one told me this was even an option. Like, what the hell? The second notion they equally refused to entertain was that “You can avoid a conversation”, rather, your realistic options are to “Talk it out” or “Act it out”.
+            </blockquote>
+            <img
+              src="https://res.cloudinary.com/dl9xg597r/image/upload/v1751466818/TalkItOut-ActItOut_vtcaqq.png"
+              alt="Talk it out vs act it out"
+              style={{ width: "40rem", maxWidth: "90%" }}
+            />
+            <p>I was so overwhelmed by this newfound fact that I went and had two long-due conversations right away: one postponed for 7 years, one for 3 years, the second of which I thought I would certainly take to my grave. The bad news for me was that I was so spontaneous and rash, I did this before reading the chapters “Before Opening Your Mouth” or “How to Open Your Mouth.”</p>
+            <p>So for what it’s worth, I have now read the book, and I know now much more how I was part of the problem in the conversations I was having at work and at home in the past years. So if you are frustrated by conversations that do not have a good resolution (or any resolution at all), or if you are choosing between being honest and keeping someone in your life….. by reading this far, you have just been robbed of whatever excuse you had.</p>
+            <p>I am sharing what I took most from this book, but frankly, the whole book is the key. I am even keeping it by my side and referring to it again when new situations come up.</p>
+          </section>
+          <hr />
+          <section className="speaking-section">
+            <h2>Why have Critical Conversations?</h2>
+            <p>‘The single biggest problem in communication is the illusion that it has taken place’ said surely someone. Have you ever left a conversation feeling like you did your job, only to find out three months later that the other person thinks you’re an actual goblin? Turns out, words don’t equal understanding. Huh.</p>
+            <p>What do most of us do when something bothers us, but mentioning it is awkward or seems impossible? We avoid. We become Olympic-level avoiders. You’d think the stakes were “if you talk, you get eaten by wolves.” (Which, to be fair, is probably how our brains evolved: “Don’t make anyone mad or you get booted from the tribe.”) So, instead, we become slightly dysfunctional humans, all because nobody wants to say the thing that needs saying.</p>
+            <p>In healthy relationships, people actually address problems pretty much as soon as they spot them. They have built environments where trust is high, they keep their intimacy at home, and productivity at work. But if you wait months or years to bring something up? The relationship kind of rots from the inside, like an old banana in a gym bag. If you want a shortcut to how healthy your work or love life is, just measure the time between “I notice a problem” and “I actually talk about it.” That’s your diagnosis for now.</p>
+            <p>Silence seems like a safe bet at first. You don’t bring up the thing that’s bugging you. Instead, you start letting out tiny sighs when they talk. You notice how your replies get shorter. You skip the little inside jokes. You say you’re tired. Even if you’re still polite, something feels off, like everyone’s performing a version of normal and hoping the other doesn’t notice the tension. You start treating each other like you’re both slightly annoying roommates. It’s not just awkward, it’s exhausting. And the longer it goes, the more normal it starts to feel.</p>
+            <p>There’s this booby trap: Pick honesty and lose the relationship, or fake it and keep the peace. I bought this for way too long.  Not talking builds resentment, and you end up living in a fake reality with people you’re supposed to care about. The only thing that really connects us is telling the truth. Not dancing around it, actually saying it.</p>
+            <p>The conversations that matter most are the ones where we’re the worst at communicating. Stakes go up, skills go down. It’s almost slapstick. These conversations affect everything: your sleep, your job, your friendships, whether your family group chat is a warzone or a safe haven. The longer you wait, the more your brain invents stories and the more your actions get weird. But nobody’s born with the right words. These are just skills, or so I hope.</p>
+            <p>At the core of all this, it’s about letting meaning flow freely. Not just information, but the real stuff, what you actually think, what you’re scared of, what you wish would change. The old Fool’s Choice is thinking you have to pick: honest or kind. The people who are good at this somehow pull off both. 100% honest, 100% respectful. </p>
+          </section>
+          <hr />
+          <section className="speaking-section">
+            <h2>How to prepare for Critical Conversations?</h2>
+            <p>More often than we realize, we start talking about topic A, maybe something as dull as “the current project” at work, or “last night’s dishes” at home. And at first, we really believe that’s what we’re arguing about. But then, out of nowhere, emotions shoot up, and suddenly everyone’s reaction is way out of proportion to whatever “topic A” is. At that point, nobody actually cares about topic A anymore. Now, the argument is about something way bigger and much more symbolic. Usually, it’s the stuff we’ve stayed silent about for way too long. That’s how a fight about the dishes morphs into, “You always do this!” or, “I don’t know if you even respect my role as X when ...” Suddenly, we’re pretending to care about topic A, but what’s actually happening is a wrestling match for safety, dignity, respect, whatever’s been sitting quietly in the background.</p>
+            <p>When a topic feels overwhelming or impossible, it’s probably because I’ve bundled a bunch of issues together. Maybe I’m annoyed about the immediate thing (content), or maybe it’s the fact that this happens every week (pattern), or maybe I’m just quietly panicking about what this means for our whole relationship. I have to actually unpack this mess, pick one, and try to state it in a single sentence. When you are trying to figure out “what do you most want to talk about?” try to separate it from “How on earth can I bring that up?”. The burden of the second step can muddy the water, and make us choose the wrong topic.</p>
+            <p>When emotions are high and the stakes feel big, we grab for the closest topic, usually something we think we can win, or something vague enough to hide in. And every time, right as the conversation starts to spiral, I catch myself wanting to either win, save face, or punish. Apparently, the book wants me to ignore all of that and start with my heart. As in:</p>
+            <blockquote className="quote">What do I really want here, for me, for them, for us? If my answer is, “I want to prove them wrong and never do dishes again,” it’s probably time to hit pause.</blockquote>
+            <p>And then there’s the uphill bit: mastering my stories. When I’m upset, my brain starts making up these little movies where I’m either the victim (“it’s all their fault”), the hero fighting a villain (“they’re just evil”), or the helpless bystander (“there’s nothing I can do”). I have to rewind, look at my own behavior, name what I’m actually feeling, and ask:</p>
+            <div className="list-section">
+              <ul>
+                <li>What’s the story I’m telling myself that’s making this emotion explode?</li>
+                <li>Is there actual evidence, or am I just writing dramatic fiction again?</li>
+              </ul>
+            </div>
+            <p>And, the final embarrassing step: “What am I pretending not to notice about my own part in this?” Not fun.</p>
+          </section>
+          <hr />
+          <section className="speaking-section">
+            <h2>Without Trust, Forget Having Critical Conversations</h2>
+            <p>If you want to shut down a conversation instantly, just add fear. Nothing sucks the life out of dialogue faster. People don’t really debate when they’re afraid; they just… shrink or turn defensive. The last time someone gave me feedback and I actually listened, it was probably because I trusted that they weren’t out to get me. If I think you’re judging me or don’t actually care, my brain just quietly checks out and starts doodling, hoping to exit soon. If I want a real conversation, it has to be obvious that I care about them and about what they care about; people can smell it any other way.</p>
+            <p>Respect is the unspoken currency of every conversation. If people feel even a whiff of disrespect, it doesn’t matter what the actual topic is, they’re going to spend the rest of the time protecting their dignity. It’s not about whether I think I respect them; it’s about whether they think I do.</p>
+            <p>So, how do you actually say hard things without making someone feel attacked? The book’s recipe is you need confidence (believe your view is worth saying), humility (know you might not have it all figured out), and skill (don’t just blurt it out and hope for the best). You can be honest and kind at the same time. It’s not a contradiction, just a harder thing to do.</p>
+            <p>The assignment before the conversation is to separate facts from the stories we tell ourselves. Don’t pretend you’re bringing “the truth”, just share what you’ve seen and how it looks from where you’re standing. If you tell the story as a story, not as the facts, people are way more likely to hear you out. And the more certain you sound, the more you have to actually invite disagreement, otherwise you just become a dictator. </p>
+            <p>In the end, the only way to speak strongly is to be just as open to being challenged. The second I stop wanting to be challenged, I’m probably just protecting my own ego, not actually trying to solve anything. And that’s the thing: you can say hard things without being a jerk, but it takes practice and some actual guts. And sometimes, a little more silence than you’d like.</p>
+          </section>
+          <hr />
+          <section className="speaking-section">
+            <h2>How To Prepare For Receiving Feedback?</h2>
+            <p>Sometimes it feels like everyone’s walking around with a giant invisible pen, and at any moment, someone might reach over and grab yours. It’s not a fancy moment, nobody says, “May I write your self-worth today?” They just do it. You ace a project, and suddenly you’re awesome. Somebody frowns at your joke, now you’re back to “try harder.”</p>
+            <p>And then comes feedback. If it pokes right into the self-worth spot, it burns. Suddenly, it’s not about the work or the thing you did, it’s about you, like someone’s scribbling “not good enough” in your margins. People don’t get angry about feedback when they’re fine; it’s only when there’s fear underneath. That’s when you snap back or shrink or try to disappear. It’s like the pen is always at risk of getting stolen.</p>
+            <p>Losing the pen is basically handing over your power to whoever’s closest. Now you’re not making your own worth, you’re borrowing it. You end up insecure, always checking the room, always adjusting, always looking for proof that you’re still enough.</p>
+            <p>When feedback comes, remind yourself you’re safe. This isn’t an emergency, even if your body says it is. Separate the feedback from your identity. You can mess up without being a mess. It’s okay to ask for examples, to listen all the way through, to say “let me think about that” instead of reacting right away. You get to pick when and how you answer. That’s holding the pen.</p>
+            <p>And, somehow, the less you let others write your worth, the less their feedback can hurt you. You still listen, but you don’t lose yourself every time someone picks up a pen.</p>
+          </section>
         </div>
       )
     },
