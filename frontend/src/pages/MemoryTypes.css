@@ -1,0 +1,168 @@
+:root {
+  /* Modern muted palette */
+  --yes-bg: rgba(0, 102, 94, 0.7);      /* Dark Cyan */
+  --yes-border: rgba(0, 77, 64, 0.9);
+
+  --might-bg: rgba(191, 138, 53, 0.5);  /* Muted Gold */
+  --might-border: rgba(159, 108, 43, 0.7);
+
+  --no-bg: rgba(183, 82, 71, 0.5);      /* Terracotta */
+  --no-border: rgba(152, 58, 51, 0.7);
+
+  --fg: #1c1c1e;
+  --header-bg: rgba(242, 242, 247, 0.9);
+  --border-color: rgba(210, 210, 215, 0.3);
+  --tooltip-bg: rgba(28, 28, 30, 0.75);
+}
+
+/* SCROLLER */
+.table-container {
+  max-width: 100%;
+  max-height: 80vh;
+  overflow: auto;                 /* the only scrolling element */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: #fff;               /* keeps rounded corners visible */
+}
+
+/* TABLE */
+.memory-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  min-width: 800px;
+  font-size: 0.8rem;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+               "Helvetica Neue", Arial, sans-serif;
+  background: #fff;
+  /* DO NOT set overflow:hidden or border-radius here (breaks sticky) */
+}
+
+/* CELLS */
+.memory-table th,
+.memory-table td {
+  border: 1px solid var(--border-color);
+  padding: 6px 10px;
+  text-align: center;
+  white-space: nowrap;
+  color: var(--fg);
+}
+
+/* STICKY HEADER (top) */
+.memory-table thead th {
+  position: sticky;
+  top: 0;
+  background: var(--header-bg);
+  backdrop-filter: blur(12px);
+  font-weight: 600;
+  z-index: 4;
+}
+
+/* STICKY FIRST COLUMN (both header+body) */
+.memory-table th:first-child,
+.memory-table td:first-child {
+  position: sticky;
+  left: 0;
+  background: var(--header-bg);   /* must be non-transparent */
+  backdrop-filter: blur(12px);
+  z-index: 5;                     /* above other cells */
+  isolation: isolate;             /* own stacking context */
+  box-shadow: 1px 0 0 var(--border-color); /* divider to the right */
+  text-align: left;               /* usually nicer for criteria names */
+}
+
+/* HOVER — keep first column intact */
+.memory-table tbody tr:hover td {
+  background: rgba(0, 0, 0, 0.04);
+  transition: background 0.2s ease;
+}
+.memory-table tbody tr:hover td:first-child {
+  background: var(--header-bg);
+}
+
+/* COLOR LOGIC */
+td:has(> .yes)   { background: var(--yes-bg) !important;   color: var(--fg) !important; }
+td:has(> .might) { background: var(--might-bg) !important; color: var(--fg) !important; }
+td:has(> .no)    { background: var(--no-bg) !important;    color: var(--fg) !important; }
+
+.yes, .might, .no {
+  background: transparent !important;
+  color: inherit;
+  padding: 0;
+}
+.yes:empty::before,
+.might:empty::before,
+.no:empty::before { content: "\00a0"; } /* keep row height even if empty */
+
+/* COLORS-ONLY TOGGLE */
+.memory-table.hide-text td span { opacity: 0; }   /* hide inner text in data cells */
+.memory-table.hide-text td:first-child span,
+.memory-table.hide-text th, 
+.memory-table.hide-text tbody th { opacity: 1; }  /* keep first column/headers visible */
+
+/* TOOLTIP */
+[data-tooltip] { cursor: help; }
+
+.tooltip {
+  position: fixed;
+  pointer-events: none;
+  background: var(--tooltip-bg);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 280px;
+  z-index: 10000;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+/* OPTIONAL: tighter controls area */
+.table-controls {
+  margin: 6px 0;
+  font-size: 0.8rem;
+}
+
+
+.more-about {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+    list-style: none;
+}
+
+.more-about h2 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.more-about h3 {
+  margin-top: 1.2rem;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.more-about h4 {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.more-about ul {
+  margin-left: 1.5rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* Stacks items vertically */
+  gap: 1rem; /* This adds the space BETWEEN items. Adjust this value (e.g., 0.75rem, 1.5rem) */
+}
+
+/* The line-height now only controls space within a single list item */
+.more-about ul li {
+  line-height: 1.5;
+}
