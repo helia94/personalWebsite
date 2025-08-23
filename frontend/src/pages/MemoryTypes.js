@@ -32,7 +32,7 @@ const columnDescriptions = {
   "Text-based DB": "Early digital memory. Structured tables with exact lookups. Precise but rigid, retrieval only works if it fits the schema.",
   "File Systems": "Everyday digital memory. Folders and files organize data on a computer, and easy for humans to navigate.",
   "Knowledge Graph": "Memory as a web of entities and relationships. Works like a giant mind map, enabling traversal through connected facts.",
-  "Web Search": "Memory of the internet. Lets us find anything across billions of pages, fast — but ranking favors what’s popular and linked.",
+  "Web Search": "Memory of the internet. Lets us find anything across billions of pages, fast, but ranking favors what’s popular and linked.",
   "Ad Personalization": "Memory about *you*. Builds a profile of preferences and behaviors, predicting what you’ll want next.",
   "Blockchain": "Memory no one can secretly change. Shared, permanent, and transparent, but biased toward early data and costly to rewrite.",
   "Vector DB": "Memory by similarity. Retrieves “things like this” based on embeddings, not exact matches. Great for fuzzier search.",
@@ -47,7 +47,7 @@ const cellExtras = {
     "Verbal Language / Culture": "Verses are written in meter and rhyme not just for beauty but to help bards remember thousands of lines. The meter is an indexing system. Songs and chants (nursery rhymes, prayers) stick because rhythm gives you a recall structure.",
     "Ad Personalization": "Example of using profile indices could be “give me people in profile X (recently looked at running shoes, age 25–40, in Germany).”",
     "Hierarchical Memory Networks": "tree of memories: high-level summaries indexing down to low-level facts, navigated with embeddings via trained attention (not embedding similarity!)",
-    "Agent As Memory Manager (e.g. Letta)": "memory as a layered system: short-term conversation sits in a buffer, long-term facts live in recall storage, and the most important knowledge is pinned into editable core blocks inside the LLM’s context. Retrieval does happen (so RAG is part of the picture), but not as a blind “dump top-k similar chunks” — rather, the agent searches, summarizes, rewrites, and selectively injects what matters."
+    "Agent As Memory Manager (e.g. Letta)": "memory as a layered system: short-term conversation sits in a buffer, long-term facts live in recall storage, and the most important knowledge is pinned into editable core blocks inside the LLM’s context. Retrieval does happen (so RAG is part of the picture), but not as a blind “dump top-k similar chunks”, rather, the agent searches, summarizes, rewrites, and selectively injects what matters."
   },
   "Retrieval (Source)": {
     "Human Brain": "Episodic memory sometimes recalls exact detail (where, when, who), but semantic/general knowledge is reconstructed, not retrieved. For people without highly superior autobiographical memory even the episodic memory is faulty and subjective more often than not.",
@@ -131,7 +131,7 @@ const cellExtras = {
   },
   "Multimodality": {
     "File Systems": "Can store any file type, but each is siloed (.txt, .jpg, .mp3). No unified search or reasoning across them.",
-    "Web Search": "Results are blended, but not deeply integrated — mostly parallel lists (websites, images, videos).",
+    "Web Search": "Results are blended, but not deeply integrated, mostly parallel lists (websites, images, videos).",
     "Vector DB": "Embeddings let text and images live in the same space, enabling “find images matching this sentence.”",
     "LLM": "Recent models (GPT-4o, Gemini) process multiple inputs together (text, vision, audio), but still experimental.",
     "Hierarchical Memory Networks": "Early research suggests combining modalities in structured memory, but practical systems remain rare.",
