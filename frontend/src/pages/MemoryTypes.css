@@ -14,6 +14,11 @@
   overflow:auto;
 }
 
+.table-controls{
+  margin-bottom:4px;
+  font-size:0.75rem;
+}
+
 .memory-table{
   border-collapse:collapse;
   width:100%;
@@ -57,6 +62,8 @@ td:has(> .no){background:var(--no-bg)!important;color:var(--fg)!important;}
 .yes:empty::before,
 .might:empty::before,
 .no:empty::before{content:"\00a0";}
+
+.memory-table.hide-text td span{opacity:0;}
 
 [data-tooltip]{cursor:help;}
 

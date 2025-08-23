@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import "./MemoryTypes.css";
 
@@ -140,6 +140,7 @@ const cellExtras = {
 };
 
 export default function MemoryTypes() {
+  const [colorOnly, setColorOnly] = useState(false);
   useEffect(() => {
     const table = document.getElementById("memory-table");
     if (!table) return;
@@ -260,8 +261,21 @@ export default function MemoryTypes() {
       <p>
         <strong>Symbols:</strong> <strong>?</strong> means unknown.
       </p>
+      <div className="table-controls">
+        <label>
+          <input
+            type="checkbox"
+            checked={colorOnly}
+            onChange={(e) => setColorOnly(e.target.checked)}
+          />
+          Colors only
+        </label>
+      </div>
       <div className="table-container">
-        <table id="memory-table" className="memory-table">
+        <table
+          id="memory-table"
+          className={`memory-table ${colorOnly ? "hide-text" : ""}`}
+        >
           <thead>
             <tr>
               <th>Criteria</th>
