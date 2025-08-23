@@ -1,8 +1,11 @@
 :root{
-  --yes-bg:#bbf7d0;
-  --might-bg:#fef9c3;
-  --no-bg:#fecaca;
-  --fg:#111;
+  --yes-bg:rgba(52,199,89,0.25);
+  --might-bg:rgba(255,214,10,0.3);
+  --no-bg:rgba(255,59,48,0.25);
+  --fg:#1c1c1e;
+  --header-bg:#f2f2f7;
+  --border-color:#d1d1d6;
+  --tooltip-bg:rgba(28,28,30,0.85);
 }
 
 .table-container{
@@ -16,11 +19,12 @@
   width:100%;
   min-width:800px;
   font-size:0.75rem;
+  font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
 }
 
 .memory-table th,
 .memory-table td{
-  border:1px solid #ddd;
+  border:1px solid var(--border-color);
   padding:2px 4px;
   text-align:center;
   white-space:nowrap;
@@ -29,14 +33,14 @@
 .memory-table thead th{
   position:sticky;
   top:0;
-  background:#fff;
+  background:var(--header-bg);
   z-index:3;
 }
 
 .memory-table tbody th{
   position:sticky;
   left:0;
-  background:#fff;
+  background:var(--header-bg);
   z-index:2;
 }
 
@@ -54,23 +58,22 @@ td:has(> .no){background:var(--no-bg)!important;color:var(--fg)!important;}
 .might:empty::before,
 .no:empty::before{content:"\00a0";}
 
-[data-tooltip]{
-  cursor:help;
-}
+[data-tooltip]{cursor:help;}
 
 .tooltip{
   position:fixed;
   pointer-events:none;
-  background:#111;
+  background:var(--tooltip-bg);
   color:#fff;
   padding:8px 12px;
-  border-radius:6px;
+  border-radius:8px;
   font-size:0.85rem;
   line-height:1.3;
-  box-shadow:0 2px 8px rgba(0,0,0,0.3);
+  box-shadow:0 2px 8px rgba(0,0,0,0.2);
+  backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,0.18);
   max-width:280px;
   z-index:10000;
   opacity:0;
   transition:opacity 0.15s;
 }
-
