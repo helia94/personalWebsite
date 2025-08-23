@@ -6,6 +6,7 @@ import axios from 'axios'
 import { useContext, useState, useEffect } from "react";
 import { MobileViewContext } from "../context/MobileViewContext";
 import SecondarySidebar from "../components/SecondarySidebar";
+import MemoryTypes from "./MemoryTypes";
 
 export const writingData = [
   {
@@ -38,7 +39,8 @@ export const writingData = [
     title: "Work",
     items: [
       { label: "Shadow of University", route: "/writing/work/university" },
-      { label: "Vocation", route: "/writing/work/vocation" }
+      { label: "Vocation", route: "/writing/work/vocation" },
+      { label: "Memory Types", route: "/writing/work/memory-types" }
     ],
   },
   {
@@ -573,6 +575,7 @@ export default function Writing({ isMobile }) {
               rssFeed="https://medium.com/feed/@helia.jm"
               targetSlug="can-i-find-satisfying-work"
             />} />
+            <Route path="/work/memory-types" element={<MemoryTypes />} />
           </Routes>
         </div>
       }
