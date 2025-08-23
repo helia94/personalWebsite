@@ -3,64 +3,65 @@ import { Helmet } from "react-helmet";
 import "./MemoryTypes.css";
 
 const rowDescriptions = {
-  "Indexing": "Shortcut structures that let the system jump straight to the right spot instead of scanning everything.",
-  "Retrieval (Source)": "Ability to point back to the exact place information came from, distinguishing memory from hallucination.",
-  "Iterative Query": "Multi-step process where each step uses the previous result to move closer to the target.",
-  "Query Enhancement": "System rewrites or augments your query to better match relevant data.",
-  "PageRank / TextRank": "Graph-based ranking tricks where popularity flows through links.",
-  "No Right Answer": "Often produces multiple valid results instead of one truth.",
-  "Gets Better By Use": "Adapts to the individual user with continued use.",
-  "Gets Better By Network": "Improves for everyone as more people use it.",
-  "Clear Feedback Loops": "Learns directly from signals like clicks or corrections.",
-  "Always On": "Works continuously even when not explicitly queried.",
-  "Time Dependent": "Freshness of information matters for usefulness.",
-  "Strategic Forgetting": "Deliberately removes or de-prioritizes old information.",
-  "Real Time Update": "New information appears immediately.",
-  "Daily Update": "Information refreshed in regular daily batches.",
+  "Indexing": "Shortcut structures (like an address book) that let the system jump straight to the right spot instead of scanning everything. The more explicit and engineered the index, the less the system relies on “learning it from data.”",
+  "Retrieval (Source)": "Can the system point back to the exact place the info came from (like a footnote)? This shows whether it’s true memory (retrieval) or just prediction/imagination (hallucination/creativity).",
+  "Iterative Query": "Any multi-step process where each step uses the previous step’s to move closer to the target result. Not just reformulating a string: includes filtering, traversal, multi-hop reasoning, re-ranking, re-embedding, tool loops, and trial-and-error.",
+  "Query Enhancement": "The system rewrites/augments your query to better match relevant data: e.g., add synonyms, fix spelling, disambiguate intent, split into sub-queries, or re-embed with extra context. Goal: retrieve what you *meant*, not just what you typed.",
+  "PageRank / TextRank": "Both are graph-based ranking tricks. PageRank (Google) = “a page is important if many important pages link to it.” TextRank = same idea for text: “a word/sentence is important if many other important ones connect to it.” Said otherwise: popularity by association.",
+  "No Right Answer": "The system often produces multiple valid results instead of one truth. Like Google giving you 10 relevant links, or an LLM giving different plausible answers to an open-ended question.",
+  "Gets Better By Use": "The more *you* use it, the more it adapts to you (like Spotify or Google remembering your habits).",
+  "Gets Better By Network": "The more *everyone* uses it, the better it gets for all users (like Waze traffic maps, or Google ranking improving with global click data).",
+  "Clear Feedback Loops": "The system learns directly from signals like clicks, corrections, or votes. Strong feedback loops = quick self-improvement. More of an application criteria not so applicable just considering the tech framework.",
+  "Always On": "Works continuously even if you don’t ask. Example: Google crawling the web, your brain processing in sleep. Not just sitting idle until queried.",
+  "Time Dependent": "Freshness matters: “today’s weather” is different than yesterday’s, or “top news” shifts hourly.",
+  "Strategic Forgetting": "The system deliberately removes or de-prioritizes old info to stay useful. Like your brain forgetting irrelevant details, or Google de-indexing spam.",
+  "Real Time Update": "New info shows up instantly. Example: stock tickers update within seconds.",
+  "Daily Update": "Info is refreshed in batch cycles, not instantly. Example: a news site that rebuilds its index every night.",
   "Guaranteed Long-Term Storage": "Ensures data persists reliably over long periods.",
   "Contextualization": "Ability to leverage surrounding context or history.",
   "Multimodality": "Supports multiple types of data such as text, images, or audio.",
-  "Structural Bias": "Architecture favors certain information over others.",
+  "Structural Bias": "The system’s architecture itself favors some info over others. Examples: Web search favors popular, linked sites. Vector DBs favor cluster centers (majority patterns). LLMs favor smooth, common phrasing over rare facts.",
   "Year / Decade (Introduced)": "Approximate origin time for each memory type."
 };
 
+
 const columnDescriptions = {
-  "DNA": "Life’s molecular memory storing instructions for building organisms.",
-  "Human Brain": "Neural system with plasticity that reconstructs memories at recall.",
-  "Verbal Language / Culture": "Shared oral memory evolving with each retelling.",
-  "Text-based DB": "Structured tables with exact lookups; precise but rigid.",
-  "File Systems": "Folders and files organizing data for everyday computing.",
-  "Knowledge Graph": "Web of entities and relationships enabling traversal through connected facts.",
-  "Web Search": "Internet-scale memory allowing retrieval across billions of pages.",
-  "Ad Personalization": "Profiles that predict individual preferences and behavior.",
-  "Blockchain": "Shared, append-only ledger providing transparent and tamper-resistant history.",
-  "Vector DB": "Similarity-based memory retrieving items by embedding proximity.",
-  "LLM": "Large language model compressing patterns of language into predictive weights.",
-  "Hierarchical Memory Networks": "Neural memory with layered abstractions linking summaries to details.",
-  "Memory-Augmented Neural Networks": "Neural models with an external scratchpad for reading and writing.",
-  "Agent As Memory Manager (e.g. Letta)": "Digital agent that organizes, retrieves, and prunes its own memory."
+  "DNA": "Life’s memory chip. A molecular information that stores instructions for building organisms, highly stable across generations, but not adaptive in real-time.",
+  "Human Brain": "A system shaped by neural plasticity. It uses forgetting as a form of optimization, and integrates memories into broader narratives that support future-oriented behavior. Rather than serving as a fidelity, based recorder of the past, memory is constructed at recall, filtered through attention, goals, and current context.",
+  "Verbal Language / Culture": "Shared memory across people. Keeps stories, rules, and knowledge alive beyond individuals, but evolves with retelling.",
+  "Text-based DB": "Early digital memory. Structured tables with exact lookups. Precise but rigid, retrieval only works if it fits the schema.",
+  "File Systems": "Everyday digital memory. Folders and files organize data on a computer, and easy for humans to navigate.",
+  "Knowledge Graph": "Memory as a web of entities and relationships. Works like a giant mind map, enabling traversal through connected facts.",
+  "Web Search": "Memory of the internet. Lets us find anything across billions of pages, fast — but ranking favors what’s popular and linked.",
+  "Ad Personalization": "Memory about *you*. Builds a profile of preferences and behaviors, predicting what you’ll want next.",
+  "Blockchain": "Memory no one can secretly change. Shared, permanent, and transparent, but biased toward early data and costly to rewrite.",
+  "Vector DB": "Memory by similarity. Retrieves “things like this” based on embeddings, not exact matches. Great for fuzzier search.",
+  "LLM": "Memory compressed into statistical patterns of language. Predicts what word/idea should come next, but can hallucinate.",
+  "Hierarchical Memory Networks": "Neural memory with layers. Mimics abstraction levels (summary vs detail), but risks losing edge-case facts.",
+  "Memory-Augmented Neural Networks": "AI with an attached scratchpad. Learns tasks better by writing and reading from external memory slots.",
+  "Agent As Memory Manager (e.g. Letta)": "A digital assistant that organizes its own memory. Decides what to keep, forget, or fetch, mixing structured blocks with LLM context."
 };
 
 const cellExtras = {
   "Indexing": {
-    "Verbal Language / Culture": "Verses in meter and rhyme help bards remember thousands of lines; rhythm provides recall structure.",
-    "Ad Personalization": "Profiles enable queries like \"people in profile X (e.g., age 25–40 in Germany)\".",
-    "Hierarchical Memory Networks": "Tree of memories with high-level summaries indexing down to low-level facts.",
-    "Agent As Memory Manager (e.g. Letta)": "Layered memory: the agent searches, summarizes and selectively injects context instead of dumping top-k matches."
+    "Verbal Language / Culture": "Verses are written in meter and rhyme not just for beauty but to help bards remember thousands of lines. The meter is an indexing system. Songs and chants (nursery rhymes, prayers) stick because rhythm gives you a recall structure.",
+    "Ad Personalization": "Example of using profile indices could be “give me people in profile X (recently looked at running shoes, age 25–40, in Germany).”",
+    "Hierarchical Memory Networks": "tree of memories: high-level summaries indexing down to low-level facts, navigated with embeddings via trained attention (not embedding similarity!)",
+    "Agent As Memory Manager (e.g. Letta)": "memory as a layered system: short-term conversation sits in a buffer, long-term facts live in recall storage, and the most important knowledge is pinned into editable core blocks inside the LLM’s context. Retrieval does happen (so RAG is part of the picture), but not as a blind “dump top-k similar chunks” — rather, the agent searches, summarizes, rewrites, and selectively injects what matters."
   },
   "Retrieval (Source)": {
-    "Human Brain": "Episodic memory recalls detail but semantic knowledge is reconstructed.",
-    "Verbal Language / Culture": "Redundancy across people stabilizes cultural memory.",
-    "Ad Personalization": "Profiles don’t reveal the data trail that produced predictions.",
-    "Memory-Augmented Neural Networks": "Reference recent slots but older information is quickly overwritten.",
-    "Agent As Memory Manager (e.g. Letta)": "Each memory block can carry metadata such as source and time."
+    "Human Brain": "Episodic memory sometimes recalls exact detail (where, when, who), but semantic/general knowledge is reconstructed, not retrieved. For people without highly superior autobiographical memory even the episodic memory is faulty and subjective more often than not.",
+    "Verbal Language / Culture": "Cultural knowledge survives because many people repeat it. Errors in one telling are corrected by others, stabilizing the memory across the group.",
+    "Ad Personalization": "Profiles predict what you might want, but don’t cite sources. You see the outcome, not the trail of data that produced it.",
+    "Memory-Augmented Neural Networks": "They can reference recently stored slots, but older info is quickly overwritten.",
+    "Agent As Memory Manager (e.g. Letta)": "Each memory block can carry tags (where it came from, when it was added) but cannot retrieve the full source like the full past conversation. This helps track provenance but depends on the agent’s design."
   },
   "Iterative Query": {
-    "Vector DB": "Typical RAG pipelines refine search in multiple steps.",
-    "LLM": "Uses multi-turn reasoning and tool loops.",
-    "Hierarchical Memory Networks": "Attention navigates the hierarchy of memories.",
-    "Memory-Augmented Neural Networks": "Read/write cycles converge on results.",
-    "Agent As Memory Manager (e.g. Letta)": "Chains searches, summarizes, rewrites, and re-queries."
+    "Vector DB": "Not embedded in Vector DB. But it is common practice in RAG to search in steps. First grab a broad set of results (e.g. top 100), then narrow them by re-embedding, filtering, or re-ranking that smaller group until you converge on the best matches.",
+    "LLM": "Iteration here means multi-turn reasoning: the system tries, evaluates, and reformulates internally. Not just text rewrite, but chains of re-queries or tool calls.",
+    "Hierarchical Memory Networks": "Iteration here means multi-turn reasoning: the system tries, evaluates, and reformulates internally. Not just text rewrite, but chains of re-queries or tool calls.",
+    "Memory-Augmented Neural Networks": "Iteration here means multi-turn reasoning: the system tries, evaluates, and reformulates internally. Not just text rewrite, but chains of re-queries or tool calls.",
+    "Agent As Memory Manager (e.g. Letta)": "Iteration here means multi-turn reasoning: the system tries, evaluates, and reformulates internally. Not just text rewrite, but chains of re-queries or tool calls."
   },
   "Query Enhancement": {
     "Web Search": "Adds synonyms, fixes spelling, and disambiguates intent.",
@@ -71,71 +72,71 @@ const cellExtras = {
     "Agent As Memory Manager (e.g. Letta)": "Rewrites questions to retrieve what you meant."
   },
   "No Right Answer": {
-    "Vector DB": "Similarity search often yields many equally valid results.",
-    "Agent As Memory Manager (e.g. Letta)": "Decides whether to surface multiple perspectives."
+    "Vector DB": "Depending on embeddings and task, many “similar” results can be equally valid. There isn’t one ground-truth match.",
+    "Agent As Memory Manager (e.g. Letta)": "Agents can decide what “enough” means for an answer. Sometimes multiple perspectives are surfaced, sometimes one is chosen."
   },
   "Gets Better By Use": {
-    "Hierarchical Memory Networks": "Improve only when trained on application-level feedback.",
-    "Memory-Augmented Neural Networks": "Improve only when trained on application-level feedback.",
-    "Agent As Memory Manager (e.g. Letta)": "Users can correct or delete stored facts."
+    "Hierarchical Memory Networks": "They don’t adapt automatically. Only when the larger application loop gives reinforcement (e.g., human corrections) does performance improve.",
+    "Memory-Augmented Neural Networks": "They don’t adapt automatically. Only when the larger application loop gives reinforcement (e.g., human corrections) does performance improve.",
+    "Agent As Memory Manager (e.g. Letta)": "Users can edit or delete stored facts, directly shaping the memory over time. This is closer to human note-taking than automatic adaptation."
   },
   "Gets Better By Network": {
-    "Blockchain": "More participants increase trust but not retrieval quality."
+    "Blockchain": "More users strengthen the network’s trust and security, but search within the chain doesn’t get easier by scale, only consensus does."
   },
   "Clear Feedback Loops": {
-    "Hierarchical Memory Networks": "Learning depends on application-level signals.",
-    "Agent As Memory Manager (e.g. Letta)": "Requires explicit user feedback to adapt."
+    "Hierarchical Memory Networks": "The loop is only as strong as the application: an LLM agent with thumbs-up feedback learns, but without signals it stagnates.",
+    "Agent As Memory Manager (e.g. Letta)": "The loop is only as strong as the application: an LLM agent with thumbs-up feedback learns, but without signals it stagnates."
   },
   "Always On": {
-    "Agent As Memory Manager (e.g. Letta)": "Can proactively maintain and consolidate its memory."
+    "Agent As Memory Manager (e.g. Letta)": "Not just idle until queried. Could theoretically continuously maintain and improve its memory: consolidates notes, deduplicates facts, updates state (e.g. if “sold car,” it now knows “no car”)."
   },
   "Strategic Forgetting": {
     "Verbal Language / Culture": "Details drop and change across retellings; only core motifs persist.",
-    "Text-based DB": "Supports explicit DELETE operations and retention policies.",
-    "File Systems": "Lifecycle rules or TTL remove files automatically.",
-    "Knowledge Graph": "Pruning or decay routines trim noisy nodes and edges.",
-    "Web Search": "De-indexes results for policy or legal reasons.",
-    "Ad Personalization": "Old signals fade; recent behavior dominates targeting.",
-    "Blockchain": "Append-only design means nothing can be forgotten.",
-    "Vector DB": "Supports TTL/expiry and explicit deletion/compaction.",
+    "Text-based DB": "Explicit DELETE, retention policies, GDPR erasure.",
+    "File Systems": "Files removed manually or by retention settings (e.g., auto-delete after 30 days).",
+    "Knowledge Graph": "KGs are routinely pruned/trimmed to drop noisy or low-value nodes/edges; temporal KGs use decay and subgraph pruning to keep the graph useful and tractable. At web scale, updates and re-ranking are batched, not “forget on touch,” because recomputing embeddings/centrality is expensive.",
+    "Web Search": "Results removed from index for policy/legal reasons; content may still exist elsewhere.",
+    "Ad Personalization": "Old interests decay; recent behavior dominates targeting.",
+    "Blockchain": "Append-only; once written, data is permanent unless forked.",
+    "Vector DB": "Many vector stores support TTL/expiry and explicit delete/compaction—practical strategic forgetting.",
     "LLM": "Frozen weights; corrections don’t erase knowledge globally.",
-    "Hierarchical Memory Networks": "Forgetting happens at training time or session reset.",
-    "Memory-Augmented Neural Networks": "Slots can be erased during a task but reset between sessions.",
-    "Agent As Memory Manager (e.g. Letta)": "Policies allow rewriting or deleting memory blocks and summarizing over time."
+    "Hierarchical Memory Networks": "Once trained/frozen, an HMN won’t rewrite memory on its own at runtime; “forgetting” is mostly a training-time effect (what summaries keep vs drop) or a session reset, not true online, strategic deletion.",
+    "Memory-Augmented Neural Networks": "Can erase/overwrite slots within a task, but resets between sessions.",
+    "Agent As Memory Manager (e.g. Letta)": "Letta keeps editable memory blocks; agents can rewrite/delete blocks, summarize/condense (“sleep-time compute”), and set read-only vs writable areas. That’s genuine, inference-time strategic forgetting by policy."
   },
   "Real Time Update": {
-    "Knowledge Graph": "Some domains stream updates in real time.",
-    "Web Search": "News and similar domains update near real time.",
-    "Vector DB": "Rapid re-indexing is challenging.",
+    "Knowledge Graph": "Some KGs update nightly (like Wikidata), others stream updates in real-time (financial graphs).",
+    "Web Search": "Search engines crawl and update fast, but “real-time” often means minutes to hours, not seconds.",
+    "Vector DB": "Similarity search is instant, but new data only appears after ingestion + re-embedding.",
     "Agent As Memory Manager (e.g. Letta)": "Updates memory immediately when new information arrives."
   },
   "Daily Update": {
-    "Knowledge Graph": "Often refreshed in daily batches.",
-    "Web Search": "Large-scale batch updates run each day.",
+    "Knowledge Graph": "Some KGs update nightly (like Wikidata), others stream updates in real-time (financial graphs).",
+    "Web Search": "Search engines crawl and update fast, but “real-time” often means minutes to hours, not seconds.",
     "Ad Personalization": "User models are commonly refreshed daily.",
-    "Vector DB": "Re-indexing frequently scheduled daily.",
+    "Vector DB": "Similarity search is instant, but new data only appears after ingestion + re-embedding.",
     "Agent As Memory Manager (e.g. Letta)": "Likely performs periodic consolidation."
   },
   "Guaranteed Long-Term Storage": {
-    "Verbal Language / Culture": "Persists through community retelling though fragile.",
-    "Agent As Memory Manager (e.g. Letta)": "Depends on implementation; stores reformulated knowledge."
+    "Verbal Language / Culture": "Stories can last millennia (epics, myths), but only if communities actively retell them. Without transmission, they vanish.",
+    "Agent As Memory Manager (e.g. Letta)": "Reformulated version of information is preserved as key-value or chunks with embeddings, but not in the raw format and in full, depend on agent implementation."
   },
   "Contextualization": {
-    "Web Search": "Tailors results by session, location, and history.",
-    "Vector DB": "Relies solely on the query vector for context.",
+    "Web Search": "Tailors results by session, device, location, and history, but not deep context.",
+    "Vector DB": "Context comes only from the embedding of your query, not memory of past interactions.",
     "LLM": "Maintains context within the current session.",
-    "Hierarchical Memory Networks": "Context comes from the query vector and current focus.",
+    "Hierarchical Memory Networks": "They adapt within a session (e.g., focus shifts), but reset once training or session ends.",
     "Memory-Augmented Neural Networks": "Retains context within the active session.",
-    "Agent As Memory Manager (e.g. Letta)": "Contextualizes well after enough interactions but limited on cold start."
+    "Agent As Memory Manager (e.g. Letta)": "Before enough interactions, personalization is weak. Needs accumulated data to contextualize well."
   },
   "Multimodality": {
-    "File Systems": "Store any file type but without cross-modal reasoning.",
-    "Web Search": "Mixes text, image, and video results.",
-    "Vector DB": "Supports joint text and image embeddings.",
-    "LLM": "Newer models process text, vision, and audio together.",
-    "Hierarchical Memory Networks": "Research explores multimodal memory structures.",
-    "Memory-Augmented Neural Networks": "Multimodal use is still emerging.",
-    "Agent As Memory Manager (e.g. Letta)": "Early agents begin to handle mixed modalities."
+    "File Systems": "Can store any file type, but each is siloed (.txt, .jpg, .mp3). No unified search or reasoning across them.",
+    "Web Search": "Results are blended, but not deeply integrated — mostly parallel lists (websites, images, videos).",
+    "Vector DB": "Embeddings let text and images live in the same space, enabling “find images matching this sentence.”",
+    "LLM": "Recent models (GPT-4o, Gemini) process multiple inputs together (text, vision, audio), but still experimental.",
+    "Hierarchical Memory Networks": "Early research suggests combining modalities in structured memory, but practical systems remain rare.",
+    "Memory-Augmented Neural Networks": "Early research suggests combining modalities in structured memory, but practical systems remain rare.",
+    "Agent As Memory Manager (e.g. Letta)": "Early research suggests combining modalities in structured memory, but practical systems remain rare."
   }
 };
 
