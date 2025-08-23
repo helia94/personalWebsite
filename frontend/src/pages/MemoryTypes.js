@@ -623,6 +623,50 @@ export default function MemoryTypes() {
           </tbody>
         </table>
       </div>
+      <div className="more-about">
+    <h2>More About The Table Cells</h2>
+    <p>
+      All the explanations below also show up as tooltips when you hover on the
+      table. You can either explore them inline here, or use hover for quicker
+      reference.
+    </p>
+
+    {/* Row descriptions */}
+    <h3>Criteria Descriptions</h3>
+    <ul>
+      {Object.entries(rowDescriptions).map(([row, desc]) => (
+        <li key={row}>
+          <strong>{row}:</strong> {desc}
+        </li>
+      ))}
+    </ul>
+
+    {/* Column descriptions */}
+    <h3>Memory Types</h3>
+    <ul>
+      {Object.entries(columnDescriptions).map(([col, desc]) => (
+        <li key={col}>
+          <strong>{col}:</strong> {desc}
+        </li>
+      ))}
+    </ul>
+
+    {/* Cell extras */}
+    <h3>Extra Notes (Row × Column)</h3>
+    {Object.entries(cellExtras).map(([row, cols]) => (
+      <div key={row}>
+        <h4>{row}</h4>
+        <ul>
+          {Object.entries(cols).map(([col, text]) => (
+            <li key={col}>
+              <strong>{col}:</strong> {text}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+
     </div>
   );
 }

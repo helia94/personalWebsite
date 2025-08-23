@@ -126,3 +126,43 @@ td:has(> .no)    { background: var(--no-bg) !important;    color: var(--fg) !imp
   margin: 6px 0;
   font-size: 0.8rem;
 }
+
+
+.more-about {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+    list-style: none;
+}
+
+.more-about h2 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.more-about h3 {
+  margin-top: 1.2rem;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.more-about h4 {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.more-about ul {
+  margin-left: 1.5rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* Stacks items vertically */
+  gap: 1rem; /* This adds the space BETWEEN items. Adjust this value (e.g., 0.75rem, 1.5rem) */
+}
+
+/* The line-height now only controls space within a single list item */
+.more-about ul li {
+  line-height: 1.5;
+}
