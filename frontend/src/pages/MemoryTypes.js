@@ -165,6 +165,67 @@ export default function MemoryTypes() {
         cell.tabIndex = 0;
       });
     });
+
+    const tooltip = document.createElement("div");
+    tooltip.className = "tooltip";
+    document.body.appendChild(tooltip);
+
+    const allCells = table.querySelectorAll("[data-tooltip]");
+
+    const position = (e) => {
+      let x = e.clientX;
+      let y = e.clientY;
+      if (e.touches && e.touches[0]) {
+        x = e.touches[0].clientX;
+        y = e.touches[0].clientY;
+      }
+      if (!x && !y) {
+        const rect = e.currentTarget.getBoundingClientRect();
+        x = rect.left + rect.width / 2;
+        y = rect.top + rect.height / 2;
+      }
+      const rect = tooltip.getBoundingClientRect();
+      let left = x + 12;
+      let top = y + 12;
+      if (left + rect.width > window.innerWidth) {
+        left = window.innerWidth - rect.width - 12;
+      }
+      if (top + rect.height > window.innerHeight) {
+        top = window.innerHeight - rect.height - 12;
+      }
+      tooltip.style.left = `${left}px`;
+      tooltip.style.top = `${top}px`;
+    };
+
+    const show = (e) => {
+      tooltip.textContent = e.currentTarget.dataset.tooltip;
+      tooltip.style.opacity = 1;
+      position(e);
+    };
+
+    const move = (e) => position(e);
+    const hide = () => {
+      tooltip.style.opacity = 0;
+    };
+
+    allCells.forEach((cell) => {
+      cell.addEventListener("pointerenter", show);
+      cell.addEventListener("pointermove", move);
+      cell.addEventListener("pointerleave", hide);
+      cell.addEventListener("focus", show);
+      cell.addEventListener("blur", hide);
+    });
+
+    return () => {
+      allCells.forEach((cell) => {
+        cell.removeEventListener("pointerenter", show);
+        cell.removeEventListener("pointermove", move);
+        cell.removeEventListener("pointerleave", hide);
+        cell.removeEventListener("focus", show);
+        cell.removeEventListener("blur", hide);
+      });
+      document.body.removeChild(tooltip);
+    };
   }, []);
 
   return (
