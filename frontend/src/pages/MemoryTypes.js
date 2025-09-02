@@ -259,6 +259,11 @@ export default function MemoryTypes() {
         as an anchor point to compare and understand emerging systems.
       </p>
       <p>
+        Hovering on the criteria column, the memory type header row, and cells (marked with <strong>✦</strong>), shows additional definition and explanation of the terms. 
+        You can also find this info at the bottom of the table, so if you are not familiar with the most of the terms for memory types and the criteria, 
+        first go to  the bottom, where these are explained, and then come back to the table.   
+      </p>
+      <p>
         <strong>Symbols:</strong> 
         <ul style={{ listStyleType: "none", padding: 0 }}>
           <li><strong>?</strong>: I could not find information or make up my mind.</li>

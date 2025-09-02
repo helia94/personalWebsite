@@ -1,20 +1,19 @@
 :root {
-  /* Modern muted palette */
-  --yes-bg: rgba(0, 102, 94, 0.7);      /* Dark Cyan */
-  --yes-border: rgba(0, 77, 64, 0.9);
+  /* Modern muted palette (aligned to TERRACOTTA / GOLD / DARK_CYAN) */
+  --yes-bg: rgba(0, 102, 94, 0.7);       /* Dark Cyan */
+  --yes-border: rgba(0, 82, 75, 0.9);    /* ~20% darker */
 
-  --might-bg: rgba(191, 138, 53, 0.5);  /* Muted Gold */
-  --might-border: rgba(159, 108, 43, 0.7);
+  --might-bg: rgba(191, 138, 53, 0.5);   /* Muted Gold */
+  --might-border: rgba(153, 110, 42, 0.7); /* ~20% darker */
 
-  --no-bg: rgba(183, 82, 71, 0.5);      /* Terracotta */
-  --no-border: rgba(152, 58, 51, 0.7);
+  --no-bg: rgba(183, 82, 71, 0.5);       /* Terracotta */
+  --no-border: rgba(146, 66, 57, 0.7);   /* ~20% darker */
 
   --fg: #1c1c1e;
   --header-bg: rgba(242, 242, 247, 0.9);
   --border-color: rgba(210, 210, 215, 0.3);
   --tooltip-bg: rgba(28, 28, 30, 0.75);
 }
-
 /* SCROLLER */
 .table-container {
   max-width: 100%;
