@@ -36,11 +36,16 @@ export const writingData = [
     ],
   },
   {
-    title: "Work",
+    title: "Career",
     items: [
-      { label: "Shadow of University", route: "/writing/work/university" },
-      { label: "Vocation", route: "/writing/work/vocation" },
-      { label: "Memory Types", route: "/writing/work/memory-types" }
+      { label: "Shadow of University", route: "/writing/career/university" },
+      { label: "Vocation", route: "/writing/career/vocation" }
+    ],
+  },
+  {
+    title: "Technology",
+    items: [
+      { label: "Memory Types", route: "/writing/technology/memory-types" }
     ],
   },
   {
@@ -566,16 +571,17 @@ export default function Writing({ isMobile }) {
             {/* Personal Articles */}
             <Route path="/personal/nonsense" element={<Poems />} />
 
-            {/* Work Articles */}
-            <Route path="/work/university" element={<MediumArticle
+            {/* Career Articles */}
+            <Route path="/career/university" element={<MediumArticle
               rssFeed="https://medium.com/feed/@helia.jm"
               targetSlug="the-long-shadow-of-the-university"
             />} />
-            <Route path="/work/vocation" element={<MediumArticle
+            <Route path="/career/vocation" element={<MediumArticle
               rssFeed="https://medium.com/feed/@helia.jm"
               targetSlug="can-i-find-satisfying-work"
             />} />
-            <Route path="/work/memory-types" element={<MemoryTypes />} />
+            {/* Technology Articles */}
+            <Route path="/technology/memory-types" element={<MemoryTypes />} />
           </Routes>
         </div>
       }
