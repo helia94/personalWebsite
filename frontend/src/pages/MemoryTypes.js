@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import "./MemoryTypes.css";
+import MemorySimilarityHeatmap from "./MemoryTypesHeatmap";
 
 const rowDescriptions = {
-  "Indexing": "Shortcut structures (like an address book) that let the system jump straight to the right spot instead of scanning everything. The more explicit and engineered the index, the less the system relies on “learning it from data.”",
+  "Indexing": "Shortcut structures (like an address book) that let the system jump straight to the right spot instead of scanning everything. The more explicit and engineered the index, the less the system relies on “learning it dynamically from data.”",
   "Retrieval (Source)": "Can the system point back to the exact place the info came from (like a footnote)? This shows whether it’s true memory (retrieval) or just prediction/imagination (hallucination/creativity).",
   "Iterative Query": "Any multi-step process where each step uses the previous step’s to move closer to the target result. Not just reformulating a string: includes filtering, traversal, multi-hop reasoning, re-ranking, re-embedding, tool loops, and trial-and-error.",
   "Query Enhancement": "The system rewrites/augments your query to better match relevant data: e.g., add synonyms, fix spelling, disambiguate intent, split into sub-queries, or re-embed with extra context. Goal: retrieve what you *meant*, not just what you typed.",
   "PageRank / TextRank": "Both are graph-based ranking tricks. PageRank (Google) = “a page is important if many important pages link to it.” TextRank = same idea for text: “a word/sentence is important if many other important ones connect to it.” Said otherwise: popularity by association.",
   "No Right Answer": "The system often produces multiple valid results instead of one truth. Like Google giving you 10 relevant links, or an LLM giving different plausible answers to an open-ended question.",
   "Gets Better By Use": "The more *you* use it, the more it adapts to you (like Spotify or Google remembering your habits).",
-  "Gets Better By Network": "The more *everyone* uses it, the better it gets for all users (like Waze traffic maps, or Google ranking improving with global click data).",
+  "Gets Better By Network": "The more *you* use it, the better it gets for all users (like Waze traffic maps, or Google ranking improving with global click data).",
   "Clear Feedback Loops": "The system learns directly from signals like clicks, corrections, or votes. Strong feedback loops = quick self-improvement. More of an application criteria not so applicable just considering the tech framework.",
   "Always On": "Works continuously even if you don’t ask. Example: Google crawling the web, your brain processing in sleep. Not just sitting idle until queried.",
   "Time Dependent": "Freshness matters: “today’s weather” is different than yesterday’s, or “top news” shifts hourly.",
@@ -27,27 +28,27 @@ const rowDescriptions = {
 
 const columnDescriptions = {
   "DNA": "Life’s memory chip. A molecular information that stores instructions for building organisms, highly stable across generations, but not adaptive in real-time.",
-  "Human Brain": "A system shaped by neural plasticity. It uses forgetting as a form of optimization, and integrates memories into broader narratives that support future-oriented behavior. Rather than serving as a fidelity, based recorder of the past, memory is constructed at recall, filtered through attention, goals, and current context.",
-  "Verbal Language / Culture": "Shared memory across people. Keeps stories, rules, and knowledge alive beyond individuals, but evolves with retelling.",
-  "Text-based DB": "Early digital memory. Structured tables with exact lookups. Precise but rigid, retrieval only works if it fits the schema.",
-  "File Systems": "Everyday digital memory. Folders and files organize data on a computer, and easy for humans to navigate.",
+  "Human Brain": "It uses forgetting as a form of optimization, and integrates memories into broader narratives that support future-oriented behavior. Rather than serving as a fidelity, based recorder of the past, memory is constructed at recall, filtered through attention, goals, and current context.",
+  "Verbal Language / Culture": "A form of distributed shared memory in tribes that is hard to transfer or copy across tribe boundaries where context and shared experiences matter. Keeps stories, rules, and knowledge alive beyond individuals, but evolves with retelling.",
+  "Text-based DB": "Structured tables with exact lookups. Precise but rigid, retrieval only works if it fits the schema.",
+  "File Systems": "Folders and files organize data on a computer, and easy for humans to navigate.",
   "Knowledge Graph": "Memory as a web of entities and relationships. Works like a giant mind map, enabling traversal through connected facts.",
-  "Web Search": "Memory of the internet. Lets us find anything across billions of pages, fast, but ranking favors what’s popular and linked.",
-  "Ad Personalization": "Memory about *you*. Builds a profile of preferences and behaviors, predicting what you’ll want next.",
-  "Blockchain": "Memory no one can secretly change. Shared, permanent, and transparent, but biased toward early data and costly to rewrite.",
+  "Web Search": "Fast access to the entire internet at its current state. Lets us find match for simple queries across billions of pages, fast, but ranking favors what’s popular and linked. I considered a separate entry for document search (e.g. Elastic Search) as used widely for application data, but for simplicity I only kept full scale web search as it has everything in document search and more.",
+  "Ad Personalization": "Builds a profile of preferences and behaviors, predicting what you’ll want next.",
+  "Blockchain": "Shared, permanent, and transparent memory, but biased toward early data and costly to rewrite.",
   "Vector DB": "Memory by similarity. Retrieves “things like this” based on embeddings, not exact matches. Great for fuzzier search.",
   "LLM": "Memory compressed into statistical patterns of language. Predicts what word/idea should come next, but can hallucinate.",
   "Hierarchical Memory Networks": "Neural memory with layers. Mimics abstraction levels (summary vs detail), but risks losing edge-case facts.",
   "Memory-Augmented Neural Networks": "AI with an attached scratchpad. Learns tasks better by writing and reading from external memory slots.",
-  "Agent As Memory Manager (e.g. Letta)": "A digital assistant that organizes its own memory. Decides what to keep, forget, or fetch, mixing structured blocks with LLM context."
+  "Agent As Memory Manager (e.g. Letta)": "A bot that organizes its own memory. Decides what to keep, forget, or fetch, mixing structured blocks with LLM context."
 };
 
 const cellExtras = {
   "Indexing": {
     "Verbal Language / Culture": "Verses are written in meter and rhyme not just for beauty but to help bards remember thousands of lines. The meter is an indexing system. Songs and chants (nursery rhymes, prayers) stick because rhythm gives you a recall structure.",
     "Ad Personalization": "Example of using profile indices could be “give me people in profile X (recently looked at running shoes, age 25–40, in Germany).”",
-    "Hierarchical Memory Networks": "tree of memories: high-level summaries indexing down to low-level facts, navigated with embeddings via trained attention (not embedding similarity!)",
-    "Agent As Memory Manager (e.g. Letta)": "memory as a layered system: short-term conversation sits in a buffer, long-term facts live in recall storage, and the most important knowledge is pinned into editable core blocks inside the LLM’s context. Retrieval does happen (so RAG is part of the picture), but not as a blind “dump top-k similar chunks”, rather, the agent searches, summarizes, rewrites, and selectively injects what matters."
+    "Hierarchical Memory Networks": "Tree of memories: high-level summaries indexing down to low-level facts, navigated with embeddings via trained attention (not embedding similarity!)",
+    "Agent As Memory Manager (e.g. Letta)": "Memory as a layered system: short-term conversation sits in a buffer, long-term facts live in recall storage, and the most important knowledge is pinned into editable core blocks inside the LLM’s context. Retrieval does happen (so RAG is part of the picture), but not as a blind “dump top-k similar chunks”, rather, the agent searches, summarizes, rewrites, and selectively injects what matters."
   },
   "Retrieval (Source)": {
     "Human Brain": "Episodic memory sometimes recalls exact detail (where, when, who), but semantic/general knowledge is reconstructed, not retrieved. For people without highly superior autobiographical memory even the episodic memory is faulty and subjective more often than not.",
@@ -241,13 +242,11 @@ export default function MemoryTypes() {
       </Helmet>
       <h1>Memory Types</h1>
       <p>
-        Back in April, I made a table to solve my internal confusion about existing and
+        Back in April, I needed to solve my internal confusion about existing and
         emerging types of memory and retrieval. Now I decided to clean it up so it could
-        be shared with people like me, who apparently have too much time.
-      </p>
-      <p>
-        I am not sure if it is useful, at least it has not helped me make decisions yet,
-        but I found it very interesting, so that's something.
+        be shared. The result is a table, a bit too wide for my own taste, that helps to
+        answer what features memory systems like Human Brain, Oral Culture, Web Search, LLMs
+        and other widely used systems have in common, and where they differ.
       </p>
       <p>
         As much as I tried to research, I am not an expert on these memory types. If you
@@ -255,12 +254,16 @@ export default function MemoryTypes() {
       </p>
       <p>
         Some of these memory types are natural (DNA, brain, language), some are
-        tools/tech (databases, file systems, search engines), and some are AI research
-        ideas (memory networks, agents). They can’t be cleanly separated, but each serves
+        tools (databases, file systems), and some are applications that use many tools (web search). 
+        They can’t be cleanly separated, but they are widely used and each serves
         as an anchor point to compare and understand emerging systems.
       </p>
       <p>
-        <strong>Symbols:</strong> <strong>?</strong> means unknown.
+        <strong>Symbols:</strong> 
+        <ul style={{ listStyleType: "none", padding: 0 }}>
+          <li><strong>?</strong>: I could not find information or make up my mind.</li>
+          <li><strong>✦</strong>: Clarification available on tooltip and as text below the table.</li>
+        </ul>
       </p>
       <div className="table-controls">
         <label>
@@ -487,7 +490,7 @@ export default function MemoryTypes() {
             <tr>
               <th>Strategic Forgetting</th>
               <td><span className="no"></span></td>
-              <td><span className="yes">✦</span></td>
+              <td><span className="yes"></span></td>
               <td><span className="yes">✦</span></td>
               <td><span className="yes">Delete/Expire✦</span></td>
               <td><span className="yes">Delete/TTL✦</span></td>
@@ -624,6 +627,8 @@ export default function MemoryTypes() {
         </table>
       </div>
       <div className="more-about">
+
+    <MemorySimilarityHeatmap />
     <h2>More About The Table Cells</h2>
     <p>
       All the explanations below also show up as tooltips when you hover on the
