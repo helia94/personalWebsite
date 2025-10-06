@@ -23,6 +23,12 @@ const socialItems = [
     profileUrl: "https://github.com/helia94",
   },
   {
+    label: "Email",
+    route: "/social-media/email",
+    logoUrl: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/gmail.svg",
+    profileUrl: "mailto:helia.jm@gmail.com",
+  },
+  {
     label: "Instagram",
     route: "/social-media/instagram",
     logoUrl: "https://res.cloudinary.com/dl9xg597r/image/upload/v1738627019/5279112_camera_instagram_social_media_instagram_logo_icon_eb5exo.svg",
