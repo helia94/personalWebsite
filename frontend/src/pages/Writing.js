@@ -18,7 +18,8 @@ export const writingData = [
       { label: "(p) Tango Music", route: "/writing/tango/music" },
       { label: "(p) A Woman in Tango", route: "/writing/tango/woman-in-tango" },
       { label: "(p) Giving and Getting", route: "/writing/tango/giving-getting" },
-      { label: "(p) Talking about Tango", route: "/writing/tango/questions" }
+      { label: "(p) Talking about Tango", route: "/writing/tango/questions" },
+      { label: "My perfect tanda", route: "/writing/tango/perfect-tanda" }
     ],
   },
   {
@@ -382,6 +383,51 @@ const NonsenseExercises = () => {
   );
 };
 
+const PerfectTanda = () => (
+  <section className="speaking-section">
+    <h1>My perfect tanda, the dopamine, and the serotonin.</h1>
+
+    <p>
+      Unlike athletic sport, in tango, one can chase many diverging types of highs and goals, and that is the point. From meditative state, to technique perfection, from physical to mental connection, to the high of discovering strangers, to drama, to ambition, to being one with music or the floor, and many more. To each, their own, this is about what I find myself chasising after, in the time being, subject to change of course in the (possibly not so far) future.
+    </p>
+
+    <p>
+      A good tango night used to feel like this, in slight exaggeration. I am walking back from a milonga, calling my partner, reporting how it went. Na ja, …. The way was long, and they started late; The right dancer did not see me in the Tanda that I was waiting for to dance with her. But! I had a moment, a mysterious breath in the third song of Pugliese that I never had before. SO IT WAS ALL WORTH IT.
+    </p>
+
+    <p>
+      A really good night lately looks like this. I went into the room content, and the milonga could have actually stopped at any moment, and been just as good. Most dancers were feeling comfortable and at home, at ease most of the time.  And I could feel that what I was giving to each partner was surprisingly different.
+    </p>
+
+    <p>
+      More and more often, this is a feature unlocked in my regular milonga. A sense of satisfaction with how much we all have changed in the past four years. A contemplation of what could be next for us. With a certainty that even though I am not there, something of me is still happening there. And of others who do not, cannot, dance anymore, something of them dances in me. A consensus that our presence there was giving and not asking.
+    </p>
+
+    <p>
+      This reminds me of this quote (in a quote) from a blog about addiction to tango. Which inspired me to think about my journey in the first place.
+    </p>
+
+    <p>
+      “””<br />
+      “Dr. Huberman, addiction is the progressive narrowing of things that give one pleasure.” If he is right, I then would say that the "extreme opposite" of addiction is flow:  The progressive ability to widen the spectrum of things that give pleasure.  It is when the simple things of life give pleasure.
+      “””
+    </p>
+
+    <p>
+      My perfect tanda at the moment is not a “The” at all, it is in fact “A” perfect Tanda, which happens mostly in the nights where every tanda is perfect.
+    </p>
+
+    <p>
+      It is kind of like John Lennon singing, stemming from an oblivion to what good even is. Is a thirst like ‘I desperately want to get to know you’, and also ‘show you myself’, but that once you do, I promise not to care, and make it a big deal, I will let it sit there. It is like how your cat knows you're great, but he is just okay with it.
+      This curious, yet uncaring human will carry with him for me the gift of freedom, without making me feel arbitrary. The moment is light, as if we just started dancing, and we have all the time in the world, without rushing to achieve and to feel, but with a present that does not let a moment pass by, as if it were the last dance of my life. The stakes are set to be incredibly low in a perfect tanda, nothing to lose.
+    </p>
+
+    <p>
+      If tango were a relationship, my current favorite tanda would not feel like a first date, or even a passionate moment. It would be more like spending time with an old friend, where I could feel myself, accompanied, and at home. Lately, it is only in this anchor of trust that I find myself truly free to explore.
+    </p>
+  </section>
+);
+
 function ArticlePage({ title }) {
   return (
     <div>
@@ -556,6 +602,7 @@ export default function Writing({ isMobile }) {
             <Route path="/tango/woman-in-tango" element={<ArticlePage title="A Woman in Tango" />} />
             <Route path="/tango/giving-getting" element={<ArticlePage title="Giving and Getting" />} />
             <Route path="/tango/questions" element={<ArticlePage title="Talking about Tango" />} />
+            <Route path="/tango/perfect-tanda" element={<PerfectTanda />} />
 
             {/* Dating Articles */}
             <Route path="/dating/online-dating" element={<MediumArticle
