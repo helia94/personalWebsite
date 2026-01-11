@@ -53,7 +53,7 @@ export const bookmarkCategories = [
         route: "/bookmarks/econtalk"
       },
       {
-        label: "(p) Conversations with Tyler",
+        label: "Conversations with Tyler",
         route: "/bookmarks/conversations-with-tyler"
       },
       {
@@ -423,11 +423,105 @@ function BookmarkDetail() {
     "conversations-with-tyler": {
       name: "Conversations with Tyler",
       url: "https://conversationswithtyler.com",
+      seoTitle: "Conversations with Tyler | Bookmarks | Helia Jamshidi",
+      seoDescription: "Why Helia Jamshidi keeps returning to Conversations with Tyler: a fly-on-the-wall podcast that rewards curiosity, niche guests, and intellectual range.",
+      seoKeywords: "Conversations with Tyler, Tyler Cowen podcast, podcast recommendations, 1843 Economist profile, Helia Jamshidi bookmarks",
+      canonicalUrl: "https://heliajamshidi.me/bookmarks/conversations-with-tyler",
       description: () => (
         <div>
           <p>
-            A thought-provoking podcast featuring interviews with some of the most influential thinkers in economics and culture.
+            “Conversations with Tyler” — or, more accurately, <i>Interrogations by Tyler</i> — is the most entertaining media I consume.
+            It might be my best guarantee against boredom. It’s high-dopamine, high-serotonin, like the perfect amount of sugar, fat, and salt,
+            but surprisingly it is also good for you.
           </p>
+          <p>
+            I doubt this was my feeling in the beginning. Around 2015–2017, I do not remember exactly when, I started listening. Tyler had appeared
+            on <i>EconTalk</i> as a guest. Having enjoyed that episode, I jumped to see what his own podcast is like. I remember thinking, what a
+            maniac, who would ever listen to this jungle of context switching, with no overarching goal to be seen.
+          </p>
+          <p>
+            As Tyler will repeat, this is a conversation he wants to have with the guest, not the one you wish. This is not a conversation flow
+            optimized for the viewer count, or even for taking the viewer with, so she is not utterly lost. You are a fly-on-the-wall.
+            This comes with pros and cons. For me, the pros strongly outweigh the cost, and I have become increasingly uncomfortable with podcasts
+            made for the audience and not in fly-on-the-wall setting.
+          </p>
+          <p>
+            Unlike the most popular podcast recipe — being a male host in their 20s–30s, British accent, all sharing at least 80% of the same famous
+            guests, host in awe of the guest and agreeing 110% of the times, work actually done by a research team, always some relation to self-help
+            and life hacking, always something scientific proven wrong and debunked — Tyler tends to bring on guests that you have never heard of and
+            are underrepresented in media and pop culture. If you are only testing a couple of episodes, avoid the temptation of going for big names
+            like Sam Altman and Peter Thiel, who you would get everywhere, and go to a niche topic and person.
+          </p>
+          <p>
+            Now, a bit more about Tyler that might intrigue or deter you. Either way, it will help you make up your mind. If we ever had to let one
+            of our humans compete with an AI on total knowledge collection, Tyler would be our best chance. He reads at an unbelievable speed,
+            diversity, and quantity, and as a result of this repetition, a deep web of connected concepts emerges. But the written word is not the
+            only man made culture he overconsumes. There are only a handful of regions in the world that he has not repeatedly visited, and whose
+            cuisine he would not understand deeply. He might also have a more diverse music taste than anyone I know, including Rick Ruben.
+            A fun fact for me is, while he is very pro-big-business, AI, tech, and weekly (my guess) in touch with the creme de la creme of the tech
+            industry, he finds it hard to adapt most gadgets and apps for personal use, and mostly does not use them.
+          </p>
+          <p>
+            One of Tyler's other superpowers, in my view, is his inability to romanticize matters, to always go for the face value, be it in music,
+            books, people, and theories. I sometimes wonder how this works out in family life; a face value of what family members are cannot be an
+            easy journey. One thing I find not so diverse and, until now, kind of personally uncomfortable is a kind of mono focus on Talent and
+            Production-Function, be it on a personal, group, or historical level, as the main or sole Values that are interesting. Fully possible
+            that my reading is not accurate, but I doubt I am the only one reading it that way.
+          </p>
+          <section className="speaking-section">
+            <div className="list-section">
+              <p>
+                The podcast website offers a curated list of episodes to start with. Here is the <a href="https://conversationswithtyler.com/start-here" target="_blank" rel="noreferrer">CWT start here page</a>,
+                and the Spotify playlist I created based on it:
+              </p>
+              <iframe
+                title="Spotify playlist: Conversations with Tyler start here"
+                style={{ borderRadius: "12px", width: "100%", height: "352px", border: 0 }}
+                src="https://open.spotify.com/embed/playlist/4bmJMcu3yejGD6xRDWoaCN?utm_source=generator"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </section>
+          <section className="speaking-section">
+            <div className="list-section">
+              <p>
+                This is what I would start with: episodes with David Brooks, first because he is one of the funniest people I know, second because
+                they talk off the show regularly, and it makes the show better. I would claim Tyler never laughs more than with David Brooks, and
+                their styles are most complementary for my taste, a balance of romanticization.
+              </p>
+              <iframe
+                title="Spotify playlist: Conversations with Tyler David Brooks episodes"
+                style={{ borderRadius: "12px", width: "100%", height: "352px", border: 0 }}
+                src="https://open.spotify.com/embed/playlist/6z0WCLoYgAZuvuZGLMw0Ht?utm_source=generator"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </section>
+          <section className="speaking-section">
+            <div className="list-section">
+              <ul>
+                <li>Listen to <b>Cass Sunstein</b>, the most cited legal author of all time, for a master class on respecting your opponents' views and taking them seriously.</li>
+                <li>Listen to <b>Seth Godin</b>, for his beautiful voice and being.</li>
+                <li>Listen to <b>Richard Prum</b>, to rediscover what curiosity and research out of pure interest and not for prestige could mean. He also argues that the beauty of birds arises partly because many species lost their penises. Expect evolutionary gossip you didn’t know you needed.</li>
+                <li>Listen to <b>Audrey Tang</b>, for the power of imagination, ambition, and traveling into the future with the example of Taiwan. Taiwan’s digital minister talks about building “radical transparency” into democracy, so if you’re curious how an open API government works in practice, this is it.</li>
+                <li>Listen to <b>Fuchsia Dunlop</b>, for delicate stories of food in China. Dunlop and Tyler share a banquet at Mama Chang, comparing hand-crafted soy sauce to mass-produced bottles and discussing how Chinese chefs use Amish chickens.</li>
+                <li>Listen to <b>Brian Winter</b>, for Brazil, Argentina, and Tango.</li>
+                <li><b>Kevin Kelly</b> and Tyler is another duo I really like; there is more synergy and overlap than usual.</li>
+                <li><b>Rick Rubin</b> and Tyler may be the biggest contrast between the guest and host in terms of mindset, but it works perfectly.</li>
+                <li><b>Ian Leslie</b>, if you have any connection to the Beatles.</li>
+                <li><b>David Robertson</b>, also for a beautiful voice, and getting into the head of a conductor.</li>
+                <li><b>Sebastian Mallaby</b>, if you know what venture capital is but don't really get it like me.</li>
+                <li><b>Masha Gessen</b>, for Tyler's excellent questions on Russia and Russians, I believe these are all questions he could not get answers to yet from his Russian spouse and books.</li>
+                <li><b>Dave Rubin</b> for a truth deep dive on the podcast as a medium.</li>
+                <li><b>Michele Gelfand</b> has studied many cultures, and Tyler has traveled to many; this is a very delicious and curious attempt at looking at the gap between numbers and casual observation that challenges more formal statements.</li>
+                <li>The former CIA director reveals he considered becoming a priest before joining the agency and explains that spies recruit by exploiting vulnerabilities, ambitions, and aspirations. It’s a candid look at patriotism, Catholic upbringing, and the human side of espionage.</li>
+                <li><b>Kirchhoff</b> describes how Ukrainian garage workshops modify drones overnight while Western defense contractors move at glacial pace. He predicts the end of manned mechanized warfare and discusses the Pentagon’s Replicator program. If you’re fascinated by wartime tech innovations, this episode has it.</li>
+                <li><b>Stephenson</b> shifts from science fiction to historical fiction and examines why today’s best spies are unremarkable people who can disappear into the background.</li>
+              </ul>
+            </div>
+          </section>
         </div>
       )
     },
@@ -510,21 +604,28 @@ function BookmarkDetail() {
   };
 
   const info = bookmarksInfo[bookmarkId] || {};
+  const pageTitle = info.seoTitle || `${info.name || "Bookmark"} | Bookmarks | Helia Jamshidi`;
+  const pageDescription = info.seoDescription || `Details and links for ${info.name || "this bookmark"} curated by Helia Jamshidi.`;
+  const pageKeywords = info.seoKeywords || "bookmarks, recommendations, Helia Jamshidi";
+  const canonicalUrl = info.canonicalUrl || `https://heliajamshidi.me/bookmarks/${bookmarkId || ""}`.replace(/\/$/, "");
 
   return (
     <div>
       <Helmet>
-        <title>{`${info.name || "Bookmark"} | Bookmarks | Helia Jamshidi`}</title>
+        <title>{pageTitle}</title>
         <meta
           name="description"
-          content={`Details and links for ${info.name || "this bookmark"} curated by Helia Jamshidi.`}
+          content={pageDescription}
         />
-        <meta property="og:title" content={`${info.name || "Bookmark"} | Bookmarks | Helia Jamshidi`} />
+        <meta name="keywords" content={pageKeywords} />
+        <meta property="og:title" content={pageTitle} />
         <meta
           property="og:description"
-          content={`Find out more about ${info.name || "this bookmark"} on Helia's personal site.`}
+          content={pageDescription}
         />
         <meta property="og:type" content="article" />
+        <meta property="og:url" content={canonicalUrl} />
+        <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <h1>{info.name || "Unknown Bookmark"}</h1>
       {info.url && (
