@@ -52,7 +52,8 @@ export const writingData = [
   {
     title: "Personal",
     items: [
-      { label: "Nonsense", route: "/writing/personal/nonsense" }
+      { label: "Nonsense", route: "/writing/personal/nonsense" },
+      { label: "Rules to Live By", route: "/writing/personal/newTitle" }
     ],
   },
 
@@ -581,6 +582,58 @@ function Poems() {
   );
 }
 
+function RulesToLiveBy() {
+  return (
+    <div>
+      <h1>Rules to Live By (in No Particular Order)</h1>
+      <ul>
+        <li>Don’t listen to reply.</li>
+        <li>There is no intuition in unknown territory.</li>
+        <li>Freedom is not the absence of restrictions, but finding the right ones.</li>
+        <li>Technology has not been an automatic feature of history.</li>
+        <li>
+          When you have nothing but your identity and job to rest on, you find yourself constantly
+          comparing yourself to others.
+        </li>
+        <li>
+          When you keep focusing on the specific circumstance of your pain, you easily become angry
+          and resentful.
+        </li>
+        <li>Friendship, passion, and selfless giving.</li>
+        <li>Competition can make you see value where there is none.</li>
+        <li>Kindness can come at the cost of not seeking the truth.</li>
+        <li>You don’t want to be selfish.</li>
+        <li>Allow yourself sometimes to take more shit from some people.</li>
+        <li>
+          We think we want ease and comfort, and of course, we do from time to time, but something
+          inside longs for some calling that requires dedication and sacrifice.
+        </li>
+        <li>Being Nice is not the same as being Kind.</li>
+        <li>
+          Maximize feeling responsible and minimize feeling guilty, and mark the difference.
+        </li>
+        <li>
+          Decide when the game (set by others) is interesting enough (or cheap enough) to play, and
+          when you should make your own games.
+        </li>
+        <li>Curiosity and playing for the long term can often turn fear around.</li>
+        <li>
+          Negative feelings about negative feelings are more annoying and formidable than the
+          feelings alone.
+        </li>
+        <li>Being sad or mad cannot be a character.</li>
+        <li>Attention (to anything) is a good antidote to boredom.</li>
+        <li>If your values do not cost you anything, they are not your values.</li>
+        <li>Between worrying and caring, choose the latter.</li>
+        <li>
+          95% of the time, I like to not take myself seriously, but still be able to recognize that
+          5% were, I need to take it dead serious.
+        </li>
+      </ul>
+    </div>
+  );
+}
+
 export default function Writing({ isMobile }) {
   const { contentIsVisibleMobile, toc2IsVisibleMobile } = useContext(MobileViewContext);
 
@@ -617,6 +670,7 @@ export default function Writing({ isMobile }) {
 
             {/* Personal Articles */}
             <Route path="/personal/nonsense" element={<Poems />} />
+            <Route path="/personal/newTitle" element={<RulesToLiveBy />} />
 
             {/* Career Articles */}
             <Route path="/career/university" element={<MediumArticle
