@@ -53,7 +53,7 @@ export const writingData = [
     title: "Personal",
     items: [
       { label: "Nonsense", route: "/writing/personal/nonsense" },
-      { label: "Rules to Ponder", route: "/writing/personal/rulesToLiveBy" }
+      { label: "Rules to Live by", route: "/writing/personal/rulesToLiveBy" }
     ],
   },
 
