@@ -52,7 +52,8 @@ export const writingData = [
   {
     title: "Personal",
     items: [
-      { label: "Nonsense", route: "/writing/personal/nonsense" }
+      { label: "Nonsense", route: "/writing/personal/nonsense" },
+      { label: "Rules to live by", route: "/writing/personal/newTitle" }
     ],
   },
 
@@ -581,6 +582,76 @@ function Poems() {
   );
 }
 
+function RulesToLiveBy() {
+  return (
+    <div>
+      <Helmet>
+        <title>Rules to live by | Helia Jamshidi</title>
+      </Helmet>
+      <h1>Rules to live by</h1>
+      <div style={{ maxWidth: "42rem", margin: "0 auto", display: "flex", flexDirection: "column", gap: "2.5rem" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "1.6rem", fontSize: "1.02rem" }}>
+          <p>Don’t listen to reply.</p>
+          <p>There is no intuition in unknown territory.</p>
+          <p>Freedom is not the absence of restrictions, but finding the right ones.</p>
+          <p>Technology has not been an automatic feature of history.</p>
+          <p>
+            When you have nothing but your identity and job to rest on, you find yourself
+            constantly comparing yourself to others.
+          </p>
+          <p>
+            When you keep focusing on the specific circumstance of your pain, you easily become
+            angry and resentful.
+          </p>
+        </div>
+
+        <div style={{ display: "flex", flexDirection: "column", gap: "1.6rem", paddingLeft: "1.4rem" }}>
+          <p style={{ fontStyle: "italic" }}>Friendship, passion, and selfless giving.</p>
+          <p>Competition can make you see value where there is none.</p>
+          <p>Kindness can come at the cost of not seeking the truth.</p>
+          <p>You don’t want to be selfish.</p>
+          <p>Allow yourself sometimes to take more shit from some people.</p>
+          <p>
+            We think we want ease and comfort, and of course, we do from time to time, but something
+            inside longs for some calling that requires dedication and sacrifice.
+          </p>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "1.6rem",
+            paddingLeft: "1.1rem",
+            borderLeft: "2px solid #eee",
+            fontSize: "0.99rem"
+          }}
+        >
+          <p>Being Nice is not the same as being Kind.</p>
+          <p>Maximize feeling responsible and minimize feeling guilty, and mark the difference.</p>
+          <p>
+            Decide when the game (set by others) is interesting enough (or cheap enough) to play,
+            and when you should make your own games.
+          </p>
+          <p>Curiosity and playing for the long term can often turn fear around.</p>
+          <p>
+            Negative feelings about negative feelings are more annoying and formidable than the
+            feelings alone.
+          </p>
+          <p>Being sad or mad cannot be a character.</p>
+          <p>Attention (to anything) is a good antidote to boredom.</p>
+          <p>If your values do not cost you anything, they are not your values.</p>
+          <p>Between worrying and caring, choose the latter.</p>
+          <p>
+            95% of the time, I like to not take myself seriously, but still be able to recognize
+            that 5% were, I need to take it dead serious.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Writing({ isMobile }) {
   const { contentIsVisibleMobile, toc2IsVisibleMobile } = useContext(MobileViewContext);
 
@@ -617,6 +688,7 @@ export default function Writing({ isMobile }) {
 
             {/* Personal Articles */}
             <Route path="/personal/nonsense" element={<Poems />} />
+            <Route path="/personal/newTitle" element={<RulesToLiveBy />} />
 
             {/* Career Articles */}
             <Route path="/career/university" element={<MediumArticle
