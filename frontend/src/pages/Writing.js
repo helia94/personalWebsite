@@ -53,7 +53,7 @@ export const writingData = [
     title: "Personal",
     items: [
       { label: "Nonsense", route: "/writing/personal/nonsense" },
-      { label: "Rules to Live By", route: "/writing/personal/newTitle" }
+      { label: "Rules to Ponder", route: "/writing/personal/newTitle" }
     ],
   },
 
@@ -585,13 +585,13 @@ function Poems() {
 function RulesToLiveBy() {
   return (
     <div>
-      <h1>Rules to Live By (in No Particular Order)</h1>
+      <h1>Rules to Ponder (in No Particular Order)</h1>
       <div style={{ maxWidth: "42rem", margin: "0 auto", display: "flex", flexDirection: "column", gap: "2.5rem" }}>
         <p style={{ fontStyle: "italic", marginBottom: 0 }}>
-          Rules to live by, written as scattered notes.
+          Rules to ponder, written as scattered notes.
         </p>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: "1.6rem" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "1.6rem", fontSize: "1.02rem" }}>
           <p>Don’t listen to reply.</p>
           <p>There is no intuition in unknown territory.</p>
           <p>Freedom is not the absence of restrictions, but finding the right ones.</p>
@@ -606,7 +606,7 @@ function RulesToLiveBy() {
           </p>
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: "1.6rem", paddingLeft: "1rem" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "1.6rem", paddingLeft: "1.4rem" }}>
           <p style={{ fontStyle: "italic" }}>Friendship, passion, and selfless giving.</p>
           <p>Competition can make you see value where there is none.</p>
           <p>Kindness can come at the cost of not seeking the truth.</p>
@@ -623,8 +623,9 @@ function RulesToLiveBy() {
             display: "flex",
             flexDirection: "column",
             gap: "1.6rem",
-            paddingLeft: "1.25rem",
-            borderLeft: "2px solid #eee"
+            paddingLeft: "1.1rem",
+            borderLeft: "2px solid #eee",
+            fontSize: "0.99rem"
           }}
         >
           <p>Being Nice is not the same as being Kind.</p>
