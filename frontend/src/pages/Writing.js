@@ -53,7 +53,7 @@ export const writingData = [
     title: "Personal",
     items: [
       { label: "Nonsense", route: "/writing/personal/nonsense" },
-      { label: "Rules to Ponder", route: "/writing/personal/newTitle" }
+      { label: "Rules to Ponder", route: "/writing/personal/rulesToLiveBy" }
     ],
   },
 
@@ -585,11 +585,9 @@ function Poems() {
 function RulesToLiveBy() {
   return (
     <div>
-      <h1>Rules to Ponder (in No Particular Order)</h1>
+      <h1>Rules to Live by (in No Particular Order)</h1>
       <div style={{ maxWidth: "42rem", margin: "0 auto", display: "flex", flexDirection: "column", gap: "2.5rem" }}>
-        <p style={{ fontStyle: "italic", marginBottom: 0 }}>
-          Rules to ponder, written as scattered notes.
-        </p>
+
 
         <div style={{ display: "flex", flexDirection: "column", gap: "1.6rem", fontSize: "1.02rem" }}>
           <p>Don’t listen to reply.</p>
@@ -689,7 +687,7 @@ export default function Writing({ isMobile }) {
 
             {/* Personal Articles */}
             <Route path="/personal/nonsense" element={<Poems />} />
-            <Route path="/personal/newTitle" element={<RulesToLiveBy />} />
+            <Route path="/personal/rulesToLiveBy" element={<RulesToLiveBy />} />
 
             {/* Career Articles */}
             <Route path="/career/university" element={<MediumArticle
