@@ -1,6 +1,5 @@
 // File: src/pages/Projects.js
-import React, { useState } from "react";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { Helmet } from "react-helmet";
 import { Routes, Route, useParams } from "react-router-dom";
 import { MobileViewContext } from "../context/MobileViewContext";
@@ -9,9 +8,9 @@ import "./Projects.css"
 
 const projectItems = [
   { label: "Jous", route: "/projects/jous" },
-  { label: "Emotion Explorer", route: "/projects/emotion-explorer" },
   { label: "Second Date", route: "/projects/second-date" },
   { label: "Tango Diario", route: "/projects/tango-diario" },
+  { label: "Melting Pots", route: "/projects/melting-pots" },
 ];
 
 function ProjectsHome() {
@@ -25,7 +24,7 @@ function ProjectsHome() {
         />
         <meta
           name="keywords"
-          content="Helia Jamshidi projects, Jous, Emotion Explorer, Second Date, Tango Diario"
+          content="Helia Jamshidi projects, Jous, Second Date, Tango Diario, Melting Pots"
         />
         <meta property="og:title" content="Projects | Helia Jamshidi" />
         <meta
@@ -159,90 +158,41 @@ function TangoDiario() {
   );
 }
 
-function EmotionResolver() {
-  const [emotion, setEmotion] = useState('');
-  const [result, setResult] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const quickEmotions = ['Calm', 'Angry', 'Bitter'];
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setResult(null);
-    try {
-      const response = await fetch('/api/emotion', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ emotion })
-      });
-      if (!response.ok) throw new Error('Server error');
-      const data = await response.json();
-      setResult(data);
-    } catch (error) {
-      console.error('Request failed:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
+function MeltingPots() {
   return (
     <div className="container">
       <Helmet>
-        <title>Emotion Explorer | Helia Jamshidi</title>
+        <title>Melting Pots | Helia Jamshidi</title>
         <meta
           name="description"
-          content="Tool to discover nuanced emotions and their cultural context."
+          content="Community hub for shared cultural connection and storytelling."
         />
-        <meta property="og:title" content="Emotion Explorer | Helia Jamshidi" />
+        <meta property="og:title" content="Melting Pots | Helia Jamshidi" />
         <meta
           property="og:description"
-          content="Find more specific words for how you feel using this simple app."
+          content="Visit Melting Pots to explore community stories and cultural exchange."
         />
-        <meta property="og:url" content="https://heliajamshidi.me/projects/emotion-explorer" />
+        <meta property="og:url" content="https://heliajamshidi.me/projects/melting-pots" />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://heliajamshidi.me/projects/emotion-explorer" />
+        <link rel="canonical" href="https://heliajamshidi.me/projects/melting-pots" />
       </Helmet>
-      <h1>Emotion Explorer</h1>
-      <h4 style={{textAlign: "center", marginTop:"0px", marginBottom:"3rem"}}>Find out similar but more specific emotions from other cultures</h4>
-
-      <div className="quick-emotions">
-        {quickEmotions.map((item) => (
-          <button key={item} type="button" className="quick-btn" onClick={() => setEmotion(item)}>
-            {item}
+      <h1>Melting Pots</h1>
+      <p>A community space for sharing cultural stories and building connection.</p>
+      <div className="sample-images-section">
+        <div className="image-gallery" >
+          <iframe
+            src="https://meltingpots.org"
+            title="Melting Pots"
+            className="app-embed"
+          ></iframe>
+          <button
+            className="visit-btn"
+            onClick={() => window.open('https://meltingpots.org', '_blank')}
+          >
+            Visit App
           </button>
-        ))}
-      </div>
-
-      <form className="emotion-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Type your emotion"
-          value={emotion}
-          onChange={(e) => setEmotion(e.target.value)}
-          className="emotion-input"
-        />
-        <button type="submit" className="submit-btn" disabled={loading || !emotion.trim()}>
-          {loading ? 'Loading...' : 'Send'}
-        </button>
-      </form>
-
-      {result && (
-        <div className="result">
-          <p className="result-intro">{result.intro}</p>
-          <div className="emotion-grid">
-            {result.emotions.map((item, idx) => (
-              <div key={idx} className="emotion-card">
-                <h3>{item.name}</h3>
-                <h4>{item.language}</h4>
-                <p>{item.meaning}</p>
-                <p className="cultural-context">
-                  <strong>Cultural context:</strong> {item['cultural context']}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }
@@ -258,9 +208,9 @@ export default function Projects({isMobile}) {
         <Routes>
           <Route path="/" element={<ProjectsHome />} />
           <Route path="/jous" element={<Jous />} />
-          <Route path="/emotion-explorer" element={<EmotionResolver />} />
           <Route path="/second-date" element={<SecondDate />} />
           <Route path="/tango-diario" element={<TangoDiario />} />
+          <Route path="/melting-pots" element={<MeltingPots />} />
         </Routes>
       </div>}
     </div>
