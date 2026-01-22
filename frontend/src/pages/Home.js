@@ -10,11 +10,11 @@ export default function Home() {
         <title>Helia Jamshidi - A Digital Space</title>
         <meta
           name="description"
-          content="Freelance software engineer, creator, and tango dancer on a mission to build community and collaborate on projects."
+          content="Software engineer, creator, and tango dancer on a mission to build community and collaborate on projects."
         />
         <meta
           name="keywords"
-          content="Helia Jamshidi, freelance software engineer, creator, tango dancer, collaboration, community building, karlsruhe"
+          content="Helia Jamshidi, Software engineer, creator, tango dancer, collaboration, community building, karlsruhe"
         />
         <meta name="author" content="Helia Jamshidi" />
 
@@ -36,9 +36,9 @@ export default function Home() {
       <div className="hero-section">
         <div className="hero-text">
           <h1>Helia Jamshidi</h1>
-          <h2>Freelance Software Engineer • Creator • Tango Dancer</h2>
+          <h2>Software Engineer • Creator • Tango Dancer</h2>
           <p>
-            Starting my entrepreneurial journey, currently supporting myself through freelancing.
+            Starting my entrepreneurial journey.
           </p>
         </div>
       </div>
