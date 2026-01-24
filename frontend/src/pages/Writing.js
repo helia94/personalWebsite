@@ -19,7 +19,8 @@ export const writingData = [
       { label: "(p) A Woman in Tango", route: "/writing/tango/woman-in-tango" },
       { label: "(p) Giving and Getting", route: "/writing/tango/giving-getting" },
       { label: "(p) Talking about Tango", route: "/writing/tango/questions" },
-      { label: "My perfect tanda", route: "/writing/tango/perfect-tanda" }
+      { label: "My perfect tanda", route: "/writing/tango/perfect-tanda" },
+      { label: "Say No", route: "/writing/tango/say-no" }
     ],
   },
   {
@@ -429,6 +430,56 @@ const PerfectTanda = () => (
   </section>
 );
 
+const SayNo = () => (
+  <section className="speaking-section">
+    <h1>Say No</h1>
+
+    <p>
+      I have a theory that comfortably/kindly saying No in Tango will eventually make you a better dancer.
+    </p>
+
+    <p>
+      But do not judge me yet, it's probably not for the reason you are thinking.
+    </p>
+
+    <p>
+      Although I dance both roles, this feeling is from my experience as a follower and as a leader, observing other followers. To be honest, as a leader, I am still searching for a similar thing that would make me enjoy myself and the partners more, but it remains to be found.
+    </p>
+
+    <p>
+      It was 2022, I was in Berlin, when Mahsa Amini died, and a wave of “Woman, Life, Freedom” chants took over Iran. This time, they were not only asking for freedom of mind, expression, and economy, but just as prominently, it was asking to free the BODY. I was deeply sad that this did not exist, that someone had to ask for it. But I also felt an immense power, gifted to me by them. And suddenly, in one day, I could not move my body into situations where it was not 100% its choice and wish.
+    </p>
+
+    <p>
+      What followed was that my body started letting go of the instinct to protect itself regularly, because it was no longer a necessity, and our bodies do keep the score. This has nothing to do with the so-called “Level” of dancing, or being picky, yes, that word we know too well, PICKY.
+    </p>
+
+    <p>
+      I find this, in its very essence, to be kind and accepting. And I have been on both sides of this many times, being kindly but truthfully accepted or rejected in dance. For this is a pain that lingers, to dance with someone who does not want to be there, or feels uncomfortable with you. I could just melt into the floor now.
+    </p>
+
+    <p>
+      Now, when I dance, I enjoy a much higher trust in my partners, I can come closer, I can let go, because I am here 110% because I want to be, no questions asked. Of cours there is still risk every time you discover a new person, but this is MY CHOICE of risk, I own it.
+    </p>
+
+    <p>
+      It would not work for me to say, okay, 80% of the time I am trusting, but 20% I am polite. I am being “Nice” too many times, and soon I cannot tell the difference anymore. The 100% opens the door for me to know myself, to be honest.
+    </p>
+
+    <p>
+      There are beginners (two weeks, two months into tango) with whom I feel comfortable and I have much joy, and there are beginners with whom I feel something that makes me want to exit. Exactly the same with dancers dancing plus 20 years. I think we are people more than we are dancers, and expecting to match every single person is simply not honest.
+    </p>
+
+    <p>
+      For me, the other side of never dancing out of being: polite, nice, or because people feel entitled, is constantly trying to expand the type of dancers I can enjoy dancing with, paying attention to the style of new people, by being curious, by giving them room to express, and by adapting my body and moves to them. I can best describe it as expanding the boundary but also respecting it.
+    </p>
+
+    <p>
+      I do admit, the milonga would be much more chill, social, fun, and rewarding if everyone could, would dance with everyone; it is a beautiful thing to see, to wish, to feel. No doubt. But it is the ideal, and like most ideals, is too simple and not real enough. I do want it too, but I want more, is for more women to not feel obligated at all to be where they do not want to.
+    </p>
+  </section>
+);
+
 function ArticlePage({ title }) {
   return (
     <div>
@@ -673,6 +724,7 @@ export default function Writing({ isMobile }) {
             <Route path="/tango/giving-getting" element={<ArticlePage title="Giving and Getting" />} />
             <Route path="/tango/questions" element={<ArticlePage title="Talking about Tango" />} />
             <Route path="/tango/perfect-tanda" element={<PerfectTanda />} />
+            <Route path="/tango/say-no" element={<SayNo />} />
 
             {/* Dating Articles */}
             <Route path="/dating/online-dating" element={<MediumArticle
