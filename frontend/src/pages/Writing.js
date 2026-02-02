@@ -15,10 +15,6 @@ export const writingData = [
       { label: "For Non-dancers", route: "/writing/tango/non-dancers" },
       { label: "Mentoring for Young Beginners", route: "/writing/tango/mentoring" },
       { label: "Exercises Ideas", route: "/writing/tango/exercises" },
-      { label: "(p) Tango Music", route: "/writing/tango/music" },
-      { label: "(p) A Woman in Tango", route: "/writing/tango/woman-in-tango" },
-      { label: "(p) Giving and Getting", route: "/writing/tango/giving-getting" },
-      { label: "(p) Talking about Tango", route: "/writing/tango/questions" },
       { label: "My perfect tanda", route: "/writing/tango/perfect-tanda" },
       { label: "Say No", route: "/writing/tango/say-no" },
       { label: "Shame", route: "/writing/tango/shame" }
@@ -28,14 +24,6 @@ export const writingData = [
     title: "Dating",
     items: [
       { label: "Third Generation of Online Dating", route: "/writing/dating/online-dating" },
-      { label: "(p) First Date Ideas", route: "/writing/dating/first-date" }
-    ],
-  },
-  {
-    title: "SmallTalk",
-    items: [
-      { label: "(p) Connection", route: "/writing/smalltalk/connection" },
-      { label: "(p) Hard Not to SmallTalk", route: "/writing/smalltalk/smalltalk-sticks" }
     ],
   },
   {
