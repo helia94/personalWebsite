@@ -20,7 +20,8 @@ export const writingData = [
       { label: "(p) Giving and Getting", route: "/writing/tango/giving-getting" },
       { label: "(p) Talking about Tango", route: "/writing/tango/questions" },
       { label: "My perfect tanda", route: "/writing/tango/perfect-tanda" },
-      { label: "Say No", route: "/writing/tango/say-no" }
+      { label: "Say No", route: "/writing/tango/say-no" },
+      { label: "Shame", route: "/writing/tango/shame" }
     ],
   },
   {
@@ -480,6 +481,104 @@ const SayNo = () => (
   </section>
 );
 
+const Shame = () => (
+  <section className="speaking-section">
+    <h1>Shame</h1>
+
+    <p>
+      Dancing tango, coming to a milonga, it can and is a true freeing experience. You are the one responsible for how you want to dance, what you wanna listen to, in a way that it's not accessible to most of us in our jobs or in our education, when there are goals and rules and other people. But I don't remember it to always be this room of freedom. I can also remember it being a room with many, many puddles of shame. Some, so deep that when you fall in, you'll still be wet by the end of the event and maybe a day after. Some of these memories are fresh, some seem from such a long time ago in another life, but they were once really heavy.
+    </p>
+
+    <p>
+      It was really a shame the first time I went to an event, and I danced with nobody.
+    </p>
+
+    <p>
+      I was ashamed any time I didn't know what to do. I was ashamed any time I was too quick and too hasty, moving too much. I was ashamed any time I thought I misunderstood.
+    </p>
+
+    <p>
+      I was definitely ashamed when I had not really properly planned the embrace. Is it here? Is it there? Is it up? Is it low? I was ashamed every time I awkwardly changed the embrace.
+    </p>
+
+    <p>
+      I was ashamed to dance with dancers who seemed much better than me. I was ashamed to take up their time, and I was ashamed to take up any space and be in anyone's way.
+    </p>
+
+    <p>
+      I was ashamed when I had slightly dressed up to have a better chance at having a dance.
+    </p>
+
+    <p>
+      I was ashamed that if I'm not dancing too many tandas, this is an obvious signal that I'm not having a good night, and everybody can see it. And maybe even if nobody is dancing with her, it must not be good.
+    </p>
+
+    <p>
+      I also feel shame about the quiet pleasure of being an insider in my regular milonga. About knowing the codes, being recognized, belonging, and noticing that instead of using that position to include others, I sometimes enjoyed it for myself. I doubt anyone felt excluded because of me, yet I can’t deny that being “from the inside” felt good, and that I let myself enjoy it without questioning it enough.
+    </p>
+
+    <p>
+      And of course, the shame incomparable to all other shame is from the beginning, when I was starting to lead, every ask to every follower to undergo my unskilful steps, as if they got in a car with a driver without a driving license. I started and finished every Tanda for a year with shame.
+    </p>
+
+    <p>
+      I feel shame to be not musical enough and not creative enough. I feel shame to repeat myself, and I feel shame to bore people.
+    </p>
+
+    <p>
+      I felt shame for having a fake smile in the milongas.
+    </p>
+
+    <p>
+      I felt ashamed not to be as conversational and as humorous, and sometimes not even understand the German talk between the songs, and stay there kind of dumb, hoping the next song would begin. And not being able to make fun and share humor as it happens in other places.
+    </p>
+
+    <p>
+      I feel shame when I feel somebody's not comfortable in my embrace.
+    </p>
+
+    <p>
+      I feel shame that I can dance, but some of us can no longer dance.
+    </p>
+
+    <p>
+      I feel shame that I wasted or spent so much of my time entangled in this form of self-indulgence.
+    </p>
+
+    <p>
+      I feel ashamed that during a Tanda, I talk a lot to myself, and a lot of it can be self-congratulatory.
+    </p>
+
+    <p>
+      In the ending of most tandas, I still almost always feel quite a bit of shame because I'm never satisfied with what I have to say, what I said or didn't say, or how genuine it felt, the goodbye part of the Tanda. It always feels some amount of fake, no matter what I do. I've never felt comfortable in that moment in myself.
+    </p>
+
+    <p>
+      But every now and then, there are dancers who take our shame away, and God bless them, they do not say, but they show us we are gonna be okay, and even if not, it won’t matter. I hope reading about my ongoing list of tango shames can erase some from your own list.
+    </p>
+
+    <p>
+      Or, as Brené Brown would tell me if she were here (indirect quotes):
+    </p>
+
+    <p>
+      Every single person experiences shame. And yet, shame is one of the most unspoken, hidden emotions we experience. We rarely talk about it, even though it can silently shape us so much.
+    </p>
+
+    <p>
+      Shame derives its power from being unspeakable. The moment we name it, the moment we say ‘I’m feeling shame,’ it begins to lose its grip. Speaking shame doesn’t eliminate it, but it stops controlling us from the shadows. When someone listens to our story without judgment, without trying to fix us, without minimizing our experience, shame begins to dissolve. Shame is the fear of disconnection.
+    </p>
+
+    <p>
+      We often think we can shame ourselves or others into being better, more disciplined, more productive, or more lovable. But shame corrodes the part of us that believes change is possible. It doesn’t motivate, it paralyzes. Rumbling with shame means staying present with the discomfort, curiosity, and vulnerability instead of shutting down or lashing out. It’s about choosing to respond with courage rather than self-protection.
+    </p>
+
+    <p>
+      Cheers.
+    </p>
+  </section>
+);
+
 function ArticlePage({ title }) {
   return (
     <div>
@@ -725,6 +824,7 @@ export default function Writing({ isMobile }) {
             <Route path="/tango/questions" element={<ArticlePage title="Talking about Tango" />} />
             <Route path="/tango/perfect-tanda" element={<PerfectTanda />} />
             <Route path="/tango/say-no" element={<SayNo />} />
+            <Route path="/tango/shame" element={<Shame />} />
 
             {/* Dating Articles */}
             <Route path="/dating/online-dating" element={<MediumArticle
