@@ -204,152 +204,6 @@ function TangoIntroduction() {
 }
 
 function MoreMilongaRituals() {
-  const rituals = [
-    {
-      title: "Chairs with blindfolds",
-      description: "My absolute favorite ritual from the Taboe Camp in the Netherlands.",
-      bullets: [
-        "Sit down, blindfold yourself, and place a simple sign for leading or following.",
-        "People invite you to dance by touching your hand or gently letting you know they want a dance.",
-        "You might never learn who you danced with, which makes the mystery marvelous."
-      ],
-      indent: 0
-    },
-    {
-      title: "“We’re gathering” moment",
-      description: "A clear call for everyone to join, unlike the open beginnings and endings of most milongas.",
-      bullets: [
-        "The host announces a gathering and everyone knows it’s time to show up.",
-        "It creates a shared moment where things can be collectively said or felt.",
-        "I’d add this to any weekend tango event I organize."
-      ],
-      indent: 1
-    },
-    {
-      title: "“Who’s with me?” circle",
-      description: "A big-circle ritual that quickly reveals shared identities beyond roles or backgrounds.",
-      bullets: [
-        "Stand in a large circle, then a host or participant asks a question.",
-        "Anyone who relates steps into the middle, and others join them.",
-        "It can be simple (“I came alone,” “I’m a beginner”) or emotional and expressive."
-      ],
-      indent: 2
-    },
-    {
-      title: "Long-tanda random switching",
-      description: "A long tanda of five or six songs where everyone joins and switches after each song.",
-      bullets: [
-        "Frequent switches lower the risk and raise the sense of experimentation.",
-        "You dance with people you normally might not choose.",
-        "The floor is full and you get to know people fast."
-      ],
-      indent: 1
-    },
-    {
-      title: "Granada vals ronda",
-      description: "A birthday-vals style ronda where you rapidly switch partners in a big circle.",
-      bullets: [
-        "Everyone dances a vals and switches quickly after each song.",
-        "By the end you’ve danced with everyone from the other role.",
-        "It’s a powerful way to feel the diversity of embraces."
-      ],
-      indent: 0
-    },
-    {
-      title: "Anonymous notes",
-      description: "Pens and cards on the tables for discreet, nostalgic letters.",
-      bullets: [
-        "Write a note and ask a third person to deliver it or place it quietly.",
-        "Share impressions you might not say out loud.",
-        "A classy, old-world way of giving back in words."
-      ],
-      indent: 2
-    },
-    {
-      title: "One song, many orchestras",
-      description: "Credit to Sia and Oxana from Basel for this brilliant tanda idea.",
-      bullets: [
-        "Play the same song by different orchestras in one tanda.",
-        "Newer dancers can feel the contrast in interpretations.",
-        "It’s a fast track to understanding tango musicality."
-      ],
-      indent: 1
-    },
-    {
-      title: "Small talk with question cards",
-      description: "Deeper conversation prompts for the bar and tables.",
-      bullets: [
-        "Leave question cards around the milonga and normalize using them.",
-        "Turn idle time into something more honest and memorable.",
-        "An open-source deck could include tango-specific prompts (link coming soon)."
-      ],
-      indent: 0
-    },
-    {
-      title: "Followers’ choice & silent tandas",
-      description: "Two experiments I’ve heard of and want to try.",
-      bullets: [
-        "Followers choose leaders while leaders sit passively for a tanda or two.",
-        "Invite a tanda in complete silence.",
-        "Both rituals shift attention to consent and listening."
-      ],
-      indent: 2
-    },
-    {
-      title: "Rules that create gentle friction",
-      description: "Small social constraints that make interaction easier, not awkward.",
-      bullets: [
-        "You can’t pour your own drink; someone else must offer it.",
-        "The person next to you pours water or coffee for you.",
-        "It builds care and longer conversations through simple rituals."
-      ],
-      indent: 1
-    },
-    {
-      title: "Dancing in the dark",
-      description: "A milonga lit only by bright bracelets.",
-      bullets: [
-        "Lower the lights and wear glowing bracelets.",
-        "You move carefully while still seeing the flow.",
-        "The floor becomes a floating constellation."
-      ],
-      indent: 0
-    },
-    {
-      title: "The helping box",
-      description: "A shoebox of requests that turn the community into a mutual-aid network.",
-      bullets: [
-        "Write what you need: a flat, a doctor, help moving.",
-        "Others can pick cards and offer support or connections.",
-        "Projects and shared tasks can bring people closer than small talk alone."
-      ],
-      indent: 2
-    }
-  ];
-
-  const ritualRefs = React.useRef([]);
-
-  React.useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    ritualRefs.current.forEach((item) => {
-      if (item) {
-        observer.observe(item);
-      }
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <div className="milonga-rituals">
       <Helmet>
@@ -387,34 +241,100 @@ function MoreMilongaRituals() {
         a comparsita. I love that you begin the first and the last one with a special someone.
       </p>
       <p>
-        I like to have more rituals too. These I learned from the Taboe Camp in the Netherlands, and
-        I hope they inspire you if you currently organize a milonga or a tango event.
+        And I like to have more rituals. These I have learned from the Taboe Camp in the
+        Netherlands, and I hope they inspire you if you currently organize a milonga or a Tango
+        event.
       </p>
-
-      <ul className="rituals-list">
-        {rituals.map((ritual, index) => (
-          <li
-            key={ritual.title}
-            className="ritual-card"
-            style={{ "--indent": `${ritual.indent}rem` }}
-            ref={(el) => {
-              ritualRefs.current[index] = el;
-            }}
-          >
-            <h3>{ritual.title}</h3>
-            <p>{ritual.description}</p>
-            <ul className="ritual-bullets">
-              {ritual.bullets.map((bullet) => (
-                <li key={bullet}>{bullet}</li>
-              ))}
-            </ul>
-          </li>
-        ))}
-      </ul>
-
       <p>
-        If you ever tried one of these, write me about how it went. If you have more ideas, write
-        me also.
+        My absolute favorite: Chairs with Blindfolds. You can sit, blindfold yourself, have some
+        sort of a sign whether you want to lead or you want to follow, and people can ask you to
+        dance by touching your hand or gently letting you know that they want to dance with you. I
+        still don’t know with whom I danced while I was blindfolded, and I find that marvelous.
+      </p>
+      <p>
+        One other thing Paras did, which I’ve dreamt of many, many times, I was sure that if I ever
+        organize a weekend Tango, this would for sure be part of it. Sometimes she announces: We’re
+        gathering. Everybody knows that this time they should come. It’s a call for everybody to
+        join, unlike normal milongas or marathons, which have a very open beginning and end. I
+        think it’s worth it, for some time, for everybody to join, where things can be shared.
+      </p>
+      <p>
+        What she does is this: you’re in a big circle. I’ve also done this in Fuck the Small Talk
+        or other meetups in non-Tango contexts, that’s why I knew it and loved it already. You stand
+        in a big circle and then either a host or even the participants ask a question or say
+        something, and then ask, “Who’s with me?” Somebody can step into the middle and say, “I like
+        dancing both roles,” meaning they’re double role, and everybody else who’s double role joins
+        them. From the beginning, everybody knows them, other options I like: “I came here on my
+        own”, “I am a beginner”, “it is my first time in this event”. Or it could be about
+        feelings: who thinks they’re not good enough in their dancing, who likes to play and not
+        have strict roles, who loves Troilo, who loves only the closed embrace, whatever people in
+        the moment want to ask. You suddenly have clues about who intrigues you that you might
+        otherwise need two or three days to find out, and it puts us into new shared identities
+        beyond man, woman, or where you’re from.
+      </p>
+      <p>
+        Another thing I loved: every day, for a long Tanda, five or six songs, again everybody
+        joins. You switch faster, randomly, after one song. The risk is lower. You try things. You
+        dance with people you otherwise might not. There’s a lot of randomness and togetherness.
+        The floor is full, and you get to know people very fast.
+      </p>
+      <p>
+        Another version of this I experienced in Granada, Spain. Instead of a birthday vals where
+        one person dances with many people, they made a very big ronda with everybody. They played
+        a vals and switched very fast, the same way as a birthday vals. At the end, everybody had
+        danced with everybody from the other role. In that case, you would follow the entire time
+        and dance with all the leaders if you were following. I found that amazing. It’s a powerful
+        way to understand how everyone’s embrace actually feels. A lot of information.
+      </p>
+      <p>
+        What we also had, maybe it doesn’t work for a single-day milonga, or maybe it does, was
+        having a lot of pens and cards. You could write anonymous notes and ask a third person to
+        deliver them, or place them at someone’s seat or in their bag when they’re not looking. I
+        find this letter-writing nostalgic and classy. You can say things you normally wouldn’t
+        say: what impression someone left on you, how they made you feel. You give back in words
+        what you want them to feel.
+      </p>
+      <p>
+        The credit for this one goes to Sia and Oxana from Basel. They once did something in a
+        milonga that I would like to have in every milonga, maybe even many times. Instead of
+        playing different songs from one orchestra in one year, as the rule usually goes, they
+        played the same song by different orchestras in one Tanda. Especially for less experienced
+        dancers, it’s a gift to hear the radical diversity of interpretations of one composition.
+        It’s an easy way to understand contrast when people are beginning their Tango journey and
+        getting used to Tango music.
+      </p>
+      <p>
+        Something I haven’t experienced yet but would love is better small talk around the tables,
+        at the bar, when you’re not dancing. We already have more small talk in Tango than in other
+        social events, but I’d love to go deeper. Having question cards around the milonga and
+        making it normal to use them would significantly improve the quality of time. Otherwise,
+        non-dancing time is often idle or shallow. These cards could be generic or an open-source
+        version with Tango-specific questions, “see end of blog for a link”.
+      </p>
+      <p>
+        What I’ve heard of but never experienced, and I’m eager to try, are two things. One:
+        follower’s choice. For one or more Tandas, leaders sit passively and are chosen by
+        followers. The other: dancing some Tandas in complete silence, invited by the DJ.
+      </p>
+      <p>
+        Also, any rules that force more social friction, but because they’re rules, they’re not
+        awkward, just excuses to interact. Simple things like you cannot pour yourself a drink;
+        someone else must offer it. If you want water, the person next to you pours it. Coffee,
+        whatever. People become more aware of each other’s needs, more accommodating, and that
+        often leads to longer conversations.
+      </p>
+      <p>
+        Another thing I’ve heard of but never experienced is dancing in the dark, with only bright
+        bracelets, so you don’t run into other couples.
+      </p>
+      <p>
+        And finally, something I would love in weekly or monthly local milongas: a helping box.
+        Just a shoebox with cards. If something is going on in your life and you need help, you
+        write it down. People can check the box and see if they can help or know someone who can,
+        finding a flat, moving something, or recommending a doctor. I think meeting people over
+        drinks just to talk is overrated, while doing projects and tasks together is underrated.
+        This box could be a collection of excuses for people who already know each other to do
+        more together than just Tango.
       </p>
     </div>
   );
