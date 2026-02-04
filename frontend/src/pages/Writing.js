@@ -15,6 +15,7 @@ export const writingData = [
       { label: "For Non-dancers", route: "/writing/tango/non-dancers" },
       { label: "Mentoring for Young Beginners", route: "/writing/tango/mentoring" },
       { label: "Exercises Ideas", route: "/writing/tango/exercises" },
+      { label: "More Milonga Rituals", route: "/writing/tango/rituals" },
       { label: "My perfect tanda", route: "/writing/tango/perfect-tanda" },
       { label: "Say No", route: "/writing/tango/say-no" },
       { label: "Shame", route: "/writing/tango/shame" }
@@ -198,6 +199,223 @@ function TangoIntroduction() {
           </p>
         </a>
       </div>
+    </div>
+  );
+}
+
+function MoreMilongaRituals() {
+  const rituals = [
+    {
+      title: "Chairs with blindfolds",
+      description: "My absolute favorite ritual from the Taboe Camp in the Netherlands.",
+      bullets: [
+        "Sit down, blindfold yourself, and place a simple sign for leading or following.",
+        "People invite you to dance by touching your hand or gently letting you know they want a dance.",
+        "You might never learn who you danced with, which makes the mystery marvelous."
+      ],
+      indent: 0
+    },
+    {
+      title: "“We’re gathering” moment",
+      description: "A clear call for everyone to join, unlike the open beginnings and endings of most milongas.",
+      bullets: [
+        "The host announces a gathering and everyone knows it’s time to show up.",
+        "It creates a shared moment where things can be collectively said or felt.",
+        "I’d add this to any weekend tango event I organize."
+      ],
+      indent: 1
+    },
+    {
+      title: "“Who’s with me?” circle",
+      description: "A big-circle ritual that quickly reveals shared identities beyond roles or backgrounds.",
+      bullets: [
+        "Stand in a large circle, then a host or participant asks a question.",
+        "Anyone who relates steps into the middle, and others join them.",
+        "It can be simple (“I came alone,” “I’m a beginner”) or emotional and expressive."
+      ],
+      indent: 2
+    },
+    {
+      title: "Long-tanda random switching",
+      description: "A long tanda of five or six songs where everyone joins and switches after each song.",
+      bullets: [
+        "Frequent switches lower the risk and raise the sense of experimentation.",
+        "You dance with people you normally might not choose.",
+        "The floor is full and you get to know people fast."
+      ],
+      indent: 1
+    },
+    {
+      title: "Granada vals ronda",
+      description: "A birthday-vals style ronda where you rapidly switch partners in a big circle.",
+      bullets: [
+        "Everyone dances a vals and switches quickly after each song.",
+        "By the end you’ve danced with everyone from the other role.",
+        "It’s a powerful way to feel the diversity of embraces."
+      ],
+      indent: 0
+    },
+    {
+      title: "Anonymous notes",
+      description: "Pens and cards on the tables for discreet, nostalgic letters.",
+      bullets: [
+        "Write a note and ask a third person to deliver it or place it quietly.",
+        "Share impressions you might not say out loud.",
+        "A classy, old-world way of giving back in words."
+      ],
+      indent: 2
+    },
+    {
+      title: "One song, many orchestras",
+      description: "Credit to Sia and Oxana from Basel for this brilliant tanda idea.",
+      bullets: [
+        "Play the same song by different orchestras in one tanda.",
+        "Newer dancers can feel the contrast in interpretations.",
+        "It’s a fast track to understanding tango musicality."
+      ],
+      indent: 1
+    },
+    {
+      title: "Small talk with question cards",
+      description: "Deeper conversation prompts for the bar and tables.",
+      bullets: [
+        "Leave question cards around the milonga and normalize using them.",
+        "Turn idle time into something more honest and memorable.",
+        "An open-source deck could include tango-specific prompts (link coming soon)."
+      ],
+      indent: 0
+    },
+    {
+      title: "Followers’ choice & silent tandas",
+      description: "Two experiments I’ve heard of and want to try.",
+      bullets: [
+        "Followers choose leaders while leaders sit passively for a tanda or two.",
+        "Invite a tanda in complete silence.",
+        "Both rituals shift attention to consent and listening."
+      ],
+      indent: 2
+    },
+    {
+      title: "Rules that create gentle friction",
+      description: "Small social constraints that make interaction easier, not awkward.",
+      bullets: [
+        "You can’t pour your own drink; someone else must offer it.",
+        "The person next to you pours water or coffee for you.",
+        "It builds care and longer conversations through simple rituals."
+      ],
+      indent: 1
+    },
+    {
+      title: "Dancing in the dark",
+      description: "A milonga lit only by bright bracelets.",
+      bullets: [
+        "Lower the lights and wear glowing bracelets.",
+        "You move carefully while still seeing the flow.",
+        "The floor becomes a floating constellation."
+      ],
+      indent: 0
+    },
+    {
+      title: "The helping box",
+      description: "A shoebox of requests that turn the community into a mutual-aid network.",
+      bullets: [
+        "Write what you need: a flat, a doctor, help moving.",
+        "Others can pick cards and offer support or connections.",
+        "Projects and shared tasks can bring people closer than small talk alone."
+      ],
+      indent: 2
+    }
+  ];
+
+  const ritualRefs = React.useRef([]);
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    ritualRefs.current.forEach((item) => {
+      if (item) {
+        observer.observe(item);
+      }
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div className="milonga-rituals">
+      <Helmet>
+        <title>More Milonga Rituals | Helia Jamshidi</title>
+        <meta
+          name="description"
+          content="A collection of milonga rituals that bring dancers together: blindfold chairs, circle prompts, silent tandas, and more."
+        />
+        <meta
+          name="keywords"
+          content="milonga rituals, tango community, tango social dance, tango event ideas"
+        />
+        <meta name="author" content="Helia Jamshidi" />
+        <meta property="og:title" content="More Milonga Rituals | Helia Jamshidi" />
+        <meta
+          property="og:description"
+          content="Creative milonga rituals to deepen connection: blindfold chairs, circle prompts, silence, and shared games."
+        />
+        <meta property="og:url" content="https://heliajamshidi.me/writing/tango/rituals" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="More Milonga Rituals | Helia Jamshidi" />
+        <meta
+          name="twitter:description"
+          content="A list of rituals to add more warmth and connection to milongas."
+        />
+        <link rel="canonical" href="https://heliajamshidi.me/writing/tango/rituals" />
+      </Helmet>
+
+      <h1>More Milonga Rituals</h1>
+      <p>
+        One of the reasons I love milongas is for the rituals. I love the fact that when a stranger
+        comes and watches a milonga, she would have in the beginning no idea how so many people can
+        pair up within 10 seconds and come to the dance floor. I love that we clap for the DJ before
+        a comparsita. I love that you begin the first and the last one with a special someone.
+      </p>
+      <p>
+        I like to have more rituals too. These I learned from the Taboe Camp in the Netherlands, and
+        I hope they inspire you if you currently organize a milonga or a tango event.
+      </p>
+
+      <ul className="rituals-list">
+        {rituals.map((ritual, index) => (
+          <li
+            key={ritual.title}
+            className="ritual-card"
+            style={{ "--indent": `${ritual.indent}rem` }}
+            ref={(el) => {
+              ritualRefs.current[index] = el;
+            }}
+          >
+            <h3>{ritual.title}</h3>
+            <p>{ritual.description}</p>
+            <ul className="ritual-bullets">
+              {ritual.bullets.map((bullet) => (
+                <li key={bullet}>{bullet}</li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+
+      <p>
+        If you ever tried one of these, write me about how it went. If you have more ideas, write
+        me also.
+      </p>
     </div>
   );
 }
@@ -806,6 +1024,7 @@ export default function Writing({ isMobile }) {
             <Route path="/tango/non-dancers" element={<TangoIntroduction />} />
             <Route path="/tango/mentoring" element={<MentoringSection />} />
             <Route path="/tango/exercises" element={<NonsenseExercises/>} />
+            <Route path="/tango/rituals" element={<MoreMilongaRituals />} />
             <Route path="/tango/music" element={<ArticlePage title="Tango Music" />} />
             <Route path="/tango/woman-in-tango" element={<ArticlePage title="A Woman in Tango" />} />
             <Route path="/tango/giving-getting" element={<ArticlePage title="Giving and Getting" />} />
