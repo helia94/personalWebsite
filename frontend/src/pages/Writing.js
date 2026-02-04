@@ -15,6 +15,7 @@ export const writingData = [
       { label: "For Non-dancers", route: "/writing/tango/non-dancers" },
       { label: "Mentoring for Young Beginners", route: "/writing/tango/mentoring" },
       { label: "Exercises Ideas", route: "/writing/tango/exercises" },
+      { label: "More Milonga Rituals", route: "/writing/tango/rituals" },
       { label: "My perfect tanda", route: "/writing/tango/perfect-tanda" },
       { label: "Say No", route: "/writing/tango/say-no" },
       { label: "Shame", route: "/writing/tango/shame" }
@@ -202,6 +203,140 @@ function TangoIntroduction() {
   );
 }
 
+function MoreMilongaRituals() {
+  const ritualRefs = React.useRef([]);
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    ritualRefs.current.forEach((item) => {
+      if (item) {
+        observer.observe(item);
+      }
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div className="milonga-rituals">
+      <Helmet>
+        <title>More Milonga Rituals | Helia Jamshidi</title>
+        <meta
+          name="description"
+          content="A collection of milonga rituals that bring dancers together: blindfold chairs, circle prompts, silent tandas, and more."
+        />
+        <meta
+          name="keywords"
+          content="milonga rituals, tango community, tango social dance, tango event ideas"
+        />
+        <meta name="author" content="Helia Jamshidi" />
+        <meta property="og:title" content="More Milonga Rituals | Helia Jamshidi" />
+        <meta
+          property="og:description"
+          content="Creative milonga rituals to deepen connection: blindfold chairs, circle prompts, silence, and shared games."
+        />
+        <meta property="og:url" content="https://heliajamshidi.me/writing/tango/rituals" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="More Milonga Rituals | Helia Jamshidi" />
+        <meta
+          name="twitter:description"
+          content="A list of rituals to add more warmth and connection to milongas."
+        />
+        <link rel="canonical" href="https://heliajamshidi.me/writing/tango/rituals" />
+      </Helmet>
+
+      <h1>More Milonga Rituals</h1>
+      <p>
+        One of the reasons I love milongas is for the rituals. I love the fact that when a stranger
+        comes and watches a milonga, she would have in the beginning no idea how so many people can
+        pair up within 10 seconds and come to the dance floor. I love that we clap for the DJ before
+        a comparsita. I love that you begin the first and the last one with a special someone.
+      </p>
+      <p>
+        I like to have more rituals too. These I learned from the Taboe Camp in the Netherlands, and
+        I hope they inspire you if you currently organize a milonga or a Tango event.
+      </p>
+      <div className="rituals-flow">
+        {[
+          {
+            text: "My absolute favorite: Chairs with Blindfolds. You can sit, blindfold yourself, have some sort of a sign whether you want to lead or you want to follow, and people can ask you to dance by touching your hand or gently letting you know that they want to dance with you. I still don’t know with whom I danced while I was blindfolded, and I find that marvelous.",
+            indent: "indent-0"
+          },
+          {
+            text: "One other thing Paras did, which I’ve dreamt of many, many times, I was sure that if I ever organize a weekend Tango, this would for sure be part of it. Sometimes she announces: We’re gathering. Everybody knows that this time they should come. It’s a call for everybody to join, unlike normal milongas or marathons, which have a very open beginning and end. I think it’s worth it, for some time, for everybody to join, where things can be shared.",
+            indent: "indent-1"
+          },
+          {
+            text: "What she does is this: you’re in a big circle. I’ve also done this in Fuck the Small Talk or other meetups in non-Tango contexts, that’s why I knew it and loved it already. You stand in a big circle and then either a host or even the participants ask a question or say something, and then ask, “Who’s with me?” Somebody can step into the middle and say, “I like dancing both roles,” meaning they’re double role, and everybody else who’s double role joins them. From the beginning, everybody knows them, other options I like: “I came here on my own”, “I am a beginner”, “it is my first time in this event”. Or it could be about feelings: who thinks they’re not good enough in their dancing, who likes to play and not have strict roles, who loves Troilo, who loves only the closed embrace, whatever people in the moment want to ask. You suddenly have clues about who intrigues you that you might otherwise need two or three days to find out, and it puts us into new shared identities beyond man, woman, or where you’re from.",
+            indent: "indent-2"
+          },
+          {
+            text: "Another thing I loved: every day, for a long Tanda, five or six songs, again everybody joins. You switch faster, randomly, after one song. The risk is lower. You try things. You dance with people you otherwise might not. There’s a lot of randomness and togetherness. The floor is full, and you get to know people very fast.",
+            indent: "indent-1"
+          },
+          {
+            text: "Another version of this I experienced in Granada, Spain. Instead of a birthday vals where one person dances with many people, they made a very big ronda with everybody. They played a vals and switched very fast, the same way as a birthday vals. At the end, everybody had danced with everybody from the other role. In that case, you would follow the entire time and dance with all the leaders if you were following. I found that amazing. It’s a powerful way to understand how everyone’s embrace actually feels. A lot of information.",
+            indent: "indent-0"
+          },
+          {
+            text: "What we also had, maybe it doesn’t work for a single-day milonga, or maybe it does, was having a lot of pens and cards. You could write anonymous notes and ask a third person to deliver them, or place them at someone’s seat or in their bag when they’re not looking. I find this letter-writing nostalgic and classy. You can say things you normally wouldn’t say: what impression someone left on you, how they made you feel. You give back in words what you want them to feel.",
+            indent: "indent-2"
+          },
+          {
+            text: "The credit for this one goes to Sia and Oxana from Basel. They once did something in a milonga that I would like to have in every milonga, maybe even many times. Instead of playing different songs from one orchestra in one year, as the rule usually goes, they played the same song by different orchestras in one Tanda. Especially for less experienced dancers, it’s a gift to hear the radical diversity of interpretations of one composition. It’s an easy way to understand contrast when people are beginning their Tango journey and getting used to Tango music.",
+            indent: "indent-1"
+          },
+          {
+            text: "Something I haven’t experienced yet but would love is better small talk around the tables, at the bar, when you’re not dancing. We already have more small talk in Tango than in other social events, but I’d love to go deeper. Having question cards around the milonga and making it normal to use them would significantly improve the quality of time. Otherwise, non-dancing time is often idle or shallow. These cards could be generic or an open-source version with Tango-specific questions, “see end of blog for a link”.",
+            indent: "indent-0"
+          },
+          {
+            text: "What I’ve heard of but never experienced, and I’m eager to try, are two things. One: follower’s choice. For one or more Tandas, leaders sit passively and are chosen by followers. The other: dancing some Tandas in complete silence, invited by the DJ.",
+            indent: "indent-2"
+          },
+          {
+            text: "Also, any rules that force more social friction, but because they’re rules, they’re not awkward, just excuses to interact. Simple things like you cannot pour yourself a drink; someone else must offer it. If you want water, the person next to you pours it. Coffee, whatever. People become more aware of each other’s needs, more accommodating, and that often leads to longer conversations.",
+            indent: "indent-1"
+          },
+          {
+            text: "Another thing I’ve heard of but never experienced is dancing in the dark, with only bright bracelets, so you don’t run into other couples.",
+            indent: "indent-0"
+          },
+          {
+            text: "And finally, something I would love in weekly or monthly local milongas: a helping box. Just a shoebox with cards. If something is going on in your life and you need help, you write it down. People can check the box and see if they can help or know someone who can, finding a flat, moving something, or recommending a doctor. I think meeting people over drinks just to talk is overrated, while doing projects and tasks together is underrated. This box could be a collection of excuses for people who already know each other to do more together than just Tango.",
+            indent: "indent-2"
+          },
+          {
+            text: "If you ever tried one of these, write me about how it went. If you have more ideas, write me also.",
+            indent: "indent-0"
+          }
+        ].map((ritual, index) => (
+          <p
+            key={`${ritual.text.slice(0, 24)}-${index}`}
+            className={`ritual-paragraph ${ritual.indent}`}
+            ref={(el) => {
+              ritualRefs.current[index] = el;
+            }}
+          >
+            {ritual.text}
+          </p>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 const MentoringSection = () => {
   return (
     <div>
@@ -297,6 +432,32 @@ const MentoringSection = () => {
 const NonsenseExercises = () => {
   return (
     <section className="speaking-section">
+      <Helmet>
+        <title>Nonsense Exercises in Tango | Helia Jamshidi</title>
+        <meta
+          name="description"
+          content="A playful list of tango exercises and prompts for experimentation, musicality, and connection."
+        />
+        <meta
+          name="keywords"
+          content="tango exercises, tango practice, tango improvisation, tango musicality"
+        />
+        <meta name="author" content="Helia Jamshidi" />
+        <meta property="og:title" content="Nonsense Exercises in Tango | Helia Jamshidi" />
+        <meta
+          property="og:description"
+          content="A playful list of tango exercises and prompts for experimentation, musicality, and connection."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://heliajamshidi.me/writing/tango/exercises" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Nonsense Exercises in Tango | Helia Jamshidi" />
+        <meta
+          name="twitter:description"
+          content="A playful list of tango exercises and prompts for experimentation, musicality, and connection."
+        />
+        <link rel="canonical" href="https://heliajamshidi.me/writing/tango/exercises" />
+      </Helmet>
       <h1>Nonsense Exercises I Like to Try in Tango</h1>
       <h4>If you like them too, let’s find a time to practice</h4>
 
@@ -376,6 +537,32 @@ const NonsenseExercises = () => {
 
 const PerfectTanda = () => (
   <section className="speaking-section">
+    <Helmet>
+      <title>My Perfect Tanda | Helia Jamshidi</title>
+      <meta
+        name="description"
+        content="A reflection on the kinds of highs tango offers and what a perfect tanda feels like."
+      />
+      <meta
+        name="keywords"
+        content="perfect tanda, tango reflections, tango connection, tango rituals"
+      />
+      <meta name="author" content="Helia Jamshidi" />
+      <meta property="og:title" content="My Perfect Tanda | Helia Jamshidi" />
+      <meta
+        property="og:description"
+        content="A reflection on the kinds of highs tango offers and what a perfect tanda feels like."
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://heliajamshidi.me/writing/tango/perfect-tanda" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content="My Perfect Tanda | Helia Jamshidi" />
+      <meta
+        name="twitter:description"
+        content="A reflection on the kinds of highs tango offers and what a perfect tanda feels like."
+      />
+      <link rel="canonical" href="https://heliajamshidi.me/writing/tango/perfect-tanda" />
+    </Helmet>
     <h1>My perfect tanda, the dopamine, and the serotonin.</h1>
 
     <p>
@@ -421,6 +608,32 @@ const PerfectTanda = () => (
 
 const SayNo = () => (
   <section className="speaking-section">
+    <Helmet>
+      <title>Say No in Tango | Helia Jamshidi</title>
+      <meta
+        name="description"
+        content="Why kindly saying no in tango can deepen consent, trust, and the joy of dancing."
+      />
+      <meta
+        name="keywords"
+        content="tango consent, saying no in tango, tango boundaries, tango community"
+      />
+      <meta name="author" content="Helia Jamshidi" />
+      <meta property="og:title" content="Say No in Tango | Helia Jamshidi" />
+      <meta
+        property="og:description"
+        content="Why kindly saying no in tango can deepen consent, trust, and the joy of dancing."
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://heliajamshidi.me/writing/tango/say-no" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content="Say No in Tango | Helia Jamshidi" />
+      <meta
+        name="twitter:description"
+        content="Why kindly saying no in tango can deepen consent, trust, and the joy of dancing."
+      />
+      <link rel="canonical" href="https://heliajamshidi.me/writing/tango/say-no" />
+    </Helmet>
     <h1>Say No</h1>
 
     <p>
@@ -471,6 +684,32 @@ const SayNo = () => (
 
 const Shame = () => (
   <section className="speaking-section">
+    <Helmet>
+      <title>Shame in Tango | Helia Jamshidi</title>
+      <meta
+        name="description"
+        content="A list of the shame moments tango can surface, and how naming them softens their grip."
+      />
+      <meta
+        name="keywords"
+        content="tango shame, tango emotions, tango vulnerability, tango community"
+      />
+      <meta name="author" content="Helia Jamshidi" />
+      <meta property="og:title" content="Shame in Tango | Helia Jamshidi" />
+      <meta
+        property="og:description"
+        content="A list of the shame moments tango can surface, and how naming them softens their grip."
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://heliajamshidi.me/writing/tango/shame" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content="Shame in Tango | Helia Jamshidi" />
+      <meta
+        name="twitter:description"
+        content="A list of the shame moments tango can surface, and how naming them softens their grip."
+      />
+      <link rel="canonical" href="https://heliajamshidi.me/writing/tango/shame" />
+    </Helmet>
     <h1>Shame</h1>
 
     <p>
@@ -567,9 +806,30 @@ const Shame = () => (
   </section>
 );
 
-function ArticlePage({ title }) {
+function ArticlePage({ title, seo }) {
+  const pageTitle = seo?.title || `${title} | Helia Jamshidi`;
+  const pageDescription =
+    seo?.description ||
+    `Read "${title}" by Helia Jamshidi. Reflections, notes, and ideas from writing on culture, relationships, and creativity.`;
+  const pageKeywords = seo?.keywords || "writing, essays, reflections";
+  const pageUrl = seo?.canonical;
+
   return (
     <div>
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content={pageKeywords} />
+        <meta name="author" content="Helia Jamshidi" />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:type" content="website" />
+        {pageUrl && <meta property="og:url" content={pageUrl} />}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        {pageUrl && <link rel="canonical" href={pageUrl} />}
+      </Helmet>
       <h1>{title}</h1>
       <p>This is some placeholder text for the writing article content.</p>
     </div>
@@ -806,10 +1066,63 @@ export default function Writing({ isMobile }) {
             <Route path="/tango/non-dancers" element={<TangoIntroduction />} />
             <Route path="/tango/mentoring" element={<MentoringSection />} />
             <Route path="/tango/exercises" element={<NonsenseExercises/>} />
-            <Route path="/tango/music" element={<ArticlePage title="Tango Music" />} />
-            <Route path="/tango/woman-in-tango" element={<ArticlePage title="A Woman in Tango" />} />
-            <Route path="/tango/giving-getting" element={<ArticlePage title="Giving and Getting" />} />
-            <Route path="/tango/questions" element={<ArticlePage title="Talking about Tango" />} />
+            <Route path="/tango/rituals" element={<MoreMilongaRituals />} />
+            <Route
+              path="/tango/music"
+              element={
+                <ArticlePage
+                  title="Tango Music"
+                  seo={{
+                    title: "Tango Music | Helia Jamshidi",
+                    description: "Notes on tango music, how it feels on the floor, and why it matters for connection.",
+                    keywords: "tango music, tango orchestras, tango musicality",
+                    canonical: "https://heliajamshidi.me/writing/tango/music"
+                  }}
+                />
+              }
+            />
+            <Route
+              path="/tango/woman-in-tango"
+              element={
+                <ArticlePage
+                  title="A Woman in Tango"
+                  seo={{
+                    title: "A Woman in Tango | Helia Jamshidi",
+                    description: "Reflections on gender, roles, and identity within the tango community.",
+                    keywords: "women in tango, tango roles, tango community",
+                    canonical: "https://heliajamshidi.me/writing/tango/woman-in-tango"
+                  }}
+                />
+              }
+            />
+            <Route
+              path="/tango/giving-getting"
+              element={
+                <ArticlePage
+                  title="Giving and Getting"
+                  seo={{
+                    title: "Giving and Getting in Tango | Helia Jamshidi",
+                    description: "Thoughts on reciprocity, generosity, and receiving in tango partnerships.",
+                    keywords: "tango connection, tango partnership, tango reciprocity",
+                    canonical: "https://heliajamshidi.me/writing/tango/giving-getting"
+                  }}
+                />
+              }
+            />
+            <Route
+              path="/tango/questions"
+              element={
+                <ArticlePage
+                  title="Talking about Tango"
+                  seo={{
+                    title: "Talking About Tango | Helia Jamshidi",
+                    description: "Questions, prompts, and observations for making tango conversations richer.",
+                    keywords: "tango questions, tango conversation, tango culture",
+                    canonical: "https://heliajamshidi.me/writing/tango/questions"
+                  }}
+                />
+              }
+            />
             <Route path="/tango/perfect-tanda" element={<PerfectTanda />} />
             <Route path="/tango/say-no" element={<SayNo />} />
             <Route path="/tango/shame" element={<Shame />} />

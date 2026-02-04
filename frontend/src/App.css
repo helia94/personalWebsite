@@ -241,6 +241,54 @@ p {
   padding: 1rem;
 }
 
+.milonga-rituals {
+  max-width: 54rem;
+}
+
+.rituals-flow {
+  margin: 2rem 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.ritual-paragraph {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0;
+  color: #1f1c2b;
+  opacity: 0.4;
+  transform: translateY(10px);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.ritual-paragraph::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  color: #6d4c9f;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.ritual-paragraph.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ritual-paragraph.indent-0 {
+  margin-left: 0;
+}
+
+.ritual-paragraph.indent-1 {
+  margin-left: 1.2rem;
+}
+
+.ritual-paragraph.indent-2 {
+  margin-left: 2.4rem;
+}
+
 
 html {
   scroll-behavior: smooth;
