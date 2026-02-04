@@ -515,6 +515,32 @@ const MentoringSection = () => {
 const NonsenseExercises = () => {
   return (
     <section className="speaking-section">
+      <Helmet>
+        <title>Nonsense Exercises in Tango | Helia Jamshidi</title>
+        <meta
+          name="description"
+          content="A playful list of tango exercises and prompts for experimentation, musicality, and connection."
+        />
+        <meta
+          name="keywords"
+          content="tango exercises, tango practice, tango improvisation, tango musicality"
+        />
+        <meta name="author" content="Helia Jamshidi" />
+        <meta property="og:title" content="Nonsense Exercises in Tango | Helia Jamshidi" />
+        <meta
+          property="og:description"
+          content="A playful list of tango exercises and prompts for experimentation, musicality, and connection."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://heliajamshidi.me/writing/tango/exercises" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Nonsense Exercises in Tango | Helia Jamshidi" />
+        <meta
+          name="twitter:description"
+          content="A playful list of tango exercises and prompts for experimentation, musicality, and connection."
+        />
+        <link rel="canonical" href="https://heliajamshidi.me/writing/tango/exercises" />
+      </Helmet>
       <h1>Nonsense Exercises I Like to Try in Tango</h1>
       <h4>If you like them too, let’s find a time to practice</h4>
 
@@ -594,6 +620,32 @@ const NonsenseExercises = () => {
 
 const PerfectTanda = () => (
   <section className="speaking-section">
+    <Helmet>
+      <title>My Perfect Tanda | Helia Jamshidi</title>
+      <meta
+        name="description"
+        content="A reflection on the kinds of highs tango offers and what a perfect tanda feels like."
+      />
+      <meta
+        name="keywords"
+        content="perfect tanda, tango reflections, tango connection, tango rituals"
+      />
+      <meta name="author" content="Helia Jamshidi" />
+      <meta property="og:title" content="My Perfect Tanda | Helia Jamshidi" />
+      <meta
+        property="og:description"
+        content="A reflection on the kinds of highs tango offers and what a perfect tanda feels like."
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://heliajamshidi.me/writing/tango/perfect-tanda" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content="My Perfect Tanda | Helia Jamshidi" />
+      <meta
+        name="twitter:description"
+        content="A reflection on the kinds of highs tango offers and what a perfect tanda feels like."
+      />
+      <link rel="canonical" href="https://heliajamshidi.me/writing/tango/perfect-tanda" />
+    </Helmet>
     <h1>My perfect tanda, the dopamine, and the serotonin.</h1>
 
     <p>
@@ -639,6 +691,32 @@ const PerfectTanda = () => (
 
 const SayNo = () => (
   <section className="speaking-section">
+    <Helmet>
+      <title>Say No in Tango | Helia Jamshidi</title>
+      <meta
+        name="description"
+        content="Why kindly saying no in tango can deepen consent, trust, and the joy of dancing."
+      />
+      <meta
+        name="keywords"
+        content="tango consent, saying no in tango, tango boundaries, tango community"
+      />
+      <meta name="author" content="Helia Jamshidi" />
+      <meta property="og:title" content="Say No in Tango | Helia Jamshidi" />
+      <meta
+        property="og:description"
+        content="Why kindly saying no in tango can deepen consent, trust, and the joy of dancing."
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://heliajamshidi.me/writing/tango/say-no" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content="Say No in Tango | Helia Jamshidi" />
+      <meta
+        name="twitter:description"
+        content="Why kindly saying no in tango can deepen consent, trust, and the joy of dancing."
+      />
+      <link rel="canonical" href="https://heliajamshidi.me/writing/tango/say-no" />
+    </Helmet>
     <h1>Say No</h1>
 
     <p>
@@ -689,6 +767,32 @@ const SayNo = () => (
 
 const Shame = () => (
   <section className="speaking-section">
+    <Helmet>
+      <title>Shame in Tango | Helia Jamshidi</title>
+      <meta
+        name="description"
+        content="A list of the shame moments tango can surface, and how naming them softens their grip."
+      />
+      <meta
+        name="keywords"
+        content="tango shame, tango emotions, tango vulnerability, tango community"
+      />
+      <meta name="author" content="Helia Jamshidi" />
+      <meta property="og:title" content="Shame in Tango | Helia Jamshidi" />
+      <meta
+        property="og:description"
+        content="A list of the shame moments tango can surface, and how naming them softens their grip."
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://heliajamshidi.me/writing/tango/shame" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content="Shame in Tango | Helia Jamshidi" />
+      <meta
+        name="twitter:description"
+        content="A list of the shame moments tango can surface, and how naming them softens their grip."
+      />
+      <link rel="canonical" href="https://heliajamshidi.me/writing/tango/shame" />
+    </Helmet>
     <h1>Shame</h1>
 
     <p>
@@ -785,9 +889,30 @@ const Shame = () => (
   </section>
 );
 
-function ArticlePage({ title }) {
+function ArticlePage({ title, seo }) {
+  const pageTitle = seo?.title || `${title} | Helia Jamshidi`;
+  const pageDescription =
+    seo?.description ||
+    `Read "${title}" by Helia Jamshidi. Reflections, notes, and ideas from writing on culture, relationships, and creativity.`;
+  const pageKeywords = seo?.keywords || "writing, essays, reflections";
+  const pageUrl = seo?.canonical;
+
   return (
     <div>
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content={pageKeywords} />
+        <meta name="author" content="Helia Jamshidi" />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:type" content="website" />
+        {pageUrl && <meta property="og:url" content={pageUrl} />}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        {pageUrl && <link rel="canonical" href={pageUrl} />}
+      </Helmet>
       <h1>{title}</h1>
       <p>This is some placeholder text for the writing article content.</p>
     </div>
@@ -1025,10 +1150,62 @@ export default function Writing({ isMobile }) {
             <Route path="/tango/mentoring" element={<MentoringSection />} />
             <Route path="/tango/exercises" element={<NonsenseExercises/>} />
             <Route path="/tango/rituals" element={<MoreMilongaRituals />} />
-            <Route path="/tango/music" element={<ArticlePage title="Tango Music" />} />
-            <Route path="/tango/woman-in-tango" element={<ArticlePage title="A Woman in Tango" />} />
-            <Route path="/tango/giving-getting" element={<ArticlePage title="Giving and Getting" />} />
-            <Route path="/tango/questions" element={<ArticlePage title="Talking about Tango" />} />
+            <Route
+              path="/tango/music"
+              element={
+                <ArticlePage
+                  title="Tango Music"
+                  seo={{
+                    title: "Tango Music | Helia Jamshidi",
+                    description: "Notes on tango music, how it feels on the floor, and why it matters for connection.",
+                    keywords: "tango music, tango orchestras, tango musicality",
+                    canonical: "https://heliajamshidi.me/writing/tango/music"
+                  }}
+                />
+              }
+            />
+            <Route
+              path="/tango/woman-in-tango"
+              element={
+                <ArticlePage
+                  title="A Woman in Tango"
+                  seo={{
+                    title: "A Woman in Tango | Helia Jamshidi",
+                    description: "Reflections on gender, roles, and identity within the tango community.",
+                    keywords: "women in tango, tango roles, tango community",
+                    canonical: "https://heliajamshidi.me/writing/tango/woman-in-tango"
+                  }}
+                />
+              }
+            />
+            <Route
+              path="/tango/giving-getting"
+              element={
+                <ArticlePage
+                  title="Giving and Getting"
+                  seo={{
+                    title: "Giving and Getting in Tango | Helia Jamshidi",
+                    description: "Thoughts on reciprocity, generosity, and receiving in tango partnerships.",
+                    keywords: "tango connection, tango partnership, tango reciprocity",
+                    canonical: "https://heliajamshidi.me/writing/tango/giving-getting"
+                  }}
+                />
+              }
+            />
+            <Route
+              path="/tango/questions"
+              element={
+                <ArticlePage
+                  title="Talking about Tango"
+                  seo={{
+                    title: "Talking About Tango | Helia Jamshidi",
+                    description: "Questions, prompts, and observations for making tango conversations richer.",
+                    keywords: "tango questions, tango conversation, tango culture",
+                    canonical: "https://heliajamshidi.me/writing/tango/questions"
+                  }}
+                />
+              }
+            />
             <Route path="/tango/perfect-tanda" element={<PerfectTanda />} />
             <Route path="/tango/say-no" element={<SayNo />} />
             <Route path="/tango/shame" element={<Shame />} />
