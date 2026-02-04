@@ -241,6 +241,48 @@ p {
   padding: 1rem;
 }
 
+.milonga-rituals {
+  max-width: 54rem;
+}
+
+.rituals-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.ritual-card {
+  margin-left: var(--indent, 0rem);
+  padding: 1.5rem 1.7rem;
+  border-radius: 18px;
+  background: #faf9ff;
+  border: 1px solid rgba(49, 34, 68, 0.08);
+  box-shadow: 0 10px 25px rgba(49, 34, 68, 0.08);
+  opacity: 0.35;
+  transform: translateY(12px);
+  transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease;
+}
+
+.ritual-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: 0 14px 30px rgba(49, 34, 68, 0.12);
+}
+
+.ritual-bullets {
+  margin: 0.8rem 0 0;
+  padding-left: 1.3rem;
+  list-style: disc;
+  color: #312244;
+}
+
+.ritual-bullets li {
+  margin-bottom: 0.6rem;
+}
+
 
 html {
   scroll-behavior: smooth;
