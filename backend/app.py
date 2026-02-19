@@ -2,10 +2,12 @@ import os
 import html
 import asyncio
 import aiohttp
+from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from backend.database import db  # Import from the new database module
 import requests
+from sqlalchemy.exc import SQLAlchemyError
 from backend.emotion_resolver import EmotionResolver
 from backend.gpt import GPT
 
@@ -16,6 +18,21 @@ CORS(app)
 db_url = os.environ.get("DATABASE_URL", "sqlite:///test.db")
 if db_url and db_url.startswith("postgres://"):
     db_url = db_url.replace("postgres://", "postgresql://", 1)
+
+
+def _add_sslmode_require(database_url: str) -> str:
+    """Ensure Postgres connections request TLS in hosted environments."""
+
+    if not database_url.startswith("postgresql://"):
+        return database_url
+
+    parsed = urlparse(database_url)
+    query_params = dict(parse_qsl(parsed.query, keep_blank_values=True))
+    query_params.setdefault("sslmode", "require")
+    return urlunparse(parsed._replace(query=urlencode(query_params)))
+
+
+db_url = _add_sslmode_require(db_url)
 app.config["SQLALCHEMY_DATABASE_URI"] = db_url
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db.init_app(app)  # Initialize the db with the app
@@ -66,7 +83,10 @@ def send_email_notification(subject: str, body_html: str) -> None:
 
 @app.before_first_request
 def create_tables():
-    db.create_all()
+    try:
+        db.create_all()
+    except SQLAlchemyError as exc:
+        app.logger.exception("Database initialization skipped: %s", exc)
 
 @app.route("/api/questions", methods=["GET"])
 def get_questions():
