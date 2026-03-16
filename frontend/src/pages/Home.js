@@ -6,6 +6,18 @@ import { Helmet } from "react-helmet";
 export default function Home() {
   return (
     <div className="home-container">
+      <div className="lost-items-banner" role="alert" aria-live="polite">
+        <p>
+          <strong>Deutsch:</strong> Am 14. März habe ich in Karlsruhe meine Karte und eine kleine braune Ledertasche verloren.
+          Wenn du diese Website über meinen Ausweis gefunden hast, hast du die richtige Person gefunden.
+          Bitte kontaktiere mich unter <a href="mailto:helia.jm@gmail.com">helia.jm@gmail.com</a>.
+        </p>
+        <p>
+          <strong>English:</strong> On March 14th, I lost my card and a small brown leather bag in Karlsruhe.
+          If you found this website through my ID, you found the right person.
+          Please contact me at <a href="mailto:helia.jm@gmail.com">helia.jm@gmail.com</a>.
+        </p>
+      </div>
       <Helmet>
         <title>Helia Jamshidi - A Digital Space</title>
         <meta
