@@ -15,7 +15,20 @@ app = Flask(__name__)
 CORS(app)
 
 # Configure SQLAlchemy
-db_url = os.environ.get("DATABASE_URL", "sqlite:///test.db")
+def _sanitize_database_url(database_url: str) -> str:
+    """Normalize environment-provided DB URLs before passing to SQLAlchemy."""
+
+    cleaned = (database_url or "").strip()
+    if (
+        len(cleaned) >= 2
+        and cleaned[0] == cleaned[-1]
+        and cleaned[0] in {"\"", "'"}
+    ):
+        cleaned = cleaned[1:-1].strip()
+    return cleaned
+
+
+db_url = _sanitize_database_url(os.environ.get("DATABASE_URL", "sqlite:///test.db"))
 if db_url and db_url.startswith("postgres://"):
     db_url = db_url.replace("postgres://", "postgresql://", 1)
 
@@ -36,7 +49,7 @@ db_url = _add_sslmode_require(db_url)
 app.config["SQLALCHEMY_DATABASE_URI"] = db_url
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db.init_app(app)  # Initialize the db with the app
-emotion_resolver = EmotionResolver(GPT())
+emotion_resolver = None
 
 ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD", "secret123")
 RESEND_API_KEY = os.environ.get("RESEND_API_KEY")
@@ -81,6 +94,15 @@ def send_email_notification(subject: str, body_html: str) -> None:
     except requests.RequestException as exc:
         app.logger.exception("Error while sending email notification: %s", exc)
 
+
+def get_emotion_resolver():
+    """Lazily initialize the emotion resolver so unrelated routes stay available."""
+
+    global emotion_resolver
+    if emotion_resolver is None:
+        emotion_resolver = EmotionResolver(GPT())
+    return emotion_resolver
+
 @app.before_first_request
 def create_tables():
     try:
@@ -90,17 +112,30 @@ def create_tables():
 
 @app.route("/api/questions", methods=["GET"])
 def get_questions():
-    all_questions = Questions.query.order_by(Questions.id.desc()).all()
-    return jsonify([q.to_dict() for q in all_questions])
+    try:
+        all_questions = Questions.query.order_by(Questions.id.desc()).all()
+        return jsonify([q.to_dict() for q in all_questions])
+    except SQLAlchemyError as exc:
+        app.logger.exception(
+            "Unable to load AMA questions (check DATABASE_URL credentials): %s", exc
+        )
+        return jsonify({"error": "Question service is temporarily unavailable."}), 503
 
 @app.route("/api/questions", methods=["POST"])
 def add_question():
     data = request.json
     question_text = data.get("question", "")
     name = data.get("name", "")
-    new_q = Questions(question=question_text, name=name)
-    db.session.add(new_q)
-    db.session.commit()
+
+    try:
+        new_q = Questions(question=question_text, name=name)
+        db.session.add(new_q)
+        db.session.commit()
+    except SQLAlchemyError as exc:
+        db.session.rollback()
+        app.logger.exception("Unable to save AMA question: %s", exc)
+        return jsonify({"error": "Question service is temporarily unavailable."}), 503
+
     safe_name = (name or "").strip() or "Anonymous"
     escaped_name = html.escape(safe_name)
     escaped_question = html.escape(question_text).replace("\n", "<br>")
@@ -121,12 +156,18 @@ def answer_question():
     password = data.get("password", "")
     if password != ADMIN_PASSWORD:
         return jsonify({"error": "Unauthorized"}), 403
-    q = Questions.query.get(qid)
-    if q:
-        q.answer = answer
-        db.session.commit()
-        return jsonify({"message": "Answer added"}), 200
-    return jsonify({"error": "Not found"}), 404
+
+    try:
+        q = Questions.query.get(qid)
+        if q:
+            q.answer = answer
+            db.session.commit()
+            return jsonify({"message": "Answer added"}), 200
+        return jsonify({"error": "Not found"}), 404
+    except SQLAlchemyError as exc:
+        db.session.rollback()
+        app.logger.exception("Unable to save AMA answer: %s", exc)
+        return jsonify({"error": "Question service is temporarily unavailable."}), 503
 
 @app.route("/api/messages", methods=["POST"])
 def add_message():
@@ -134,9 +175,16 @@ def add_message():
     msg = data.get("message", "")
     name = data.get("name", "")
     email = data.get("email", "")
-    new_msg = Messages(message=msg, name=name, email=email)
-    db.session.add(new_msg)
-    db.session.commit()
+
+    try:
+        new_msg = Messages(message=msg, name=name, email=email)
+        db.session.add(new_msg)
+        db.session.commit()
+    except SQLAlchemyError as exc:
+        db.session.rollback()
+        app.logger.exception("Unable to save message: %s", exc)
+        return jsonify({"error": "Message service is temporarily unavailable."}), 503
+
     safe_name = (name or "").strip() or "Anonymous"
     safe_email = (email or "").strip() or "Not provided"
     escaped_name = html.escape(safe_name)
@@ -157,7 +205,7 @@ def emotion():
     data = request.json
     emotion = data.get("emotion")
     try:
-        json_response = emotion_resolver.resolve(emotion)
+        json_response = get_emotion_resolver().resolve(emotion)
         return jsonify(json_response)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
