@@ -6,6 +6,26 @@
     font-family: ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
   }
   
+
+.lost-items-banner {
+  background: #fff2a8;
+  border: 1px solid #e7cf63;
+  color: #3d3200;
+  padding: 0.9rem 5%;
+  margin: 0.75rem 0.5rem 0;
+  border-radius: 8px;
+  line-height: 1.45;
+}
+
+.lost-items-banner p {
+  margin: 0.35rem 0;
+}
+
+.lost-items-banner a {
+  color: #513b00;
+  font-weight: 600;
+}
+
   /* Hero Section */
   .hero-section {
     background: url("https://res.cloudinary.com/demo/image/upload/v1670000000/esther_bg.jpg") no-repeat center center/cover;
