@@ -54,7 +54,19 @@ export default function Tweets() {
 
       <div className="tweets-page">
         <h1 className="tweets-title">Tweets</h1>
-        <p className="tweets-subtitle">Short thoughts, half-formed opinions, things that don't need a full essay.</p>
+        <p className="tweets-subtitle">Short thoughts, half-formed opinions.</p>
+
+        <ul className="tweets-list">
+          {tweets.length === 0 && (
+            <li className="tweets-empty">Nothing yet.</li>
+          )}
+          {tweets.map((t) => (
+            <li key={t.id} className="tweet">
+              <p className="tweet__body">{t.body}</p>
+              <time className="tweet__date">{formatDate(t.created_at)}</time>
+            </li>
+          ))}
+        </ul>
 
         {isAdmin && (
           <form className="tweets-compose" onSubmit={post}>
@@ -75,18 +87,6 @@ export default function Tweets() {
             </button>
           </form>
         )}
-
-        <ul className="tweets-list">
-          {tweets.length === 0 && (
-            <li className="tweets-empty">Nothing yet.</li>
-          )}
-          {tweets.map((t) => (
-            <li key={t.id} className="tweet">
-              <p className="tweet__body">{t.body}</p>
-              <time className="tweet__date">{formatDate(t.created_at)}</time>
-            </li>
-          ))}
-        </ul>
 
         <button className="tweets-admin-trigger" onClick={() => setShowLogin(true)}>
           ···
