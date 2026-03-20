@@ -61,6 +61,13 @@ NOTIFICATION_EMAIL = os.environ.get("NOTIFICATION_EMAIL", "helia.jm@gmail.com")
 
 # Import models after db is defined
 from backend.models import Questions, Messages
+from backend.comments.infrastructure.comment_model import CommentModel
+from backend.comments.infrastructure.comment_repository import SqlAlchemyCommentRepository
+from backend.comments.application.comment_service import CommentService
+
+
+def _comment_service() -> CommentService:
+    return CommentService(SqlAlchemyCommentRepository())
 
 
 def send_email_notification(subject: str, body_html: str) -> None:
@@ -199,6 +206,40 @@ def add_message():
         ),
     )
     return jsonify({"message": "Message saved"}), 201
+
+@app.route("/api/comments", methods=["GET"])
+def get_comments():
+    page_url = request.args.get("url", "")
+    if not page_url:
+        return jsonify([])
+    try:
+        comments = _comment_service().get_comments(page_url)
+        return jsonify([c.to_dict() for c in comments])
+    except SQLAlchemyError as exc:
+        app.logger.exception("Unable to load comments: %s", exc)
+        return jsonify({"error": "Comment service temporarily unavailable."}), 503
+
+
+@app.route("/api/comments", methods=["POST"])
+def add_comment():
+    data = request.json or {}
+    page_url = data.get("page_url", "")
+    body = data.get("body", "")
+    author_name = data.get("author_name", "") or None
+
+    if not page_url or not body.strip():
+        return jsonify({"error": "page_url and body are required."}), 400
+
+    try:
+        comment = _comment_service().add_comment(
+            page_url=page_url, body=body, author_name=author_name
+        )
+        return jsonify(comment.to_dict()), 201
+    except SQLAlchemyError as exc:
+        db.session.rollback()
+        app.logger.exception("Unable to save comment: %s", exc)
+        return jsonify({"error": "Comment service temporarily unavailable."}), 503
+
 
 @app.route("/api/emotion", methods=["POST"])
 def emotion():

@@ -1,6 +1,7 @@
 // File: src/components/MainContent.js
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import Comments from './Comments';
 
 export default function MainContent({ children, writingData, workItems, bookmarkCategories, isMobile }) {
   const location = useLocation();
@@ -43,6 +44,7 @@ export default function MainContent({ children, writingData, workItems, bookmark
   return (
     <div className="main-content-container">
       {children}
+      <Comments />
       {nextItemRoute && (
         <button
           style={{ position: 'fixed', bottom: '20px', right: '20px' }}
