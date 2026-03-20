@@ -7,6 +7,7 @@ import { useContext, useState, useEffect } from "react";
 import { MobileViewContext } from "../context/MobileViewContext";
 import SecondarySidebar from "../components/SecondarySidebar";
 import MemoryTypes from "./MemoryTypes";
+import Tweets from "./writing/Tweets";
 
 export const writingData = [
   {
@@ -47,7 +48,12 @@ export const writingData = [
       { label: "Rules to Live by", route: "/writing/personal/rulesToLiveBy" }
     ],
   },
-
+  {
+    title: "Tweets",
+    items: [
+      { label: "Tweets", route: "/writing/tweets" },
+    ],
+  },
 ];
 
 
@@ -1156,6 +1162,7 @@ export default function Writing({ isMobile }) {
             />} />
             {/* Technology Articles */}
             <Route path="/technology/memory-types" element={<MemoryTypes />} />
+            <Route path="/tweets" element={<Tweets />} />
           </Routes>
         </div>
       }

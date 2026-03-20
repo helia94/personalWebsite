@@ -64,10 +64,17 @@ from backend.models import Questions, Messages
 from backend.comments.infrastructure.comment_model import CommentModel
 from backend.comments.infrastructure.comment_repository import SqlAlchemyCommentRepository
 from backend.comments.application.comment_service import CommentService
+from backend.tweets.infrastructure.tweet_model import TweetModel
+from backend.tweets.infrastructure.tweet_repository import SqlAlchemyTweetRepository
+from backend.tweets.application.tweet_service import TweetService
 
 
 def _comment_service() -> CommentService:
     return CommentService(SqlAlchemyCommentRepository())
+
+
+def _tweet_service() -> TweetService:
+    return TweetService(SqlAlchemyTweetRepository())
 
 
 def send_email_notification(subject: str, body_html: str) -> None:
@@ -239,6 +246,37 @@ def add_comment():
         db.session.rollback()
         app.logger.exception("Unable to save comment: %s", exc)
         return jsonify({"error": "Comment service temporarily unavailable."}), 503
+
+
+@app.route("/api/tweets", methods=["GET"])
+def get_tweets():
+    try:
+        tweets = _tweet_service().get_tweets()
+        return jsonify([t.to_dict() for t in tweets])
+    except SQLAlchemyError as exc:
+        app.logger.exception("Unable to load tweets: %s", exc)
+        return jsonify({"error": "Tweet service temporarily unavailable."}), 503
+
+
+@app.route("/api/tweets", methods=["POST"])
+def post_tweet():
+    data = request.json or {}
+    password = data.get("password", "")
+    body = data.get("body", "")
+
+    if password != ADMIN_PASSWORD:
+        return jsonify({"error": "Unauthorized"}), 403
+
+    if not body.strip():
+        return jsonify({"error": "body is required."}), 400
+
+    try:
+        tweet = _tweet_service().post_tweet(body=body)
+        return jsonify(tweet.to_dict()), 201
+    except SQLAlchemyError as exc:
+        db.session.rollback()
+        app.logger.exception("Unable to save tweet: %s", exc)
+        return jsonify({"error": "Tweet service temporarily unavailable."}), 503
 
 
 @app.route("/api/emotion", methods=["POST"])
