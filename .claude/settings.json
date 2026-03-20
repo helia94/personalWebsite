@@ -1,0 +1,63 @@
+{
+  "mcpServers": {
+    "notion": {
+      "url": "https://mcp.notion.com/mcp"
+    }
+  },
+  "defaultMode": "acceptEdits",
+  "permissions": {
+    "allow": [
+      "Bash(git *)",
+      "Bash(glab *)",
+      "Bash(hatch *)",
+      "Bash(hatch*)",
+      "Bash(python *)",
+      "Bash(python*)",
+      "Bash(docker *)",
+      "Bash(docker*)",
+      "Bash(docker-compose *)",
+      "Bash(docker-compose*)",
+      "Bash(pytest *)",
+      "Bash(pip *)",
+      "Bash(uv *)",
+      "Bash(npm *)",
+      "Bash(npx *)",
+      "Bash(cd *)",
+      "Bash(ls *)",
+      "Bash(cp *)",
+      "Bash(mv *)",
+      "Bash(mkdir *)",
+      "Bash(cat *)",
+      "Bash(rg *)",
+      "Bash(find *)",
+      "Bash(head *)",
+      "Bash(tail *)",
+      "Bash(echo *)",
+      "Bash(env *)",
+      "Bash(which *)",
+      "Bash",
+      "Read",
+      "Edit",
+      "Write",
+      "Glob",
+      "Grep",
+      "Agent(*)",
+      "WebFetch",
+      "WebSearch",
+      "mcp__notion__*"
+    ],
+    "deny": [
+      "Bash(rm *)",
+      "Bash(rm-*)",
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "Read(.env*)",
+      "Read(**/.env*)",
+      "Read(**/secrets/**)",
+      "Edit(.env*)",
+      "Edit(**/.env*)",
+      "Edit(**/*.key)",
+      "Edit(**/secrets/**)"
+    ]
+  }
+}
