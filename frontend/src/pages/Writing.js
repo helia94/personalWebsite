@@ -16,6 +16,7 @@ export const writingData = [
       { label: "For Non-dancers", route: "/writing/tango/non-dancers" },
       { label: "Mentoring for Young Beginners", route: "/writing/tango/mentoring" },
       { label: "Exercises Ideas", route: "/writing/tango/exercises" },
+      { label: "Workout for Tango", route: "/writing/workout" },
       { label: "More Milonga Rituals", route: "/writing/tango/rituals" },
       { label: "My perfect tanda", route: "/writing/tango/perfect-tanda" },
       { label: "Say No", route: "/writing/tango/say-no" },
@@ -540,6 +541,87 @@ const NonsenseExercises = () => {
           </li>
         </ul>
       </section>
+    </section>
+  );
+};
+
+const TangoWorkout = () => {
+  return (
+    <section className="speaking-section">
+      <Helmet>
+        <title>Tango Workout: Build Balance, Mobility, and Stability | Helia Jamshidi</title>
+        <meta
+          name="description"
+          content="A practical tango workout guide focused on feet, hips, core, and turning balance so beginners and experienced dancers can build stability faster."
+        />
+        <meta
+          name="keywords"
+          content="tango workout, tango balance training, tango exercises, tango mobility, tango foot strength, tango core training"
+        />
+        <meta name="author" content="Helia Jamshidi" />
+        <meta property="og:title" content="Tango Workout: Build Balance, Mobility, and Stability | Helia Jamshidi" />
+        <meta
+          property="og:description"
+          content="A tango workout that improves foot and ankle strength, hip mobility, core stability, and turning balance with embedded practice playlists."
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://heliajamshidi.me/writing/workout" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Tango Workout: Build Balance, Mobility, and Stability | Helia Jamshidi" />
+        <meta
+          name="twitter:description"
+          content="A practical tango workout guide with focus areas and YouTube playlists to support faster stability and ease in social dance."
+        />
+        <link rel="canonical" href="https://heliajamshidi.me/writing/workout" />
+      </Helmet>
+
+      <h1>Tango Workout: The Fastest Way I Found to Improve Without Constant Private Feedback</h1>
+
+      <p>
+        For the majority of my tango journey until now, there were long periods when I wanted to improve rather desperately, but I did not know how to do that without one-on-one feedback from experienced teachers and dancers.
+      </p>
+      <p>
+        That kind of feedback can be monetarily expensive, socially expensive, or simply not as available as I am used to as a software engineer, where materials are often immediately available and where I can ask ChatGPT for help with almost anything.
+      </p>
+      <p>
+        But one thing brings a lot, and I cannot emphasize this enough: a body that is more prepared. Especially a body that is more balanced. Anything that gives you a faster millisecond of stability on your own feet will pay off in tango.
+      </p>
+      <p>
+        I would be very surprised if you are just starting tango and more balance does <strong>not</strong> help you.
+      </p>
+
+      <h2>The Workout Categories That Helped Me Most</h2>
+      <ul>
+        <li><strong>Foot, Ankle, Calf</strong></li>
+        <li><strong>Hip</strong></li>
+        <li><strong>Back, Core, Twist</strong></li>
+        <li><strong>Balance, Turn</strong></li>
+      </ul>
+
+      <p>
+        I think these categories of exercises will help you. Before tango, stronger or more articulated feet were not even on my radar. It just was not a thing.
+      </p>
+      <p>
+        Not all your balance comes from your feet, but feet are a very good starting point, especially because for many non-dancers and non-runners, feet are massively undertrained.
+      </p>
+      <p>
+        Hip mobility helps with almost every turn and pivot. Your partner might not always notice why, but you will feel more ease and lightness with better hip and spinal mobility.
+      </p>
+      <p>
+        Then there is your core and back, the foundation of almost every movement in tango.
+      </p>
+
+      <h2>Prepared YouTube Playlists</h2>
+      <p>
+        Here are prepared playlists you can use to build a tango-friendly body gradually.
+      </p>
+
+      <div className="image-gallery" style={{ textAlign: "center", display: "flex", flexDirection: "column", gap: "1rem", alignItems: "center" }}>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=ihDT_Ua_LnfbjWe3&amp;list=PLisEU8FzrGwkT6vUgtxu2Ys9b1wqgjbuU" title="Tango Workout Playlist 1: Foot, Ankle, and Calf" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=_GjqiLfkm8ZSwbD5&amp;list=PLisEU8FzrGwlp69aCTmlWLCyfg3vSa9ao" title="Tango Workout Playlist 2: Hip Mobility and Rotation" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=rGokF4yIHX0V_y_9&amp;list=PLisEU8FzrGwk45qIsh1zoyD7qLTIqrTul" title="Tango Workout Playlist 3: Back, Core, and Twist" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=ZFc1hIxcgq9lkLdH&amp;list=PLisEU8FzrGwmRITKwLkRp_gkyG12HY4_3" title="Tango Workout Playlist 4: Balance and Turn Control" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+      </div>
     </section>
   );
 };
@@ -1075,6 +1157,7 @@ export default function Writing({ isMobile }) {
             <Route path="/tango/non-dancers" element={<TangoIntroduction />} />
             <Route path="/tango/mentoring" element={<MentoringSection />} />
             <Route path="/tango/exercises" element={<NonsenseExercises/>} />
+            <Route path="/workout" element={<TangoWorkout />} />
             <Route path="/tango/rituals" element={<MoreMilongaRituals />} />
             <Route
               path="/tango/music"
