@@ -16,6 +16,7 @@ export const writingData = [
       { label: "For Non-dancers", route: "/writing/tango/non-dancers" },
       { label: "Mentoring for Young Beginners", route: "/writing/tango/mentoring" },
       { label: "Exercises Ideas", route: "/writing/tango/exercises" },
+      { label: "Workout for Tango", route: "/writing/workout" },
       { label: "More Milonga Rituals", route: "/writing/tango/rituals" },
       { label: "My perfect tanda", route: "/writing/tango/perfect-tanda" },
       { label: "Say No", route: "/writing/tango/say-no" },
@@ -540,6 +541,166 @@ const NonsenseExercises = () => {
           </li>
         </ul>
       </section>
+    </section>
+  );
+};
+
+const TangoWorkout = () => {
+  const workoutPlaylists = [
+    {
+      name: "Tango-Workout-Balance-Turn",
+      embedUrl: "https://www.youtube.com/embed/videoseries?si=ihDT_Ua_LnfbjWe3&list=PLisEU8FzrGwkT6vUgtxu2Ys9b1wqgjbuU",
+      playlistUrl: "https://youtube.com/playlist?list=PLisEU8FzrGwkT6vUgtxu2Ys9b1wqgjbuU&si=haLqVG3uo8-JJ9y2"
+    },
+    {
+      name: "Tango-Workout-Core&Twist",
+      embedUrl: "https://www.youtube.com/embed/videoseries?si=_GjqiLfkm8ZSwbD5&list=PLisEU8FzrGwlp69aCTmlWLCyfg3vSa9ao",
+      playlistUrl: "https://youtube.com/playlist?list=PLisEU8FzrGwlp69aCTmlWLCyfg3vSa9ao&si=SjN5EqJ_rN6tidsH"
+    },
+    {
+      name: "Tango-Workout-Feet-Ankle-Calf",
+      embedUrl: "https://www.youtube.com/embed/videoseries?si=MXyS_HFYO6O0HcCs&list=PLisEU8FzrGwnS86kW2y7avK-bCVzHHTG0",
+      playlistUrl: "https://youtube.com/playlist?list=PLisEU8FzrGwnS86kW2y7avK-bCVzHHTG0&si=MXyS_HFYO6O0HcCs"
+    },
+    {
+      name: "Tango-Workout-Hip-Mobility",
+      embedUrl: "https://www.youtube.com/embed/videoseries?si=ZFc1hIxcgq9lkLdH&list=PLisEU8FzrGwmRITKwLkRp_gkyG12HY4_3",
+      playlistUrl: "https://youtube.com/playlist?list=PLisEU8FzrGwmRITKwLkRp_gkyG12HY4_3&si=XatdAVbwFYx-a6pJ"
+    },
+    {
+      name: "Tango-Workout-Back",
+      embedUrl: "https://www.youtube.com/embed/videoseries?si=rGokF4yIHX0V_y_9&list=PLisEU8FzrGwk45qIsh1zoyD7qLTIqrTul",
+      playlistUrl: "https://youtube.com/playlist?list=PLisEU8FzrGwk45qIsh1zoyD7qLTIqrTul&si=Xrff7h9LaKJAsjyP"
+    }
+  ];
+
+  return (
+    <section className="speaking-section">
+      <Helmet>
+        <title>Tango Workout: Build Balance, Mobility, and Stability | Helia Jamshidi</title>
+        <meta
+          name="description"
+          content="A practical tango workout guide focused on feet, hips, core, and turning balance so beginners and experienced dancers can build stability faster."
+        />
+        <meta
+          name="keywords"
+          content="tango workout, tango balance training, tango exercises, tango mobility, tango foot strength, tango core training"
+        />
+        <meta name="author" content="Helia Jamshidi" />
+        <meta property="og:title" content="Tango Workout: Build Balance, Mobility, and Stability | Helia Jamshidi" />
+        <meta
+          property="og:description"
+          content="A tango workout that improves foot and ankle strength, hip mobility, core stability, and turning balance with embedded practice playlists."
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://heliajamshidi.me/writing/workout" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Tango Workout: Build Balance, Mobility, and Stability | Helia Jamshidi" />
+        <meta
+          name="twitter:description"
+          content="A practical tango workout guide with focus areas and YouTube playlists to support faster stability and ease in social dance."
+        />
+        <link rel="canonical" href="https://heliajamshidi.me/writing/workout" />
+      </Helmet>
+
+      <h1>Tango Workout for Better Balance, Stability, and Mobility</h1>
+
+      <p>
+        For the majority of my tango journey until now, there were long periods when I wanted to improve rather desperately, but I did not know how to do that without one-on-one feedback from experienced teachers and dancers.
+      </p>
+      <p>
+        That kind of feedback can be monetarily expensive, socially expensive, or simply not as available as I am used to as a software engineer, where materials are often immediately available and where I can ask ChatGPT for help with almost anything.
+      </p>
+      <p>
+        But one thing brings a lot, and I cannot emphasize this enough: a body that is more prepared. Especially a body that is more balanced. Anything that gives you a faster millisecond of stability on your own feet will pay off in tango.
+      </p>
+      <p>
+        I would be very surprised if you are just starting tango and more balance does <strong>not</strong> help you.
+      </p>
+
+      <h2>The Workout Categories That Helped Me Most</h2>
+      <ul>
+        <li><strong>Foot, Ankle, Calf</strong></li>
+        <li><strong>Hip</strong></li>
+        <li><strong>Back, Core, Twist</strong></li>
+        <li><strong>Balance, Turn</strong></li>
+      </ul>
+
+      <p>
+        I think these categories of exercises will help you. Before tango, stronger or more articulated feet were not even on my radar. It just was not a thing.
+      </p>
+      <p>
+        Not all your balance comes from your feet, but feet are a very good starting point, especially because for many non-dancers and non-runners, feet are massively undertrained.
+      </p>
+      <p>
+        Hip mobility helps with almost every turn and pivot. Your partner might not always notice why, but you will feel more ease and lightness with better hip and spinal mobility.
+      </p>
+      <p>
+        Then there is your core and back, the foundation of almost every movement in tango.
+      </p>
+
+      <h2>Prepared YouTube Playlists</h2>
+      <p>
+        You can watch directly here, and each embed also has a clear link to open the full playlist on YouTube so you can save it to your account.
+      </p>
+
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+          gap: "1.2rem",
+          marginTop: "0.8rem"
+        }}
+      >
+        {workoutPlaylists.map((playlist) => (
+          <article
+            key={playlist.name}
+            style={{
+              border: "1px solid #e6e6e6",
+              borderRadius: "12px",
+              padding: "1rem",
+              background: "#fff",
+              boxShadow: "0 2px 10px rgba(0, 0, 0, 0.05)"
+            }}
+          >
+            <h3 style={{ marginTop: 0, marginBottom: "0.6rem", fontSize: "1.05rem" }}>{playlist.name}</h3>
+            <a
+              href={playlist.playlistUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-block",
+                marginBottom: "0.8rem",
+                padding: "0.4rem 0.7rem",
+                borderRadius: "999px",
+                background: "#f7f7f7",
+                border: "1px solid #ddd",
+                textDecoration: "none",
+                fontWeight: 600
+              }}
+            >
+              Open on YouTube ↗
+            </a>
+            <div style={{ position: "relative", paddingTop: "56.25%" }}>
+              <iframe
+                src={playlist.embedUrl}
+                title={playlist.name}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: "10px"
+                }}
+              ></iframe>
+            </div>
+          </article>
+        ))}
+      </div>
     </section>
   );
 };
@@ -1075,6 +1236,7 @@ export default function Writing({ isMobile }) {
             <Route path="/tango/non-dancers" element={<TangoIntroduction />} />
             <Route path="/tango/mentoring" element={<MentoringSection />} />
             <Route path="/tango/exercises" element={<NonsenseExercises/>} />
+            <Route path="/workout" element={<TangoWorkout />} />
             <Route path="/tango/rituals" element={<MoreMilongaRituals />} />
             <Route
               path="/tango/music"
