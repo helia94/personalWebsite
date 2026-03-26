@@ -20,7 +20,8 @@ export const writingData = [
       { label: "More Milonga Rituals", route: "/writing/tango/rituals" },
       { label: "My perfect tanda", route: "/writing/tango/perfect-tanda" },
       { label: "Say No", route: "/writing/tango/say-no" },
-      { label: "Shame", route: "/writing/tango/shame" }
+      { label: "Shame", route: "/writing/tango/shame" },
+      { label: "Teachers", route: "/writing/tango/teacher" }
     ],
   },
   {
@@ -976,6 +977,179 @@ const Shame = () => (
   </section>
 );
 
+const TangoTeachers = () => (
+  <section className="speaking-section">
+    <Helmet>
+      <title>Tango Teachers I Recommend | Helia Jamshidi</title>
+      <meta
+        name="description"
+        content="A personal note on tango teachers I am grateful for, what I learned from each, and why they stand out."
+      />
+      <meta
+        name="keywords"
+        content="tango teachers, tango musicality, tango movement, tango learning"
+      />
+      <meta name="author" content="Helia Jamshidi" />
+      <meta property="og:title" content="Tango Teachers I Recommend | Helia Jamshidi" />
+      <meta
+        property="og:description"
+        content="A personal note on tango teachers I am grateful for, what I learned from each, and why they stand out."
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://heliajamshidi.me/writing/tango/teacher" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content="Tango Teachers I Recommend | Helia Jamshidi" />
+      <meta
+        name="twitter:description"
+        content="A personal note on tango teachers I am grateful for, what I learned from each, and why they stand out."
+      />
+      <link rel="canonical" href="https://heliajamshidi.me/writing/tango/teacher" />
+    </Helmet>
+
+    <h1>Tango teachers I recommend</h1>
+    <p>
+      This is a post about tango teachers that I really recommend and I’m grateful for, and the reasons why.
+    </p>
+
+    <h3>Murad Erdemsel</h3>
+    <p>
+      Murad Erdemsel is one of the few on this list where I would go to both for musicality and movement.
+      I think, along with Godoy, he’s the one who planted the idea of contrast most deeply in my
+      understanding of tango—not just fast and slow, but contrast in general: intensity, intimacy, focus.
+    </p>
+    <p>
+      He is always extremely prepared for each workshop. There is always a clear structure. I don’t think
+      I’ve really met him as a person—I’ve only taken three or four workshops—but as a teacher, he takes
+      communication very seriously. It’s not just “I know something,” it’s “I know something, and I will
+      optimize how I deliver it to you.” That’s rare in tango.
+    </p>
+
+    <h3>Horacio Godoy</h3>
+    <p>
+      I think I’ve taken workshops with him four times, each time over multiple days and sessions. He goes
+      much deeper into music than any other teacher I’ve seen. And still, I don’t think he has told us more
+      than maybe 5% of what he actually knows.
+    </p>
+    <p>
+      It doesn’t feel like he’s repeating what he heard somewhere. It feels like it comes from a deep
+      musical and cultural understanding. He also works a lot on how to make you actually get it—there is
+      singing, clapping, you have to test yourself.
+    </p>
+    <p>
+      He has courses on different rhythms, on melody, on bridges, on orchestras, even on role-switching in
+      music. But what stayed most for me is not just understanding rhythms—it’s respecting the style of each
+      type of music. Getting your body into the intention of it. Completely changing your quality depending on
+      the era, the orchestra. And having respect for that.
+    </p>
+
+    <h3>Michael Lavocah</h3>
+    <p>
+      Michael Lavocah is, I think, the person I’ve met who loves tango the most. I could be wrong, but
+      that’s how it feels. He’s very humble, very accessible. I really like his voice, and he tells a lot of
+      stories about musicians and orchestras.
+    </p>
+    <p>
+      What stands out is that there’s no façade. No persona. It just feels like the person.
+    </p>
+    <p>
+      Not all of that immediately changes your dancing, if that’s what you’re after. But it’s a big source
+      of enrichment. It adds details, connections—something extra into the music and into your body.
+    </p>
+    <p>
+      At the same time, there are very concrete things I learned from him that I didn’t get elsewhere. For
+      example, his work on duration and quality of beats—not just marcado 2 or marcado 4, but what kind of
+      marcado 4. That was eye-opening.
+    </p>
+    <p>
+      I also haven’t had another teacher explain lyricism and phrasing as textured as him. And he gives
+      cultural background—why something is the way it is—which I think, over time, gives more “sauce” to how
+      you dance music from that era.
+    </p>
+
+    <h3>Guillermo Barrionuevo</h3>
+    <p>
+      I only had two days with him, but if you measure change in my dancing per hour, it would probably be
+      highest for him.
+    </p>
+    <p>The workshop was Water, Earth, Air, Fire.</p>
+    <p><strong>Earth:</strong> control, grounded, leading every step, nothing random.</p>
+    <p>
+      <strong>Air:</strong> no resistance—path of least resistance. If your body falls, you go with it. If
+      the follower goes somewhere else, you follow. You’re not leading steps, you’re leading direction.
+    </p>
+    <p><strong>Water:</strong> moving like through a resistant medium—slow, but fluid.</p>
+    <p><strong>Fire:</strong> surprise, intimacy, connection.</p>
+    <p>
+      What stayed is how different these qualities are, and how much they change everything.
+    </p>
+    <p>
+      He’s often described as a “teacher of teachers,” but in person there’s also no façade. No persona. Just
+      the person. Completely down to earth. I feel like he would dance with anyone and actually enjoy it,
+      which makes you feel very comfortable in his workshops.
+    </p>
+
+    <h3>Natalia Aguera &amp; Agustin Venturino</h3>
+    <p>
+      I think they also do a lot of musicality, which might overlap with Godoy. I only had one workshop with
+      them in that direction, and at that point it felt a bit redundant.
+    </p>
+    <p>
+      But what I really took from them—and I had wanted to hear this for a long time—was something else. A
+      kind of confirmation, almost an invitation: to untangle tango.
+    </p>
+    <p>
+      Not to walk or turn in a “tango way.” To make it more like a walk in the park. To be more natural. More
+      yourself. To be comfortable with your body and your partner’s body, and see where that goes.
+    </p>
+
+    <h3>Pepa Palazon</h3>
+    <p>
+      She’s really not afraid to be exactly how she wants to be, and not to exude a lot of tango grace. I
+      like her energy the most.
+    </p>
+    <p>
+      From a musicality point of view, you get much less information than, say, in a Godoy workshop. But you
+      work hard. You actually have to dance it, which is much harder than just listening and understanding.
+    </p>
+    <p>
+      It’s really a bodily boot camp. You need control to execute a new concept. Out of everyone here, this
+      is probably where I had to concentrate the most and do the most cognitive and physical work myself. And
+      that’s nice.
+    </p>
+
+    <p>
+      I also prepared a YouTube playlist with content from each of these teachers, if you want to look at
+      them directly.
+    </p>
+    <p>
+      <a
+        href="https://youtube.com/playlist?list=PLisEU8FzrGwmOY-8Lsj4cEbeOrciU9ukN&si=31TEU6tJuosJyOjE"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Open playlist on YouTube ↗
+      </a>
+    </p>
+    <div style={{ position: "relative", paddingTop: "56.25%" }}>
+      <iframe
+        src="https://www.youtube.com/embed/videoseries?si=31TEU6tJuosJyOjE&amp;list=PLisEU8FzrGwmOY-8Lsj4cEbeOrciU9ukN"
+        title="Tango teachers playlist"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          borderRadius: "10px"
+        }}
+      ></iframe>
+    </div>
+  </section>
+);
+
 function ArticlePage({ title, seo }) {
   const pageTitle = seo?.title || `${title} | Helia Jamshidi`;
   const pageDescription =
@@ -1297,6 +1471,7 @@ export default function Writing({ isMobile }) {
             <Route path="/tango/perfect-tanda" element={<PerfectTanda />} />
             <Route path="/tango/say-no" element={<SayNo />} />
             <Route path="/tango/shame" element={<Shame />} />
+            <Route path="/tango/teacher" element={<TangoTeachers />} />
 
             {/* Dating Articles */}
             <Route path="/dating/online-dating" element={<MediumArticle
