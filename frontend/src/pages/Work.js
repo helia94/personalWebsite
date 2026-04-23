@@ -210,7 +210,7 @@ function Collaborate() {
 
         <ul >
           <li >
-            <strong>Local Collaborations in Karlsruhe:</strong> I want to
+            <strong>Local Collaborations:</strong> I want to
             experiment with new event formats that foster deeper connections
             without pressure. Think reading quietly together, conversation
             groups using prompts from apps like <a href="https://jous.app" target="_blank" rel="noopener noreferrer" style={{ color: '#0077cc' }}>Jous App</a>, or even exploring physical contact. I’ll

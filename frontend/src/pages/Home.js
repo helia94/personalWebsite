@@ -8,12 +8,12 @@ export default function Home() {
     <div className="home-container">
       <div className="lost-items-banner" role="alert" aria-live="polite">
         <p>
-          <strong>Deutsch:</strong> Am 14. März habe ich in Karlsruhe meine Karte und eine kleine braune Ledertasche verloren.
+          <strong>Deutsch:</strong> Am 14. März habe ich meine Karte und eine kleine braune Ledertasche verloren.
           Wenn du diese Website über meinen Ausweis gefunden hast, hast du die richtige Person gefunden.
           Bitte kontaktiere mich unter <a href="mailto:helia.jm@gmail.com">helia.jm@gmail.com</a>.
         </p>
         <p>
-          <strong>English:</strong> On March 14th, I lost my card and a small brown leather bag in Karlsruhe.
+          <strong>English:</strong> On March 14th, I lost my card and a small brown leather bag.
           If you found this website through my ID, you found the right person.
           Please contact me at <a href="mailto:helia.jm@gmail.com">helia.jm@gmail.com</a>.
         </p>
@@ -26,7 +26,7 @@ export default function Home() {
         />
         <meta
           name="keywords"
-          content="Helia Jamshidi, Software engineer, creator, tango dancer, collaboration, community building, karlsruhe"
+          content="Helia Jamshidi, Software engineer, creator, tango dancer, collaboration, community building"
         />
         <meta name="author" content="Helia Jamshidi" />
 
@@ -69,13 +69,13 @@ export default function Home() {
           The purpose of this homepage is to explain who I am and what I desire most from you, and how I can include you in my life.
         </p>
         <p>
-          I’m an Iranian-born woman who moved to the Netherlands at 23, and three years later to Karlsruhe, Germany, where I’ve lived for over four years.
-          While I have a fulfilling personal life, my connection to the city and its people is minimal, and I want that to change.
+          I’m an Iranian-born woman who moved to the Netherlands at 23, and three years later to Germany, where I’ve lived for over four years.
+          While I have a fulfilling personal life, my connection to the local community is minimal, and I want that to change.
           This website offers a glimpse of who I am, helping you decide if you want to get to know me, if you want me to know you, or if we can do something together and stay connected.
         </p>
         <p>
           I once spent a week in Lisbon and two weeks in Berlin, and I met so many people so fast. It made me sad to realize how much more spark
-          I had in those short trips than I’ve had in four years in Karlsruhe. It feels like something I can change, and I’m determined to try.
+          I had in those short trips than I’ve had at home over the years. It feels like something I can change, and I’m determined to try.
         </p>
         <p>
           Another reason I’ve made this space is that repeating my life story every time I meet a new person takes ages, and I want to experiment

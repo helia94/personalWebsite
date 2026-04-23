@@ -353,43 +353,43 @@ const MentoringSection = () => {
     <div>
       <Helmet>
         {/* General SEO Tags */}
-        <title>Learn Argentine Tango in Karlsruhe | Mentoring for Beginners</title>
+        <title>Learn Argentine Tango | Mentoring for Beginners</title>
         <meta
           name="description"
-          content="Join personalized mentoring sessions for Argentine Tango in Karlsruhe. Learn balance, musicality, and milonga techniques. Perfect for beginners and young dancers."
+          content="Join personalized mentoring sessions for Argentine Tango. Learn balance, musicality, and milonga techniques. Perfect for beginners and young dancers."
         />
         <meta
           name="keywords"
-          content="Argentine Tango Karlsruhe, learn milonga, tango mentoring, tango beginners, tango dance Karlsruhe, tango musicality, tango balance, tango community Karlsruhe"
+          content="Argentine Tango, learn milonga, tango mentoring, tango beginners, tango dance, tango musicality, tango balance, tango community"
         />
 
         {/* German SEO Tags */}
         <meta
           name="description"
           lang="de"
-          content="Lernen Sie Argentinischen Tango in Karlsruhe mit persönlichem Mentoring für Anfänger. Verbessern Sie Balance, Musikalität und Milonga-Techniken. Perfekt für junge Tänzer und Einsteiger."
+          content="Lernen Sie Argentinischen Tango mit persönlichem Mentoring für Anfänger. Verbessern Sie Balance, Musikalität und Milonga-Techniken. Perfekt für junge Tänzer und Einsteiger."
         />
         <meta
           name="keywords"
           lang="de"
-          content="Argentinischer Tango Karlsruhe, Milonga lernen, Tango Mentoring, Tango Anfänger, Tango tanzen Karlsruhe, Tango Musikalität, Tango Balance, Tango Gemeinschaft Karlsruhe"
+          content="Argentinischer Tango, Milonga lernen, Tango Mentoring, Tango Anfänger, Tango tanzen, Tango Musikalität, Tango Balance, Tango Gemeinschaft"
         />
 
         {/* Open Graph Tags (for social media sharing) */}
-        <meta property="og:title" content="Learn Argentine Tango in Karlsruhe | Mentoring for Beginners" />
+        <meta property="og:title" content="Learn Argentine Tango | Mentoring for Beginners" />
         <meta
           property="og:description"
-          content="Join personalized mentoring sessions for Argentine Tango in Karlsruhe. Learn balance, musicality, and milonga techniques. Perfect for beginners and young dancers."
+          content="Join personalized mentoring sessions for Argentine Tango. Learn balance, musicality, and milonga techniques. Perfect for beginners and young dancers."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://heliajamshidi.me/writing/tango/mentoring" />
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Learn Argentine Tango in Karlsruhe | Mentoring for Beginners" />
+        <meta name="twitter:title" content="Learn Argentine Tango | Mentoring for Beginners" />
         <meta
           name="twitter:description"
-          content="Join personalized mentoring sessions for Argentine Tango in Karlsruhe. Learn balance, musicality, and milonga techniques. Perfect for beginners and young dancers."
+          content="Join personalized mentoring sessions for Argentine Tango. Learn balance, musicality, and milonga techniques. Perfect for beginners and young dancers."
         />
 
         {/* Canonical Link */}
@@ -426,10 +426,10 @@ const MentoringSection = () => {
         <section className="call-to-action">
           <h3>Join the Community</h3>
           <p>
-            To have a place to practice, you have to be a member of <strong>Tanzsportclub Astoria Karlsruhe</strong>. Membership is <strong>60 euros per 3 months</strong>, or you can suggest your own location.
+            To have a place to practice, you have to be a member of a local tango club. Membership is <strong>60 euros per 3 months</strong>, or you can suggest your own location.
           </p>
           <p>
-            This is part of my wish to expand my community in Karlsruhe, and I am sure you have something I can learn from you. <strong>We will find out.</strong>
+            This is part of my wish to expand my community, and I am sure you have something I can learn from you. <strong>We will find out.</strong>
           </p>
           <a href="mailto:helia.jm@gmail.com" className="submit-button">
             Write Me
