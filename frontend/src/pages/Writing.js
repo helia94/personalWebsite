@@ -21,7 +21,11 @@ export const writingData = [
       { label: "My perfect tanda", route: "/writing/tango/perfect-tanda" },
       { label: "Say No", route: "/writing/tango/say-no" },
       { label: "Shame", route: "/writing/tango/shame" },
-      { label: "Teachers", route: "/writing/tango/teacher" }
+      { label: "Teachers", route: "/writing/tango/teacher" },
+      { label: "Demanding Attention", route: "/writing/tango/demanding-attention" },
+      { label: "A sure way to have a lousy time", route: "/writing/tango/lousy-time" },
+      { label: "My paradox of choice in milonga", route: "/writing/tango/paradox-of-choice" },
+      { label: "Do you prefer the first standard or the 10th Tanda?", route: "/writing/tango/10th-tanda" }
     ],
   },
   {
@@ -1150,6 +1154,121 @@ const TangoTeachers = () => (
   </section>
 );
 
+const DemandingAttention = () => (
+  <div>
+    <h1>Demanding attention</h1>
+    <p>
+      Demanding attention. It&apos;s a funny thing, but something that has changed my dancing as a leader a lot.
+    </p>
+    <p>
+      As a leader, I find myself more and more, to a point, almost exclusively dancing with partners who demand my attention. Demanding my attention is not demanding entertainment. It is, in fact, the opposite of expecting and consuming something.
+    </p>
+    <p>
+      My attention is demanded when the other partner is extra expressive. The partner is expressing how they want this song to go: if they wanna go with the humor, or with a heavy central energy, or they wanna go light and butterfly, or they wanna go super long and elastic. Some part of the demand is just communicating how they want to dance. It&apos;s like choosing something from the menu and not just going to the canteen and taking whatever is there.
+    </p>
+    <p>
+      The other type of expression is less meta and really concrete in every movement. Every movement, every millisecond, can be new. I have to be tuned to what they are doing, and be able to support it, accompany it, and extend it. If they have an idea to play with music, I have to guess it. If they have an idea to play with the movement, I have to move into it. And giving me breadcrumbs on where I can focus my attention at this point is actually relieving and interesting.
+    </p>
+    <p>
+      Maybe I feel this way because I started following before I started leading, and I still love the feeling of following, so maybe I am trying to also follow while I lead. However, this longing was shaped; I find it hard to live without it now.
+    </p>
+    <p>
+      This kind of demand is quite diverse and can be even subtle. The followers I enjoy dancing with do not all play in the same way, or demand my attention in the same way. It is astonishingly varied and individual. It feels even more personal than the kind of attention I need when I am in the following role and adapting myself to leaders. When I follow, there is more of a template, more of a pattern to pay attention to. But when I lead, my attention has to find a different target each time.
+    </p>
+    <p>
+      In my experience, this “demanding” is well correlated with how present the partners are, and how much they trust me, and how willing they are to not be in a protective mindset, but rather in a trusting attitude. I think to demand attention, it shows a level of commitment, involvement, a broken barrier, a kind of vulnerability, a kind of trust, a kind of, I&apos;m gonna give this a real go, not just wet my feet, but then be on the safe side.
+    </p>
+    <p>
+      Trust does not have to be fully deserved. None of us can really be trusted. But for four songs, we can simulate it. We can give each other that feeling of: I trust you, even while you are …. . God, that feeling is so good. As a leader or follower, it is often the best feeling of the evening. But I think it takes more from a follower to give that. More energy, more vulnerability. It is not something one can expect. But it is something one can gift.
+    </p>
+    <p>
+      Maybe that is when you can really demand the full attention of the partner. And when they do that, for me as a leader, things start hitting all the right spots.
+    </p>
+  </div>
+);
+
+const LousyTime = () => (
+  <div>
+    <h1>A sure way to have a lousy time</h1>
+    <p>
+      If I look at my own trajectory and history in tango, and if I look at how my closest tango friends are satisfied or unsatisfied in different milongas and events, I think one sure way to have a lousy evening is to rely on others and make them responsible for you enjoying the evening.
+    </p>
+    <p>
+      I definitely had this earlier in my tango journey. Whether this is the responsibility of one other dancer, your favorite, maybe even your partner, to be the highlight of your evening, to bring you joy, to show you creativity, to surprise you, to guide you, to hug you. Or we are basically expecting this from a crowd of dancers throughout the night.
+    </p>
+    <p>
+      I&apos;ve had both of these in previous years, and I still sometimes see my friends feeling this way. I think you can almost guarantee yourself a lousy time once you shift this responsibility out of yourself.
+    </p>
+    <p>
+      Of course, the environment plays a role, but it makes a huge difference who is the main character, who has the agency or the will to bring joy to the evening, or to any dance, or to any moment.
+    </p>
+    <p>
+      I think it transforms the whole experience if you are the source of choosing what and how to pay attention to, what to be curious about, how to surprise yourself, how to bring more joy and trust, how to play, how to become aware of what you exactly enjoy, and how to take the smallest steps toward having more of that yourself and bringing more of that to your partners.
+    </p>
+  </div>
+);
+
+const ParadoxOfChoice = () => (
+  <div>
+    <h1>My paradox of choice in milonga.</h1>
+    <p>
+      I think my optimal joy happens in a milonga where I have, depending on the number of hours, a handful of dancers I really enjoy dancing with. The longer the milonga, the more I might need. If it&apos;s a multi-day event, maybe even more. But let&apos;s say we are in a three-hour milonga. My optimal joy in the evening would be if I have five dancers I really enjoy dancing with there.
+    </p>
+    <p>
+      Sometimes I go to an event, maybe even a six-hour milonga, where there are about thirty people I could very well dance with. I end up enjoying the evening and each Tanda, orders of magnitude less than in the first scenario.
+    </p>
+    <p>
+      The first reason is just the stress and responsibility of choosing. It becomes more complicated and less chill. Second, because I cannot dance with all thirty logistically and time-wise, each Tanda and every partner becomes less necessary and more replaceable.
+    </p>
+    <p>
+      Even though I logically know this, I wish I had a switch where I could simulate the other context. I know that if I met this person in another milonga with fewer partners, I would be all over them, really enjoy dancing with them, really appreciate them, and really give it all. But I cannot bring myself to simulate that feeling when I am actually at an event with many more choices, where this person could just as well be someone else.
+    </p>
+    <p>
+      So in the end, the total sum of joy decreases a lot.
+    </p>
+  </div>
+);
+
+const TenthTanda = () => (
+  <div>
+    <h1>Do you prefer the first standard or the 10th Tanda?</h1>
+    <p>Here are my reasons why I would almost always take the 10th Tanda.</p>
+    <p>
+      To me, the first standard is a cost I&apos;m willing to swallow so I can explore enough to find new partners with whom I can have the 10th Tanda. It&apos;s an investment, not really a positive on its own.
+    </p>
+    <p>
+      I was recently at an event where, on Saturday, I had mostly first tandas because I was completely new to the scene. And although the dancers were perfect — perfect musicality, harmony, movement — I still left the event feeling completely depleted. The next day, except for one exception, I never had a first tanda, and it was an amazing day.
+    </p>
+    <p>
+      Thinking back on it, I&apos;ve been trying to understand why I felt this way.
+    </p>
+    <p>
+      One part is probably the social anxiety of strangers, but I don&apos;t think that&apos;s the main reason. Actually, there&apos;s also a good excitement that comes with strangers, and it almost balances things out.
+    </p>
+    <p>
+      But first tandas are a bit like small talk or a first date. You give the other person your more automatic, generic self. Maybe you have something to prove. You&apos;re establishing trust. I&apos;ve almost never been deeply compelled by my own dance in a first tanda. There are exceptions, of course.
+    </p>
+    <p>
+      By the 10th tanda, the partner knows me. They are dancing to me. They&apos;ve adapted and are responding specifically to me, whereas in the first tanda, they have no information about who I am. They&apos;re dancing with “something,” maybe figuring out pieces of what fits me, but it&apos;s still very different.
+    </p>
+    <p>
+      Another big part for me is something I&apos;d describe with a programming metaphor: a Diff. In programming, a Diff means you&apos;re making changes to a codebase that already exists. Maybe you have 1,000 lines of code; the next day you change 20 lines, and the next day you reduce 10. That evolution is the diff. I enjoy the Diff in dancing just as much as the Tanda itself. What changed since the last time we danced? How did I change? How did they change? Most importantly, how did our interaction change? In a first tanda, I only have the baseline. I don&apos;t get this extra layer of paying attention to the changes.
+    </p>
+    <p>
+      Another big difference is that, by the 10th tanda, I&apos;ve usually grown to care for the person I&apos;m dancing with. I don&apos;t have the kind of good Christian heart that immediately deeply cares about every person I meet or dance with. That feeling comes with time, repetition, and seeing each other again. And it feels completely different to dance with people you care about than with people you don&apos;t yet care about. Not because you care what they think of you, but because you genuinely care for them.
+    </p>
+    <p>
+      Then there&apos;s nuance. I think we are all searching for nuance in different ways. When you constantly have new dancers available, novelty already gives you something automatically. The new partner comes with new energy, new timing, and new movement. But if you keep dancing with more or less the same music and the same people, then you have to find the unknown inside them, or the unknown inside yourself. And both of those are delicious investigations.
+    </p>
+    <p>
+      Last but not least is trust. By the 10th tanda, I&apos;m much less performative and much more myself because I already have their consent, in a way. In the first tanda, I don&apos;t want to expose a stranger to all the mistakes or weirdness going on inside me. But if someone has danced with me 10 times, they more or less know what they are signing up for. That gives me permission to be a more raw, imperfect version of myself, which is usually the only way I truly enjoy dancing tango.
+    </p>
+    <p>
+      That said, first tandas do have one beauty that is hard to compete with. Every once in a while, by dancing with completely new people, you encounter something you&apos;ve never experienced before: a completely new dimension, energy, way of hearing the music, way of leading or following that you simply didn&apos;t know existed. And that remains endlessly juicy.
+    </p>
+  </div>
+);
+
 function ArticlePage({ title, seo }) {
   const pageTitle = seo?.title || `${title} | Helia Jamshidi`;
   const pageDescription =
@@ -1472,6 +1591,10 @@ export default function Writing({ isMobile }) {
             <Route path="/tango/say-no" element={<SayNo />} />
             <Route path="/tango/shame" element={<Shame />} />
             <Route path="/tango/teacher" element={<TangoTeachers />} />
+            <Route path="/tango/demanding-attention" element={<DemandingAttention />} />
+            <Route path="/tango/lousy-time" element={<LousyTime />} />
+            <Route path="/tango/paradox-of-choice" element={<ParadoxOfChoice />} />
+            <Route path="/tango/10th-tanda" element={<TenthTanda />} />
 
             {/* Dating Articles */}
             <Route path="/dating/online-dating" element={<MediumArticle
